@@ -34,6 +34,7 @@ brew install --cask google-cloud-sdk
 2. **Initialize Google Cloud SDK**
 ```bash
 gcloud init
+gcloud auth application-default login
 ```
 
 3. **Set up Python Virtual Environment**
@@ -115,4 +116,4 @@ This will:
 - Explore more GCP services
 - Set up monitoring and logging
 - Implement error handling
-- Add more complex examples 
+- Add more complex examples
