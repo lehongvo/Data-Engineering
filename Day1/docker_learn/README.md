@@ -10,7 +10,8 @@ docker_learn/
 ├── requirements.txt    # Python dependencies
 ├── Dockerfile         # Instructions for building Docker image
 ├── docker-compose.yml # Docker services configuration
-├── .env              # Environment variables
+├── .env              # Environment variables (local)
+├── .env.example      # Example environment variables template
 └── user/             # User module
     ├── models.py     # Database models
     └── routes.py     # API routes
@@ -36,16 +37,21 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-3. Set up environment variables in `.env`:
-```
-PORT=8000
-FLASK_ENV=development
-FLASK_DEBUG=1
-DATABASE_URL=postgresql://postgres:postgres@localhost:5432/postgres
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=postgres
-POSTGRES_DB=postgres
-```
+3. Set up environment variables:
+   - Copy `.env.example` to `.env`
+   ```bash
+   cp .env.example .env
+   ```
+   - Edit `.env` with your configuration:
+   ```
+   PORT=8000
+   FLASK_ENV=development
+   FLASK_DEBUG=1
+   DATABASE_URL=postgresql://postgres:postgres@localhost:5432/postgres
+   POSTGRES_USER=postgres
+   POSTGRES_PASSWORD=postgres
+   POSTGRES_DB=postgres
+   ```
 
 4. Run the application:
 ```bash
@@ -77,6 +83,20 @@ The application uses PostgreSQL with SQLAlchemy ORM. Database connection can be 
 - `POSTGRES_PASSWORD`: Database password
 - `POSTGRES_DB`: Database name
 - `DATABASE_URL`: Full database connection URL
+
+## Environment Variables
+
+The project uses environment variables for configuration. A template is provided in `.env.example`:
+
+- `PORT`: Application port (default: 8000)
+- `FLASK_ENV`: Environment mode (development/production)
+- `FLASK_DEBUG`: Debug mode (1/0)
+- `DATABASE_URL`: PostgreSQL connection URL
+- `POSTGRES_USER`: Database username
+- `POSTGRES_PASSWORD`: Database password
+- `POSTGRES_DB`: Database name
+
+**Note**: Never commit `.env` file containing sensitive information. Always use `.env.example` as a template.
 
 ## Development
 
