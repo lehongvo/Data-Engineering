@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  web:
+    build: .
+    ports:
+      - "${PORT:-8080}:${PORT:-8080}"
+    volumes:
+      - .:/app
+      - ./credentials/service-account-key.json:/app/credentials/service-account-key.json:ro
+    environment:
+      - PORT=${PORT:-8080}
+      - FLASK_ENV=${FLASK_ENV:-production}
+      - FLASK_DEBUG=${FLASK_DEBUG:-0}
+      - GCP_PROJECT_ID=${GCP_PROJECT_ID}
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials/service-account-key.json
+    restart: unless-stopped
+
+  cronjob:
+    build:
+      context: .
+      dockerfile: Dockerfile.cron
+    volumes:
+      - .:/app
+      - ./credentials/service-account-key.json:/app/credentials/service-account-key.json:ro
+    environment:
+      - GCP_PROJECT_ID=${GCP_PROJECT_ID}
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/credentials/service-account-key.json
+    restart: unless-stopped
