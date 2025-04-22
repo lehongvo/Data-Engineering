@@ -100,12 +100,7 @@ def generate_random_records(count=10):
             record = {
                 "full_name": names.get_full_name(),
                 "age": random.randint(18, 80),
-                "nationality": random.choice(NATIONALITIES),
-                "occupation": random.choice(OCCUPATIONS),
-                "city": random.choice(CITIES),
-                "salary": random.randint(30000, 150000),
-                "years_experience": random.randint(0, 40),
-                "created_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                "api_key": os.getenv("API_KEY_INSERT"),
             }
             records.append(record)
             logger.debug(f"Generated record {i+1}/{count}: {record}")

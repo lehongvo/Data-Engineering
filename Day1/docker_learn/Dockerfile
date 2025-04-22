@@ -4,19 +4,17 @@ FROM python:3.9-slim
 # Set working directory in container
 WORKDIR /app
 
-# Copy required files
-COPY requirements.txt .
-COPY app.py .
-COPY .env .
+# Copy all files
+COPY . .
 
 # Install Python dependencies
 RUN pip install -r requirements.txt
 
-# Use ARG for build-time variables
-ARG PORT=8000
+# Use environment variable for port
+ENV PORT=8080
 
-# Expose port from build arg
+# Expose port
 EXPOSE ${PORT}
 
 # Run the application
-CMD ["python", "app.py"]
+CMD exec gunicorn --bind :$PORT --workers 1 --threads 8 --timeout 0 app:app

@@ -1,188 +1,205 @@
-# Flask BigQuery Docker Application
+# Flask BigQuery Application
 
-This project demonstrates a Flask application that integrates with Google BigQuery, containerized using Docker, and deployed on a Google Cloud Platform (GCP) Virtual Machine.
+## Overview
+This application provides a web interface to interact with Google BigQuery, featuring automatic data insertion via a cron job. It includes both a web service and a background job service.
+
+## Prerequisites
+- Google Cloud Platform Account
+- Python 3.9+
+- Docker and Docker Compose
+- Google Cloud SDK
+- A GCP Project with BigQuery API enabled
+- Service Account with BigQuery permissions
 
 ## Project Structure
 ```
-Exercise2/
-├── app.py              # Main Flask application with BigQuery integration
-├── requirements.txt    # Python dependencies
-├── Dockerfile          # Instructions for building Docker image
+.
+├── app.py              # Main Flask application
+├── cron_insert.py      # Background job for data insertion
+├── Dockerfile          # Docker configuration
 ├── docker-compose.yml  # Docker services configuration
-├── .env                # Environment variables (local) - not in git
-├── .env.example        # Example environment variables template
-├── templates/          # HTML templates
-│   └── index.html      # Main page template
-└── static/             # Static files (CSS, JS, images)
+├── requirements.txt    # Python dependencies
+├── static/            # Static files (CSS, JS)
+└── templates/         # HTML templates
 ```
 
-## Prerequisites
-
-- Google Cloud Platform account with billing enabled
-- Google Cloud SDK installed
-- Docker & Docker Compose installed
-- A GCP Service Account with BigQuery permissions
+## Environment Variables
+Create a `.env` file with the following variables:
+```
+GCP_PROJECT_ID=your-project-id
+GOOGLE_APPLICATION_CREDENTIALS=/app/credentials.json
+API_KEY_INSERT=your-api-key
+```
 
 ## Local Development Setup
 
-1. Create a virtual environment and install dependencies:
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd <repository-directory>
+```
+
+2. Create and activate virtual environment:
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+3. Install dependencies:
+```bash
 pip install -r requirements.txt
 ```
 
-2. Set up environment variables:
-   - Copy `.env.example` to `.env`
-   ```bash
-   cp .env.example .env
-   ```
-   - Edit `.env` with your GCP configuration:
-   ```
-   GCP_PROJECT_ID=your-gcp-project-id
-   GOOGLE_APPLICATION_CREDENTIALS=./credentials/your-service-account-key.json
-   ```
+4. Set up Google Cloud credentials:
+- Download your service account key file
+- Rename it to `credentials.json`
+- Place it in the project root directory
 
-3. Create a credentials directory and place your GCP service account key:
+5. Run the application:
 ```bash
-mkdir -p credentials
-# Place your service account JSON key file in the credentials directory
+python app.py
 ```
 
-4. Run the application locally:
+## Docker Deployment
+
+1. Build and start the containers:
 ```bash
-flask run
+docker-compose build
+docker-compose up -d
 ```
 
-## Docker Setup (Local)
-
-1. Build and run with Docker Compose:
+2. Check container status:
 ```bash
-docker-compose up --build
+docker-compose ps
 ```
 
-The application will be available at `http://localhost:8080`
-
-## Deployment to GCP VM
-
-### Option 1: Manual VM Setup
-
-1. Create a GCP VM instance:
-   - Go to the GCP Console
-   - Navigate to Compute Engine > VM instances
-   - Click "Create Instance"
-   - Choose a machine type (e.g., e2-small)
-   - Check "Allow HTTP/HTTPS traffic"
-   - Click "Create"
-
-2. Connect to your VM using SSH:
+3. View logs:
 ```bash
-gcloud compute ssh your-vm-name --project your-project-id --zone your-zone
+# Web application logs
+docker-compose logs web
+
+# Cron job logs
+docker-compose logs cronjob
 ```
 
-3. Install Docker and Docker Compose on the VM:
-```bash
-# Update package lists
-sudo apt-get update
+## Google Cloud Deployment
 
+1. Create a Compute Engine instance:
+```bash
+gcloud compute instances create flask-bigquery-app \
+    --zone=asia-southeast1-a \
+    --machine-type=e2-medium \
+    --tags=http-server \
+    --image-family=ubuntu-2004-lts \
+    --image-project=ubuntu-os-cloud
+```
+
+2. Set up firewall rule:
+```bash
+gcloud compute firewall-rules create allow-flask-app \
+    --allow tcp:8080 \
+    --target-tags=http-server \
+    --description="Allow incoming traffic on TCP port 8080"
+```
+
+3. SSH into the instance:
+```bash
+gcloud compute ssh flask-bigquery-app --zone=asia-southeast1-a
+```
+
+4. Install Docker and Docker Compose on the instance:
+```bash
 # Install Docker
-sudo apt-get install -y docker.io
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
 
 # Install Docker Compose
 sudo curl -L "https://github.com/docker/compose/releases/download/v2.12.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
-
-# Start Docker service
-sudo systemctl start docker
-sudo systemctl enable docker
-
-# Add your user to Docker group
-sudo usermod -aG docker $USER
 ```
 
-4. Log out and log back in for group changes to take effect:
+5. Deploy the application:
 ```bash
-exit
-gcloud compute ssh your-vm-name --project your-project-id --zone your-zone
-```
+# Clone the repository
+git clone <repository-url>
+cd <repository-directory>
 
-5. Clone your repository on the VM:
-```bash
-git clone your-repository-url
-cd Exercise2
-```
-
-6. Set up environment variables and credentials:
-```bash
-cp .env.example .env
-# Edit .env with your project ID
+# Create .env file and add credentials
 nano .env
 
-# Create credentials directory
-mkdir -p credentials
-```
-
-7. Create a service account key file on your local machine and copy it to the VM:
-```bash
-# On local machine
-gcloud compute scp your-service-account-key.json your-vm-name:~/Exercise2/credentials/ --project your-project-id --zone your-zone
-```
-
-8. Run the application with Docker Compose:
-```bash
+# Start the application
 docker-compose up -d
 ```
 
-### Option 2: Using Terraform (Infrastructure as Code)
-
-For automated deployment, you can use Terraform to provision the GCP VM and deploy your application. See examples in the Terraform documentation.
-
 ## API Endpoints
 
-- GET `/`: Web interface to test BigQuery connection
-- GET `/api/health`: Health check endpoint
-- GET `/api/bigquery/test`: Test BigQuery connection and run a sample query
+- `GET /`: Main web interface
+- `GET /health`: Health check endpoint
+- `GET /test`: Test BigQuery connection
+- `POST /insert`: Insert records into BigQuery
+- `GET /records`: Retrieve records with filtering and pagination
 
-## Environment Variables
+## Features
 
-- `PORT`: Application port (default: 8080)
-- `FLASK_ENV`: Environment mode (development/production)
-- `FLASK_DEBUG`: Debug mode (1/0)
-- `GCP_PROJECT_ID`: Your Google Cloud project ID
-- `GOOGLE_APPLICATION_CREDENTIALS`: Path to your GCP service account key file
+1. Web Interface:
+   - Form for manual data insertion
+   - Table view of existing records
+   - Filtering by name and age range
+   - Pagination support
 
-**Note**: Never commit `.env` file or service account keys to Git. Always use `.env.example` as a template.
+2. Background Job:
+   - Automatic insertion of random records
+   - Configurable schedule (default: every hour)
+   - Detailed logging in `cron_insert.log`
 
-## Security Best Practices
+3. Security:
+   - API key validation
+   - Google Cloud authentication
+   - Firewall rules configuration
 
-1. **Service Account Permissions**: Use least privilege principles when creating service accounts
-2. **Environment Variables**: Store sensitive information in environment variables, not in code
-3. **Firewall Rules**: Configure GCP firewall to limit access to your VM
-4. **Regular Updates**: Keep dependencies updated to address security vulnerabilities
+## Monitoring
 
-## Performance Optimization
+1. Application Logs:
+```bash
+# View web application logs
+docker-compose logs web
 
-1. **BigQuery Query Optimization**: Use efficient queries to minimize processing costs
-2. **Caching**: Implement caching for frequent queries using Redis or Memcached
-3. **Connection Pooling**: Reuse BigQuery connections where possible
+# View cron job logs
+docker-compose logs cronjob
+
+# View cron job log file
+cat cron_insert.log
+```
+
+2. BigQuery Monitoring:
+- Access BigQuery console to monitor:
+  - Query execution
+  - Data insertion
+  - Table updates
 
 ## Troubleshooting
 
-1. **GCP Authentication Issues**
-   - Verify your service account key is properly set up
-   - Check if the service account has the necessary permissions
+1. Connection Issues:
+- Verify firewall rules are properly configured
+- Check if the application is running: `docker-compose ps`
+- Verify the instance's external IP is accessible
 
-2. **Docker Issues**
-   - Check logs: `docker-compose logs`
-   - Verify ports are properly exposed
+2. BigQuery Issues:
+- Verify service account permissions
+- Check credentials file location
+- Review application logs for specific errors
 
-3. **Application Errors**
-   - Check Flask logs
-   - Verify environment variables are correctly set
+3. Cron Job Issues:
+- Check cron_insert.log for errors
+- Verify API key in .env file
+- Check BigQuery permissions
 
-## Resources
+## Support
 
-- [Google Cloud Documentation](https://cloud.google.com/docs)
-- [BigQuery Documentation](https://cloud.google.com/bigquery/docs)
-- [Flask Documentation](https://flask.palletsprojects.com/)
-- [Docker Documentation](https://docs.docker.com/)
+For issues and support:
+1. Check the logs first
+2. Review the troubleshooting section
+3. Contact the development team
+
+## License
+[Your License Information]

@@ -43,9 +43,19 @@ gcloud compute ssh $INSTANCE_NAME --zone=$ZONE --command='
     sudo usermod -aG docker $USER
 '
 
+# Create necessary directories on VM
+echo "Creating directories..."
+gcloud compute ssh $INSTANCE_NAME --zone=$ZONE --command='
+    mkdir -p ~/app/credentials
+'
+
 # Copy application files
 echo "Copying application files..."
 gcloud compute scp --recurse ./* $INSTANCE_NAME:~/app --zone=$ZONE
+
+# Copy .env file separately
+echo "Copying .env file..."
+gcloud compute scp .env $INSTANCE_NAME:~/app/.env --zone=$ZONE
 
 # Start application
 echo "Starting application..."
