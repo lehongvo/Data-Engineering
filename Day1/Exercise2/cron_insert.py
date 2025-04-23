@@ -167,8 +167,8 @@ logger.info("=" * 50)
 run_job()
 
 # Schedule the job to run every 10 seconds
-schedule.every(10).seconds.do(run_job)
-logger.info("Scheduled job to run every 10 seconds")
+schedule.every(600).seconds.do(run_job)
+logger.info("Scheduled job to run every 600 seconds")
 
 # Keep the script running
 while True:

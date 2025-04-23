@@ -225,12 +225,13 @@ async def my_function():
     # Để minh họa cách hoạt động của async with, chúng ta sẽ sử dụng asyncio.sleep()
     await asyncio.sleep(1)
     print("Hàm bất đồng bộ đã hoàn thành")
-    
+
     # Cách sử dụng async with với một context manager thực sự sẽ như sau:
     # async with aiofiles.open("tên_file.txt", "r") as file:
     #     content = await file.read()
     #     print(content)
     # (Lưu ý: aiofiles cần được cài đặt bằng: pip install aiofiles)
+
 
 asyncio.run(my_function())
 

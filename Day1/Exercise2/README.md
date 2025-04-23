@@ -131,6 +131,98 @@ nano .env
 docker-compose up -d
 ```
 
+## Redeployment Process
+
+### 1. Delete Existing Instance
+```bash
+# Navigate to project directory
+cd path/to/project
+
+# Run delete instance script
+./delete_instance.sh
+```
+This script will:
+- Delete the VM instance named 'flask-bigquery-app'
+- Clean up associated resources
+- Provide feedback on deletion status
+
+### 2. Deploy New Instance
+```bash
+# Run deployment script
+./deploy.sh
+```
+The deployment script will:
+- Create a new VM instance
+- Set up necessary firewall rules
+- Install Docker and dependencies
+- Clone and configure the application
+- Start the Docker containers
+
+### 3. Verify Deployment
+After deployment, verify the application:
+
+1. Access the web interface:
+```bash
+# Use the instance's external IP
+http://<instance-ip>:8080
+```
+
+2. Check container status:
+```bash
+gcloud compute ssh flask-bigquery-app --zone=asia-southeast1-a --project=your-project-id \
+    --command="cd ~/app && docker-compose ps"
+```
+
+3. View application logs:
+```bash
+# Check web application logs
+gcloud compute ssh flask-bigquery-app --zone=asia-southeast1-a --project=your-project-id \
+    --command="cd ~/app && docker-compose logs web"
+
+# Check cron job logs
+gcloud compute ssh flask-bigquery-app --zone=asia-southeast1-a --project=your-project-id \
+    --command="cd ~/app && docker-compose logs cronjob"
+```
+
+4. Test functionality:
+   - Add new records through the web interface
+   - Verify pagination works
+   - Check if cron job is inserting data (view logs)
+   - Test search and filter features
+
+### 4. Troubleshooting Deployment
+If issues occur during deployment:
+
+1. SSH into the instance:
+```bash
+gcloud compute ssh flask-bigquery-app --zone=asia-southeast1-a --project=your-project-id
+```
+
+2. Common checks:
+```bash
+# Check Docker status
+sudo systemctl status docker
+
+# View Docker containers
+docker ps
+
+# Check application directory
+cd ~/app
+ls -la
+
+# View Docker Compose logs
+docker-compose logs
+
+# Check environment variables
+cat .env
+```
+
+3. Common issues and solutions:
+   - If containers aren't running: `docker-compose up -d`
+   - If permission issues: Check credentials.json and .env file
+   - If network issues: Verify firewall rules
+   - If data not showing: Check BigQuery connection and permissions
+
 ## API Endpoints
 
 - `GET /`: Main web interface
