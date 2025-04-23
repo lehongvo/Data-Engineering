@@ -50,6 +50,33 @@ document.addEventListener('DOMContentLoaded', function () {
     // Run health check every 30 seconds
     checkHealth();
     setInterval(checkHealth, 30000);
+
+    // Add pagination button listeners
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+    const itemsPerPage = document.getElementById('itemsPerPage');
+
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            if (currentPage > 1) {
+                loadRecords(currentPage - 1);
+            }
+        });
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            if (currentPage < totalPages) {
+                loadRecords(currentPage + 1);
+            }
+        });
+    }
+
+    if (itemsPerPage) {
+        itemsPerPage.addEventListener('change', () => {
+            loadRecords(1); // Reset to first page when changing items per page
+        });
+    }
 });
 
 // Debounce function to limit API calls
@@ -121,14 +148,14 @@ async function handleFormSubmit(event) {
 // Load records with pagination and filters
 async function loadRecords(page = 1) {
     try {
-        // Get filter values
         const nameFilter = document.getElementById('nameFilter')?.value || '';
         const minAge = document.getElementById('minAgeFilter')?.value || '';
         const maxAge = document.getElementById('maxAgeFilter')?.value || '';
+        const itemsPerPage = document.getElementById('itemsPerPage')?.value || 10;
 
-        // Build query parameters
         const params = new URLSearchParams({
-            page: page
+            page: page,
+            per_page: itemsPerPage
         });
 
         if (nameFilter) params.append('name', nameFilter);
@@ -202,33 +229,68 @@ function updateRecordsTable(records) {
 
 // Update pagination UI
 function updatePagination() {
-    const pagination = document.getElementById('pagination');
-    if (!pagination) return;
+    const prevButton = document.getElementById('prevPage');
+    const nextButton = document.getElementById('nextPage');
+    const currentPageSpan = document.getElementById('currentPage');
+    const totalPagesSpan = document.getElementById('totalPages');
+    const paginationNumbers = document.getElementById('pagination');
 
-    pagination.innerHTML = '';
-
-    // Previous button
-    const prevButton = document.createElement('button');
-    prevButton.textContent = 'Previous';
-    prevButton.className = `btn btn-secondary ${currentPage === 1 ? 'disabled' : ''}`;
-    prevButton.onclick = () => currentPage > 1 && loadRecords(currentPage - 1);
-    pagination.appendChild(prevButton);
-
-    // Page numbers
-    for (let i = 1; i <= totalPages; i++) {
-        const pageButton = document.createElement('button');
-        pageButton.textContent = i;
-        pageButton.className = `btn ${currentPage === i ? 'btn-primary' : 'btn-secondary'}`;
-        pageButton.onclick = () => loadRecords(i);
-        pagination.appendChild(pageButton);
+    if (!prevButton || !nextButton || !currentPageSpan || !totalPagesSpan || !paginationNumbers) {
+        console.error('Pagination elements not found');
+        return;
     }
 
-    // Next button
-    const nextButton = document.createElement('button');
-    nextButton.textContent = 'Next';
-    nextButton.className = `btn btn-secondary ${currentPage === totalPages ? 'disabled' : ''}`;
-    nextButton.onclick = () => currentPage < totalPages && loadRecords(currentPage + 1);
-    pagination.appendChild(nextButton);
+    // Update page numbers
+    currentPageSpan.textContent = currentPage;
+    totalPagesSpan.textContent = totalPages;
+
+    // Enable/disable prev/next buttons
+    prevButton.disabled = currentPage === 1;
+    nextButton.disabled = currentPage === totalPages;
+
+    // Generate pagination numbers
+    paginationNumbers.innerHTML = '';
+
+    // Calculate range of pages to show
+    let startPage = Math.max(1, currentPage - 2);
+    let endPage = Math.min(totalPages, currentPage + 2);
+
+    // Always show first page
+    if (startPage > 1) {
+        addPageNumber(1);
+        if (startPage > 2) {
+            addEllipsis();
+        }
+    }
+
+    // Add page numbers
+    for (let i = startPage; i <= endPage; i++) {
+        addPageNumber(i);
+    }
+
+    // Always show last page
+    if (endPage < totalPages) {
+        if (endPage < totalPages - 1) {
+            addEllipsis();
+        }
+        addPageNumber(totalPages);
+    }
+
+    function addPageNumber(pageNum) {
+        const button = document.createElement('button');
+        button.className = `btn btn-sm ${pageNum === currentPage ? 'btn-primary' : 'btn-outline-secondary'}`;
+        button.textContent = pageNum;
+        button.style.margin = '0 2px';
+        button.onclick = () => loadRecords(pageNum);
+        paginationNumbers.appendChild(button);
+    }
+
+    function addEllipsis() {
+        const span = document.createElement('span');
+        span.className = 'mx-2';
+        span.textContent = '...';
+        paginationNumbers.appendChild(span);
+    }
 }
 
 // Update active filters display

@@ -103,14 +103,18 @@ def test_bigquery():
 @error_handler
 def get_records():
     """
-    Get records from test_table with optional filters
+    Get records from test_table with optional filters and pagination
     """
     try:
         # Get query parameters
         page = int(request.args.get("page", 1))
+        per_page = int(request.args.get("per_page", 10))  # Default 10 items per page
         name_filter = request.args.get("name")
         min_age = request.args.get("min_age")
         max_age = request.args.get("max_age")
+
+        # Validate and limit per_page parameter
+        per_page = min(max(per_page, 5), 50)  # Limit between 5 and 50 items
 
         # Get BigQuery client and project ID
         client = get_bigquery_client()
@@ -139,8 +143,8 @@ def get_records():
         total_records = next(count_job.result())["total"]
 
         # Calculate pagination
-        total_pages = math.ceil(total_records / RECORDS_PER_PAGE)
-        offset = (page - 1) * RECORDS_PER_PAGE
+        total_pages = math.ceil(total_records / per_page)
+        offset = (page - 1) * per_page
 
         # Get records for current page
         records_query = f"""
@@ -151,7 +155,7 @@ def get_records():
             FROM `{project_id}.test_dataset.test_table`
             {where_sql}
             ORDER BY full_name
-            LIMIT {RECORDS_PER_PAGE}
+            LIMIT {per_page}
             OFFSET {offset}
         """
 
@@ -175,7 +179,7 @@ def get_records():
             "pagination": {
                 "current_page": page,
                 "total_pages": total_pages,
-                "per_page": RECORDS_PER_PAGE,
+                "per_page": per_page,
                 "total_records": total_records,
                 "has_next": page < total_pages,
                 "has_prev": page > 1,

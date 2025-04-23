@@ -166,9 +166,9 @@ logger.info("=" * 50)
 # Run insert_records immediately when the script starts
 run_job()
 
-# Schedule the job to run every 10000 seconds
-schedule.every(10000).seconds.do(run_job)
-logger.info("Scheduled job to run every 10000 seconds")
+# Schedule the job to run every 10 seconds
+schedule.every(10).seconds.do(run_job)
+logger.info("Scheduled job to run every 10 seconds")
 
 # Keep the script running
 while True:
