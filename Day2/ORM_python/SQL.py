@@ -8,6 +8,8 @@ from dotenv import load_dotenv
 import psycopg2
 from psycopg2.extras import RealDictCursor
 from tabulate import tabulate
+import csv
+from datetime import datetime
 
 # Load environment variables
 load_dotenv()
@@ -520,6 +522,317 @@ def use_aliases():
     return results
 
 
+# Export functions
+def export_table_to_csv(table_name, output_file):
+    """
+    Export a table to CSV file
+    Args:
+        table_name (str): Name of the table to export
+        output_file (str): Path to save the CSV file
+    Returns:
+        bool: True if export successful, False otherwise
+    """
+    try:
+        # Get all data from table
+        query = f"SELECT * FROM {table_name} ORDER BY id;"
+        results = execute_query(query)
+
+        if not results:
+            print(f"No data found in table {table_name}")
+            return False
+
+        # Create directory if it doesn't exist
+        os.makedirs("exports", exist_ok=True)
+
+        # Write to CSV
+        with open(f"exports/{output_file}", "w", newline="") as f:
+            # Get headers from first row
+            headers = results[0].keys()
+            writer = csv.DictWriter(f, fieldnames=headers)
+
+            # Write headers and data
+            writer.writeheader()
+            writer.writerows(results)
+
+        print(f"\nExported {len(results)} rows to exports/{output_file}")
+        return True
+
+    except Exception as e:
+        print(f"Error exporting {table_name}: {str(e)}")
+        return False
+
+
+def export_employees_to_csv():
+    """
+    Export employees table to CSV with additional department info
+    Returns:
+        bool: True if export successful, False otherwise
+    """
+    try:
+        # Get employees with department names
+        query = """
+        SELECT 
+            e.id,
+            e.first_name,
+            e.last_name,
+            e.email,
+            d.name as department_name,
+            e.hire_date,
+            e.created_at,
+            e.updated_at
+        FROM employees e
+        JOIN departments d ON e.department_id = d.id
+        ORDER BY e.id;
+        """
+        results = execute_query(query)
+
+        if not results:
+            print("No employees found")
+            return False
+
+        # Create directory if it doesn't exist
+        os.makedirs("exports", exist_ok=True)
+
+        # Generate filename with timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"employees_{timestamp}.csv"
+
+        # Write to CSV
+        with open(f"exports/{filename}", "w", newline="") as f:
+            headers = results[0].keys()
+            writer = csv.DictWriter(f, fieldnames=headers)
+
+            writer.writeheader()
+            writer.writerows(results)
+
+        print(f"\nExported {len(results)} employees to exports/{filename}")
+        return True
+
+    except Exception as e:
+        print(f"Error exporting employees: {str(e)}")
+        return False
+
+
+def export_departments_with_stats():
+    """
+    Export departments table to CSV with employee statistics
+    Returns:
+        bool: True if export successful, False otherwise
+    """
+    try:
+        # Get departments with employee counts and other stats
+        query = """
+        SELECT 
+            d.id,
+            d.name,
+            COUNT(e.id) as employee_count,
+            MIN(e.hire_date) as earliest_hire,
+            MAX(e.hire_date) as latest_hire,
+            d.created_at,
+            d.updated_at
+        FROM departments d
+        LEFT JOIN employees e ON d.id = e.department_id
+        GROUP BY d.id, d.name
+        ORDER BY d.id;
+        """
+        results = execute_query(query)
+
+        if not results:
+            print("No departments found")
+            return False
+
+        # Create directory if it doesn't exist
+        os.makedirs("exports", exist_ok=True)
+
+        # Generate filename with timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"departments_{timestamp}.csv"
+
+        # Write to CSV
+        with open(f"exports/{filename}", "w", newline="") as f:
+            headers = results[0].keys()
+            writer = csv.DictWriter(f, fieldnames=headers)
+
+            writer.writeheader()
+            writer.writerows(results)
+
+        print(f"\nExported {len(results)} departments to exports/{filename}")
+        return True
+
+    except Exception as e:
+        print(f"Error exporting departments: {str(e)}")
+        return False
+
+
+def export_employees_with_departments():
+    """
+    Export employees and departments data joined together into a single CSV file
+    The output includes all employee details along with their department information
+
+    Returns:
+        bool: True if export successful, False otherwise
+    """
+    try:
+        # Get employees joined with departments
+        query = """
+        SELECT 
+            e.id as employee_id,
+            e.first_name,
+            e.last_name,
+            e.email,
+            e.hire_date,
+            d.id as department_id,
+            d.name as department_name,
+            -- Calculate department statistics
+            COUNT(*) OVER (PARTITION BY d.id) as dept_employee_count,
+            MIN(e.hire_date) OVER (PARTITION BY d.id) as dept_earliest_hire,
+            MAX(e.hire_date) OVER (PARTITION BY d.id) as dept_latest_hire,
+            -- Include creation and update timestamps
+            e.created_at as employee_created_at,
+            e.updated_at as employee_updated_at,
+            d.created_at as department_created_at,
+            d.updated_at as department_updated_at
+        FROM employees e
+        JOIN departments d ON e.department_id = d.id
+        ORDER BY d.name, e.last_name, e.first_name;
+        """
+        results = execute_query(query)
+
+        if not results:
+            print("No data found")
+            return False
+
+        # Create directory if it doesn't exist
+        os.makedirs("exports", exist_ok=True)
+
+        # Generate filename with timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"employees-departments_{timestamp}.csv"
+
+        # Write to CSV
+        with open(f"exports/{filename}", "w", newline="") as f:
+            headers = results[0].keys()
+            writer = csv.DictWriter(f, fieldnames=headers)
+
+            writer.writeheader()
+            writer.writerows(results)
+
+        print(f"\nExported {len(results)} records to exports/{filename}")
+        print("\nFile contains the following columns:")
+        print("- Employee: ID, first name, last name, email, hire date")
+        print("- Department: ID, name")
+        print("- Department Stats: employee count, earliest & latest hire dates")
+        print("- Timestamps: creation and update dates for both records")
+
+        # Print sample of the data using tabulate
+        print("\nSample of exported data (first 5 rows):")
+        print(tabulate(results[:5], headers="keys", tablefmt="psql"))
+
+        return True
+
+    except Exception as e:
+        print(f"Error exporting joined data: {str(e)}")
+        return False
+
+
+def export_department_summaries():
+    """
+    Export a summary of each department with employee statistics
+    Creates a CSV with one row per department and aggregated employee data
+
+    Returns:
+        bool: True if export successful, False otherwise
+    """
+    try:
+        query = """
+        SELECT 
+            d.id as department_id,
+            d.name as department_name,
+            COUNT(e.id) as total_employees,
+            MIN(e.hire_date) as earliest_hire,
+            MAX(e.hire_date) as latest_hire,
+            -- Additional statistics
+            COUNT(CASE WHEN e.hire_date >= NOW() - INTERVAL '1 year' THEN 1 END) as hired_last_year,
+            COUNT(CASE WHEN e.hire_date >= NOW() - INTERVAL '1 month' THEN 1 END) as hired_last_month,
+            -- Include department timestamps
+            d.created_at,
+            d.updated_at
+        FROM departments d
+        LEFT JOIN employees e ON d.id = e.department_id
+        GROUP BY d.id, d.name
+        ORDER BY d.name;
+        """
+        results = execute_query(query)
+
+        if not results:
+            print("No departments found")
+            return False
+
+        # Create directory if it doesn't exist
+        os.makedirs("exports", exist_ok=True)
+
+        # Generate filename with timestamp
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        filename = f"department-summaries_{timestamp}.csv"
+
+        # Write to CSV
+        with open(f"exports/{filename}", "w", newline="") as f:
+            headers = results[0].keys()
+            writer = csv.DictWriter(f, fieldnames=headers)
+
+            writer.writeheader()
+            writer.writerows(results)
+
+        print(f"\nExported {len(results)} department summaries to exports/{filename}")
+        print("\nSummary includes:")
+        print("- Department details (ID, name)")
+        print("- Total employee count")
+        print("- Earliest and latest hire dates")
+        print("- Recent hiring statistics (last month/year)")
+
+        # Print the summary using tabulate
+        print("\nDepartment Summaries:")
+        print(tabulate(results, headers="keys", tablefmt="psql"))
+
+        return True
+
+    except Exception as e:
+        print(f"Error exporting department summaries: {str(e)}")
+        return False
+
+
+def export_all_tables():
+    """
+    Export all data in various formats:
+    1. Individual tables (employees.csv, departments.csv)
+    2. Joined data (employees-departments.csv)
+    3. Department summaries (department-summaries.csv)
+
+    Returns:
+        tuple: (bool, bool, bool) indicating success of each export
+    """
+    print("\nStarting comprehensive data export...")
+
+    # Export individual tables
+    employees_success = export_employees_to_csv()
+    departments_success = export_departments_with_stats()
+
+    # Export joined data
+    joined_success = export_employees_with_departments()
+
+    # Export department summaries
+    summaries_success = export_department_summaries()
+
+    # Print summary
+    print("\nExport Summary:")
+    print(f"Employees export: {'Success' if employees_success else 'Failed'}")
+    print(f"Departments export: {'Success' if departments_success else 'Failed'}")
+    print(f"Joined data export: {'Success' if joined_success else 'Failed'}")
+    print(f"Department summaries: {'Success' if summaries_success else 'Failed'}")
+
+    return employees_success, departments_success, joined_success, summaries_success
+
+
 if __name__ == "__main__":
     # Ví dụ sử dụng các hàm
     print("1. Thống kê theo phòng ban:")
@@ -567,3 +880,12 @@ if __name__ == "__main__":
 
     print("\n10. Aliases:")
     use_aliases()
+
+    print("\n11. Exporting tables to CSV:")
+    export_all_tables()
+
+    print("\n12. Export joined employees-departments data:")
+    export_employees_with_departments()
+
+    print("\n13. Export department summaries:")
+    export_department_summaries()

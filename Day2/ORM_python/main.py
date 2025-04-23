@@ -236,7 +236,7 @@ def list_employees(department_name: Optional[str] = None):
 
 
 @app.command()
-def generate_sample_data(num_departments: int = 10, num_employees: int = 1000):
+def generate_sample_data(num_departments: int = 10, num_employees: int = 5000):
     """Generate sample data for departments and employees."""
     try:
         session = get_db_session()
