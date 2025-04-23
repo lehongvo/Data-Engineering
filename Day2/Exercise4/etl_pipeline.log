@@ -1,0 +1,10 @@
+2025-04-23 17:12:25,937 - INFO - Starting ETL pipeline...
+2025-04-23 17:12:25,941 - INFO - Successfully extracted 200 rows from csv/employees-departments_20250423_161401.csv
+2025-04-23 17:12:25,956 - INFO - Successfully transformed 200 rows
+2025-04-23 17:12:25,958 - INFO - Successfully saved 200 rows to output/transformed_employees_data.csv
+2025-04-23 17:12:25,958 - INFO - ETL pipeline completed successfully!
+2025-04-23 17:13:31,432 - INFO - Starting ETL pipeline...
+2025-04-23 17:13:31,440 - INFO - Successfully extracted 200 rows from csv/employees-departments_20250423_161401.csv
+2025-04-23 17:13:31,455 - INFO - Successfully transformed 200 rows
+2025-04-23 17:13:31,458 - INFO - Successfully saved 200 rows to output/transformed_employees_data.csv
+2025-04-23 17:13:31,458 - INFO - ETL pipeline completed successfully!
