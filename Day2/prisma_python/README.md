@@ -30,7 +30,7 @@ cd <project-directory>
 
 2. Create and activate virtual environment:
 ```bash
-python -m venv venv
+deactivate && python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
@@ -139,7 +139,7 @@ The application uses three main models:
 
 1. Start the application:
 ```bash
-uvicorn main:app --reload
+pip install setuptools && uvicorn main:app --reload
 ```
 
 2. Access the API documentation:

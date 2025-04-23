@@ -13,6 +13,12 @@ import sys
 from contextlib import asynccontextmanager
 from web3.exceptions import BlockNotFound
 import time
+import csv
+from io import StringIO
+from fastapi.responses import StreamingResponse
+from decimal import Decimal
+from collections import defaultdict
+from statistics import mean, median
 
 # Load environment variables
 load_dotenv()
@@ -322,9 +328,24 @@ async def get_transactions(skip: int = 0, limit: int = 10):
 
 
 @app.get("/transactions/{tx_hash}", response_model=TransactionResponse)
-async def get_transaction(tx_hash: str):
+async def get_transaction(
+    tx_hash: str,
+    from_block: Optional[int] = None,
+    to_block: Optional[int] = None,
+    limit: Optional[int] = 100,
+):
     try:
-        transaction = await prisma.transaction.find_unique(where={"hash": tx_hash})
+        # Build the where clause
+        where_clause = {"hash": tx_hash}
+        if from_block is not None:
+            where_clause["blockNumber"] = {"gte": from_block}
+        if to_block is not None:
+            where_clause["blockNumber"] = {
+                **where_clause.get("blockNumber", {}),
+                "lte": to_block,
+            }
+
+        transaction = await prisma.transaction.find_unique(where=where_clause)
         if not transaction:
             raise HTTPException(status_code=404, detail="Transaction not found")
         return transaction
@@ -345,6 +366,242 @@ async def get_transactions_by_block(block_number: int):
     except Exception as e:
         logger.error(f"Error fetching transactions for block {block_number}: {str(e)}")
         raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@app.get("/transactions/summary/csv")
+async def get_transactions_summary_csv(
+    from_block: Optional[int] = None,
+    to_block: Optional[int] = None,
+    limit: Optional[int] = 1000,
+):
+    try:
+        # Build where clause for block range
+        where_clause = {}
+        if from_block is not None:
+            where_clause["blockNumber"] = {"gte": from_block}
+        if to_block is not None:
+            where_clause["blockNumber"] = {
+                **where_clause.get("blockNumber", {}),
+                "lte": to_block,
+            }
+
+        logger.info(f"Fetching transactions with where clause: {where_clause}")
+
+        # Fetch transactions
+        transactions = await prisma.transaction.find_many(
+            where=where_clause, take=limit, order={"blockNumber": "desc"}
+        )
+
+        if not transactions:
+            logger.warning("No transactions found for the specified block range")
+            return StreamingResponse(
+                iter(["No transactions found for the specified block range"]),
+                media_type="text/plain",
+                status_code=404,
+            )
+
+        logger.info(f"Found {len(transactions)} transactions")
+
+        # Initialize analytics data with safe defaults
+        analytics = {
+            "total_transactions": len(transactions),
+            "successful_transactions": 0,
+            "failed_transactions": 0,
+            "total_value_wei": Decimal("0"),
+            "total_gas_used": Decimal("0"),
+            "unique_addresses": set(),
+            "transactions_by_hour": defaultdict(int),
+            "value_ranges": defaultdict(int),
+            "gas_prices": [],
+        }
+
+        # Process transactions for analytics with safety checks
+        for tx in transactions:
+            try:
+                # Safely convert string values to Decimal
+                tx_value = Decimal(str(tx.value)) if tx.value else Decimal("0")
+                tx_gas = Decimal(str(tx.gas)) if tx.gas else Decimal("0")
+                tx_gas_price = (
+                    Decimal(str(tx.gasPrice)) if tx.gasPrice else Decimal("0")
+                )
+
+                # Update analytics
+                analytics["successful_transactions"] += 1 if tx.status else 0
+                analytics["failed_transactions"] += 0 if tx.status else 1
+                analytics["total_value_wei"] += tx_value
+                analytics["total_gas_used"] += tx_gas
+
+                if tx.fromAddr:
+                    analytics["unique_addresses"].add(tx.fromAddr)
+                if tx.to:
+                    analytics["unique_addresses"].add(tx.to)
+
+                if tx.timestamp:
+                    analytics["transactions_by_hour"][tx.timestamp.hour] += 1
+
+                if tx_gas_price > 0:
+                    analytics["gas_prices"].append(tx_gas_price)
+
+                # Categorize transaction value
+                value_eth = tx_value / Decimal(10**18)
+                if value_eth == 0:
+                    analytics["value_ranges"]["0 ETH"] += 1
+                elif value_eth < Decimal("0.1"):
+                    analytics["value_ranges"]["<0.1 ETH"] += 1
+                elif value_eth < Decimal("1"):
+                    analytics["value_ranges"]["0.1-1 ETH"] += 1
+                elif value_eth < Decimal("10"):
+                    analytics["value_ranges"]["1-10 ETH"] += 1
+                else:
+                    analytics["value_ranges"][">10 ETH"] += 1
+
+            except Exception as e:
+                logger.error(f"Error processing transaction {tx.hash}: {str(e)}")
+                continue
+
+        # Prepare CSV data
+        output = StringIO()
+        writer = csv.writer(output)
+
+        # Write report header
+        writer.writerow(["Ethereum Transaction Analysis Report"])
+        writer.writerow(
+            [f"Generated at: {datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC')}"]
+        )
+        writer.writerow(
+            [
+                f"Block Range: {from_block if from_block else 'Start'} to {to_block if to_block else 'Latest'}"
+            ]
+        )
+        writer.writerow([])
+
+        # Write Summary Statistics
+        writer.writerow(["Summary Statistics"])
+        writer.writerow(["Metric", "Value"])
+        writer.writerow(["Total Transactions", analytics["total_transactions"]])
+        writer.writerow(
+            ["Successful Transactions", analytics["successful_transactions"]]
+        )
+        writer.writerow(["Failed Transactions", analytics["failed_transactions"]])
+
+        # Avoid division by zero
+        success_rate = 0
+        if analytics["total_transactions"] > 0:
+            success_rate = (
+                analytics["successful_transactions"]
+                / analytics["total_transactions"]
+                * 100
+            )
+        writer.writerow(["Success Rate", f"{success_rate:.2f}%"])
+
+        writer.writerow(
+            ["Total Value (ETH)", f"{analytics['total_value_wei']/10**18:.2f}"]
+        )
+
+        # Calculate gas statistics only if we have gas prices
+        if analytics["gas_prices"]:
+            avg_gas = mean(analytics["gas_prices"]) / 10**9
+            med_gas = median(analytics["gas_prices"]) / 10**9
+            writer.writerow(["Average Gas Price (Gwei)", f"{avg_gas:.2f}"])
+            writer.writerow(["Median Gas Price (Gwei)", f"{med_gas:.2f}"])
+        else:
+            writer.writerow(["Average Gas Price (Gwei)", "N/A"])
+            writer.writerow(["Median Gas Price (Gwei)", "N/A"])
+
+        writer.writerow(["Unique Addresses", len(analytics["unique_addresses"])])
+        writer.writerow([])
+
+        # Write Value Distribution
+        writer.writerow(["Transaction Value Distribution"])
+        writer.writerow(["Range", "Count", "Percentage"])
+        for value_range, count in analytics["value_ranges"].items():
+            percentage = (
+                (count / analytics["total_transactions"]) * 100
+                if analytics["total_transactions"] > 0
+                else 0
+            )
+            writer.writerow([value_range, count, f"{percentage:.2f}%"])
+        writer.writerow([])
+
+        # Write Hourly Distribution
+        writer.writerow(["Hourly Transaction Distribution (UTC)"])
+        writer.writerow(["Hour", "Number of Transactions", "Percentage"])
+        for hour in range(24):
+            count = analytics["transactions_by_hour"][hour]
+            percentage = (
+                (count / analytics["total_transactions"]) * 100
+                if analytics["total_transactions"] > 0
+                else 0
+            )
+            writer.writerow([f"{hour:02d}:00", count, f"{percentage:.2f}%"])
+        writer.writerow([])
+
+        # Write Detailed Transaction List
+        writer.writerow(["Detailed Transaction List"])
+        writer.writerow(
+            [
+                "Transaction Hash",
+                "Block Number",
+                "From Address",
+                "To Address",
+                "Value (ETH)",
+                "Gas Price (Gwei)",
+                "Gas Used",
+                "Timestamp (UTC)",
+                "Status",
+                "Age",
+            ]
+        )
+
+        # Write transaction data with safety checks
+        current_time = datetime.utcnow()
+        for tx in transactions:
+            try:
+                tx_value = Decimal(str(tx.value)) if tx.value else Decimal("0")
+                tx_gas_price = (
+                    Decimal(str(tx.gasPrice)) if tx.gasPrice else Decimal("0")
+                )
+
+                age = current_time - tx.timestamp if tx.timestamp else timedelta(0)
+
+                writer.writerow(
+                    [
+                        tx.hash,
+                        tx.blockNumber,
+                        tx.fromAddr or "N/A",
+                        tx.to or "N/A",
+                        f"{tx_value/10**18:.6f}",
+                        f"{tx_gas_price/10**9:.2f}",
+                        tx.gas or "N/A",
+                        (
+                            tx.timestamp.strftime("%Y-%m-%d %H:%M:%S")
+                            if tx.timestamp
+                            else "N/A"
+                        ),
+                        "Success" if tx.status else "Failed",
+                        str(age).split(".")[0] if age else "N/A",
+                    ]
+                )
+            except Exception as e:
+                logger.error(f"Error writing transaction {tx.hash} to CSV: {str(e)}")
+                continue
+
+        # Prepare the response
+        output.seek(0)
+        timestamp = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+        filename = f"eth_transactions_report_{from_block}-{to_block}_{timestamp}.csv"
+
+        return StreamingResponse(
+            iter([output.getvalue()]),
+            media_type="text/csv",
+            headers={"Content-Disposition": f"attachment; filename={filename}"},
+        )
+
+    except Exception as e:
+        logger.error(f"Error generating transactions summary: {str(e)}")
+        # Return a more detailed error response
+        error_msg = f"Failed to generate summary report: {str(e)}"
+        raise HTTPException(status_code=500, detail=error_msg)
 
 
 if __name__ == "__main__":
