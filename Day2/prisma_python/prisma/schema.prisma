@@ -1,0 +1,43 @@
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+}
+
+generator client {
+    provider = "prisma-client-py"
+}
+
+model User {
+    id        Int      @id @default(autoincrement())
+    email     String   @unique
+    name      String?
+    posts     Post[]
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model Post {
+    id        Int      @id @default(autoincrement())
+    title     String
+    content   String?
+    published Boolean  @default(false)
+    author    User     @relation(fields: [authorId], references: [id])
+    authorId  Int
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
+
+model Transaction {
+    id          Int      @id @default(autoincrement())
+    hash        String   @unique
+    blockNumber BigInt
+    fromAddr    String   @map("from")
+    to          String
+    value       String // Wei value as string due to large numbers
+    gasPrice    String
+    gas         String
+    timestamp   DateTime @default(now())
+    status      Boolean // true if successful
+    createdAt   DateTime @default(now())
+    updatedAt   DateTime @updatedAt
+}
