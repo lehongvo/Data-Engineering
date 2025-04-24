@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vincent's Azure Demo</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        width: 100%;
+        text-align: center;
+        animation: fadeIn 1s ease-in;
+      }
+
+      h1 {
+        color: #4a5568;
+        margin-bottom: 1rem;
+        font-size: 2.5rem;
+      }
+
+      p {
+        color: #718096;
+        line-height: 1.7;
+        margin-bottom: 2rem;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .feature {
+        padding: 1.5rem;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .feature:hover {
+        transform: translateY(-5px);
+      }
+
+      .feature h3 {
+        color: #4a5568;
+        margin-bottom: 1rem;
+      }
+
+      .feature p {
+        color: #718096;
+        font-size: 0.9rem;
+        margin-bottom: 0;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1.5rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Welcome to Azure VM Demo, Build VM by Vincent</h1>
+      <p>
+        This is a demonstration of hosting a beautiful webpage on Azure Virtual
+        Machine
+      </p>
+
+      <div class="features">
+        <div class="feature">
+          <h3>Azure Cloud</h3>
+          <p>Powered by Microsoft Azure's reliable cloud infrastructure</p>
+        </div>
+        <div class="feature">
+          <h3>Modern Design</h3>
+          <p>Built with modern HTML5 and CSS3 features</p>
+        </div>
+        <div class="feature">
+          <h3>Responsive</h3>
+          <p>Looks great on all devices and screen sizes</p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
