@@ -1,82 +1,75 @@
-# Data Engineering Infrastructure với GCP
+# Data Engineering Infrastructure - GCP Terraform
 
-Project này tạo data infrastructure trên Google Cloud Platform (GCP) với các thành phần:
-- VPC Network và Subnet
-- Cloud Storage Bucket cho data lake
-- BigQuery Dataset và Table cho data warehouse
+Tự động hóa việc tạo infrastructure cho data engineering trên GCP sử dụng Terraform.
 
-## Yêu cầu trước khi bắt đầu
+## Resources được tạo
 
-1. Cài đặt Terraform:
-   ```bash
-   brew install terraform
-   ```
+- VPC Network & Subnet (asia-southeast1)
+- Cloud Storage Bucket (Data Lake)
+- BigQuery Dataset & Table
 
-2. Cài đặt và cấu hình Google Cloud SDK:
-   ```bash
-   brew install google-cloud-sdk
-   gcloud init
-   ```
+## Yêu cầu
 
-3. Tạo Service Account và download key JSON:
-   - Truy cập Google Cloud Console
-   - Vào IAM & Admin > Service Accounts
-   - Tạo service account mới với quyền:
-     - Compute Network Admin
-     - Storage Admin
-     - BigQuery Admin
-   - Tạo và download key JSON
+1. Google Cloud SDK
+2. Terraform
+3. Service Account với các quyền:
+   - Compute Network Admin
+   - Storage Admin
+   - BigQuery Admin
 
-4. Set environment variable cho credentials:
-   ```bash
-   export GOOGLE_APPLICATION_CREDENTIALS="path/to/your/service-account-key.json"
-   ```
+## Cách sử dụng
 
-## Các bước thực hiện
+1. **Set credentials**:
+```bash
+export GOOGLE_APPLICATION_CREDENTIALS="path/to/your/service-account-key.json"
+```
 
-1. Khởi tạo project:
-   ```bash
-   terraform init
-   ```
+2. **Khởi tạo và tạo infrastructure**:
+```bash
+# Khởi tạo Terraform
+terraform init
 
-2. Xem trước thay đổi (thay YOUR_PROJECT_ID bằng ID project của bạn):
-   ```bash
-   terraform plan -var="project_id=YOUR_PROJECT_ID"
-   ```
+# Xem plan
+terraform plan -var="project_id=your-project-id"
 
-3. Tạo infrastructure:
-   ```bash
-   terraform apply -var="project_id=YOUR_PROJECT_ID"
-   ```
+# Tạo infrastructure
+terraform apply -var="project_id=your-project-id"
+```
 
-4. Xóa infrastructure:
-   ```bash
-   terraform destroy -var="project_id=YOUR_PROJECT_ID"
-   ```
+3. **Xóa infrastructure**:
+```bash
+terraform destroy -var="project_id=your-project-id"
+```
 
-## Cấu trúc Data Lake
+## Cấu trúc
 
-- Raw data được lưu trong Cloud Storage với cấu trúc:
-  ```
-  gs://{project-name}-data-lake-{environment}/raw/sales/YYYY/MM/DD/
-  ```
+```
+terraform-basics/
+├── main.tf          # Resource definitions
+├── variables.tf     # Input variables
+└── outputs.tf       # Output values
+```
 
-- Data được tự động chuyển sang storage class NEARLINE sau 30 ngày
+## Biến
 
-## BigQuery Integration
+| Tên | Mặc định | Mô tả |
+|-----|----------|-------|
+| project_id | (required) | GCP Project ID |
+| region | asia-southeast1 | Region để deploy |
+| environment | dev | Môi trường (dev/staging/prod) |
+| project_name | data-engineering-practice | Tên project |
+| subnet_cidr | 10.0.0.0/24 | CIDR cho subnet |
 
-- Dataset được tạo với tên: {project_name}_{environment}
-- Table raw_sales_data được partition theo ngày (transaction_date)
-- Schema bao gồm:
-  - transaction_id (STRING)
-  - customer_id (STRING)
-  - amount (FLOAT)
-  - transaction_date (TIMESTAMP)
+## Outputs
 
-## Biến môi trường
+- vpc_network_id: ID của VPC
+- subnet_id: ID của subnet
+- data_lake_bucket: Tên bucket
+- bigquery_dataset: ID của dataset
+- bigquery_table: ID của table
 
-- `project_id`: ID của GCP Project (required)
-- `region`: GCP Region (default: "asia-southeast1")
-- `environment`: Môi trường deployment (default: "dev")
-- `project_name`: Tên project (default: "data-engineering-practice")
-- `subnet_cidr`: CIDR block cho subnet (default: "10.0.0.0/24")
+## Lưu ý
+
+- KHÔNG commit file credentials
+- Sử dụng biến môi trường cho credentials
+- Kiểm tra kỹ plan trước khi apply 

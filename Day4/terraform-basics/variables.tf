@@ -1,34 +1,28 @@
-variable "vpc_cidr" {
-  description = "CIDR block cho VPC"
-  type        = string
-  default     = "10.0.0.0/16"
-}
-
 variable "project_id" {
-  description = "ID của GCP Project"
+  description = "The ID of the GCP project"
   type        = string
-}
-
-variable "environment" {
-  description = "Môi trường deployment (dev, staging, prod)"
-  type        = string
-  default     = "dev"
 }
 
 variable "region" {
-  description = "GCP Region để deploy resources"
+  description = "The region to deploy resources to"
   type        = string
   default     = "asia-southeast1"
 }
 
+variable "environment" {
+  description = "The environment (dev, staging, prod)"
+  type        = string
+  default     = "dev"
+}
+
 variable "project_name" {
-  description = "Tên project"
+  description = "The name of the project"
   type        = string
   default     = "data-engineering-practice"
 }
 
 variable "subnet_cidr" {
-  description = "CIDR block cho subnet"
+  description = "The CIDR block for the subnet"
   type        = string
   default     = "10.0.0.0/24"
 }

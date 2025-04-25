@@ -12,60 +12,52 @@ provider "google" {
   region  = var.region
 }
 
-# Tạo VPC
-resource "google_compute_network" "vpc" {
-  name                    = "${var.project_name}-vpc"
+# VPC Network
+resource "google_compute_network" "vpc_network" {
+  name                    = "${var.project_name}-${var.environment}-vpc"
   auto_create_subnetworks = false
 }
 
-# Tạo Subnet
+# Subnet
 resource "google_compute_subnetwork" "subnet" {
-  name          = "${var.project_name}-subnet"
+  name          = "${var.project_name}-${var.environment}-subnet"
   ip_cidr_range = var.subnet_cidr
-  network       = google_compute_network.vpc.id
+  network       = google_compute_network.vpc_network.id
   region        = var.region
 }
 
-# Tạo Cloud Storage bucket (tương đương với S3)
+# Cloud Storage bucket
 resource "google_storage_bucket" "data_lake" {
   name          = "${var.project_name}-data-lake-${var.environment}"
   location      = var.region
   force_destroy = true
 
-  versioning {
-    enabled = true
-  }
-
   lifecycle_rule {
     condition {
-      age = 30  # days
+      age = 30
     }
     action {
-      type = "SetStorageClass"
+      type          = "SetStorageClass"
       storage_class = "NEARLINE"
     }
   }
 }
 
-# Tạo BigQuery Dataset (tương đương với Glue Catalog)
-resource "google_bigquery_dataset" "data_catalog" {
-  dataset_id  = replace("${var.project_name}_${var.environment}", "-", "_")
-  description = "Dataset for data lake catalog"
-  location    = var.region
-
-  labels = {
-    environment = var.environment
-    project     = var.project_name
-  }
+# BigQuery Dataset
+resource "google_bigquery_dataset" "dataset" {
+  dataset_id    = "${replace(var.project_name, "-", "_")}_${var.environment}"
+  friendly_name = "Data Engineering Dataset"
+  description   = "Dataset for data engineering practice"
+  location      = var.region
 }
 
-# Tạo BigQuery Table
-resource "google_bigquery_table" "sales_data" {
-  dataset_id = google_bigquery_dataset.data_catalog.dataset_id
-  table_id   = "raw_sales_data"
-
+# BigQuery Table
+resource "google_bigquery_table" "raw_sales_data" {
+  dataset_id          = google_bigquery_dataset.dataset.dataset_id
+  table_id            = "raw_sales_data"
+  deletion_protection = false
   time_partitioning {
-    type = "DAY"
+    type  = "DAY"
     field = "transaction_date"
   }
 
@@ -74,22 +66,26 @@ resource "google_bigquery_table" "sales_data" {
   {
     "name": "transaction_id",
     "type": "STRING",
-    "mode": "REQUIRED"
+    "mode": "REQUIRED",
+    "description": "Unique identifier for the transaction"
   },
   {
     "name": "customer_id",
     "type": "STRING",
-    "mode": "REQUIRED"
+    "mode": "REQUIRED",
+    "description": "Unique identifier for the customer"
   },
   {
     "name": "amount",
     "type": "FLOAT",
-    "mode": "REQUIRED"
+    "mode": "REQUIRED",
+    "description": "Transaction amount"
   },
   {
     "name": "transaction_date",
     "type": "TIMESTAMP",
-    "mode": "REQUIRED"
+    "mode": "REQUIRED",
+    "description": "Date and time of the transaction"
   }
 ]
 EOF
