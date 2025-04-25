@@ -21,4 +21,19 @@ output "bigquery_dataset" {
 output "bigquery_table" {
   description = "The ID of the BigQuery table"
   value       = google_bigquery_table.raw_sales_data.table_id
-} 
+}
+
+output "instance_name" {
+  description = "The name of the VM instance"
+  value       = google_compute_instance.vm_instance.name
+}
+
+output "instance_external_ip" {
+  description = "The external IP of the VM instance"
+  value       = google_compute_instance.vm_instance.network_interface[0].access_config[0].nat_ip
+}
+
+output "instance_internal_ip" {
+  description = "The internal IP of the VM instance"
+  value       = google_compute_instance.vm_instance.network_interface[0].network_ip
+}

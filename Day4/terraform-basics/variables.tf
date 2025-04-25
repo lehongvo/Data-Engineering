@@ -26,3 +26,27 @@ variable "subnet_cidr" {
   type        = string
   default     = "10.0.0.0/24"
 }
+
+variable "instance_name" {
+  description = "The name of the VM instance"
+  type        = string
+  default     = "data-processing-instance"
+}
+
+variable "machine_type" {
+  description = "The machine type of the VM instance"
+  type        = string
+  default     = "e2-medium"
+}
+
+variable "zone" {
+  description = "The zone where the VM instance will be created"
+  type        = string
+  default     = "asia-southeast1-a"
+}
+
+variable "instance_tags" {
+  description = "Network tags for the VM instance"
+  type        = list(string)
+  default     = ["data-processing"]
+}

@@ -90,3 +90,38 @@ resource "google_bigquery_table" "raw_sales_data" {
 ]
 EOF
 }
+
+# Compute Engine Instance
+resource "google_compute_instance" "vm_instance" {
+  name         = "${var.project_name}-${var.environment}-${var.instance_name}"
+  machine_type = var.machine_type
+  zone         = var.zone
+
+  boot_disk {
+    initialize_params {
+      image = "debian-cloud/debian-11"
+    }
+  }
+
+  network_interface {
+    network    = google_compute_network.vpc_network.name
+    subnetwork = google_compute_subnetwork.subnet.name
+
+    access_config {
+      # Ephemeral public IP
+    }
+  }
+
+  tags = var.instance_tags
+
+  metadata = {
+    ssh-keys = "debian:${file("~/.ssh/id_rsa.pub")}"
+  }
+
+  metadata_startup_script = <<-EOF
+              #!/bin/bash
+              apt-get update
+              apt-get install -y python3-pip
+              pip3 install google-cloud-storage google-cloud-bigquery pandas
+              EOF
+}
