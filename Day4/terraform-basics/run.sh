@@ -25,6 +25,54 @@ check_error() {
     fi
 }
 
+# Function to clean up existing Python environment
+cleanup_python_env() {
+    print_message $YELLOW "🧹 Cleaning up existing Python environment..."
+    
+    # Check if we're in a virtual environment and deactivate if so
+    if [[ "$VIRTUAL_ENV" != "" ]]; then
+        deactivate
+    fi
+    
+    # Remove existing venv if it exists
+    if [ -d "scripts/venv" ]; then
+        print_message $YELLOW "🗑️ Removing existing virtual environment..."
+        rm -rf scripts/venv
+    fi
+}
+
+# Function to setup Python environment and run data loading script
+setup_and_run_python() {
+    # Clean up existing environment first
+    cleanup_python_env
+    
+    print_message $YELLOW "🐍 Setting up new Python environment..."
+    
+    # Create and activate virtual environment
+    cd scripts
+    python3 -m venv venv
+    check_error "Failed to create virtual environment"
+    
+    source venv/bin/activate
+    check_error "Failed to activate virtual environment"
+    
+    # Install requirements
+    print_message $YELLOW "📦 Installing Python dependencies..."
+    pip install -r ../requirements.txt
+    check_error "Failed to install Python dependencies"
+    
+    # Run the script
+    print_message $YELLOW "🔄 Loading sample data..."
+    python3 load_sample_data.py
+    check_error "Failed to load sample data"
+    
+    # Deactivate virtual environment
+    deactivate
+    cd ..
+    
+    print_message $GREEN "✅ Successfully loaded sample data!"
+}
+
 # 1. Delete all infrastructure
 delete_infrastructure() {
     print_message $YELLOW "🗑️ Deleting all infrastructure..."
@@ -91,7 +139,10 @@ delete_infrastructure
 # 2. Create new infrastructure
 create_infrastructure
 
-print_message $GREEN "🎉 Done! Infrastructure has been successfully reset!"
+# 3. Load sample data
+setup_and_run_python
+
+print_message $GREEN "🎉 Done! Infrastructure has been successfully reset and sample data loaded!"
 
 # Print verification links
 print_message $YELLOW "\n🔍 Verify your infrastructure at these links:"
