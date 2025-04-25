@@ -1,3 +1,15 @@
 # Please add ***REMOVED*** to .gitignore
 ***REMOVED***
 ***REMOVED***
+
+# Google Cloud credentials
+*.json
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Environment variables
+.env
