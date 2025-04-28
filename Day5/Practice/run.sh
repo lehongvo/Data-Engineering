@@ -214,6 +214,17 @@ print_message $GREEN "✅ App Engine deploy successfully!"
 print_message $GREEN "🌐 API URL: $APP_URL"
 print_message $GREEN "📦 Bucket: $ACTUAL_BUCKET_NAME"
 
+# Get instance information and SSH details
+print_message $YELLOW "🔑 Getting SSH connection details..."
+INSTANCE_INFO=$(gcloud app instances list --service=default --format="table(id,service,version)")
+print_message $GREEN "📊 App Engine Instances:"
+echo "$INSTANCE_INFO"
+
+print_message $YELLOW "📌 To SSH into an instance, use:"
+print_message $GREEN "gcloud app instances ssh [INSTANCE_ID] --service=default"
+print_message $YELLOW "Example:"
+print_message $NC "gcloud app instances ssh \$(gcloud app instances list --service=default --format='value(id)' | head -1) --service=default"
+
 # Show logs for debugging
 print_message $YELLOW "📝 Checking App Engine logs..."
 gcloud app logs tail 
