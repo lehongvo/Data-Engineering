@@ -122,6 +122,22 @@ create_firewall_rule() {
     check_error "Failed to create firewall rule"
 }
 
+# Function to delete firewall rule
+delete_firewall_rule() {
+    print_message $YELLOW "🔥 Checking and deleting firewall rule if exists..."
+    
+    # Check if firewall rule exists
+    if gcloud compute firewall-rules describe data-engineering-practice-dev-allow-ssh \
+        --project=$PROJECT_ID &>/dev/null; then
+        print_message $YELLOW "🗑️ Deleting firewall rule..."
+        gcloud compute firewall-rules delete data-engineering-practice-dev-allow-ssh \
+            --project=$PROJECT_ID \
+            --quiet
+    else
+        print_message $GREEN "✅ No existing firewall rule found."
+    fi
+}
+
 # 1. Delete all infrastructure
 delete_infrastructure() {
     print_message $YELLOW "🗑️ Deleting all infrastructure..."
@@ -132,6 +148,9 @@ delete_infrastructure() {
 
     # First delete VM instance specifically
     delete_vm_instance
+
+    # Delete firewall rule before other resources
+    delete_firewall_rule
 
     # First, disable deletion protection
     print_message $YELLOW "🔓 Disabling deletion protection..."
