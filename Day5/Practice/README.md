@@ -75,3 +75,35 @@ yarn run terraform destroy -auto-approve
 ## 5. Ghi chú
 - Đảm bảo cấu hình đúng project, region, zone trong `terraform/variables.tf`
 - Thay thế các giá trị placeholder trong Makefile, ETL script, queries.sql cho phù hợp với project của bạn 
+
+## 6. Thành tựu và Tính năng
+
+### ✅ Các yêu cầu đã đáp ứng:
+
+1. **Tạo data pipeline ETL hoàn chỉnh**: 
+   - Upload file → GCS → BigQuery
+   - Mô hình ETL: Extract (từ GCS), Transform (cơ bản), Load (vào BigQuery)
+
+2. **Sử dụng Google Cloud Platform**:
+   - Google Cloud Storage (GCS) làm data lake
+   - BigQuery làm data warehouse
+   - GCP Service Account tích hợp đúng
+
+3. **Containerization**:
+   - Docker containers cho API và ETL
+   - Môi trường đóng gói đầy đủ và di động
+
+4. **API RESTful**:
+   - Endpoints đầy đủ: upload, download, run-etl
+   - Xử lý lỗi phù hợp, fallback vào local storage khi cần
+
+5. **Infrastructure as Code**:
+   - Terraform quản lý tài nguyên GCP
+   - Có thể tạo/xóa toàn bộ hạ tầng dễ dàng
+
+### 📌 Điểm cải thiện thêm (nếu có):
+
+1. **Testing**: Thêm unit tests và integration tests
+2. **Monitoring**: Thêm hệ thống theo dõi và cảnh báo
+3. **Security**: Tăng cường bảo mật API, mã hóa dữ liệu
+4. **Documentation**: Tạo tài liệu API, playbook vận hành 
