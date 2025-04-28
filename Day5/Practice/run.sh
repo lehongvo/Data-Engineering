@@ -97,21 +97,53 @@ print_message $YELLOW "🚀 Deploying ETL API lên Google App Engine..."
 # Create file app.yaml 
 cat > ./etl/app.yaml <<EOL
 runtime: python39
+instance_class: F1
+
 entrypoint: gunicorn -b :\$PORT etl_api:app
 
 env_variables:
   BUCKET_NAME: "$ACTUAL_BUCKET_NAME"
-  GOOGLE_APPLICATION_CREDENTIALS: "/gcp-service-account-key.json"
+  GOOGLE_APPLICATION_CREDENTIALS: "cgp-service-account-key.json"
+
+handlers:
+- url: /.*
+  script: auto
+  secure: always
+
+includes:
+- .env.yaml
+EOL
+
+# Create requirements.txt for App Engine
+cat > ./etl/requirements.txt <<EOL
+Flask==2.0.1
+gunicorn==20.1.0
+google-cloud-storage==2.5.0
+google-cloud-bigquery==2.34.3
+pandas==1.4.2
+python-dotenv==0.19.2
 EOL
 
 # Copy credentials to etl/ if needed
 cp ./***REMOVED*** ./etl/cgp-service-account-key.json
 
-# Deploy lên App Engine
-gcloud app deploy ./etl/app.yaml --quiet
+# Create .env.yaml for App Engine environment variables
+cat > ./etl/.env.yaml <<EOL
+env_variables:
+  GOOGLE_APPLICATION_CREDENTIALS: "cgp-service-account-key.json"
+EOL
+
+# Deploy to App Engine
+cd etl
+gcloud app deploy app.yaml --quiet
+cd ..
 
 # Get URL of App Engine after deployment
 APP_URL=$(gcloud app browse --no-launch-browser)
 print_message $GREEN "✅ App Engine deploy successfully!"
 print_message $GREEN "🌐 API URL: $APP_URL"
-print_message $GREEN "📦 Bucket: $ACTUAL_BUCKET_NAME" 
+print_message $GREEN "📦 Bucket: $ACTUAL_BUCKET_NAME"
+
+# Show logs for debugging
+print_message $YELLOW "📝 Checking App Engine logs..."
+gcloud app logs tail -s default 
