@@ -1,9 +1,13 @@
 #!/bin/bash
 
 PROJECT_ID="unique-axle-457602-n6"
+PROJECT_NUMBER=$(gcloud projects describe ${PROJECT_ID} --format="value(projectNumber)")
 REGION="asia-southeast1"
 ZONE="asia-southeast1-b"
 BUCKET_NAME="bucket-test-${PROJECT_ID}-$(date +%Y%m%d%H%M%S)"
+
+# Define staging bucket name without domain
+STAGING_BUCKET="${PROJECT_ID}-staging-$(date +%Y%m%d)"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -89,21 +93,77 @@ check_error "Failed to start ETL API container"
 print_message $GREEN "✅ Deploy successfully! ETL API is ready at http://localhost:$API_PORT"
 print_message $GREEN "📦 Using bucket: $ACTUAL_BUCKET_NAME"
 
-print_message $YELLOW "🚀 Initialize App Engine for the project (if not already present)..."
-gcloud app create --region=$REGION --quiet || true
-
 print_message $YELLOW "🚀 Deploying ETL API lên Google App Engine..."
+
+# Check if App Engine exists
+APP_EXISTS=$(gcloud app describe 2>/dev/null)
+if [ $? -ne 0 ]; then
+    print_message $YELLOW "🔧 Creating new App Engine application..."
+    gcloud app create --region=$REGION --quiet
+else
+    print_message $GREEN "✅ App Engine already exists, proceeding with deployment..."
+fi
+
+# Ensure required APIs are enabled
+print_message $YELLOW "🔧 Enabling required APIs..."
+gcloud services enable appengine.googleapis.com cloudbuild.googleapis.com storage-api.googleapis.com
+
+# Repair App Engine application
+print_message $YELLOW "🔧 Repairing App Engine application..."
+curl -X POST -H "Authorization: Bearer $(gcloud auth print-access-token)" \
+     -H "Content-Type: application/json" \
+     "https://appengine.googleapis.com/v1/apps/${PROJECT_ID}:repair"
+
+# Wait for repair to complete
+print_message $YELLOW "⏳ Waiting for repair to complete..."
+sleep 10
+
+# Create and configure staging bucket with correct permissions
+print_message $YELLOW "🔧 Creating staging bucket ${STAGING_BUCKET}..."
+
+# Create bucket if not exists
+if ! gsutil ls -b "gs://${STAGING_BUCKET}" > /dev/null 2>&1; then
+    gsutil mb -p ${PROJECT_ID} -l ${REGION} "gs://${STAGING_BUCKET}"
+    
+    # Set public access prevention
+    gsutil pap set enforced "gs://${STAGING_BUCKET}"
+    
+    # Set uniform bucket-level access
+    gsutil uniformbucketlevelaccess set on "gs://${STAGING_BUCKET}"
+fi
+
+# Set correct IAM permissions
+print_message $YELLOW "🔧 Setting bucket permissions..."
+gsutil iam ch serviceAccount:${PROJECT_ID}@appspot.gserviceaccount.com:roles/storage.objectViewer "gs://${STAGING_BUCKET}"
+gsutil iam ch serviceAccount:${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com:roles/storage.objectViewer "gs://${STAGING_BUCKET}"
+gsutil iam ch serviceAccount:${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com:roles/storage.objectCreator "gs://${STAGING_BUCKET}"
+
+# Verify bucket exists and is accessible
+if gsutil ls -b "gs://${STAGING_BUCKET}" > /dev/null 2>&1; then
+    print_message $GREEN "✅ Staging bucket created and configured successfully"
+else
+    print_message $RED "❌ Failed to create or access staging bucket"
+    exit 1
+fi
 
 # Create file app.yaml 
 cat > ./etl/app.yaml <<EOL
 runtime: python39
 instance_class: F1
 
-entrypoint: gunicorn -b :\$PORT etl_api:app
+entrypoint: python -m gunicorn -b :\$PORT etl_api:app --timeout 120
 
 env_variables:
   BUCKET_NAME: "$ACTUAL_BUCKET_NAME"
   GOOGLE_APPLICATION_CREDENTIALS: "cgp-service-account-key.json"
+
+runtime_config:
+  python_version: 3.9
+
+automatic_scaling:
+  target_cpu_utilization: 0.65
+  min_instances: 1
+  max_instances: 10
 
 handlers:
 - url: /.*
@@ -116,12 +176,12 @@ EOL
 
 # Create requirements.txt for App Engine
 cat > ./etl/requirements.txt <<EOL
-Flask==2.0.1
-gunicorn==20.1.0
-google-cloud-storage==2.5.0
-google-cloud-bigquery==2.34.3
-pandas==1.4.2
-python-dotenv==0.19.2
+flask>=2.0.1
+gunicorn>=20.1.0
+google-cloud-storage>=2.5.0
+google-cloud-bigquery>=2.34.3
+pandas>=1.4.2
+python-dotenv>=0.19.2
 EOL
 
 # Copy credentials to etl/ if needed
@@ -135,8 +195,18 @@ EOL
 
 # Deploy to App Engine
 cd etl
-gcloud app deploy app.yaml --quiet
-cd ..
+print_message $YELLOW "🚀 Starting deployment..."
+
+# Set longer timeout for deployment
+gcloud config set app/cloud_build_timeout 1200
+
+# Deploy with staging bucket
+print_message $YELLOW "⏳ Deploying to App Engine (this may take a few minutes)..."
+gcloud app deploy app.yaml --quiet --verbosity=info --bucket="gs://${STAGING_BUCKET}"
+
+# Wait for deployment to complete
+print_message $YELLOW "⏳ Waiting for deployment to complete..."
+sleep 30
 
 # Get URL of App Engine after deployment
 APP_URL=$(gcloud app browse --no-launch-browser)
@@ -146,4 +216,4 @@ print_message $GREEN "📦 Bucket: $ACTUAL_BUCKET_NAME"
 
 # Show logs for debugging
 print_message $YELLOW "📝 Checking App Engine logs..."
-gcloud app logs tail -s default 
+gcloud app logs tail 
