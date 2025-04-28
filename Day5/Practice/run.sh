@@ -87,4 +87,31 @@ docker run -d --name etl-api --rm \
 check_error "Failed to start ETL API container"
 
 print_message $GREEN "✅ Deploy successfully! ETL API is ready at http://localhost:$API_PORT"
-print_message $GREEN "📦 Using bucket: $ACTUAL_BUCKET_NAME" 
+print_message $GREEN "📦 Using bucket: $ACTUAL_BUCKET_NAME"
+
+print_message $YELLOW "🚀 Initialize App Engine for the project (if not already present)..."
+gcloud app create --region=$REGION --quiet || true
+
+print_message $YELLOW "🚀 Deploying ETL API lên Google App Engine..."
+
+# Create file app.yaml 
+cat > ./etl/app.yaml <<EOL
+runtime: python39
+entrypoint: gunicorn -b :\$PORT etl_api:app
+
+env_variables:
+  BUCKET_NAME: "$ACTUAL_BUCKET_NAME"
+  GOOGLE_APPLICATION_CREDENTIALS: "/gcp-service-account-key.json"
+EOL
+
+# Copy credentials to etl/ if needed
+cp ./***REMOVED*** ./etl/cgp-service-account-key.json
+
+# Deploy lên App Engine
+gcloud app deploy ./etl/app.yaml --quiet
+
+# Get URL of App Engine after deployment
+APP_URL=$(gcloud app browse --no-launch-browser)
+print_message $GREEN "✅ App Engine deploy successfully!"
+print_message $GREEN "🌐 API URL: $APP_URL"
+print_message $GREEN "📦 Bucket: $ACTUAL_BUCKET_NAME" 

@@ -1,0 +1,6 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT etl_api:app
+
+env_variables:
+  BUCKET_NAME: "bucket-test-unique-axle-457602-n6-20250428161650"
+  GOOGLE_APPLICATION_CREDENTIALS: "/gcp-service-account-key.json"
