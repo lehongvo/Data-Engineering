@@ -3,14 +3,14 @@ namespace: data-engineer
 description: "Basic ETL workflow with sequential tasks"
 
 tasks:
-  - id: sequential
+  - id: main
     type: io.kestra.plugin.core.flow.Sequential
     tasks:
       - id: extract_data
         type: io.kestra.plugin.scripts.python.Script
         taskRunner:
           type: io.kestra.plugin.scripts.runner.docker.Docker
-          containerImage: python:3.9-alpine
+          image: python:3.9-alpine
         script: |
           print("Extracting data...")
           # Output data to share with other tasks
@@ -20,18 +20,18 @@ tasks:
         type: io.kestra.plugin.scripts.python.Script
         taskRunner:
           type: io.kestra.plugin.scripts.runner.docker.Docker
-          containerImage: python:3.9-alpine
+          image: python:3.9-alpine
         script: |
           print("Transforming data...")
-          print(f"Received data: {outputs.sequential.extract_data.extracted_data}")
+          print("Received data: {{ outputs.tasks.extract_data.extracted_data }}")
           print("::{\"outputs\":{\"transformed_data\":\"processed_data\"}}")
       
       - id: load_data
         type: io.kestra.plugin.scripts.python.Script
         taskRunner:
           type: io.kestra.plugin.scripts.runner.docker.Docker
-          containerImage: python:3.9-alpine
+          image: python:3.9-alpine
         script: |
           print("Loading data...")
-          print(f"Received data: {outputs.sequential.transform_data.transformed_data}")
+          print("Received data: {{ outputs.tasks.transform_data.transformed_data }}")
           print("Data loaded successfully!")
