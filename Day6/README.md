@@ -2,9 +2,9 @@
 
 ## Mục Lục
 1. [Giới Thiệu](#giới-thiệu)
-2. [Workflow Orchestration Fundamentals](#1-workflow-orchestration-fundamentals-2-3-tuần)
-3. [Kestra Platform](#2-kestra-platform-3-4-tuần)
-4. [Thực Hành](#3-thực-hành-4-5-tuần)
+2. [Workflow Orchestration Fundamentals](#1-workflow-orchestration-fundamentals)
+3. [Kestra Platform](#2-kestra-platform)
+4. [Thực Hành](#3-thực-hành)
 5. [Best Practices](#4-best-practices)
 6. [Resources & Community](#5-resources--community)
 
@@ -564,7 +564,7 @@ tasks:
       Authorization: "Bearer {{ secret.API_TOKEN }}"
 ```
 
-## 3. Thực Hành (4-5 tuần)
+## 3. Thực Hành
 
 ### 3.1 Basic Projects
 
