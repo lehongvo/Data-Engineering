@@ -28,42 +28,205 @@ Workflow Orchestration là một phần quan trọng trong Data Engineering, gi�
   - Custom tasks
 
 #### b. Dependencies Management
-- **Task Dependencies**
-  ```
-  Task A → Task B → Task C
-         ↘
-           Task D → Task E
-  ```
-- **Dependency Types**
-  - Direct dependencies
-  - Cross-workflow dependencies
-  - Time-based dependencies
-  - Data dependencies
 
-#### c. DAG (Directed Acyclic Graph)
-- **Cấu trúc DAG**
-  - Nodes (tasks)
-  - Edges (dependencies)
-  - Properties: No cycles allowed
-- **DAG Design Patterns**
-  - Linear workflows
-  - Fan-out/Fan-in patterns
-  - Dynamic DAGs
-
-#### d. Scheduling & Triggers
-- **Time-based Scheduling**
+##### 1. Task Dependencies Cơ Bản
+- **Định nghĩa**: Mối quan hệ phụ thuộc giữa các tasks trong workflow
+- **Cú pháp cơ bản**:
   ```yaml
-  schedule:
-    cron: "0 0 * * *"  # Daily at midnight
-    timezone: "UTC"
+  id: basic-dependencies
+  namespace: example
+  
+  tasks:
+    - id: extract_data
+      type: io.kestra.core.tasks.scripts.Python
+      script: |
+        print("Extracting data...")
+    
+    - id: transform_data
+      dependsOn: 
+        - extract_data    # Transform chỉ chạy sau khi extract hoàn thành
+      type: io.kestra.core.tasks.scripts.Python
+      script: |
+        print("Transforming data...")
+    
+    - id: load_data
+      dependsOn: 
+        - transform_data  # Load chỉ chạy sau khi transform hoàn thành
+      type: io.kestra.core.tasks.scripts.Python
+      script: |
+        print("Loading data...")
   ```
-- **Event-based Triggers**
-  - File arrival
-  - API calls
-  - Database changes
-- **Custom Triggers**
-  - Conditional execution
-  - Complex event processing
+
+##### 2. Các Loại Dependencies
+
+###### a. Direct Dependencies (Phụ thuộc trực tiếp)
+```yaml
+tasks:
+  - id: prepare_data
+    type: io.kestra.core.tasks.scripts.Shell
+    commands:
+      - echo "Preparing data..."
+    
+  - id: process_data
+    dependsOn: 
+      - prepare_data    # Phụ thuộc trực tiếp
+    type: io.kestra.core.tasks.scripts.Shell
+    commands:
+      - echo "Processing data..."
+```
+
+###### b. Cross-workflow Dependencies (Phụ thuộc chéo)
+```yaml
+# Workflow chính
+id: main_workflow
+namespace: production
+
+tasks:
+  - id: trigger_sub_workflow
+    type: io.kestra.core.tasks.flows.Flow
+    namespace: production
+    flowId: sub_workflow    # Gọi workflow khác
+    inputs:
+      date: "{{ outputs.previous_task.date }}"
+
+# Workflow phụ
+id: sub_workflow
+namespace: production
+
+inputs:
+  - name: date
+    type: string
+
+tasks:
+  - id: process_date
+    type: io.kestra.core.tasks.scripts.Shell
+    commands:
+      - echo "Processing date {{ inputs.date }}"
+```
+
+###### c. Time-based Dependencies (Phụ thuộc thời gian)
+```yaml
+triggers:
+  - id: daily_schedule
+    type: schedule
+    cron: "0 0 * * *"    # Chạy hàng ngày lúc 00:00
+    
+  - id: weekly_schedule
+    type: schedule
+    cron: "0 0 * * MON"  # Chạy mỗi thứ 2
+    
+tasks:
+  - id: time_dependent_task
+    type: io.kestra.core.tasks.scripts.Shell
+    commands:
+      - echo "Running at scheduled time"
+```
+
+###### d. Data Dependencies (Phụ thuộc dữ liệu)
+```yaml
+tasks:
+  - id: check_data_exists
+    type: io.kestra.core.tasks.scripts.Shell
+    commands:
+      - test -f "data.csv" || exit 1
+    
+  - id: process_data
+    dependsOn:
+      - check_data_exists
+    type: io.kestra.core.tasks.scripts.Python
+    script: |
+      import pandas as pd
+      df = pd.read_csv("data.csv")
+      # Process data
+```
+
+##### 3. Dependency Patterns
+
+###### a. Sequential Pattern (Tuần tự)
+```yaml
+tasks:
+  - id: task_1
+    type: io.kestra.core.tasks.scripts.Shell
+    
+  - id: task_2
+    dependsOn: [task_1]
+    
+  - id: task_3
+    dependsOn: [task_2]
+```
+
+###### b. Fan-out Pattern (Phân nhánh)
+```yaml
+tasks:
+  - id: source_task
+    type: io.kestra.core.tasks.scripts.Shell
+    
+  - id: branch_1
+    dependsOn: [source_task]
+    
+  - id: branch_2
+    dependsOn: [source_task]
+    
+  - id: branch_3
+    dependsOn: [source_task]
+```
+
+###### c. Fan-in Pattern (Hội tụ)
+```yaml
+tasks:
+  - id: branch_1
+    type: io.kestra.core.tasks.scripts.Shell
+    
+  - id: branch_2
+    type: io.kestra.core.tasks.scripts.Shell
+    
+  - id: final_task
+    dependsOn: 
+      - branch_1
+      - branch_2
+```
+
+##### 4. Error Handling trong Dependencies
+
+###### a. Retry Logic
+```yaml
+tasks:
+  - id: sensitive_task
+    type: io.kestra.core.tasks.scripts.Shell
+    retry:
+      maxAttempts: 3
+      delay: PT1M      # Delay 1 phút giữa các lần retry
+      multiplier: 2    # Tăng delay gấp đôi mỗi lần
+```
+
+###### b. Conditional Dependencies
+```yaml
+tasks:
+  - id: task_with_condition
+    type: io.kestra.core.tasks.scripts.Shell
+    conditions:
+      - type: io.kestra.core.models.conditions.ExecutionStatusCondition
+        in:
+          - SUCCESS
+          - WARNING
+```
+
+##### 5. Best Practices
+
+1. **Tổ chức Dependencies**
+   - Giữ dependencies đơn giản và rõ ràng
+   - Tránh tạo các chu trình phụ thuộc
+   - Sử dụng meaningful task IDs
+
+2. **Error Handling**
+   - Luôn có retry strategy cho critical tasks
+   - Implement proper error notifications
+   - Log đầy đủ thông tin để debug
+
+3. **Testing**
+   - Test dependencies trước khi deploy
+   - Validate workflow structure
+   - Kiểm tra các edge cases
 
 ### 1.2 Advanced Concepts
 
@@ -96,20 +259,241 @@ Workflow Orchestration là một phần quan trọng trong Data Engineering, gi�
 
 #### a. Architecture
 ```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   UI/API    │ ←→ │  Executor   │ ←→ │  Storage    │
-└─────────────┘    └─────────────┘    └─────────────┘
-                         ↑
-                   ┌─────────────┐
-                   │  Workers    │
-                   └─────────────┘
+┌─────────────────────────────────────────────────────────┐
+│                     UI / API Layer                      │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│   ┌─────────────┐        ┌─────────────────────┐       │
+│   │             │        │     Web Interface    │       │
+│   │  REST API   │        │   - Flow Management  │       │
+│   │             │        │   - Monitoring       │       │
+│   └─────────────┘        │   - Analytics       │       │
+│                          └─────────────────────┘       │
+│                                                         │
+├─────────────────────────────────────────────────────────┤
+│                    Executor Layer                       │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│   ┌─────────────┐        ┌─────────────────────┐       │
+│   │  Scheduler  │        │    Task Executor    │       │
+│   │  - Timing   │        │   - Task Running    │       │
+│   │  - Triggers │        │   - Error Handling  │       │
+│   └─────────────┘        └─────────────────────┘       │
+│                                                         │
+├─────────────────────────────────────────────────────────┤
+│                    Storage Layer                        │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│   ┌─────────────┐        ┌─────────────────────┐       │
+│   │  Metadata   │        │       Logs &        │       │
+│   │   Store     │        │     Flow State      │       │
+│   └─────────────┘        └─────────────────────┘       │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
 #### b. Key Components
-- **UI Server**: Web interface for workflow management
-- **API Server**: RESTful API for programmatic access
-- **Executor**: Orchestrates workflow execution
-- **Storage**: Persists workflow state and history
+
+##### 1. Kiến Trúc Tổng Quan
+```
+┌─────────────────────────────────────────────────────────┐
+│                     UI / API Layer                      │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│   ┌─────────────┐        ┌─────────────────────┐       │
+│   │             │        │     Web Interface    │       │
+│   │  REST API   │        │   - Flow Management  │       │
+│   │             │        │   - Monitoring       │       │
+│   └─────────────┘        │   - Analytics       │       │
+│                          └─────────────────────┘       │
+│                                                         │
+├─────────────────────────────────────────────────────────┤
+│                    Executor Layer                       │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│   ┌─────────────┐        ┌─────────────────────┐       │
+│   │  Scheduler  │        │    Task Executor    │       │
+│   │  - Timing   │        │   - Task Running    │       │
+│   │  - Triggers │        │   - Error Handling  │       │
+│   └─────────────┘        └─────────────────────┘       │
+│                                                         │
+├─────────────────────────────────────────────────────────┤
+│                    Storage Layer                        │
+├─────────────────────────────────────────────────────────┤
+│                                                         │
+│   ┌─────────────┐        ┌─────────────────────┐       │
+│   │  Metadata   │        │       Logs &        │       │
+│   │   Store     │        │     Flow State      │       │
+│   └─────────────┘        └─────────────────────┘       │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+```
+
+##### 2. Chi Tiết Các Thành Phần
+
+###### a. UI/API Layer (Tầng Giao Diện)
+1. **Web Interface**
+   - Dashboard quản lý workflows
+   - Monitoring và tracking execution
+   - Flow visualization
+   - Real-time logs
+   ```yaml
+   # Ví dụ cấu hình UI server
+   kestra:
+     server:
+       port: 8080
+       interface: "0.0.0.0"
+   ```
+
+2. **REST API**
+   - API endpoints cho automation
+   - Programmatic access
+   - Webhook integration
+   ```bash
+   # Ví dụ gọi API
+   curl -X POST http://localhost:8080/api/v1/executions \
+     -H "Content-Type: application/json" \
+     -d '{"namespace": "dev", "flowId": "example-flow"}'
+   ```
+
+###### b. Executor Layer (Tầng Thực Thi)
+1. **Scheduler**
+   - Quản lý timing của workflows
+   - Xử lý triggers
+   - Queue management
+   ```yaml
+   # Ví dụ cấu hình scheduler
+   triggers:
+     - id: schedule
+       type: schedule
+       cron: "0 * * * *"  # Chạy mỗi giờ
+   ```
+
+2. **Task Executor**
+   - Thực thi các tasks
+   - Resource management
+   - Error handling
+   ```yaml
+   # Ví dụ task execution
+   tasks:
+     - id: complex_task
+       type: io.kestra.core.tasks.scripts.Python
+       concurrent: 5  # Số lượng task có thể chạy đồng thời
+       retry:
+         maxAttempts: 3
+   ```
+
+###### c. Storage Layer (Tầng Lưu Trữ)
+1. **Metadata Store**
+   - Lưu trữ flow definitions
+   - Task configurations
+   - Execution history
+   ```yaml
+   # Ví dụ cấu hình storage
+   kestra:
+     repository:
+       type: postgres
+       postgres:
+         url: jdbc:postgresql://localhost:5432/kestra
+         username: kestra
+         password: secret
+   ```
+
+2. **Logs & Flow State**
+   - Execution logs
+   - Task states
+   - Performance metrics
+   ```yaml
+   # Ví dụ cấu hình logging
+   kestra:
+     logging:
+       level: INFO
+       path: /var/log/kestra
+       retention: 30d
+   ```
+
+##### 3. Tương Tác Giữa Các Components
+
+1. **Flow Execution Process**
+```mermaid
+sequenceDiagram
+    participant UI as UI/API
+    participant Executor as Task Executor
+    participant Storage as Storage Layer
+    
+    UI->>Executor: Trigger Flow
+    Executor->>Storage: Get Flow Definition
+    Storage-->>Executor: Return Definition
+    Executor->>Executor: Execute Tasks
+    Executor->>Storage: Update State
+    Executor->>UI: Return Results
+```
+
+2. **Data Flow**
+```
+UI/API → Executor → Storage
+  ↑         ↓         ↑
+  └─────────┴─────────┘
+     State Updates
+```
+
+##### 4. Configuration Examples
+
+###### a. Basic Setup
+```yaml
+kestra:
+  repository:
+    type: postgres
+  queue:
+    type: kafka
+  storage:
+    type: local
+    local:
+      basePath: "/tmp/kestra"
+```
+
+###### b. Advanced Configuration
+```yaml
+kestra:
+  server:
+    port: 8080
+    interface: "0.0.0.0"
+  repository:
+    type: postgres
+    postgres:
+      url: jdbc:postgresql://localhost:5432/kestra
+      username: kestra
+      password: ${KESTRA_DB_PASSWORD}
+  queue:
+    type: kafka
+    kafka:
+      client:
+        bootstrap.servers: localhost:9092
+  storage:
+    type: minio
+    minio:
+      endpoint: http://minio:9000
+      access-key: minioadmin
+      secret-key: ${MINIO_SECRET_KEY}
+      bucket: kestra
+```
+
+##### 5. Best Practices
+
+1. **Scaling Components**
+   - Horizontal scaling cho executors
+   - Load balancing cho UI/API
+   - Distributed storage cho high availability
+
+2. **Security**
+   - Authentication cho UI/API
+   - Encryption cho sensitive data
+   - Role-based access control
+
+3. **Monitoring**
+   - Health checks cho mỗi component
+   - Metrics collection
+   - Alert configuration
 
 ### 2.2 Core Features
 
