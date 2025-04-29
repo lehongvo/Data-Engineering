@@ -263,31 +263,31 @@ tasks:
 │                     UI / API Layer                      │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│   ┌─────────────┐        ┌─────────────────────┐       │
-│   │             │        │     Web Interface    │       │
-│   │  REST API   │        │   - Flow Management  │       │
-│   │             │        │   - Monitoring       │       │
-│   └─────────────┘        │   - Analytics       │       │
-│                          └─────────────────────┘       │
+│   ┌─────────────┐        ┌─────────────────────┐        │
+│   │             │        │     Web Interface   │        │
+│   │  REST API   │        │   - Flow Management │        │
+│   │             │        │   - Monitoring      │        │
+│   └─────────────┘        │   - Analytics       │        │
+│                          └─────────────────────┘        │
 │                                                         │
 ├─────────────────────────────────────────────────────────┤
 │                    Executor Layer                       │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│   ┌─────────────┐        ┌─────────────────────┐       │
-│   │  Scheduler  │        │    Task Executor    │       │
-│   │  - Timing   │        │   - Task Running    │       │
-│   │  - Triggers │        │   - Error Handling  │       │
-│   └─────────────┘        └─────────────────────┘       │
+│   ┌─────────────┐        ┌─────────────────────┐        │
+│   │  Scheduler  │        │    Task Executor    │        │
+│   │  - Timing   │        │   - Task Running    │        │
+│   │  - Triggers │        │   - Error Handling  │        │
+│   └─────────────┘        └─────────────────────┘        │
 │                                                         │
 ├─────────────────────────────────────────────────────────┤
 │                    Storage Layer                        │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│   ┌─────────────┐        ┌─────────────────────┐       │
-│   │  Metadata   │        │       Logs &        │       │
-│   │   Store     │        │     Flow State      │       │
-│   └─────────────┘        └─────────────────────┘       │
+│   ┌─────────────┐        ┌─────────────────────┐        │
+│   │  Metadata   │        │       Logs &        │        │
+│   │   Store     │        │     Flow State      │        │
+│   └─────────────┘        └─────────────────────┘        │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -300,31 +300,31 @@ tasks:
 │                     UI / API Layer                      │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│   ┌─────────────┐        ┌─────────────────────┐       │
+│   ┌─────────────┐        ┌─────────────────────┐        │
 │   │             │        │     Web Interface    │       │
 │   │  REST API   │        │   - Flow Management  │       │
 │   │             │        │   - Monitoring       │       │
-│   └─────────────┘        │   - Analytics       │       │
-│                          └─────────────────────┘       │
+│   └─────────────┘        │   - Analytics       │        │
+│                          └─────────────────────┘        │
 │                                                         │
 ├─────────────────────────────────────────────────────────┤
 │                    Executor Layer                       │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│   ┌─────────────┐        ┌─────────────────────┐       │
-│   │  Scheduler  │        │    Task Executor    │       │
-│   │  - Timing   │        │   - Task Running    │       │
-│   │  - Triggers │        │   - Error Handling  │       │
-│   └─────────────┘        └─────────────────────┘       │
+│   ┌─────────────┐        ┌─────────────────────┐        │
+│   │  Scheduler  │        │    Task Executor    │        │
+│   │  - Timing   │        │   - Task Running    │        │
+│   │  - Triggers │        │   - Error Handling  │        │
+│   └─────────────┘        └─────────────────────┘        │
 │                                                         │
 ├─────────────────────────────────────────────────────────┤
 │                    Storage Layer                        │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│   ┌─────────────┐        ┌─────────────────────┐       │
-│   │  Metadata   │        │       Logs &        │       │
-│   │   Store     │        │     Flow State      │       │
-│   └─────────────┘        └─────────────────────┘       │
+│   ┌─────────────┐        ┌─────────────────────┐        │
+│   │  Metadata   │        │       Logs &        │        │
+│   │   Store     │        │     Flow State      │        │
+│   └─────────────┘        └─────────────────────┘        │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -428,6 +428,8 @@ sequenceDiagram
     Executor->>Storage: Update State
     Executor->>UI: Return Results
 ```
+#### ![Image](https://chat.google.com/u/0/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fpng&attachment_token=AOo0EEXquyS8qjS2C%2Fgyp0aE%2BEq44Ndz23EaOcN7OVH5IwMmh0g8rOdOXsdF8OQC21uA9RCrF64MlqC6hmwZogWm06XRoG%2BG0P2Q1fc3Nkdqoz3swaLSh2FFYoLg6AKp3zzTzqqqDGlRyuJ4lx5Lw2hu0eaWBWu5kaeMZNjC1ODBNFaecFCQ3O90Sjl%2Bj7fV1r2WNh022veRiItwvCyDvOYg7hsqoZWEsRro6yK40COWzFOtUD8LjA1uleSlD4Bw4ExHHPkJ7G77WF2WGvNpij0NznCVvauGLOR9BPvuABvjv%2F2TYyMB%2FIBC%2B83MB%2BFwZ4JODf1xTz4qZp2O%2BUjDm%2BmK5XXJc%2BCgAspd0PD48mdTn82BUVF4SsJY1L%2BjlYGpo09gIjNy7wTQG7DGMco3lVchJ060d6W3ARflkqCAV2FjpoMAzR%2F64415Ia1dPhCN3%2F%2BGZwekxOCxlgsu1Q44Qmqllre5xtuAd7yHqqC0fmIL71sNvLYLqHNl%2BCnwJViKtUV1VjhwzEiCln3d%2BQzDJcuxZv0XWeqxDB7ZVV4%2Fp6wfiDTfVVMoUl5dyZv9EI5hlkc%2F&allow_caching=true&sz=w512)
+
 
 2. **Data Flow**
 ```
