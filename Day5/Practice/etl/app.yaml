@@ -4,7 +4,7 @@ instance_class: F1
 entrypoint: python -m gunicorn -b :$PORT etl_api:app --timeout 120
 
 env_variables:
-  BUCKET_NAME: "bucket-test-unique-axle-457602-n6-20250428164559"
+  BUCKET_NAME: "bucket-test-unique-axle-457602-n6-20250429090602"
   GOOGLE_APPLICATION_CREDENTIALS: "cgp-service-account-key.json"
 
 runtime_config:

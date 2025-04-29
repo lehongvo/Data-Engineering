@@ -214,16 +214,31 @@ print_message $GREEN "✅ App Engine deploy successfully!"
 print_message $GREEN "🌐 API URL: $APP_URL"
 print_message $GREEN "📦 Bucket: $ACTUAL_BUCKET_NAME"
 
-# Get instance information and SSH details
+# Get instance and version information
 print_message $YELLOW "🔑 Getting SSH connection details..."
-INSTANCE_INFO=$(gcloud app instances list --service=default --format="table(id,service,version)")
-print_message $GREEN "📊 App Engine Instances:"
+
+# Get version information
+VERSION_INFO=$(gcloud app versions list --service=default --format="table(id,service,traffic_split,last_deployed.datetime)" --sort-by=~last_deployed)
+print_message $GREEN "📊 App Engine Versions:"
+echo "$VERSION_INFO"
+
+# Get latest version ID
+LATEST_VERSION=$(gcloud app versions list --service=default --format="value(id)" --sort-by=~last_deployed | head -1)
+
+# Get instances for latest version
+INSTANCE_INFO=$(gcloud app instances list --service=default --version=$LATEST_VERSION)
+print_message $GREEN "📊 App Engine Instances for version $LATEST_VERSION:"
 echo "$INSTANCE_INFO"
 
 print_message $YELLOW "📌 To SSH into an instance, use:"
-print_message $GREEN "gcloud app instances ssh [INSTANCE_ID] --service=default"
-print_message $YELLOW "Example:"
-print_message $NC "gcloud app instances ssh \$(gcloud app instances list --service=default --format='value(id)' | head -1) --service=default"
+print_message $GREEN "gcloud app instances ssh [INSTANCE_ID] --service=default --version=$LATEST_VERSION"
+
+# Get first instance ID
+FIRST_INSTANCE=$(gcloud app instances list --service=default --version=$LATEST_VERSION --format="value(id)" | head -1)
+if [ ! -z "$FIRST_INSTANCE" ]; then
+    print_message $YELLOW "Example command to connect to first instance:"
+    print_message $NC "gcloud app instances ssh $FIRST_INSTANCE --service=default --version=$LATEST_VERSION"
+fi
 
 # Show logs for debugging
 print_message $YELLOW "📝 Checking App Engine logs..."
