@@ -16,7 +16,7 @@ services:
   kestra:
     image: kestra/kestra:latest
     command: server standalone --config /etc/config/application.yml
-    user: root # Thêm quyền root cho container
+    user: root
     depends_on:
       postgres:
         condition: service_healthy

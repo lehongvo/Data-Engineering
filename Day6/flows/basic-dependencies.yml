@@ -22,8 +22,10 @@ tasks:
           type: io.kestra.plugin.scripts.runner.docker.Docker
           image: python:3.9-alpine
         script: |
+          import os
           print("Transforming data...")
-          print("Received data: {{ outputs.tasks.extract_data.extracted_data }}")
+          extracted_data = os.environ.get("KESTRA_OUTPUTS_EXTRACT_DATA_EXTRACTED_DATA")
+          print(f"Received data: {extracted_data}")
           print("::{\"outputs\":{\"transformed_data\":\"processed_data\"}}")
       
       - id: load_data
@@ -32,6 +34,8 @@ tasks:
           type: io.kestra.plugin.scripts.runner.docker.Docker
           image: python:3.9-alpine
         script: |
+          import os
           print("Loading data...")
-          print("Received data: {{ outputs.tasks.transform_data.transformed_data }}")
+          transformed_data = os.environ.get("KESTRA_OUTPUTS_TRANSFORM_DATA_TRANSFORMED_DATA")
+          print(f"Received data: {transformed_data}")
           print("Data loaded successfully!")
