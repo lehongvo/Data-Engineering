@@ -1,0 +1,42 @@
+id: scheduled_workflow
+namespace: data-engineer
+description: "Workflow with time-based triggers for data processing"
+
+triggers:
+  - id: every_morning
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "0 8 * * *"    # Run every morning at 8:00 AM
+    
+  - id: weekly_backup
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "0 0 * * SUN"  # Run every Sunday at 00:00
+    
+  - id: every_five_seconds
+    type: io.kestra.plugin.core.trigger.Schedule
+    cron: "*/5 * * * * *"    # Run every 5 seconds
+    backfill:
+      start: "2024-04-29T00:00:00Z"    # Start time
+    disabled: false    # Allow trigger to run
+
+tasks:
+  - id: main
+    type: io.kestra.plugin.core.flow.Sequential
+    tasks:
+      - id: log_trigger_info
+        type: io.kestra.plugin.core.log.Log
+        message: "Trigger executed at: {{trigger.date}}, Trigger ID: {{trigger.id}}"
+
+      - id: check_memory
+        type: io.kestra.plugin.scripts.shell.Commands
+        taskRunner:
+          type: io.kestra.plugin.scripts.runner.docker.Docker
+          image: ubuntu:latest
+        commands:
+          - "echo === System Status Check ==="
+          - "echo Time: $(date)"
+          - "echo Memory Usage: $(free -h)"
+          - "echo ==========================="
+
+      - id: notify_status
+        type: io.kestra.plugin.core.log.Log
+        message: "Check completed at {{taskrun.startDate}}" 
