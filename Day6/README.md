@@ -657,6 +657,67 @@ tasks:
    - Production deployment
    - Performance optimization
 
+## How to Run
+
+### Environment Setup
+1. **Start Kestra and dependencies**:
+   ```bash
+   chmod +x run.sh && ./run.sh
+   ```
+   This script will:
+   - Stop and remove existing Docker containers
+   - Start new Kestra container
+   - Upload all workflow files from the flows directory
+
+2. **Access Kestra UI**:
+   - Open your browser and go to: http://localhost:8080/ui
+   - Browse workflows, executions, and monitor tasks
+
+### Running Workflows
+
+1. **Using the UI**:
+   - Navigate to Flows section
+   - Find your workflow and click "Execute"
+   - Fill in any required inputs
+   - Monitor execution in real-time
+
+2. **Using the API**:
+   ```bash
+   # Run a workflow with default parameters
+   curl -X POST "http://localhost:8080/api/v1/executions/{namespace}/{flow_id}"
+   
+   # Run a workflow with custom parameters
+   curl -X POST "http://localhost:8080/api/v1/executions/{namespace}/{flow_id}" \
+     -H "Content-Type: application/json" \
+     -d '{"inputs": {"parameter1": "value1", "parameter2": "value2"}}'
+   
+   # Example: Run the simple-test flow in data-engineer namespace
+   curl -X POST "http://localhost:8080/api/v1/executions/data-engineer/simple-test"
+   curl -X POET "http://localhost:8080/api/v1/executions/data-engineer/basic-dependencies"
+   ```
+
+3. **Check execution status**:
+   ```bash
+   curl -s "http://localhost:8080/api/v1/executions/{namespace}/{flow_id}/{execution_id}" | jq
+   ```
+
+### Troubleshooting
+
+1. **View container logs**:
+   ```bash
+   docker-compose logs -f kestra
+   ```
+
+2. **API health check**:
+   ```bash
+   curl -s http://localhost:8080/api/health
+   ```
+
+3. **Common issues**:
+   - Flow validation errors: Check YAML syntax and task types
+   - Container access issues: Ensure ports are correctly mapped
+   - Storage errors: Verify volume mounts and permissions
+
 ## Tips for Success
 1. Start with simple workflows
 2. Practice regularly
@@ -668,4 +729,6 @@ tasks:
 
 Remember: Workflow orchestration is about bringing order to chaos. Take time to understand the fundamentals before diving into complex features.
 
-Happy Orchestrating! 🚀 
+Happy Orchestrating! 🚀
+
+
