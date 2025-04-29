@@ -1,0 +1,8 @@
+id: simple-test
+namespace: data-engineer
+description: "Simple test flow để kiểm tra namespace"
+
+tasks:
+  - id: simple_log
+    type: io.kestra.plugin.core.log.Log
+    message: "Hello test from Data-engineer namespace!"

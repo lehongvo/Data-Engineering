@@ -1,0 +1,9 @@
+id: simple-hello
+namespace: data-engineer
+description: "Workflow base witjh a simple hello world task"
+
+tasks:
+  - id: hello
+    type: io.kestra.core.tasks.scripts.Bash
+    commands:
+      - echo "Hello from Data-engineer namespace!"
