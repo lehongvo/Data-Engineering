@@ -5,6 +5,8 @@ services:
       POSTGRES_USER: kestra
       POSTGRES_PASSWORD: k3str4
       POSTGRES_DB: kestra
+    ports:
+      - "5432:5432" # Expose PostgreSQL port to host machine
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
