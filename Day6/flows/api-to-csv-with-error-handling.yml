@@ -16,7 +16,7 @@ errors:
 inputs:
   - id: api_url
     type: STRING
-    defaults: https://jsonplaceholder.typicode.com/posts
+    defaults: https://tama.meme/api/tokenList?sortDirection=desc&sortBy=createdAt&page=1&limit=100&isMigratedToDex=false
     required: true
   - id: retry_count
     type: INT
