@@ -319,31 +319,28 @@ tasks:
       - mkdir -p /data/output
       - chmod -R 777 /data
     runIf: "{{ execution.state == 'RUNNING' or execution.state == 'SUCCESS' }}"
-    inputFiles:
-      csv_status.txt: "{{ outputs.fetch_api_data.status }}"
-      csv_file_path.txt: "{{ outputs.fetch_api_data.csv_file }}"
     script: |
       import pandas as pd
       import os
       import json
       import sys
+      import glob
       
       try:
-          # Read inputs from files instead of direct template variables
-          with open('/tmp/kestra/csv_status.txt', 'r') as f:
-              previous_status = f.read().strip()
+          # Find the most recent CSV file in the output directory
+          output_dir = "/data/output"
+          csv_files = glob.glob(f"{output_dir}/api_data_*.csv")
           
-          with open('/tmp/kestra/csv_file_path.txt', 'r') as f:
-              csv_file = f.read().strip()
-          
-          print(f"Previous task status: {previous_status}")
-          print(f"CSV file path: {csv_file}")
-          
-          # Check if previous task was successful
-          if previous_status != "success":
-              print(f"Previous task fetch_api_data did not succeed (status: {previous_status})")
+          if not csv_files:
+              print("No CSV files found in output directory - previous task may have failed")
               print(f"::output::status=skipped")
-              sys.exit(0)  # Exit without error but don't continue
+              sys.exit(0)
+          
+          # Sort by creation time (newest first)
+          csv_files.sort(key=lambda x: os.path.getctime(x), reverse=True)
+          csv_file = csv_files[0]
+          
+          print(f"Found most recent CSV file: {csv_file}")
           
           # Ensure the file exists
           if not os.path.exists(csv_file):
@@ -384,21 +381,23 @@ tasks:
           status = "valid" if validation_passed else "invalid"
           
           print(f"Validation results: {all_validations}")
+          print(f"Row count: {validations['row_count']}")
           
           # Save validation results to file for reference
-          validation_file = os.path.join("/data/output", "validation_results.json")
+          validation_file = os.path.join(output_dir, "validation_results.json")
           with open(validation_file, 'w') as f:
               json.dump({
                   "status": status,
                   "validations": all_validations,
-                  "filename": csv_file
+                  "filename": csv_file,
+                  "row_count": validations["row_count"]
               }, f, indent=2)
           
           # Output in Kestra's format
           print(f"::file::{validation_file}")
-          print(f"::output::validation_results={str(all_validations)}")
           print(f"::output::validation_file={validation_file}")
           print(f"::output::status={status}")
+          print(f"::output::row_count={validations['row_count']}")
           
           if status == "invalid":
               raise ValueError("Data validation failed - see validation_results for details")
@@ -411,10 +410,10 @@ tasks:
 
   - id: notify_completion
     type: io.kestra.plugin.core.log.Log
-    message: "Workflow completed successfully. Records: {{ outputs.validate_output.validation_results['row_count'] }} rows, Validation: {{ outputs.validate_output.status }}"
+    message: "Workflow completed successfully."
     runIf: "{{ execution.state == 'RUNNING' or execution.state == 'SUCCESS' }}"
 
   - id: handle_invalid_data
     type: io.kestra.plugin.core.log.Log
-    message: "Data validation failed! Please check the validation results: {{ outputs.validate_output.validation_results }}"
-    runIf: "{{ execution.state == 'RUNNING' and outputs.validate_output.status == 'invalid' }}"
+    message: "Data validation failed! Please check validation results."
+    runIf: "{{ execution.state == 'RUNNING' }}"
