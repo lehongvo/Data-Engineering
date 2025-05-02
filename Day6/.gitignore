@@ -1,6 +1,6 @@
 # Ignore Google Cloud credential files
 **/config/*-service-account-key.json
-**/***REMOVED***
+**/config/cgp-service-account-key.json
 **/config/gcp-service-account-key.json
 **/config/*.json
 

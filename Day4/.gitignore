@@ -1,6 +1,6 @@
-# Please add ***REMOVED*** to .gitignore
-***REMOVED***
-***REMOVED***
+# Please add config/cgp-service-account-key.json to .gitignore
+config/cgp-service-account-key.json
+config/cgp-service-account-key.json
 
 # Google Cloud credentials
 *.json

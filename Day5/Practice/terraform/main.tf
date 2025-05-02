@@ -1,5 +1,5 @@
 provider "google" {
-  credentials = file("../***REMOVED***")
+  credentials = file("../config/cgp-service-account-key.json")
   project     = var.project
   region      = var.region
 }

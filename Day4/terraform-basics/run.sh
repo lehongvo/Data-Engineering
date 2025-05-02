@@ -143,7 +143,7 @@ delete_infrastructure() {
     print_message $YELLOW "🗑️ Deleting all infrastructure..."
     
     # Set credentials
-    export GOOGLE_APPLICATION_CREDENTIALS="/Users/user/Desktop/Data-Engineering/Day4/***REMOVED***"
+    export GOOGLE_APPLICATION_CREDENTIALS="/Users/user/Desktop/Data-Engineering/Day4/config/cgp-service-account-key.json"
     check_error "Failed to set credentials"
 
     # First delete VM instance specifically

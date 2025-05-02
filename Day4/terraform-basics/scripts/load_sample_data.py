@@ -13,7 +13,7 @@ TABLE_ID = "raw_sales_data"
 
 # Set Google Cloud credentials
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = (
-    "../../***REMOVED***"
+    "../../config/cgp-service-account-key.json"
 )
 
 

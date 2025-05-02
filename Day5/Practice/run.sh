@@ -84,7 +84,7 @@ check_error "Failed to start Postgres container"
 print_message $YELLOW "🚀 Starting ETL API container (Flask) on port $API_PORT..."
 docker run -d --name etl-api --rm \
   -p $API_PORT:5000 \
-  -v $(pwd)/***REMOVED***:/gcp-service-account-key.json \
+  -v $(pwd)/config/cgp-service-account-key.json:/gcp-service-account-key.json \
   -e GOOGLE_APPLICATION_CREDENTIALS=/gcp-service-account-key.json \
   -e BUCKET_NAME=$ACTUAL_BUCKET_NAME \
   etl-api
@@ -185,7 +185,7 @@ python-dotenv>=0.19.2
 EOL
 
 # Copy credentials to etl/ if needed
-cp ./***REMOVED*** ./etl/cgp-service-account-key.json
+cp ./config/cgp-service-account-key.json ./etl/cgp-service-account-key.json
 
 # Create .env.yaml for App Engine environment variables
 cat > ./etl/.env.yaml <<EOL
