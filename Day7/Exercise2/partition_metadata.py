@@ -41,7 +41,7 @@ def get_table_partitions(table_id):
     return client.query(query).to_dataframe()
 
 
-def vanalyze_date_partitioned_table():
+def analyze_date_partitioned_table():
     """
     Analyze the partitions of the date-partitioned sales table.
     """
@@ -126,11 +126,16 @@ def analyze_query_performance():
     print(f"  - Duration: {duration2:.2f} seconds")
     print(f"  - Bytes processed: {bytes_processed2 / (1024**3):.2f} GB")
 
-    print(f"\nImprovement with partition filter:")
-    print(f"  - Time reduction: {(duration2 - duration1) / duration2 * 100:.2f}%")
-    print(
-        f"  - Bytes reduction: {(bytes_processed2 - bytes_processed1) / bytes_processed2 * 100:.2f}%"
-    )
+    if bytes_processed2 == 0:
+        print(
+            "\nKhông có dữ liệu để so sánh hiệu năng truy vấn (bytes_processed2 = 0). Kiểm tra lại dữ liệu trong bảng hoặc khoảng ngày truy vấn."
+        )
+    else:
+        print(f"\nImprovement with partition filter:")
+        print(f"  - Time reduction: {(duration2 - duration1) / duration2 * 100:.2f}%")
+        print(
+            f"  - Bytes reduction: {(bytes_processed2 - bytes_processed1) / bytes_processed2 * 100:.2f}%"
+        )
 
     # Create comparison chart
     categories = ["With Partition Filter", "Without Partition Filter"]
@@ -246,9 +251,9 @@ def main():
     print("To use with real data, make sure to update the PROJECT_ID variable.")
 
     # When you have actual data, uncomment these lines:
-    # analyze_date_partitioned_table()
-    # analyze_query_performance()
-    # analyze_time_partitioning_impact()
+    analyze_date_partitioned_table()
+    analyze_query_performance()
+    analyze_time_partitioning_impact()
 
     print(
         "\nIn a real environment, this script would generate visualizations in the data/ directory."

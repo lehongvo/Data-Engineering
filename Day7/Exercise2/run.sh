@@ -38,7 +38,7 @@ mkdir -p data
 echo "Installing required Python packages..."
 
 # Install packages in virtual environment
-pip install google-cloud-bigquery pandas matplotlib
+pip install google-cloud-bigquery pandas matplotlib faker db-dtypes
 
 # Verify that the packages were installed successfully
 echo "Verifying package installation..."
