@@ -1,0 +1,42 @@
+steps:
+  # Bước 1: Cài đặt Python dependencies
+  - name: 'python:3.9'
+    id: 'install-dependencies'
+    entrypoint: 'pip'
+    args: ['install', '-r', 'requirements.txt']
+    
+  # Bước 2: Cấu hình Google Cloud
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    id: 'configure-gcloud'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - |
+        gcloud config set project $PROJECT_ID
+        
+  # Bước 3: Tạo thư mục config nếu chưa tồn tại
+  - name: 'ubuntu'
+    id: 'create-config-directory'
+    args: ['mkdir', '-p', 'config']
+    
+  # Bước 4: Build Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'build-docker-image'
+    args: [
+      'build', 
+      '--platform', 'linux/amd64',
+      '-t', 'gcr.io/$PROJECT_ID/bigquery-api:latest', 
+      '.'
+    ]
+    
+  # Bước 5: Push Docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    id: 'push-docker-image'
+    args: ['push', 'gcr.io/$PROJECT_ID/bigquery-api:latest']
+
+# Thời gian chờ tối đa cho build
+timeout: '1200s'
+
+# Docker images cần build và push
+images:
+  - 'gcr.io/$PROJECT_ID/bigquery-api:latest'
