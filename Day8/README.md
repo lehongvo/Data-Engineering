@@ -42,16 +42,30 @@
 - Làm sao để xem schema của một DataFrame?
 
 **Đáp án gợi ý:**
-- DataFrame trong Spark là tập hợp dữ liệu có cấu trúc (giống bảng SQL), phân tán trên nhiều node, hỗ trợ thao tác song song, còn Pandas DataFrame chỉ chạy trên 1 máy.
-- Đọc file CSV:
-  ```python
-  df = spark.read.csv("duongdan/file.csv", header=True, inferSchema=True)
-  ```
-- Xem schema:
-  ```python
-  df.printSchema()
-  df.show(5)  # Xem 5 dòng đầu
-  ```
+- DataFrame trong Spark là tập hợp dữ liệu có cấu trúc (giống bảng SQL), được phân tán trên nhiều node trong cluster, hỗ trợ xử lý song song trên dữ liệu lớn. Pandas DataFrame chỉ chạy trên 1 máy, không tối ưu cho dữ liệu lớn.
+- Spark DataFrame có thể xử lý dữ liệu lớn hơn bộ nhớ máy tính nhờ phân tán, còn Pandas bị giới hạn bởi RAM của máy.
+- Spark DataFrame hỗ trợ lazy evaluation (chỉ thực thi khi cần lấy kết quả), Pandas thì thực thi ngay.
+
+- Làm thế nào để đọc file CSV thành DataFrame trong Spark?
+  
+  **Đáp án:**
+  - Sử dụng hàm `spark.read.csv()`:
+    ```python
+    df = spark.read.csv("duongdan/file.csv", header=True, inferSchema=True)
+    ```
+  - Tham số `header=True` để lấy dòng đầu làm tên cột, `inferSchema=True` để tự động nhận diện kiểu dữ liệu.
+
+- Làm sao để xem schema của một DataFrame?
+  
+  **Đáp án:**
+  - Dùng lệnh:
+    ```python
+    df.printSchema()
+    ```
+  - Để xem trước một vài dòng dữ liệu:
+    ```python
+    df.show(5)  # Xem 5 dòng đầu
+    ```
 
 ## 4. Các thao tác cơ bản với DataFrame
 - **Filtering**: Lọc dữ liệu với `.filter()` hoặc `.where()`.
@@ -160,6 +174,38 @@
 - [Official PySpark Documentation](https://spark.apache.org/docs/latest/api/python/)
 - [Databricks Spark Guide](https://docs.databricks.com/getting-started/index.html)
 - [Spark SQL, DataFrames and Datasets Guide](https://spark.apache.org/docs/latest/sql-programming-guide.html)
+
+## 10. Bài tập thực hành
+
+1. **Đọc dữ liệu CSV**
+   - Đọc file CSV chứa thông tin nhân viên (ví dụ: id, name, age, department, salary) thành DataFrame.
+
+2. **Xem thông tin dữ liệu**
+   - In schema và hiển thị 5 dòng đầu tiên của DataFrame.
+
+3. **Lọc dữ liệu**
+   - Lọc ra các nhân viên có tuổi lớn hơn 30.
+
+4. **Chọn cột**
+   - Chỉ lấy các cột: name, age, department.
+
+5. **Thêm cột mới**
+   - Thêm cột mới 'age_plus_5' = age + 5.
+
+6. **Tổng hợp dữ liệu**
+   - Tính số lượng nhân viên và lương trung bình theo từng phòng ban.
+
+7. **Join DataFrame**
+   - Đọc thêm file CSV về phòng ban (department_id, department_name). Join với DataFrame nhân viên để lấy tên phòng ban.
+
+8. **Đổi tên và xoá cột**
+   - Đổi tên cột 'name' thành 'employee_name', xoá cột 'age_plus_5'.
+
+9. **SparkSQL**
+   - Đăng ký DataFrame thành bảng tạm và viết truy vấn SQL để lấy ra 3 phòng ban có lương trung bình cao nhất.
+
+10. **Bài tập tổng hợp**
+    - Thực hiện toàn bộ các thao tác trên với một bộ dữ liệu mới (tự tạo hoặc lấy từ Kaggle), ghi chú lại các lỗi gặp phải và cách khắc phục.
 
 ---
 

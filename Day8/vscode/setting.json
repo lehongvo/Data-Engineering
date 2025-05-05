@@ -1,0 +1,573 @@
+{
+    // "tabnine.experimentalAutoImports": true,
+    "workbench.colorCustomizations": {
+      "terminal.background": "#0f111a",
+      "terminal.foreground": "#c3e88d",
+      "terminalCursor.background": "#00ffc8",
+      "terminalCursor.foreground": "#00ffc8",
+      "terminal.ansiBlack": "#15161e",
+      "terminal.ansiBlue": "#82aaff",
+      "terminal.ansiBrightBlack": "#464b5d",
+      "terminal.ansiBrightBlue": "#36f9f6",
+      "terminal.ansiBrightCyan": "#7dcfff",
+      "terminal.ansiBrightGreen": "#00ffc8",
+      "terminal.ansiBrightMagenta": "#da70d6",
+      "terminal.ansiBrightRed": "#ff5370",
+      "terminal.ansiBrightWhite": "#ffffff",
+      "terminal.ansiBrightYellow": "#ffcb6b",
+      "terminal.ansiCyan": "#89ddff",
+      "terminal.ansiGreen": "#7af8ca",
+      "terminal.ansiMagenta": "#c099ff",
+      "terminal.ansiRed": "#ff757f",
+      "terminal.ansiWhite": "#eeffff",
+      "terminal.ansiYellow": "#ffd700",
+      "terminal.selectionBackground": "#1f2335"
+    },
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    // "[json]": {
+    //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // },
+    // "[html]": {
+    //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // },
+    // "solidity.telemetry": true,
+    // "[typescript]": {
+    //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // },
+    // "[javascript]": {
+    //   "editor.defaultFormatter": "vscode.typescript-language-features"
+    // },
+    // "workbench.iconTheme": "material-icon-theme",
+    // "diffEditor.ignoreTrimWhitespace": false,
+    // "[typescriptreact]": {
+    //   "editor.defaultFormatter": "vscode.typescript-language-features"
+    // },
+    // "window.commandCenter": true,
+    // "editor.inlineSuggest.enabled": true,
+    // "[markdown]": {
+    //   "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+    // },
+    "cSpell.userWords": ["gerden"],
+    "chatgpt.lang": "en",
+    "editor.stickyScroll.maxLineCount": 10,
+    "editor.stickyTabStops": true,
+    "editor.stickyScroll.enabled": true,
+    "window.customTitleBarVisibility": "windowed",
+    "extensions.ignoreRecommendations": true,
+    "rust-analyzer.completion.snippets.custom": {
+      "Get Account Info": {
+        "prefix": [
+          "__GetAccountInfo"
+        ],
+        "body": [
+          "let ${1:pda} = &mut ctx.accounts.${1:pda};"
+        ],
+        "requires": [],
+        "description": "Get Account Info",
+        "scope": "expr"
+      },
+      "Get Bump": {
+        "prefix": [
+          "__GetBump"
+        ],
+        "body": [
+          "${1:pda}.bump = *ctx.bumps.get(\"${1:pda}\").unwrap();"
+        ],
+        "requires": [],
+        "description": "Get Bump",
+        "scope": "expr"
+      },
+      "Burn Tokens": {
+        "prefix": [
+          "__BurnTokens"
+        ],
+        "body": [
+          "invoke(",
+          "    &burn(",
+          "        &spl_token::ID,",
+          "        ${1:token}_info.key,",
+          "        ${2:mint}_info.key,",
+          "        ${3:authority}_info.key,",
+          "        &[],",
+          "        ${4:amount},",
+          "    )?,",
+          "    &[",
+          "        ${1:token}_info.clone(),",
+          "        ${2:mint}_info.clone(),",
+          "        ${3:authority}_info.clone(),",
+          "    ],",
+          ")?;"
+        ],
+        "requires": [
+          "solana_program::program::invoke",
+          "spl_token::instruction::burn"
+        ],
+        "description": "Burn Tokens",
+        "scope": "expr"
+      },
+      "Init Associated Token Account": {
+        "prefix": [
+          "__InitAssociatedTokenAccount"
+        ],
+        "body": [
+          "invoke(",
+          "    &initialize_account(",
+          "        &spl_token::ID,",
+          "        ${1:token}_info.key,",
+          "        ${2:mint}_info.key,",
+          "        ${3:authority}_info.key,",
+          "    )?,",
+          "    &[",
+          "        ${1:token}_info.clone(),",
+          "        ${2:mint}_info.clone(),",
+          "        ${3:authority}_info.clone(),",
+          "        ${4:rent}_info.clone(),",
+          "    ],",
+          ")?;"
+        ],
+        "requires": [
+          "solana_program::program::invoke",
+          "spl_token::instruction::initialize_account"
+        ],
+        "description": "Init Associated Token Account",
+        "scope": "expr"
+      },
+      "Revoke Tokens Delegation": {
+        "prefix": [
+          "__RevokeTokensDelegation"
+        ],
+        "body": [
+          "invoke(",
+          "    &revoke(",
+          "        &spl_token::ID,",
+          "        ${1:token}_info.key,",
+          "        ${2:authority}_info.key,",
+          "        &[],",
+          "    )?,",
+          "    &[",
+          "        ${1:token}_info.clone(),",
+          "        ${2:authority}_info.clone(),",
+          "    ],",
+          ")?;"
+        ],
+        "requires": [
+          "solana_program::program::invoke",
+          "spl_token::instruction::revoke"
+        ],
+        "description": "Revoke Tokens Delegation",
+        "scope": "expr"
+      },
+      "Transfer Tokens": {
+        "prefix": [
+          "__TransferTokens"
+        ],
+        "body": [
+          "invoke(",
+          "    &transfer(",
+          "        &spl_token::ID,",
+          "        ${1:sender}_info.key,",
+          "        ${2:receiver}_info.key,",
+          "        ${3:authority}_info.key,",
+          "        &[],",
+          "        ${4:amount},",
+          "    )?,",
+          "    &[",
+          "        ${1:sender}_info.clone(),",
+          "        ${2:receiver}_info.clone(),",
+          "        ${3:authority}_info.clone(),",
+          "    ],",
+          ")?;"
+        ],
+        "requires": [
+          "solana_program::program::invoke",
+          "spl_token::instruction::transfer"
+        ],
+        "description": "Transfer Tokens",
+        "scope": "expr"
+      },
+      "Delegate Tokens": {
+        "prefix": [
+          "__DelegateTokens"
+        ],
+        "body": [
+          "invoke(",
+          "    &approve(",
+          "        &spl_token::ID,",
+          "        ${1:token}_info.key,",
+          "        ${2:delegate}_info.key,",
+          "        ${3:authority}_info.key,",
+          "        &[],",
+          "        ${4:amount},",
+          "    )?,",
+          "    &[",
+          "        ${1:token}_info.clone(),",
+          "        ${2:delegate}_info.clone(),",
+          "        ${3:authority}_info.clone(),",
+          "    ],",
+          ")?;"
+        ],
+        "requires": [
+          "solana_program::program::invoke",
+          "spl_token::instruction::approve"
+        ],
+        "description": "Delegate Tokens",
+        "scope": "expr"
+      },
+      "Get Clock Sysvar": {
+        "prefix": [
+          "__GetClockSysvar"
+        ],
+        "body": [
+          "let ${1:clock} = Clock::get()?;"
+        ],
+        "requires": [
+          "solana_program::sysvar::clock::Clock",
+          "solana_program::sysvar::Sysvar"
+        ],
+        "description": "Get Clock Sysvar",
+        "scope": "expr"
+      },
+      "Get Account": {
+        "prefix": [
+          "__GetAccount"
+        ],
+        "body": [
+          "let ${1:account}_info = next_account_info(account_info_iter)?;"
+        ],
+        "requires": [
+          "solana_program::account_info::next_account_info"
+        ],
+        "description": "Get Account",
+        "scope": "expr"
+      },
+      "Transfer Native SOL": {
+        "prefix": [
+          "__TransferNativeSOL"
+        ],
+        "body": [
+          "invoke(",
+          "    &transfer(${1:sender}_info.key, ${2:receiver}_info.key, ${3:amount}),",
+          "    &[",
+          "        ${1:sender}_info.clone(),",
+          "        ${2:receiver}_info.clone(),",
+          "        ${4:system_program}_info.clone(),",
+          "    ],",
+          ")?;"
+        ],
+        "requires": [
+          "solana_program::program::invoke",
+          "solana_program::system_instruction::transfer"
+        ],
+        "description": "Transfer Native SOL",
+        "scope": "expr"
+      },
+      "Get Rent Sysvar": {
+        "prefix": [
+          "__GetRentSysvar"
+        ],
+        "body": [
+          "let ${1:rent} = Rent::get()?;"
+        ],
+        "requires": [
+          "solana_program::sysvar::rent::Rent",
+          "solana_program::sysvar::Sysvar"
+        ],
+        "description": "Get Rent Sysvar",
+        "scope": "expr"
+      },
+      "Unpack Account": {
+        "prefix": [
+          "__UnpackAccount"
+        ],
+        "body": [
+          "let mut ${1:account} = ${2:Account}::unpack(&${1:account}_info.data.borrow())?;"
+        ],
+        "requires": [
+          "crate::state::__Account__",
+          "solana_program::account_info::next_account_info",
+          "solana_program::program_pack::Pack"
+        ],
+        "description": "Unpack Account",
+        "scope": "expr"
+      },
+      "Check Rent Exempt": {
+        "prefix": [
+          "__CheckRentExempt"
+        ],
+        "body": [
+          "if !rent.is_exempt(${1:account}_info.lamports(), ${2:Account}::LEN) {",
+          "    return Err(ProgramError::InvalidAccountData.into());",
+          "}"
+        ],
+        "requires": [
+          "crate::state::__Account__",
+          "solana_program::program_error::ProgramError",
+          "solana_program::program_pack::Pack",
+          "solana_program::sysvar::Sysvar"
+        ],
+        "description": "Check Rent Exempt",
+        "scope": "expr"
+      },
+      "Get Accounts Iterator": {
+        "prefix": [
+          "__GetAccountsIterator"
+        ],
+        "body": [
+          "let account_info_iter = &mut accounts.iter();",
+          "let ${1:account}_info = next_account_info(account_info_iter)?;"
+        ],
+        "requires": [
+          "solana_program::account_info::next_account_info"
+        ],
+        "description": "Get Accounts Iterator",
+        "scope": "expr"
+      },
+      "Get Funded Keypair": {
+        "prefix": [
+          "__GetFundedKeypair"
+        ],
+        "body": [
+          "let ${1:keypair} = Keypair::new();",
+          "let amount = 1_000_000_000;",
+          "",
+          "let tx = Transaction::new_signed_with_payer(",
+          "    &[system_instruction::transfer(",
+          "        &context.payer.pubkey(),",
+          "        &${1:keypair}.pubkey(),",
+          "        amount,",
+          "    )],",
+          "    Some(&context.payer.pubkey()),",
+          "    &[&context.payer],",
+          "    context.last_blockhash,",
+          ");",
+          "",
+          "context.banks_client.process_transaction(tx).await.unwrap();"
+        ],
+        "requires": [
+          "solana_program::system_instruction",
+          "solana_program_test::ProgramTestContext",
+          "solana_program_test::BanksClientError",
+          "solana_sdk::signature::Keypair",
+          "solana_sdk::signer::Signer",
+          "solana_sdk::transaction::Transaction"
+        ],
+        "description": "Get Funded Keypair",
+        "scope": "expr"
+      },
+      "Clone Keypair": {
+        "prefix": [
+          "__CloneKeypair"
+        ],
+        "body": [
+          "let ${1:cloned_keypair} = Keypair::from_bytes(&keypair.to_bytes()).unwrap();"
+        ],
+        "requires": [
+          "solana_sdk::signature::Keypair"
+        ],
+        "description": "Clone Keypair",
+        "scope": "expr"
+      },
+      "Create Account": {
+        "prefix": [
+          "__CreateAccount"
+        ],
+        "body": [
+          "let rent = context.banks_client.get_rent().await.unwrap();",
+          "let lamports = rent.minimum_balance(${1:len});",
+          "",
+          "let tx = Transaction::new_signed_with_payer(",
+          "    &[system_instruction::create_account(",
+          "        &context.payer.pubkey(),",
+          "        &${2:account}.pubkey(),",
+          "        lamports,",
+          "        ${1:len} as u64,",
+          "        ${3:owner},",
+          "    )],",
+          "    Some(&context.payer.pubkey()),",
+          "    &[&context.payer, &${2:account}],",
+          "    context.last_blockhash,",
+          ");",
+          "",
+          "context.banks_client.process_transaction(tx).await.unwrap();"
+        ],
+        "requires": [
+          "solana_program_test::ProgramTestContext",
+          "solana_program_test::BanksClientError",
+          "solana_sdk::pubkey::Pubkey",
+          "solana_sdk::signature::Keypair",
+          "solana_sdk::signer::Signer",
+          "solana_sdk::system_instruction",
+          "solana_sdk::transaction::Transaction"
+        ],
+        "description": "Create Account",
+        "scope": "expr"
+      },
+      "Get Account Data": {
+        "prefix": [
+          "__GetAccountData"
+        ],
+        "body": [
+          "let ${1:account_data} = context",
+          "    .banks_client",
+          "    .get_account(*${2:pubkey})",
+          "    .await",
+          "    .expect(\"account not found\")",
+          "    .expect(\"account empty\");"
+        ],
+        "requires": [
+          "solana_program_test::ProgramTestContext",
+          "solana_sdk::pubkey::Pubkey",
+          "solana_sdk::account::Account"
+        ],
+        "description": "Get Account Data",
+        "scope": "expr"
+      },
+      "Airdrop": {
+        "prefix": [
+          "__Airdrop"
+        ],
+        "body": [
+          "let tx = Transaction::new_signed_with_payer(",
+          "    &[system_instruction::transfer(",
+          "        &context.payer.pubkey(),",
+          "        ${1:receiver},",
+          "        ${2:amount},",
+          "    )],",
+          "    Some(&context.payer.pubkey()),",
+          "    &[&context.payer],",
+          "    context.last_blockhash,",
+          ");",
+          "",
+          "context.banks_client.process_transaction(tx).await.unwrap();"
+        ],
+        "requires": [
+          "solana_program_test::ProgramTestContext",
+          "solana_program_test::BanksClientError",
+          "solana_sdk::pubkey::Pubkey",
+          "solana_sdk::signer::Signer",
+          "solana_sdk::system_instruction",
+          "solana_sdk::transaction::Transaction"
+        ],
+        "description": "Airdrop",
+        "scope": "expr"
+      },
+      "Transfer Lamports": {
+        "prefix": [
+          "__TransferLamports"
+        ],
+        "body": [
+          "let tx = Transaction::new_signed_with_payer(",
+          "    &[system_instruction::transfer(&${1:from}.pubkey(), ${2:to}, ${3:amount})],",
+          "    Some(&${1:from}.pubkey()),",
+          "    &[${1:from}],",
+          "    context.last_blockhash,",
+          ");",
+          "",
+          "context.banks_client.process_transaction(tx).await?;"
+        ],
+        "requires": [
+          "solana_program_test::ProgramTestContext",
+          "solana_program_test::BanksClientError",
+          "solana_sdk::pubkey::Pubkey",
+          "solana_sdk::signature::Keypair",
+          "solana_sdk::signer::Signer",
+          "solana_sdk::system_instruction",
+          "solana_sdk::transaction::Transaction"
+        ],
+        "description": "Transfer Lamports",
+        "scope": "expr"
+      }
+    },
+    "editor.fontSize": 14.5,
+    "codeium.enableConfig": {
+      "*": true,
+      "move": true
+    },
+    "terminal.integrated.shellIntegration.enabled": true,
+    "terminal.integrated.enablePersistentSessions": true,
+    "workbench.colorTheme": "Copilot Theme",
+    "git.openRepositoryInParentFolders": "never",
+    "workbench.settings.applyToAllProfiles": [
+    
+
+    
+
+
+
+    
+  
+  
+  
+    
+    
+    
+    ],
+    "terminal.integrated.fontSize": 14.5,
+    "terminal.integrated.fontFamily": "monospace",
+    "terminal.integrated.fontWeight": "450",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "block",
+    // "editor.formatOnSave": true,
+    // "editor.formatOnPaste": true,
+    // "editor.formatOnType": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    // "[css]": {
+    //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // },
+    // "files.autoSave": "afterDelay",
+    // "files.autoSaveDelay": 1000,
+    "editor.renderWhitespace": "none",
+    // "editor.autoClosingBrackets": "always",
+    // "editor.autoClosingQuotes": "always",
+    "editor.suggestSelection": "first",
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    "editor.acceptSuggestionOnEnter": "on",
+    // "javascript.updateImportsOnFileMove.enabled": "always",
+    // "typescript.updateImportsOnFileMove.enabled": "always",
+    "files.exclude": {
+      "**/.git": true,
+      "**/.DS_Store": true,
+      "node_modules": true
+    },
+    // "editor.fontFamily": "MonoLisa, Operator Mono, FiraCode Nerd Font",
+    "editor.fontFamily": "MonoLisa, Operator Mono, FiraCode Nerd Font",
+    "cursor.composer.collapsePaneInputBoxPills": true,
+    "editor.cursorBlinking": "expand",
+    "makefile.configureOnOpen": true,
+    "cursor.cmdk.useThemedDiffBackground": true,
+  
+    "rust-analyzer.inlayHints.parameterHints.enable": false,
+    "rust-analyzer.inlayHints.typeHints.enable": false,
+    "github.copilot.advanced": {
+      "authProvider": "github"
+    },
+    "workbench.statusBar.visible": false,
+    "workbench.iconTheme": "vscode-icons",
+    "solidity.telemetry": true,
+    // Default formatters for different languages
+    // "[rust]": {
+    //     "editor.defaultFormatter": "rust-lang.rust-analyzer",
+    //     "editor.formatOnSave": true
+    // },
+    // "[typescript]": {
+    //     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    //     "editor.formatOnSave": true
+    // },
+    // "[javascript]": {
+    //     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    //     "editor.formatOnSave": true
+    // },
+    // "[typescriptreact]": {
+    //     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    //     "editor.formatOnSave": true
+    // },
+    // "[javascriptreact]": {
+    //     "editor.defaultFormatter": "esbenp.prettier-vscode",
+    //     "editor.formatOnSave": true
+    // },
+}
+  
