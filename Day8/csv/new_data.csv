@@ -1,0 +1,6 @@
+Date,Salesperson,Lead Name,Segment,Region,Target Close,Forecasted Monthly Revenue,Opportunity Stage,Weighted Revenue,Closed Opportunity,Active Opportunity,Latest Status Entry
+2024-05-01,Alice,LeadA,Enterprise,US,2024-06-01,10000,Negotiation,9000,Yes,No,2024-05-10
+2024-05-02,Bob,LeadB,SMB,UK,2024-06-15,8000,Proposal,7000,No,Yes,2024-05-12
+2024-05-03,Charlie,LeadC,Enterprise,US,2024-07-01,12000,Closed Won,12000,Yes,No,2024-05-15
+2024-05-04,David,LeadD,SMB,CA,2024-06-20,6000,Negotiation,5500,No,Yes,2024-05-18
+2024-05-05,Eva,LeadE,Enterprise,DE,2024-07-10,9500,Proposal,9000,No,Yes,2024-05-20 
