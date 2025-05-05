@@ -5,10 +5,11 @@ from pyspark.sql import SparkSession
 import os
 
 # Create SparkSession
-spark = SparkSession.builder.appName("../../csv/SalesData.csv").getOrCreate()
+spark = SparkSession.builder.appName("ReadCSV").getOrCreate()
 
 # Path to the CSV file (SalesData.csv is located in the csv folder at the same level as Practise)
-csv_path = os.path.join("..", "..", "csv", "SalesData.csv")
+base_dir = os.path.dirname(os.path.abspath(__file__))
+csv_path = os.path.abspath(os.path.join(base_dir, "..", "..", "csv", "SalesData.csv"))
 
 # Read the CSV file into a DataFrame
 # Assumes the file has a header and infers the schema automatically
