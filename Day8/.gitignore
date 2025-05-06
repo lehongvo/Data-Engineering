@@ -1,0 +1,127 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+.env.bak
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+.terraformrc
+terraform.rc
+.terraform.lock.hcl
+crash.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# MongoDB
+data/
+mongodb_data/
+
+# Logs
+*.log
+logs/
+log/
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# Config
+config/*
+!config/example.config.json
+!config/README.md
+
+# Data Files
+*.csv
+*.tsv
+*.xls
+*.xlsx
+*.parquet
+*.avro
+*.json
+!example_data/*.csv
+!example_data/*.json
+
+# Airflow
+airflow.cfg
+airflow.db
+airflow-webserver.pid
+webserver_config.py
+unittests.cfg
+logs/
+
+# Jupyter
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.jupyter/
+jupyter_notebook_config.py
+
+# Google Cloud
+*.json
+!example_config/*.json
+.gcloud/
+credentials/
+
+# AWS
+.aws/
+aws.credentials
+*.pem
+
+# Spark
+spark-warehouse/
+derby.log
+metastore_db/
+
+# Misc
+.coverage
+.tox/
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+build/
+.DS_Store
