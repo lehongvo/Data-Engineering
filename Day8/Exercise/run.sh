@@ -5,10 +5,21 @@
 echo "Starting PostgreSQL, Kafka, and Zookeeper with docker-compose..."
 docker-compose up -d
 
-# Set the path to your PostgreSQL JDBC driver (.jar)
+# Check if driver exists, if not, provide instructions
 JDBC_JAR_PATH="/Users/user/Downloads/postgresql-42.7.5.jar"
+if [ ! -f "$JDBC_JAR_PATH" ]; then
+    echo "PostgreSQL JDBC driver not found at: $JDBC_JAR_PATH"
+    echo "Please download it from: https://jdbc.postgresql.org/download/"
+    echo "Then place it at the location specified in this script or update the path."
+fi
+
 # Set the path to GCS connector
 GCS_CONNECTOR_PATH="/Users/user/Downloads/gcs-connector-hadoop3-latest.jar"
+if [ ! -f "$GCS_CONNECTOR_PATH" ] && [ "$ex_num" = "4" ]; then
+    echo "GCS connector not found at: $GCS_CONNECTOR_PATH"
+    echo "Please download it from: https://cloud.google.com/dataproc/docs/concepts/connectors/cloud-storage"
+    echo "Then place it at the location specified in this script or update the path."
+fi
 
 read -p "Enter exercise number to run (1-6): " ex_num
 
@@ -16,16 +27,21 @@ script="Exercise${ex_num}.py"
 
 wait_for_kafka() {
     echo "Checking if Kafka broker is ready on localhost:9092..."
-    for i in {1..15}; do
-        if nc -z localhost 9092; then
+    for i in {1..5}; do
+        if nc -z localhost 9092 2>/dev/null; then
             echo "Kafka broker is up!"
             return 0
         fi
-        echo "Waiting for Kafka to be ready... ($i/15)"
+        echo "Waiting for Kafka to be ready... ($i/5)"
         sleep 2
     done
-    echo "ERROR: Kafka broker is not available on localhost:9092. Please check your docker-compose setup."
-    exit 1
+    echo "WARNING: Kafka broker is not available on localhost:9092."
+    read -p "Do you want to continue anyway? (y/n): " continue_anyway
+    if [ "$continue_anyway" != "y" ]; then
+        echo "Exiting. Please check your docker-compose setup."
+        exit 1
+    fi
+    echo "Continuing without Kafka..."
 }
 
 if [ -f "$script" ]; then
@@ -34,7 +50,16 @@ if [ -f "$script" ]; then
     echo "==============================="
     if [ "$ex_num" = "4" ]; then
         # Set Google credentials for BigQuery
-        export GOOGLE_APPLICATION_CREDENTIALS="/Users/user/Desktop/Data-Engineering/Day8/config/service-account.json"
+        CREDENTIALS_PATH="/Users/user/Desktop/Data-Engineering/Day8/config/service-account.json"
+        if [ ! -f "$CREDENTIALS_PATH" ]; then
+            echo "Google credentials file not found at: $CREDENTIALS_PATH"
+            echo "Please place your service account JSON file at this location or update the path."
+            read -p "Do you want to continue anyway? (y/n): " continue_creds
+            if [ "$continue_creds" != "y" ]; then
+                exit 1
+            fi
+        fi
+        export GOOGLE_APPLICATION_CREDENTIALS="$CREDENTIALS_PATH"
         echo "Using Google credentials: $GOOGLE_APPLICATION_CREDENTIALS"
         
         # Set Hadoop configurations directly
@@ -67,7 +92,7 @@ if [ -f "$script" ]; then
     if [ "$ex_num" = "5" ]; then
         deactivate
     fi
-    echo "\n"
+    echo ""
 else
     echo "No script found for exercise $ex_num."
 fi
