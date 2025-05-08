@@ -2,3 +2,11 @@
 2025-05-08 14:21:29,032 - kafka-admin - INFO - Existing topics: ['sensor-data', 'ethereum-transactions', 'event-stream', 'ethereum-blocks', '__consumer_offsets']
 2025-05-08 14:21:29,188 - kafka-admin - INFO - Successfully created topics: ['ethereum-filtered-transactions', 'ethereum-high-value-transactions', 'ethereum-transaction-windows', 'ethereum-suspicious-transactions']
 2025-05-08 14:21:29,189 - kafka-admin - INFO - Kafka topic administration completed
+2025-05-08 14:35:11,565 - kafka-admin - INFO - Starting Kafka topic administration...
+2025-05-08 14:35:11,905 - kafka-admin - INFO - Existing topics: ['ethereum-high-value-transactions', 'sensor-data', 'ethereum-transaction-windows', 'ethereum-transactions', 'event-stream', 'ethereum-blocks', 'ethereum-filtered-transactions', '__consumer_offsets']
+2025-05-08 14:35:12,000 - kafka-admin - INFO - Successfully created topics: ['ethereum-suspicious-transactions']
+2025-05-08 14:35:12,000 - kafka-admin - INFO - Kafka topic administration completed
+2025-05-08 14:47:26,137 - kafka-admin - INFO - Starting Kafka topic administration...
+2025-05-08 14:47:27,781 - kafka-admin - INFO - Existing topics: ['ethereum-high-value-transactions', 'sensor-data', 'ethereum-transactions', 'event-stream', 'ethereum-blocks', 'ethereum-filtered-transactions', '__consumer_offsets']
+2025-05-08 14:47:27,999 - kafka-admin - INFO - Successfully created topics: ['ethereum-transaction-windows', 'ethereum-suspicious-transactions']
+2025-05-08 14:47:28,000 - kafka-admin - INFO - Kafka topic administration completed

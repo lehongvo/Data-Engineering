@@ -11,7 +11,7 @@ from web3.exceptions import BlockNotFound, TransactionNotFound
 import os
 from dotenv import load_dotenv
 
-# Đảm bảo biến môi trường được load
+# Ensure environment variables are loaded
 load_dotenv()
 
 def setup_logging(name, log_level=logging.INFO, console_output=True):
@@ -61,19 +61,19 @@ def load_config():
 
 def get_web3_provider():
     """Get Web3 provider from configuration or environment variables."""
-    # Ưu tiên biến môi trường
+    # Prioritize environment variables
     provider_url = os.getenv('ETH_PROVIDER_URL')
     
     if not provider_url:
-        # Nếu không có, sử dụng từ config
+        # If not found, use from config
         config = load_config()
         default_provider = config['ethereum'].get('default_provider', 'llamarpc')
         
-        # Sử dụng nhà cung cấp mặc định từ config
+        # Use default provider from config
         if default_provider in config['ethereum']['providers']:
             provider_url = config['ethereum']['providers'][default_provider]
         else:
-            # Fallback to LlamaRPC nếu không có mặc định
+            # Fallback to LlamaRPC if no default is configured
             provider_url = "https://eth.llamarpc.com"
         
         logging.info(f"Using Ethereum provider: {default_provider} at {provider_url}")

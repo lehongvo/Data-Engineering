@@ -3,4 +3,6 @@ web3==6.0.0
 python-dotenv==1.0.0
 confluent-kafka==2.1.1
 pyyaml==6.0.1
-requests==2.31.0 
+requests==2.31.0
+pyspark==3.4.1
+findspark==2.0.1 

@@ -35,19 +35,19 @@ echo "Using explicit path: /usr/bin/python3"
 # Check if Python and pip are installed
 check_python() {
     if ! command -v python3 &> /dev/null; then
-        print_error "Python 3 không được cài đặt. Vui lòng cài đặt Python 3 trước."
+        print_error "Python 3 is not installed. Please install Python 3 first."
         exit 1
     fi
 
     if ! command -v pip &> /dev/null && ! command -v pip3 &> /dev/null; then
-        print_error "pip không được cài đặt. Vui lòng cài đặt pip trước."
+        print_error "pip is not installed. Please install pip first."
         exit 1
     fi
 }
 
 # Install required dependencies
 install_dependencies() {
-    print_step "Đang cài đặt các thư viện Python cần thiết..."
+    print_step "Installing required Python packages..."
     
     # Determine the correct path to requirements.txt
     local req_file
@@ -56,7 +56,7 @@ install_dependencies() {
     elif [ -f "${PRACTICE_DIR}/requirements.txt" ]; then
         req_file="${PRACTICE_DIR}/requirements.txt"
     else
-        print_error "requirements.txt không tìm thấy."
+        print_error "requirements.txt not found."
         exit 1
     fi
     
@@ -68,9 +68,9 @@ install_dependencies() {
     fi
     
     if [ $? -eq 0 ]; then
-        print_message "Cài đặt thư viện thành công!"
+        print_message "Packages installed successfully!"
     else
-        print_error "Có lỗi khi cài đặt thư viện. Vui lòng kiểm tra lỗi ở trên."
+        print_error "Error installing packages. Please check the errors above."
         exit 1
     fi
 }
@@ -202,6 +202,25 @@ run_streams() {
     fi
 }
 
+# Run the Spark streams processor
+run_spark() {
+    print_step "Starting Spark streaming application for Ethereum data..."
+    
+    # Create output and checkpoint directories if they don't exist
+    if [ -f "spark_streaming.py" ]; then
+        mkdir -p output/address_volume output/contract_interactions output/gas_trends
+        mkdir -p checkpoint/address_volume checkpoint/contract_interactions checkpoint/gas_trends
+        python3 spark_streaming.py
+    elif [ -f "${PRACTICE_DIR}/spark_streaming.py" ]; then
+        (cd "${PRACTICE_DIR}" && mkdir -p output/address_volume output/contract_interactions output/gas_trends)
+        (cd "${PRACTICE_DIR}" && mkdir -p checkpoint/address_volume checkpoint/contract_interactions checkpoint/gas_trends)
+        (cd "${PRACTICE_DIR}" && python3 spark_streaming.py)
+    else
+        print_error "spark_streaming.py not found"
+        return 1
+    fi
+}
+
 # Run all components
 run_all() {
     # Determine the correct path
@@ -223,23 +242,49 @@ run_all() {
         osascript -e 'tell app "Terminal" to do script "cd '"${script_path}"' && python3 eth_consumer.py"' &
         sleep 2
         osascript -e 'tell app "Terminal" to do script "cd '"${script_path}"' && python3 eth_streams.py"' &
+        sleep 2
+        
+        # Create directories needed for Spark
+        mkdir -p "${script_path}/output/address_volume" "${script_path}/output/contract_interactions" "${script_path}/output/gas_trends"
+        mkdir -p "${script_path}/checkpoint/address_volume" "${script_path}/checkpoint/contract_interactions" "${script_path}/checkpoint/gas_trends"
+        
+        # Start Spark streaming
+        osascript -e 'tell app "Terminal" to do script "cd '"${script_path}"' && python3 spark_streaming.py"' &
     else
         # Linux/others - use screen or tmux if available
         if command -v tmux &> /dev/null; then
             tmux new-session -d -s eth-producer "cd ${script_path} && python3 eth_producer.py"
             tmux new-session -d -s eth-consumer "cd ${script_path} && python3 eth_consumer.py"
             tmux new-session -d -s eth-streams "cd ${script_path} && python3 eth_streams.py"
+            
+            # Create directories needed for Spark
+            mkdir -p "${script_path}/output/address_volume" "${script_path}/output/contract_interactions" "${script_path}/output/gas_trends"
+            mkdir -p "${script_path}/checkpoint/address_volume" "${script_path}/checkpoint/contract_interactions" "${script_path}/checkpoint/gas_trends"
+            
+            # Start Spark streaming
+            tmux new-session -d -s spark-streams "cd ${script_path} && python3 spark_streaming.py"
+            
             print_message "Started all components in tmux sessions. Use 'tmux attach -t <session-name>' to view."
         else
             # Just run in background with nohup
             if [ -f "eth_producer.py" ]; then
-                nohup python3 eth_producer.py > producer.log 2>&1 &
-                nohup python3 eth_consumer.py > consumer.log 2>&1 &
-                nohup python3 eth_streams.py > streams.log 2>&1 &
+                # Create directories needed for Spark
+                mkdir -p output/address_volume output/contract_interactions output/gas_trends
+                mkdir -p checkpoint/address_volume checkpoint/contract_interactions checkpoint/gas_trends
+                
+                nohup python3 eth_producer.py > logs/producer.log 2>&1 &
+                nohup python3 eth_consumer.py > logs/consumer.log 2>&1 &
+                nohup python3 eth_streams.py > logs/streams.log 2>&1 &
+                nohup python3 spark_streaming.py > logs/spark.log 2>&1 &
             elif [ -f "${PRACTICE_DIR}/eth_producer.py" ]; then
-                (cd "${PRACTICE_DIR}" && nohup python3 eth_producer.py > producer.log 2>&1 &)
-                (cd "${PRACTICE_DIR}" && nohup python3 eth_consumer.py > consumer.log 2>&1 &)
-                (cd "${PRACTICE_DIR}" && nohup python3 eth_streams.py > streams.log 2>&1 &)
+                # Create directories needed for Spark
+                (cd "${PRACTICE_DIR}" && mkdir -p output/address_volume output/contract_interactions output/gas_trends)
+                (cd "${PRACTICE_DIR}" && mkdir -p checkpoint/address_volume checkpoint/contract_interactions checkpoint/gas_trends)
+                
+                (cd "${PRACTICE_DIR}" && nohup python3 eth_producer.py > logs/producer.log 2>&1 &)
+                (cd "${PRACTICE_DIR}" && nohup python3 eth_consumer.py > logs/consumer.log 2>&1 &)
+                (cd "${PRACTICE_DIR}" && nohup python3 eth_streams.py > logs/streams.log 2>&1 &)
+                (cd "${PRACTICE_DIR}" && nohup python3 spark_streaming.py > logs/spark.log 2>&1 &)
             fi
             print_message "Started all components in background. Check log files for output."
         fi
@@ -254,6 +299,7 @@ stop_all() {
     pkill -f "python3 eth_producer.py" 2>/dev/null
     pkill -f "python3 eth_consumer.py" 2>/dev/null
     pkill -f "python3 eth_streams.py" 2>/dev/null
+    pkill -f "python3 spark_streaming.py" 2>/dev/null
     
     # Stop Docker containers
     # Check if we're already in the Practice directory
@@ -283,7 +329,7 @@ run_start_all() {
 
 # View logs
 view_logs() {
-    print_step "Xem log files..."
+    print_step "Viewing log files..."
     
     # Check if we're already in the Practice directory
     if [ -d "logs" ]; then
@@ -318,20 +364,21 @@ show_menu() {
     echo "============================================"
     echo "   Ethereum Blockchain Data Processing with Kafka"
     echo "============================================"
-    echo "Lựa chọn một tùy chọn:"
+    echo "Choose an option:"
     echo
-    echo "1) Bắt đầu tất cả (Full Start)"
-    echo "2) Cài đặt Python packages"
-    echo "3) Chạy Kafka và Zookeeper"
-    echo "4) Tạo Kafka topics"
-    echo "5) Chạy Ethereum Producer"
-    echo "6) Chạy Ethereum Consumer"
-    echo "7) Chạy Ethereum Streams Processor"
-    echo "8) Dừng tất cả"
-    echo "9) Xem logs"
-    echo "0) Thoát"
+    echo "1) Start all (Full Start)"
+    echo "2) Install Python packages"
+    echo "3) Run Kafka and Zookeeper"
+    echo "4) Create Kafka topics"
+    echo "5) Run Ethereum Producer"
+    echo "6) Run Ethereum Consumer"
+    echo "7) Run Ethereum Streams Processor"
+    echo "8) Run Spark Streaming Application"
+    echo "9) Stop all"
+    echo "10) View logs"
+    echo "0) Exit"
     echo
-    echo -n "Nhập lựa chọn của bạn [0-9]: "
+    echo -n "Enter your choice [0-10]: "
     read -r choice
     
     case $choice in
@@ -342,11 +389,12 @@ show_menu() {
         5) run_producer ;;
         6) run_consumer ;;
         7) run_streams ;;
-        8) stop_all ;;
-        9) view_logs ;;
+        8) run_spark ;;
+        9) stop_all ;;
+        10) view_logs ;;
         0) exit 0 ;;
         *)
-            print_error "Lựa chọn không hợp lệ!"
+            print_error "Invalid choice!"
             sleep 2
             show_menu
             ;;
@@ -354,7 +402,7 @@ show_menu() {
     
     if [ "$choice" != "0" ]; then
         echo
-        echo -n "Nhấn Enter để quay lại menu..."
+        echo -n "Press Enter to return to menu..."
         read -r dummy
         show_menu
     fi

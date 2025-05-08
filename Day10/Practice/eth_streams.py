@@ -59,9 +59,9 @@ class EthereumStreamProcessor:
         """Process Ethereum transactions as a stream."""
         logger.info(f"Starting transaction stream processor")
         
-        # Trạng thái cho các cửa sổ thời gian
+        # State for time windows
         time_window_tx_counts = defaultdict(int)
-        last_window_time = int(time.time() // 60) * 60  # Cửa sổ 1 phút
+        last_window_time = int(time.time() // 60) * 60  # 1-minute window
         
         while self.running:
             try:
@@ -74,10 +74,10 @@ class EthereumStreamProcessor:
                     logger.error(f"Consumer error: {msg.error()}")
                     continue
                 
-                # Xử lý giao dịch
+                # Process transaction
                 tx_data = json.loads(msg.value().decode('utf-8'))
                 
-                # 1. Phân tích theo địa chỉ
+                # 1. Analyze by address
                 from_address = tx_data.get('from')
                 to_address = tx_data.get('to')
                 
@@ -87,14 +87,14 @@ class EthereumStreamProcessor:
                 if to_address:
                     self.address_transaction_counts[to_address] += 1
                 
-                # 2. Phát hiện địa chỉ hoạt động mạnh
+                # 2. Detect high-activity addresses
                 if from_address and self.address_transaction_counts[from_address] > 10:
                     self.high_value_addresses.add(from_address)
                     
-                # 3. Tính toán trong cửa sổ thời gian (1 phút)
+                # 3. Calculate within time window (1 minute)
                 current_window = int(time.time() // 60) * 60
                 if current_window > last_window_time:
-                    # Gửi kết quả của cửa sổ trước
+                    # Send results of previous window
                     window_results = {
                         'window_start': last_window_time,
                         'window_end': last_window_time + 60,
@@ -102,7 +102,7 @@ class EthereumStreamProcessor:
                         'timestamp': int(time.time())
                     }
                     
-                    # Xuất kết quả ra Kafka
+                    # Export results to Kafka
                     self.producer.produce(
                         'ethereum-transaction-windows',
                         key=str(last_window_time).encode('utf-8'),
@@ -110,13 +110,13 @@ class EthereumStreamProcessor:
                         callback=self.delivery_report
                     )
                     
-                    # Cập nhật cửa sổ thời gian
+                    # Update time window
                     last_window_time = current_window
                 
-                # Tăng số giao dịch cho cửa sổ hiện tại
+                # Increment transaction count for current window
                 time_window_tx_counts[current_window] += 1
                 
-                # 4. Phát hiện giao dịch đáng ngờ
+                # 4. Detect suspicious transactions
                 if self.is_suspicious_transaction(tx_data):
                     tx_data['suspicious'] = True
                     tx_data['detection_timestamp'] = int(time.time())
@@ -128,32 +128,32 @@ class EthereumStreamProcessor:
                         callback=self.delivery_report
                     )
                 
-                # Định kỳ flush producer
+                # Periodically flush producer
                 self.producer.poll(0)
                 
             except Exception as e:
                 logger.error(f"Error processing transaction stream: {e}")
         
-        # Flush lần cuối
+        # Final flush
         self.producer.flush()
 
     def is_suspicious_transaction(self, tx_data):
         """Detect suspicious transactions based on multiple factors."""
-        # Tiêu chí đơn giản để xác định giao dịch đáng ngờ:
-        # 1. Giá trị cao (> 10 ETH)
-        # 2. Đến địa chỉ mới (chưa có nhiều giao dịch trước đó)
-        # 3. Sử dụng gas price bất thường
+        # Simple criteria to identify suspicious transactions:
+        # 1. High value (> 10 ETH)
+        # 2. To a new address (not many previous transactions)
+        # 3. Using unusual gas price
         
         suspicious = False
         
-        if tx_data.get('value', 0) > 10:  # Hơn 10 ETH
+        if tx_data.get('value', 0) > 10:  # More than 10 ETH
             to_address = tx_data.get('to')
             if to_address and self.address_transaction_counts[to_address] <= 1:
-                # Gửi giá trị lớn đến địa chỉ mới
+                # Sending large value to a new address
                 suspicious = True
             
-            # Gas price thấp bất thường cho giao dịch giá trị cao
-            if tx_data.get('gas_price', 0) < 5:  # Nhỏ hơn 5 gwei
+            # Unusually low gas price for high-value transaction
+            if tx_data.get('gas_price', 0) < 5:  # Less than 5 gwei
                 suspicious = True
                 
         return suspicious

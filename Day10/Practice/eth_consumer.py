@@ -59,10 +59,10 @@ class EthereumConsumer:
                 block_data = message.value
                 logger.info(f"Processing block #{block_data['number']} with {block_data['transaction_count']} transactions")
                 
-                # Ở đây có thể thêm logic xử lý block
-                # Ví dụ: Phân tích khối lượng giao dịch, gas used, etc.
+                # Here you can add block processing logic
+                # Example: Analyze transaction volume, gas used, etc.
                 
-                # In thông tin tóm tắt về block
+                # Print summary information about the block
                 print(f"Block #{block_data['number']} | Time: {block_data['datetime']} | Tx Count: {block_data['transaction_count']} | Gas Used: {block_data['gas_used']}")
                 
             except Exception as e:
@@ -79,7 +79,7 @@ class EthereumConsumer:
             try:
                 tx_data = message.value
                 
-                # Lọc các giao dịch có giá trị cao
+                # Filter high-value transactions
                 if self.is_high_value_transaction(tx_data):
                     self.producer.send(
                         self.topics['high_value_transactions'],
@@ -88,7 +88,7 @@ class EthereumConsumer:
                     )
                     logger.info(f"High-value transaction detected: {tx_data['hash']} - {tx_data['value']} ETH")
                     
-                # Phân tích dữ liệu giao dịch
+                # Analyze transaction data
                 self.analyze_transaction(tx_data)
                 
             except Exception as e:
@@ -101,16 +101,16 @@ class EthereumConsumer:
     def analyze_transaction(self, tx_data):
         """Analyze transaction data for insights."""
         try:
-            # Phân loại loại giao dịch (transfer, contract call, etc.)
-            # Sử dụng trường đã được thêm bởi producer
+            # Classify transaction type (transfer, contract call, etc.)
+            # Use the field added by the producer
             tx_type = tx_data.get('is_contract_call', False)
             tx_type_str = "Contract Call" if tx_type else "ETH Transfer"
             
-            # Chỉ in các giao dịch có giá trị để demo (tránh spam console)
+            # Only print valuable transactions for demo (avoid console spam)
             if tx_data.get('value', 0) > 0:
                 print(f"Transaction: {tx_data['hash'][:10]}... | Type: {tx_type_str} | Value: {tx_data['value']:.4f} ETH | From: {tx_data['from'][:8]}... | To: {tx_data.get('to', 'Contract Creation')[:8]}...")
                 
-            # Gửi kết quả phân tích đến Kafka topic
+            # Send analysis results to Kafka topic
             enriched_data = {
                 **tx_data,
                 'transaction_type': tx_type_str,

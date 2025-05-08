@@ -16,11 +16,11 @@ def create_topics(config):
         client_id='ethereum-admin'
     )
     
-    # Lấy danh sách topics hiện có
+    # Get list of existing topics
     existing_topics = admin_client.list_topics()
     logger.info(f"Existing topics: {existing_topics}")
     
-    # Định nghĩa các topics cần thiết
+    # Define required topics
     topic_list = []
     topics_config = config['kafka']['topics']
     
@@ -32,7 +32,7 @@ def create_topics(config):
                 replication_factor=1  # set to 3 in production
             ))
     
-    # Tạo thêm các topics cho stream processing
+    # Create additional topics for stream processing
     stream_topics = [
         'ethereum-transaction-windows',
         'ethereum-suspicious-transactions'
@@ -46,7 +46,7 @@ def create_topics(config):
                 replication_factor=1
             ))
     
-    # Tạo các topics nếu cần
+    # Create topics if needed
     if topic_list:
         try:
             admin_client.create_topics(new_topics=topic_list, validate_only=False)
