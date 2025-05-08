@@ -1,0 +1,26 @@
+flowchart LR
+    PG[(PostgreSQL)] --> |CDC| KC[Kafka Connect]
+    KC -->|Source Connector| KF[Kafka]
+    KC -->|Sink Connector| MG[(MongoDB)]
+    
+    subgraph Kafka
+        KF -->|topic| T1[server1.public.customers]
+        KF -->|topic| T2[server1.public.products]
+        KF -->|topic| T3[server1.public.orders]
+    end
+    
+    subgraph Data Flow
+        D1[Data Change] -->|1. Insert/Update| PG
+        PG -->|2. CDC| KC
+        KC -->|3. Capture| KF
+        KF -->|4. Stream| KC
+        KC -->|5. Transform| MG
+        MG -->|6. Persist| D2[Replicated Data]
+    end
+    
+    style PG fill:#90CAF9,stroke:#1565C0
+    style KC fill:#FFE082,stroke:#FF8F00
+    style KF fill:#A5D6A7,stroke:#2E7D32
+    style MG fill:#EF9A9A,stroke:#C62828
+    style Data Flow fill:#F5F5F5,stroke:#9E9E9E
+    style Kafka fill:#E8F5E9,stroke:#81C784
