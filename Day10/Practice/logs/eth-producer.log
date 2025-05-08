@@ -162,3 +162,17 @@
 2025-05-08 14:29:34,678 - eth-producer - INFO - Sent block 22437345 to Kafka
 2025-05-08 14:29:39,966 - eth-producer - INFO - Stopping Ethereum producer...
 2025-05-08 14:29:39,970 - eth-producer - INFO - Kafka producer closed
+2025-05-08 14:29:45,156 - eth-producer - INFO - New blocks found: 22437346 to 22437346
+2025-05-08 14:29:45,623 - eth-producer - INFO - Sent block 22437346 to Kafka
+2025-05-08 14:29:56,161 - eth-producer - INFO - New blocks found: 22437347 to 22437347
+2025-05-08 14:29:56,765 - eth-producer - INFO - Sent block 22437347 to Kafka
+2025-05-08 14:30:07,195 - eth-producer - INFO - New blocks found: 22437348 to 22437348
+2025-05-08 14:30:07,767 - eth-producer - INFO - Sent block 22437348 to Kafka
+2025-05-08 14:30:18,257 - eth-producer - INFO - New blocks found: 22437349 to 22437349
+2025-05-08 14:30:18,839 - eth-producer - INFO - Sent block 22437349 to Kafka
+2025-05-08 14:30:29,485 - eth-producer - INFO - New blocks found: 22437350 to 22437350
+2025-05-08 14:30:30,331 - eth-producer - INFO - Sent block 22437350 to Kafka
+2025-05-08 14:30:40,914 - eth-producer - INFO - New blocks found: 22437351 to 22437351
+2025-05-08 14:30:41,829 - eth-producer - INFO - Sent block 22437351 to Kafka
+2025-05-08 14:30:52,545 - eth-producer - INFO - New blocks found: 22437352 to 22437352
+2025-05-08 14:30:53,038 - eth-producer - INFO - Sent block 22437352 to Kafka
