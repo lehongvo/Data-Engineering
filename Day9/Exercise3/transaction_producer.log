@@ -96,3 +96,296 @@ Sent: {'transaction_id': 85534, 'user_id': 37, 'product_id': 107, 'product_name'
 Sent: {'transaction_id': 45862, 'user_id': 100, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 1, 'amount': 1299.99, 'timestamp': '2025-05-08 11:16:20'}
 Sent: {'transaction_id': 10872, 'user_id': 1, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 5, 'amount': 2499.95, 'timestamp': '2025-05-08 11:16:22'}
 Sent: {'transaction_id': 97046, 'user_id': 19, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 2, 'amount': 699.98, 'timestamp': '2025-05-08 11:16:23'}
+Sent: {'transaction_id': 31072, 'user_id': 85, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 2, 'amount': 299.98, 'timestamp': '2025-05-08 11:16:24'}
+Sent: {'transaction_id': 40686, 'user_id': 25, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 1, 'amount': 699.99, 'timestamp': '2025-05-08 11:16:25'}
+Sent: {'transaction_id': 35193, 'user_id': 16, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 2, 'amount': 699.98, 'timestamp': '2025-05-08 11:16:26'}
+Sent: {'transaction_id': 60351, 'user_id': 29, 'product_id': 106, 'product_name': 'Camera', 'quantity': 1, 'amount': 599.99, 'timestamp': '2025-05-08 11:16:27'}
+Sent: {'transaction_id': 67391, 'user_id': 25, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 1, 'amount': 699.99, 'timestamp': '2025-05-08 11:16:28'}
+Sent: {'transaction_id': 29184, 'user_id': 32, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:16:30'}
+Sent: {'transaction_id': 54470, 'user_id': 73, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 1, 'amount': 79.99, 'timestamp': '2025-05-08 11:16:31'}
+Sent: {'transaction_id': 63282, 'user_id': 22, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:16:32'}
+Sent: {'transaction_id': 31390, 'user_id': 32, 'product_id': 106, 'product_name': 'Camera', 'quantity': 1, 'amount': 599.99, 'timestamp': '2025-05-08 11:16:34'}
+Sent: {'transaction_id': 52019, 'user_id': 5, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 3, 'amount': 1499.97, 'timestamp': '2025-05-08 11:16:35'}
+Sent: {'transaction_id': 22885, 'user_id': 85, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 1, 'amount': 119.99, 'timestamp': '2025-05-08 11:16:37'}
+Sent: {'transaction_id': 34209, 'user_id': 30, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:16:38'}
+Sent: {'transaction_id': 49241, 'user_id': 61, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 1, 'amount': 119.99, 'timestamp': '2025-05-08 11:16:40'}
+Sent: {'transaction_id': 84424, 'user_id': 30, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 2, 'amount': 159.98, 'timestamp': '2025-05-08 11:16:41'}
+Sent: {'transaction_id': 82866, 'user_id': 100, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 1, 'amount': 199.99, 'timestamp': '2025-05-08 11:16:42'}
+Sent: {'transaction_id': 87266, 'user_id': 14, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 1, 'amount': 499.99, 'timestamp': '2025-05-08 11:16:43'}
+Sent: {'transaction_id': 68418, 'user_id': 99, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:16:44'}
+Sent: {'transaction_id': 92422, 'user_id': 3, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 3, 'amount': 1049.97, 'timestamp': '2025-05-08 11:16:44'}
+Sent: {'transaction_id': 72340, 'user_id': 91, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 1, 'amount': 79.99, 'timestamp': '2025-05-08 11:16:46'}
+Sent: {'transaction_id': 99945, 'user_id': 90, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 1, 'amount': 499.99, 'timestamp': '2025-05-08 11:16:47'}
+Sent: {'transaction_id': 12315, 'user_id': 2, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 3, 'amount': 239.97, 'timestamp': '2025-05-08 11:16:48'}
+Sent: {'transaction_id': 91949, 'user_id': 98, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:16:50'}
+Sent: {'transaction_id': 65383, 'user_id': 22, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 1, 'amount': 149.99, 'timestamp': '2025-05-08 11:16:51'}
+Sent: {'transaction_id': 86349, 'user_id': 34, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:16:53'}
+Sent: {'transaction_id': 91386, 'user_id': 82, 'product_id': 106, 'product_name': 'Camera', 'quantity': 1, 'amount': 599.99, 'timestamp': '2025-05-08 11:16:54'}
+Sent: {'transaction_id': 75027, 'user_id': 70, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:16:55'}
+Sent: {'transaction_id': 45218, 'user_id': 85, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:16:56'}
+Sent: {'transaction_id': 75494, 'user_id': 75, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:16:57'}
+Sent: {'transaction_id': 85040, 'user_id': 61, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:16:58'}
+Sent: {'transaction_id': 85954, 'user_id': 55, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:16:59'}
+Sent: {'transaction_id': 84479, 'user_id': 33, 'product_id': 106, 'product_name': 'Camera', 'quantity': 1, 'amount': 599.99, 'timestamp': '2025-05-08 11:17:00'}
+Sent: {'transaction_id': 65650, 'user_id': 21, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 1, 'amount': 699.99, 'timestamp': '2025-05-08 11:17:01'}
+Sent: {'transaction_id': 11197, 'user_id': 82, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:17:03'}
+Sent: {'transaction_id': 49864, 'user_id': 4, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 1, 'amount': 699.99, 'timestamp': '2025-05-08 11:17:04'}
+Sent: {'transaction_id': 45520, 'user_id': 1, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 2, 'amount': 299.98, 'timestamp': '2025-05-08 11:17:06'}
+Sent: {'transaction_id': 29339, 'user_id': 88, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:17:07'}
+Sent: {'transaction_id': 21807, 'user_id': 44, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:17:09'}
+Sent: {'transaction_id': 54569, 'user_id': 7, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 1, 'amount': 149.99, 'timestamp': '2025-05-08 11:17:10'}
+Sent: {'transaction_id': 76567, 'user_id': 76, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:17:11'}
+Sent: {'transaction_id': 57473, 'user_id': 39, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 2, 'amount': 999.98, 'timestamp': '2025-05-08 11:17:13'}
+Sent: {'transaction_id': 86115, 'user_id': 78, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 2, 'amount': 999.98, 'timestamp': '2025-05-08 11:17:14'}
+Sent: {'transaction_id': 13036, 'user_id': 84, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 1, 'amount': 699.99, 'timestamp': '2025-05-08 11:17:14'}
+Sent: {'transaction_id': 91004, 'user_id': 91, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 2, 'amount': 699.98, 'timestamp': '2025-05-08 11:17:16'}
+Sent: {'transaction_id': 57535, 'user_id': 4, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 4, 'amount': 1399.96, 'timestamp': '2025-05-08 11:17:16'}
+Sent: {'transaction_id': 20322, 'user_id': 7, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 1, 'amount': 79.99, 'timestamp': '2025-05-08 11:17:18'}
+Sent: {'transaction_id': 67058, 'user_id': 9, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:17:20'}
+Sent: {'transaction_id': 51995, 'user_id': 26, 'product_id': 106, 'product_name': 'Camera', 'quantity': 2, 'amount': 1199.98, 'timestamp': '2025-05-08 11:17:21'}
+Sent: {'transaction_id': 86016, 'user_id': 4, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 5, 'amount': 749.95, 'timestamp': '2025-05-08 11:17:22'}
+Sent: {'transaction_id': 26033, 'user_id': 86, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:17:23'}
+Sent: {'transaction_id': 41361, 'user_id': 30, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 1, 'amount': 349.99, 'timestamp': '2025-05-08 11:17:24'}
+Sent: {'transaction_id': 80714, 'user_id': 90, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:17:25'}
+Sent: {'transaction_id': 84223, 'user_id': 53, 'product_id': 106, 'product_name': 'Camera', 'quantity': 1, 'amount': 599.99, 'timestamp': '2025-05-08 11:17:26'}
+Sent: {'transaction_id': 77281, 'user_id': 1, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 4, 'amount': 799.96, 'timestamp': '2025-05-08 11:17:27'}
+Sent: {'transaction_id': 50997, 'user_id': 22, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:17:28'}
+Sent: {'transaction_id': 33370, 'user_id': 16, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:17:29'}
+Sent: {'transaction_id': 13242, 'user_id': 40, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:17:31'}
+Sent: {'transaction_id': 56799, 'user_id': 45, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:17:33'}
+Sent: {'transaction_id': 20965, 'user_id': 84, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:17:34'}
+Sent: {'transaction_id': 90990, 'user_id': 51, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:17:35'}
+Sent: {'transaction_id': 13717, 'user_id': 34, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 1, 'amount': 119.99, 'timestamp': '2025-05-08 11:17:37'}
+Sent: {'transaction_id': 60205, 'user_id': 2, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 1, 'amount': 119.99, 'timestamp': '2025-05-08 11:17:39'}
+Sent: {'transaction_id': 72731, 'user_id': 89, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:17:40'}
+Sent: {'transaction_id': 71503, 'user_id': 69, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 2, 'amount': 999.98, 'timestamp': '2025-05-08 11:17:41'}
+Sent: {'transaction_id': 27520, 'user_id': 27, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:17:42'}
+Sent: {'transaction_id': 28344, 'user_id': 5, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:17:43'}
+Sent: {'transaction_id': 33730, 'user_id': 35, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:17:44'}
+Sent: {'transaction_id': 24055, 'user_id': 20, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 1, 'amount': 1299.99, 'timestamp': '2025-05-08 11:17:45'}
+Sent: {'transaction_id': 54057, 'user_id': 14, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:17:46'}
+Sent: {'transaction_id': 61271, 'user_id': 99, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:17:47'}
+Sent: {'transaction_id': 13071, 'user_id': 29, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 1, 'amount': 79.99, 'timestamp': '2025-05-08 11:17:48'}
+Sent: {'transaction_id': 35422, 'user_id': 80, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 1, 'amount': 499.99, 'timestamp': '2025-05-08 11:17:50'}
+Sent: {'transaction_id': 85329, 'user_id': 19, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:17:50'}
+Sent: {'transaction_id': 27869, 'user_id': 59, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 2, 'amount': 299.98, 'timestamp': '2025-05-08 11:17:52'}
+Sent: {'transaction_id': 43760, 'user_id': 28, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 1, 'amount': 349.99, 'timestamp': '2025-05-08 11:17:54'}
+Sent: {'transaction_id': 70301, 'user_id': 23, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 2, 'amount': 159.98, 'timestamp': '2025-05-08 11:17:55'}
+Sent: {'transaction_id': 46265, 'user_id': 10, 'product_id': 106, 'product_name': 'Camera', 'quantity': 5, 'amount': 2999.95, 'timestamp': '2025-05-08 11:17:56'}
+Sent: {'transaction_id': 37975, 'user_id': 12, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:17:56'}
+Sent: {'transaction_id': 28272, 'user_id': 25, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 2, 'amount': 699.98, 'timestamp': '2025-05-08 11:17:57'}
+Sent: {'transaction_id': 39420, 'user_id': 12, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 1, 'amount': 149.99, 'timestamp': '2025-05-08 11:17:58'}
+Sent: {'transaction_id': 35561, 'user_id': 97, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 2, 'amount': 159.98, 'timestamp': '2025-05-08 11:18:00'}
+Sent: {'transaction_id': 78726, 'user_id': 6, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 5, 'amount': 749.95, 'timestamp': '2025-05-08 11:18:02'}
+Sent: {'transaction_id': 61242, 'user_id': 94, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 1, 'amount': 1299.99, 'timestamp': '2025-05-08 11:18:03'}
+Sent: {'transaction_id': 54911, 'user_id': 96, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:18:04'}
+Sent: {'transaction_id': 65697, 'user_id': 57, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:18:05'}
+Sent: {'transaction_id': 86064, 'user_id': 6, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 4, 'amount': 2799.96, 'timestamp': '2025-05-08 11:18:07'}
+Sent: {'transaction_id': 84799, 'user_id': 54, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 2, 'amount': 999.98, 'timestamp': '2025-05-08 11:18:08'}
+Sent: {'transaction_id': 70336, 'user_id': 100, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:18:09'}
+Sent: {'transaction_id': 99262, 'user_id': 89, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 1, 'amount': 349.99, 'timestamp': '2025-05-08 11:18:11'}
+Sent: {'transaction_id': 35077, 'user_id': 25, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:18:12'}
+Sent: {'transaction_id': 29448, 'user_id': 5, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 5, 'amount': 2499.95, 'timestamp': '2025-05-08 11:18:13'}
+Sent: {'transaction_id': 25969, 'user_id': 3, 'product_id': 106, 'product_name': 'Camera', 'quantity': 3, 'amount': 1799.97, 'timestamp': '2025-05-08 11:18:14'}
+Sent: {'transaction_id': 46248, 'user_id': 75, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:18:16'}
+Sent: {'transaction_id': 74445, 'user_id': 36, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 1, 'amount': 499.99, 'timestamp': '2025-05-08 11:18:17'}
+Sent: {'transaction_id': 83021, 'user_id': 30, 'product_id': 106, 'product_name': 'Camera', 'quantity': 1, 'amount': 599.99, 'timestamp': '2025-05-08 11:18:18'}
+Sent: {'transaction_id': 21781, 'user_id': 57, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 2, 'amount': 299.98, 'timestamp': '2025-05-08 11:18:20'}
+Sent: {'transaction_id': 27913, 'user_id': 31, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 1, 'amount': 199.99, 'timestamp': '2025-05-08 11:18:22'}
+Sent: {'transaction_id': 61955, 'user_id': 2, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 5, 'amount': 6499.95, 'timestamp': '2025-05-08 11:18:23'}
+Sent: {'transaction_id': 75961, 'user_id': 67, 'product_id': 106, 'product_name': 'Camera', 'quantity': 1, 'amount': 599.99, 'timestamp': '2025-05-08 11:18:24'}
+Sent: {'transaction_id': 87525, 'user_id': 57, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:18:25'}
+Sent: {'transaction_id': 52958, 'user_id': 43, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 1, 'amount': 119.99, 'timestamp': '2025-05-08 11:18:27'}
+Sent: {'transaction_id': 16153, 'user_id': 34, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:18:28'}
+Sent: {'transaction_id': 56284, 'user_id': 54, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 1, 'amount': 349.99, 'timestamp': '2025-05-08 11:18:29'}
+Sent: {'transaction_id': 17078, 'user_id': 89, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 1, 'amount': 349.99, 'timestamp': '2025-05-08 11:18:30'}
+Sent: {'transaction_id': 45760, 'user_id': 26, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 2, 'amount': 999.98, 'timestamp': '2025-05-08 11:18:32'}
+Sent: {'transaction_id': 12866, 'user_id': 1, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 1, 'amount': 199.99, 'timestamp': '2025-05-08 11:18:33'}
+Sent: {'transaction_id': 76944, 'user_id': 3, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 4, 'amount': 5199.96, 'timestamp': '2025-05-08 11:18:34'}
+Sent: {'transaction_id': 75488, 'user_id': 52, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 1, 'amount': 199.99, 'timestamp': '2025-05-08 11:18:35'}
+Sent: {'transaction_id': 55642, 'user_id': 39, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 1, 'amount': 119.99, 'timestamp': '2025-05-08 11:18:36'}
+Sent: {'transaction_id': 57679, 'user_id': 8, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:18:37'}
+Sent: {'transaction_id': 16047, 'user_id': 76, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:18:37'}
+Sent: {'transaction_id': 33068, 'user_id': 64, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:18:39'}
+Sent: {'transaction_id': 93293, 'user_id': 8, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 1, 'amount': 699.99, 'timestamp': '2025-05-08 11:18:39'}
+Sent: {'transaction_id': 36685, 'user_id': 7, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 5, 'amount': 999.95, 'timestamp': '2025-05-08 11:18:41'}
+Sent: {'transaction_id': 49850, 'user_id': 96, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:18:43'}
+Sent: {'transaction_id': 67909, 'user_id': 53, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:18:43'}
+Sent: {'transaction_id': 13463, 'user_id': 2, 'product_id': 106, 'product_name': 'Camera', 'quantity': 5, 'amount': 2999.95, 'timestamp': '2025-05-08 11:18:45'}
+Sent: {'transaction_id': 96448, 'user_id': 52, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:18:46'}
+Sent: {'transaction_id': 66705, 'user_id': 7, 'product_id': 106, 'product_name': 'Camera', 'quantity': 5, 'amount': 2999.95, 'timestamp': '2025-05-08 11:18:48'}
+Sent: {'transaction_id': 69170, 'user_id': 30, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 2, 'amount': 159.98, 'timestamp': '2025-05-08 11:18:49'}
+Sent: {'transaction_id': 72781, 'user_id': 74, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:18:51'}
+Sent: {'transaction_id': 29492, 'user_id': 87, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:18:51'}
+Sent: {'transaction_id': 60489, 'user_id': 38, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 1, 'amount': 1299.99, 'timestamp': '2025-05-08 11:18:52'}
+Sent: {'transaction_id': 16239, 'user_id': 80, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:18:53'}
+Sent: {'transaction_id': 40950, 'user_id': 65, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 1, 'amount': 1299.99, 'timestamp': '2025-05-08 11:18:53'}
+Sent: {'transaction_id': 15231, 'user_id': 28, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 1, 'amount': 199.99, 'timestamp': '2025-05-08 11:18:55'}
+Sent: {'transaction_id': 10432, 'user_id': 10, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 4, 'amount': 479.96, 'timestamp': '2025-05-08 11:18:56'}
+Sent: {'transaction_id': 18371, 'user_id': 63, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 2, 'amount': 159.98, 'timestamp': '2025-05-08 11:18:58'}
+Sent: {'transaction_id': 57561, 'user_id': 54, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 1, 'amount': 79.99, 'timestamp': '2025-05-08 11:18:59'}
+Sent: {'transaction_id': 24780, 'user_id': 9, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 2, 'amount': 299.98, 'timestamp': '2025-05-08 11:19:01'}
+Sent: {'transaction_id': 53616, 'user_id': 86, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 2, 'amount': 699.98, 'timestamp': '2025-05-08 11:19:03'}
+Sent: {'transaction_id': 49292, 'user_id': 16, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:19:04'}
+Sent: {'transaction_id': 77635, 'user_id': 36, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 2, 'amount': 999.98, 'timestamp': '2025-05-08 11:19:06'}
+Sent: {'transaction_id': 32382, 'user_id': 67, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:19:06'}
+Sent: {'transaction_id': 79234, 'user_id': 76, 'product_id': 106, 'product_name': 'Camera', 'quantity': 2, 'amount': 1199.98, 'timestamp': '2025-05-08 11:19:08'}
+Sent: {'transaction_id': 52303, 'user_id': 45, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:19:10'}
+Sent: {'transaction_id': 21366, 'user_id': 60, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:19:12'}
+Sent: {'transaction_id': 69652, 'user_id': 92, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 1, 'amount': 199.99, 'timestamp': '2025-05-08 11:19:13'}
+Sent: {'transaction_id': 16045, 'user_id': 58, 'product_id': 106, 'product_name': 'Camera', 'quantity': 1, 'amount': 599.99, 'timestamp': '2025-05-08 11:19:13'}
+Sent: {'transaction_id': 96746, 'user_id': 7, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 5, 'amount': 3499.95, 'timestamp': '2025-05-08 11:19:14'}
+Sent: {'transaction_id': 84634, 'user_id': 51, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 1, 'amount': 1299.99, 'timestamp': '2025-05-08 11:19:15'}
+Sent: {'transaction_id': 51980, 'user_id': 9, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 2, 'amount': 699.98, 'timestamp': '2025-05-08 11:19:17'}
+Sent: {'transaction_id': 67132, 'user_id': 5, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 3, 'amount': 239.97, 'timestamp': '2025-05-08 11:19:19'}
+Sent: {'transaction_id': 79572, 'user_id': 7, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 1, 'amount': 499.99, 'timestamp': '2025-05-08 11:19:21'}
+Sent: {'transaction_id': 54012, 'user_id': 28, 'product_id': 106, 'product_name': 'Camera', 'quantity': 2, 'amount': 1199.98, 'timestamp': '2025-05-08 11:19:22'}
+Sent: {'transaction_id': 74492, 'user_id': 66, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:19:23'}
+Sent: {'transaction_id': 73312, 'user_id': 34, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:19:24'}
+Sent: {'transaction_id': 77869, 'user_id': 51, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 1, 'amount': 119.99, 'timestamp': '2025-05-08 11:19:25'}
+Sent: {'transaction_id': 24986, 'user_id': 1, 'product_id': 106, 'product_name': 'Camera', 'quantity': 2, 'amount': 1199.98, 'timestamp': '2025-05-08 11:19:26'}
+Sent: {'transaction_id': 22866, 'user_id': 36, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 1, 'amount': 499.99, 'timestamp': '2025-05-08 11:19:28'}
+Sent: {'transaction_id': 47434, 'user_id': 78, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:19:29'}
+Sent: {'transaction_id': 23543, 'user_id': 70, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 2, 'amount': 999.98, 'timestamp': '2025-05-08 11:19:30'}
+Sent: {'transaction_id': 58015, 'user_id': 13, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 1, 'amount': 499.99, 'timestamp': '2025-05-08 11:19:31'}
+Sent: {'transaction_id': 85914, 'user_id': 16, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 2, 'amount': 159.98, 'timestamp': '2025-05-08 11:19:32'}
+Sent: {'transaction_id': 20565, 'user_id': 1, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 1, 'amount': 149.99, 'timestamp': '2025-05-08 11:19:33'}
+Sent: {'transaction_id': 25611, 'user_id': 36, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 1, 'amount': 499.99, 'timestamp': '2025-05-08 11:19:34'}
+Sent: {'transaction_id': 94807, 'user_id': 5, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 1, 'amount': 499.99, 'timestamp': '2025-05-08 11:19:34'}
+Sent: {'transaction_id': 39437, 'user_id': 93, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 2, 'amount': 159.98, 'timestamp': '2025-05-08 11:19:36'}
+Sent: {'transaction_id': 72547, 'user_id': 51, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 1, 'amount': 79.99, 'timestamp': '2025-05-08 11:19:37'}
+Sent: {'transaction_id': 75681, 'user_id': 77, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 1, 'amount': 1299.99, 'timestamp': '2025-05-08 11:19:38'}
+Sent: {'transaction_id': 82150, 'user_id': 6, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 2, 'amount': 299.98, 'timestamp': '2025-05-08 11:19:40'}
+Sent: {'transaction_id': 93298, 'user_id': 78, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 2, 'amount': 299.98, 'timestamp': '2025-05-08 11:19:41'}
+Sent: {'transaction_id': 91147, 'user_id': 61, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 1, 'amount': 119.99, 'timestamp': '2025-05-08 11:19:41'}
+Sent: {'transaction_id': 50382, 'user_id': 54, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 1, 'amount': 79.99, 'timestamp': '2025-05-08 11:19:43'}
+Sent: {'transaction_id': 47312, 'user_id': 21, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 1, 'amount': 79.99, 'timestamp': '2025-05-08 11:19:44'}
+Sent: {'transaction_id': 81879, 'user_id': 97, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 1, 'amount': 149.99, 'timestamp': '2025-05-08 11:19:45'}
+Sent: {'transaction_id': 99390, 'user_id': 24, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:19:47'}
+Sent: {'transaction_id': 90199, 'user_id': 4, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 5, 'amount': 3499.95, 'timestamp': '2025-05-08 11:19:48'}
+Sent: {'transaction_id': 62218, 'user_id': 80, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:19:49'}
+Sent: {'transaction_id': 51089, 'user_id': 100, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 1, 'amount': 119.99, 'timestamp': '2025-05-08 11:19:51'}
+Sent: {'transaction_id': 21300, 'user_id': 81, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:19:53'}
+Sent: {'transaction_id': 72885, 'user_id': 89, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:19:53'}
+Sent: {'transaction_id': 89791, 'user_id': 24, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:19:55'}
+Sent: {'transaction_id': 48286, 'user_id': 87, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 2, 'amount': 999.98, 'timestamp': '2025-05-08 11:19:57'}
+Sent: {'transaction_id': 97945, 'user_id': 92, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:19:58'}
+Sent: {'transaction_id': 38090, 'user_id': 4, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 4, 'amount': 319.96, 'timestamp': '2025-05-08 11:19:59'}
+Sent: {'transaction_id': 85709, 'user_id': 85, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:20:01'}
+Sent: {'transaction_id': 79564, 'user_id': 28, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 2, 'amount': 299.98, 'timestamp': '2025-05-08 11:20:01'}
+Sent: {'transaction_id': 70716, 'user_id': 7, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 5, 'amount': 399.95, 'timestamp': '2025-05-08 11:20:02'}
+Sent: {'transaction_id': 31459, 'user_id': 30, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:20:03'}
+Sent: {'transaction_id': 66646, 'user_id': 93, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 2, 'amount': 699.98, 'timestamp': '2025-05-08 11:20:04'}
+Sent: {'transaction_id': 21930, 'user_id': 40, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:20:06'}
+Sent: {'transaction_id': 65221, 'user_id': 64, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 2, 'amount': 999.98, 'timestamp': '2025-05-08 11:20:06'}
+Sent: {'transaction_id': 47984, 'user_id': 73, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 1, 'amount': 199.99, 'timestamp': '2025-05-08 11:20:08'}
+Sent: {'transaction_id': 58210, 'user_id': 54, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:20:10'}
+Sent: {'transaction_id': 29410, 'user_id': 35, 'product_id': 106, 'product_name': 'Camera', 'quantity': 1, 'amount': 599.99, 'timestamp': '2025-05-08 11:20:11'}
+Sent: {'transaction_id': 31602, 'user_id': 55, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:20:12'}
+Sent: {'transaction_id': 23630, 'user_id': 69, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:20:14'}
+Sent: {'transaction_id': 85661, 'user_id': 36, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:20:15'}
+Sent: {'transaction_id': 37538, 'user_id': 4, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 5, 'amount': 649.95, 'timestamp': '2025-05-08 11:20:16'}
+Sent: {'transaction_id': 30353, 'user_id': 27, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:20:17'}
+Sent: {'transaction_id': 28579, 'user_id': 72, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:20:18'}
+Sent: {'transaction_id': 25166, 'user_id': 33, 'product_id': 106, 'product_name': 'Camera', 'quantity': 2, 'amount': 1199.98, 'timestamp': '2025-05-08 11:20:19'}
+Sent: {'transaction_id': 90824, 'user_id': 85, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 1, 'amount': 349.99, 'timestamp': '2025-05-08 11:20:20'}
+Sent: {'transaction_id': 24348, 'user_id': 79, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 2, 'amount': 999.98, 'timestamp': '2025-05-08 11:20:21'}
+Sent: {'transaction_id': 53324, 'user_id': 35, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 1, 'amount': 199.99, 'timestamp': '2025-05-08 11:20:22'}
+Sent: {'transaction_id': 12991, 'user_id': 7, 'product_id': 106, 'product_name': 'Camera', 'quantity': 2, 'amount': 1199.98, 'timestamp': '2025-05-08 11:20:24'}
+Sent: {'transaction_id': 48348, 'user_id': 42, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:20:25'}
+Sent: {'transaction_id': 78700, 'user_id': 51, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:20:27'}
+Sent: {'transaction_id': 48670, 'user_id': 9, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 1, 'amount': 699.99, 'timestamp': '2025-05-08 11:20:28'}
+Sent: {'transaction_id': 77879, 'user_id': 59, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:20:29'}
+Sent: {'transaction_id': 81105, 'user_id': 99, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:20:31'}
+Sent: {'transaction_id': 22808, 'user_id': 99, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:20:32'}
+Sent: {'transaction_id': 49282, 'user_id': 46, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 1, 'amount': 499.99, 'timestamp': '2025-05-08 11:20:34'}
+Sent: {'transaction_id': 67605, 'user_id': 88, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:20:34'}
+Sent: {'transaction_id': 74680, 'user_id': 29, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 1, 'amount': 699.99, 'timestamp': '2025-05-08 11:20:36'}
+Sent: {'transaction_id': 79582, 'user_id': 62, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 1, 'amount': 499.99, 'timestamp': '2025-05-08 11:20:37'}
+Sent: {'transaction_id': 62068, 'user_id': 9, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 1, 'amount': 699.99, 'timestamp': '2025-05-08 11:20:38'}
+Sent: {'transaction_id': 26257, 'user_id': 56, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:20:39'}
+Sent: {'transaction_id': 42738, 'user_id': 57, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 2, 'amount': 159.98, 'timestamp': '2025-05-08 11:20:40'}
+Sent: {'transaction_id': 50188, 'user_id': 1, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:20:42'}
+Sent: {'transaction_id': 33267, 'user_id': 53, 'product_id': 106, 'product_name': 'Camera', 'quantity': 2, 'amount': 1199.98, 'timestamp': '2025-05-08 11:20:43'}
+Sent: {'transaction_id': 76227, 'user_id': 77, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:20:45'}
+Sent: {'transaction_id': 83035, 'user_id': 95, 'product_id': 106, 'product_name': 'Camera', 'quantity': 1, 'amount': 599.99, 'timestamp': '2025-05-08 11:20:46'}
+Sent: {'transaction_id': 76364, 'user_id': 7, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:20:47'}
+Sent: {'transaction_id': 72352, 'user_id': 52, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 1, 'amount': 119.99, 'timestamp': '2025-05-08 11:20:49'}
+Sent: {'transaction_id': 22512, 'user_id': 43, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 1, 'amount': 1299.99, 'timestamp': '2025-05-08 11:20:50'}
+Sent: {'transaction_id': 68594, 'user_id': 91, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:20:52'}
+Sent: {'transaction_id': 35809, 'user_id': 48, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:20:53'}
+Sent: {'transaction_id': 96967, 'user_id': 23, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 1, 'amount': 199.99, 'timestamp': '2025-05-08 11:20:54'}
+Sent: {'transaction_id': 45426, 'user_id': 73, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:20:55'}
+Sent: {'transaction_id': 66348, 'user_id': 44, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 2, 'amount': 299.98, 'timestamp': '2025-05-08 11:20:57'}
+Sent: {'transaction_id': 45746, 'user_id': 85, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 1, 'amount': 199.99, 'timestamp': '2025-05-08 11:20:58'}
+Sent: {'transaction_id': 16892, 'user_id': 35, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:20:59'}
+Sent: {'transaction_id': 73622, 'user_id': 69, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 1, 'amount': 199.99, 'timestamp': '2025-05-08 11:21:01'}
+Sent: {'transaction_id': 28899, 'user_id': 96, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 1, 'amount': 349.99, 'timestamp': '2025-05-08 11:21:03'}
+Sent: {'transaction_id': 92270, 'user_id': 85, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:21:04'}
+Sent: {'transaction_id': 54673, 'user_id': 84, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 1, 'amount': 1299.99, 'timestamp': '2025-05-08 11:21:06'}
+Sent: {'transaction_id': 26052, 'user_id': 26, 'product_id': 106, 'product_name': 'Camera', 'quantity': 1, 'amount': 599.99, 'timestamp': '2025-05-08 11:21:06'}
+Sent: {'transaction_id': 47828, 'user_id': 82, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:21:08'}
+Sent: {'transaction_id': 21294, 'user_id': 52, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 2, 'amount': 999.98, 'timestamp': '2025-05-08 11:21:10'}
+Sent: {'transaction_id': 89657, 'user_id': 7, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:21:12'}
+Sent: {'transaction_id': 86205, 'user_id': 31, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 2, 'amount': 159.98, 'timestamp': '2025-05-08 11:21:14'}
+Sent: {'transaction_id': 21201, 'user_id': 46, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:21:14'}
+Sent: {'transaction_id': 40840, 'user_id': 27, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 2, 'amount': 299.98, 'timestamp': '2025-05-08 11:21:15'}
+Sent: {'transaction_id': 20134, 'user_id': 58, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 2, 'amount': 159.98, 'timestamp': '2025-05-08 11:21:16'}
+Sent: {'transaction_id': 88882, 'user_id': 18, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:21:18'}
+Sent: {'transaction_id': 90760, 'user_id': 33, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:21:19'}
+Sent: {'transaction_id': 77549, 'user_id': 22, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 1, 'amount': 119.99, 'timestamp': '2025-05-08 11:21:21'}
+Sent: {'transaction_id': 36124, 'user_id': 7, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 4, 'amount': 599.96, 'timestamp': '2025-05-08 11:21:23'}
+Sent: {'transaction_id': 24750, 'user_id': 96, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:21:25'}
+Sent: {'transaction_id': 28787, 'user_id': 22, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:21:26'}
+Sent: {'transaction_id': 80447, 'user_id': 79, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 1, 'amount': 1299.99, 'timestamp': '2025-05-08 11:21:28'}
+Sent: {'transaction_id': 60041, 'user_id': 46, 'product_id': 106, 'product_name': 'Camera', 'quantity': 2, 'amount': 1199.98, 'timestamp': '2025-05-08 11:21:29'}
+Sent: {'transaction_id': 36863, 'user_id': 7, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 4, 'amount': 519.96, 'timestamp': '2025-05-08 11:21:31'}
+Sent: {'transaction_id': 78107, 'user_id': 71, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:21:32'}
+Sent: {'transaction_id': 42243, 'user_id': 60, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:21:33'}
+Sent: {'transaction_id': 23324, 'user_id': 95, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 1, 'amount': 119.99, 'timestamp': '2025-05-08 11:21:33'}
+Sent: {'transaction_id': 20475, 'user_id': 66, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 2, 'amount': 159.98, 'timestamp': '2025-05-08 11:21:35'}
+Sent: {'transaction_id': 54518, 'user_id': 63, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:21:36'}
+Sent: {'transaction_id': 66583, 'user_id': 34, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 1, 'amount': 199.99, 'timestamp': '2025-05-08 11:21:38'}
+Sent: {'transaction_id': 32061, 'user_id': 35, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 2, 'amount': 699.98, 'timestamp': '2025-05-08 11:21:40'}
+Sent: {'transaction_id': 66854, 'user_id': 55, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 1, 'amount': 149.99, 'timestamp': '2025-05-08 11:21:41'}
+Sent: {'transaction_id': 56157, 'user_id': 47, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 1, 'amount': 199.99, 'timestamp': '2025-05-08 11:21:43'}
+Sent: {'transaction_id': 59534, 'user_id': 74, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 2, 'amount': 699.98, 'timestamp': '2025-05-08 11:21:44'}
+Sent: {'transaction_id': 66229, 'user_id': 9, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:21:47'}
+Sent: {'transaction_id': 92816, 'user_id': 94, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 1, 'amount': 499.99, 'timestamp': '2025-05-08 11:21:49'}
+Sent: {'transaction_id': 27595, 'user_id': 29, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:21:51'}
+Sent: {'transaction_id': 25746, 'user_id': 37, 'product_id': 106, 'product_name': 'Camera', 'quantity': 2, 'amount': 1199.98, 'timestamp': '2025-05-08 11:21:52'}
+Sent: {'transaction_id': 61137, 'user_id': 12, 'product_id': 106, 'product_name': 'Camera', 'quantity': 1, 'amount': 599.99, 'timestamp': '2025-05-08 11:21:53'}
+Sent: {'transaction_id': 56432, 'user_id': 69, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 1, 'amount': 499.99, 'timestamp': '2025-05-08 11:21:54'}
+Sent: {'transaction_id': 49617, 'user_id': 50, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:21:56'}
+Sent: {'transaction_id': 98286, 'user_id': 74, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:21:57'}
+Sent: {'transaction_id': 25773, 'user_id': 10, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 4, 'amount': 5199.96, 'timestamp': '2025-05-08 11:21:58'}
+Sent: {'transaction_id': 99756, 'user_id': 6, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 3, 'amount': 3899.97, 'timestamp': '2025-05-08 11:22:00'}
+Sent: {'transaction_id': 83651, 'user_id': 5, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 2, 'amount': 399.98, 'timestamp': '2025-05-08 11:22:00'}
+Sent: {'transaction_id': 13909, 'user_id': 1, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 4, 'amount': 1999.96, 'timestamp': '2025-05-08 11:22:02'}
+Sent: {'transaction_id': 45768, 'user_id': 69, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:22:04'}
+Sent: {'transaction_id': 59511, 'user_id': 29, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 1, 'amount': 149.99, 'timestamp': '2025-05-08 11:22:04'}
+Sent: {'transaction_id': 88938, 'user_id': 3, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:22:05'}
+Sent: {'transaction_id': 52987, 'user_id': 11, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:22:06'}
+Sent: {'transaction_id': 33215, 'user_id': 17, 'product_id': 103, 'product_name': 'Headphones', 'quantity': 2, 'amount': 299.98, 'timestamp': '2025-05-08 11:22:08'}
+Sent: {'transaction_id': 49199, 'user_id': 76, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 1, 'amount': 1299.99, 'timestamp': '2025-05-08 11:22:10'}
+Sent: {'transaction_id': 66512, 'user_id': 5, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 5, 'amount': 2499.95, 'timestamp': '2025-05-08 11:22:11'}
+Sent: {'transaction_id': 61920, 'user_id': 47, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 1, 'amount': 1299.99, 'timestamp': '2025-05-08 11:22:12'}
+Sent: {'transaction_id': 95439, 'user_id': 2, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 3, 'amount': 1499.97, 'timestamp': '2025-05-08 11:22:13'}
+Sent: {'transaction_id': 36228, 'user_id': 94, 'product_id': 106, 'product_name': 'Camera', 'quantity': 1, 'amount': 599.99, 'timestamp': '2025-05-08 11:22:15'}
+Sent: {'transaction_id': 91505, 'user_id': 5, 'product_id': 106, 'product_name': 'Camera', 'quantity': 4, 'amount': 2399.96, 'timestamp': '2025-05-08 11:22:16'}
+Sent: {'transaction_id': 79876, 'user_id': 83, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:22:17'}
+Sent: {'transaction_id': 93279, 'user_id': 98, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:22:18'}
+Sent: {'transaction_id': 22003, 'user_id': 36, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 1, 'amount': 119.99, 'timestamp': '2025-05-08 11:22:19'}
+Sent: {'transaction_id': 54762, 'user_id': 31, 'product_id': 108, 'product_name': 'Bluetooth Speaker', 'quantity': 2, 'amount': 159.98, 'timestamp': '2025-05-08 11:22:21'}
+Sent: {'transaction_id': 37846, 'user_id': 33, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 1, 'amount': 349.99, 'timestamp': '2025-05-08 11:22:22'}
+Sent: {'transaction_id': 63197, 'user_id': 100, 'product_id': 110, 'product_name': 'Wireless Earbuds', 'quantity': 2, 'amount': 239.98, 'timestamp': '2025-05-08 11:22:23'}
+Sent: {'transaction_id': 75413, 'user_id': 7, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 1, 'amount': 1299.99, 'timestamp': '2025-05-08 11:22:23'}
+Sent: {'transaction_id': 63410, 'user_id': 2, 'product_id': 107, 'product_name': 'Gaming Console', 'quantity': 1, 'amount': 499.99, 'timestamp': '2025-05-08 11:22:24'}
+Sent: {'transaction_id': 77676, 'user_id': 6, 'product_id': 106, 'product_name': 'Camera', 'quantity': 2, 'amount': 1199.98, 'timestamp': '2025-05-08 11:22:26'}
+Sent: {'transaction_id': 78690, 'user_id': 82, 'product_id': 101, 'product_name': 'Smartphone', 'quantity': 2, 'amount': 1399.98, 'timestamp': '2025-05-08 11:22:27'}
+Sent: {'transaction_id': 60933, 'user_id': 78, 'product_id': 104, 'product_name': 'Tablet', 'quantity': 2, 'amount': 699.98, 'timestamp': '2025-05-08 11:22:28'}
+Sent: {'transaction_id': 90963, 'user_id': 19, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 1, 'amount': 1299.99, 'timestamp': '2025-05-08 11:22:29'}
+Sent: {'transaction_id': 97958, 'user_id': 53, 'product_id': 102, 'product_name': 'Laptop', 'quantity': 2, 'amount': 2599.98, 'timestamp': '2025-05-08 11:22:30'}
+Sent: {'transaction_id': 95083, 'user_id': 27, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 2, 'amount': 259.98, 'timestamp': '2025-05-08 11:22:31'}
+Sent: {'transaction_id': 12836, 'user_id': 15, 'product_id': 109, 'product_name': 'External Hard Drive', 'quantity': 1, 'amount': 129.99, 'timestamp': '2025-05-08 11:22:33'}
+Sent: {'transaction_id': 94861, 'user_id': 77, 'product_id': 105, 'product_name': 'Smartwatch', 'quantity': 1, 'amount': 199.99, 'timestamp': '2025-05-08 11:22:34'}

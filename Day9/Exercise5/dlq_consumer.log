@@ -1,0 +1,396 @@
+2025-05-08 12:24:56,640 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.2.4, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-05-08 12:24:56,650 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.2.4, node_id=bootstrap-0 host=localhost:9092 <checking_api_versions_recv> [IPv6 ('::1', 9092, 0, 0)]>: Broker version identified as 2.6
+2025-05-08 12:24:56,651 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.2.4, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-05-08 12:24:56,651 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('dead-letter-queue',)
+2025-05-08 12:24:56,651 - dlq-consumer - INFO - Successfully connected to Kafka DLQ consumer
+2025-05-08 12:24:56,652 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-05-08 12:24:56,654 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=localhost:9092 <checking_api_versions_recv> [IPv6 ('::1', 9092, 0, 0)]>: Broker version identified as 2.6
+2025-05-08 12:24:56,654 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-05-08 12:24:56,655 - dlq-consumer - INFO - Successfully connected to Kafka producer for error analytics
+2025-05-08 12:24:56,655 - dlq-consumer - INFO - Starting to listen for error records from 'dead-letter-queue'...
+2025-05-08 12:24:56,657 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.2.4, node_id=1001 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-05-08 12:24:56,760 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.2.4, node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-05-08 12:24:56,760 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.2.4, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2025-05-08 12:24:56,866 - kafka.cluster - INFO - Coordinator for group/dlq-processing-group is BrokerMetadata(nodeId='coordinator-1001', host='localhost', port=9092, rack=None)
+2025-05-08 12:24:56,867 - kafka.coordinator - INFO - Discovered coordinator coordinator-1001 for group dlq-processing-group
+2025-05-08 12:24:56,867 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-05-08 12:24:56,867 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group dlq-processing-group
+2025-05-08 12:24:56,867 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.2.4, node_id=coordinator-1001 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-05-08 12:24:56,968 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-2.2.4, node_id=coordinator-1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-05-08 12:24:57,072 - kafka.coordinator - INFO - (Re-)joining group dlq-processing-group
+2025-05-08 12:24:57,075 - kafka.coordinator - INFO - (Re-)joining group dlq-processing-group
+2025-05-08 12:24:57,080 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-05-08 12:24:57,084 - kafka.coordinator - INFO - Successfully joined group dlq-processing-group with generation 1
+2025-05-08 12:24:57,084 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='dead-letter-queue', partition=0)]
+2025-05-08 12:24:57,085 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='dead-letter-queue', partition=0)} for group dlq-processing-group
+2025-05-08 12:24:57,088 - kafka.consumer.fetcher - INFO - Resetting offset for partition TopicPartition(topic='dead-letter-queue', partition=0) to offset 0.
+2025-05-08 12:24:59,017 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,018 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,020 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,020 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,020 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,020 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,020 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,020 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,023 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,023 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,023 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,023 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,023 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,023 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,023 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,023 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,023 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,023 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,025 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:24:59,025 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,025 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,025 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,025 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,025 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,025 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,026 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,026 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,026 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,026 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:24:59,026 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,026 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,026 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,026 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,026 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,028 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,028 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,028 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,028 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,028 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,029 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,029 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,029 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,029 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,029 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,032 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,035 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,035 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,035 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:24:59,035 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,038 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,038 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,038 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:24:59,038 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,038 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,038 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,038 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,039 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,039 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,039 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,039 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,039 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,041 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,042 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,042 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,042 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,042 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,042 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,042 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,042 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,042 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:24:59,042 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,045 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,047 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,047 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,047 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,047 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,047 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:24:59,048 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,048 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,048 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,048 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,048 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,048 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:24:59,048 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,052 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,054 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,054 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,056 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,056 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,056 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,056 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,056 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,056 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,056 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:24:59,056 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,059 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,060 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,752 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:24:59,752 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:24:59,890 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:24:59,890 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:00,734 - dlq-consumer - WARNING - Error record from sensor 4: invalid_type:temperature
+2025-05-08 12:25:00,734 - dlq-consumer - WARNING -  - Invalid temperature
+2025-05-08 12:25:00,751 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:25:00,751 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:00,893 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:25:00,894 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:01,763 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:25:01,763 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:01,896 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:25:01,896 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:02,531 - dlq-consumer - WARNING - Error record from sensor 9: invalid_format:timestamp
+2025-05-08 12:25:02,531 - dlq-consumer - WARNING -  - Invalid timestamp
+2025-05-08 12:25:02,761 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:25:02,761 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:02,904 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:02,904 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:03,764 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:03,764 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:03,902 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:25:03,903 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:04,769 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:04,769 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:04,906 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:25:04,906 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:05,767 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:05,767 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:05,905 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:05,905 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:06,767 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:06,768 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:06,907 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:25:06,907 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:07,770 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:07,770 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:07,912 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:07,912 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:08,771 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:08,771 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:08,912 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:08,912 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:09,773 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:25:09,774 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:09,917 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:09,917 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:10,773 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:10,774 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:10,918 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:10,918 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:11,779 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:11,779 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:11,919 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:11,919 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:12,785 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:12,785 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:12,918 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:12,918 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:13,785 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:25:13,786 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:13,928 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:13,928 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:14,786 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:25:14,786 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:14,926 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:14,926 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:15,791 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:15,791 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:15,927 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:15,927 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:16,797 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:25:16,798 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:16,931 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:25:16,931 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:17,798 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:17,798 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:17,933 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:25:17,933 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:18,797 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:18,797 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:18,933 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:18,933 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:19,599 - dlq-consumer - WARNING - Error record from sensor 10: null_value:temperature
+2025-05-08 12:25:19,601 - dlq-consumer - WARNING -  - Invalid temperature
+2025-05-08 12:25:19,800 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:19,800 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:19,933 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:19,934 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:20,806 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:20,806 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:20,939 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:20,939 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:21,800 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:21,801 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:21,940 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:25:21,940 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:22,805 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:25:22,805 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:22,939 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:22,940 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:23,806 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:23,806 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:23,948 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:23,948 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:24,811 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:25:24,811 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:24,950 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:24,950 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:25,815 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:25,815 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:25,958 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:25,959 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:26,305 - dlq-consumer - WARNING - Error record from sensor 10: invalid_type:humidity
+2025-05-08 12:25:26,305 - dlq-consumer - WARNING -  - Invalid humidity
+2025-05-08 12:25:26,815 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:25:26,815 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:26,816 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1001 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-05-08 12:25:26,816 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-05-08 12:25:26,816 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2025-05-08 12:25:26,820 - dlq-consumer - INFO - Sent error analytics: 5 error types, 157 total errors
+2025-05-08 12:25:26,952 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:26,953 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:27,817 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:27,817 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:27,956 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:27,956 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:28,652 - dlq-consumer - WARNING - Error record from sensor 7: null_value:humidity
+2025-05-08 12:25:28,653 - dlq-consumer - WARNING -  - Invalid humidity
+2025-05-08 12:25:28,828 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:25:28,829 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:28,961 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:28,961 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:29,825 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:29,825 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:29,963 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:29,964 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:30,939 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:25:30,940 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:30,975 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:30,975 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:32,013 - dlq-consumer - WARNING - Error record from sensor unknown: missing_field:sensor_id
+2025-05-08 12:25:32,013 - dlq-consumer - WARNING -  - Missing required field: sensor_id
+2025-05-08 12:25:32,016 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:32,016 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:32,017 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:32,018 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:32,846 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:32,846 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:32,980 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:32,980 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:33,848 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:25:33,848 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:33,978 - dlq-consumer - WARNING - Error record from sensor 2: Missing required field: status
+2025-05-08 12:25:33,978 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:34,855 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:34,855 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:34,981 - dlq-consumer - WARNING - Error record from sensor 1: Missing required field: status
+2025-05-08 12:25:34,982 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:35,857 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:35,857 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:35,984 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:25:35,984 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:36,859 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:36,859 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:36,962 - dlq-consumer - WARNING - Error record from sensor None: null_value:sensor_id
+2025-05-08 12:25:36,962 - dlq-consumer - WARNING -  - Invalid sensor ID
+2025-05-08 12:25:36,990 - dlq-consumer - WARNING - Error record from sensor 4: Missing required field: status
+2025-05-08 12:25:36,990 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:37,864 - dlq-consumer - WARNING - Error record from sensor 3: Missing required field: status
+2025-05-08 12:25:37,865 - dlq-consumer - WARNING -  - Missing required field: status
+2025-05-08 12:25:37,990 - dlq-consumer - WARNING - Error record from sensor 5: Missing required field: status
+2025-05-08 12:25:37,990 - dlq-consumer - WARNING -  - Missing required field: status

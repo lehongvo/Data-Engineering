@@ -1,0 +1,33 @@
+graph TD
+    subgraph "Kafka Topics"
+        SensorData["sensor-data"] --> |"Valid and\ninvalid data"| Consumer
+        Consumer --> |"Error data"| DLQ["dead-letter-queue"]
+        DLQ --> DLQConsumer["DLQ Consumer"]
+        DLQConsumer --> |"Error analysis"| ErrorAnalytics["error-analytics"]
+        ErrorAnalytics --> ErrConsumer["Error Analytics Consumer"]
+    end
+    
+    subgraph "Data Flow"
+        Producer["Producer<br>producer.py"] --> |"Generates both valid<br>and invalid data"| SensorData
+        Consumer["Main Consumer<br>consumer.py"] --> |"Processes valid data"| ProcessedData[("Processed data")]
+        DLQConsumer["DLQ Consumer<br>dlq_consumer.py"] --> |"Logs errors"| DLQLogs[("Error logs")]
+        ErrConsumer["Error Analytics<br>error_analytics.py"] --> |"Analyzes errors"| ErrorReports[("Error analysis reports")]
+    end
+    
+    subgraph "Error Types"
+        MissingField["Missing field"] --> DLQ
+        InvalidType["Invalid data type"] --> DLQ
+        OutOfRange["Out of range value"] --> DLQ
+        InvalidFormat["Invalid format"] --> DLQ
+        NullValue["Null value"] --> DLQ
+    end
+    
+    classDef kafka fill:#c0e5c0,stroke:#006400,stroke-width:2px;
+    classDef process fill:#ffe6cc,stroke:#d79b00,stroke-width:2px;
+    classDef error fill:#f8cecc,stroke:#b85450,stroke-width:2px;
+    classDef storage fill:#dae8fc,stroke:#6c8ebf,stroke-width:2px;
+    
+    class SensorData,DLQ,ErrorAnalytics kafka;
+    class Producer,Consumer,DLQConsumer,ErrConsumer process;
+    class MissingField,InvalidType,OutOfRange,InvalidFormat,NullValue error;
+    class ProcessedData,DLQLogs,ErrorReports storage; 
