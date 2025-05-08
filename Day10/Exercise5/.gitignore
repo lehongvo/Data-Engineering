@@ -39,3 +39,4 @@ output/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+config/account_key.json
