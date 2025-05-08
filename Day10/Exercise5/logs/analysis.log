@@ -1,1 +1,2 @@
-Analysis log test message
+2025-05-08 16:43:09,986 - data-analysis - INFO - Initializing data analysis module
+2025-05-08 16:43:10,951 - data-analysis - INFO - Data Analysis logging initialized

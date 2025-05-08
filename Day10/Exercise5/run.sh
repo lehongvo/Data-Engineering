@@ -208,6 +208,49 @@ run_integration() {
     python3 -c "
 import os
 import sys
+import logging
+
+# Configure root logger
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler('logs/main.log', mode='w'),
+        logging.StreamHandler()
+    ]
+)
+
+# Create individual loggers
+spark_logger = logging.getLogger('spark-logs')
+spark_logger.setLevel(logging.INFO)
+if spark_logger.handlers:
+    spark_logger.handlers.clear()
+spark_handler = logging.FileHandler('logs/spark.log', mode='w')
+spark_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
+spark_logger.addHandler(spark_handler)
+
+analysis_logger = logging.getLogger('data-analysis')
+analysis_logger.setLevel(logging.INFO)
+if analysis_logger.handlers:
+    analysis_logger.handlers.clear()
+analysis_handler = logging.FileHandler('logs/analysis.log', mode='w')
+analysis_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
+analysis_logger.addHandler(analysis_handler)
+
+report_logger = logging.getLogger('reporting')
+report_logger.setLevel(logging.INFO)
+if report_logger.handlers:
+    report_logger.handlers.clear()
+report_handler = logging.FileHandler('logs/report.log', mode='w')
+report_handler.setFormatter(logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s'))
+report_logger.addHandler(report_handler)
+
+# Log startup information
+logging.info('Starting BigQuery-Spark integration process')
+spark_logger.info('Initializing Spark for BigQuery integration')
+analysis_logger.info('Initializing data analysis module')
+report_logger.info('Initializing reporting module')
+
 sys.path.append('src')
 from bigquery_spark_integration import BigQuerySparkIntegration
 from data_analysis import *
@@ -239,12 +282,15 @@ try:
     
     # Sample analyses
     print('Performing analyses...')
+    analysis_logger.info('Starting data analysis')
     
     # 1. Calculate statistics by segment
     if len(categorical_cols) > 0 and len(numeric_cols) > 0:
         segment_col = categorical_cols[0]
         value_col = numeric_cols[0]
+        analysis_logger.info(f'Segmenting data by {segment_col} and analyzing {value_col}')
         segment_analysis = segment_and_analyze(df, segment_col, value_col)
+        analysis_logger.info(f'Segment analysis complete - found {segment_analysis.count()} segments')
         
         # Write results to BigQuery
         integration.write_to_bigquery(segment_analysis, 'analysis_results.segment_analysis', 'overwrite')
@@ -252,32 +298,39 @@ try:
     # 2. Find correlations
     if len(numeric_cols) >= 2:
         target_col = numeric_cols[0]
+        analysis_logger.info(f'Finding correlations with {target_col}')
         correlations = find_top_correlations(df, target_col)
         print(f'Top correlations with {target_col}:')
         for col, corr in correlations:
             print(f'{col}: {corr:.3f}')
+            analysis_logger.info(f'Correlation between {target_col} and {col}: {corr:.3f}')
     
     # 3. Detect anomalies if there are numeric columns
     if numeric_cols:
         value_col = numeric_cols[0]
+        analysis_logger.info(f'Identifying anomalies in {value_col}')
         anomalies_df = identify_anomalies(df, value_col)
         anomalies_count = anomalies_df.filter(anomalies_df.is_anomaly == True).count()
         print(f'Detected {anomalies_count} anomalies in {value_col}')
+        analysis_logger.info(f'Detected {anomalies_count} anomalies in {value_col}')
         
         # Write results to BigQuery
         integration.write_to_bigquery(anomalies_df, 'analysis_results.anomalies', 'overwrite')
     
     # Create reporting visualizations
     print('Generating reports...')
+    report_logger.info('Starting report generation')
     reporting = SparkReporting()
     
     # Convert Spark DataFrame to Pandas for visualization
     pandas_df = reporting.spark_df_to_pandas(df.limit(1000))
+    report_logger.info(f'Converted {len(pandas_df)} rows to Pandas DataFrame for visualization')
     
     # Generate charts for reporting
     charts = []
     if len(numeric_cols) >= 2 and len(pandas_df) > 0:
         # Create scatter plot
+        report_logger.info(f'Creating scatter plot of {numeric_cols[0]} vs {numeric_cols[1]}')
         scatter_path = reporting.create_scatter_plot(
             pandas_df, 
             numeric_cols[0], 
@@ -288,6 +341,7 @@ try:
     
     if len(categorical_cols) > 0 and len(numeric_cols) > 0 and len(pandas_df) > 0:
         # Create bar chart
+        report_logger.info(f'Creating bar chart of {numeric_cols[0]} by {categorical_cols[0]}')
         pandas_df_grouped = pandas_df.groupby(categorical_cols[0])[numeric_cols[0]].mean().reset_index()
         bar_path = reporting.create_bar_chart(
             pandas_df_grouped.head(10), 
@@ -299,6 +353,7 @@ try:
     
     # Create HTML report
     if charts:
+        report_logger.info('Creating HTML report')
         report_path = reporting.create_html_report(
             'BigQuery-Spark Data Analysis Report',
             f'Analysis of {QUERY_LIMIT} records from {DATASET}',
@@ -306,13 +361,16 @@ try:
             tables=[(f'Sample data from {DATASET}', pandas_df.head(10))]
         )
         print(f'Report generated: {report_path}')
+        report_logger.info(f'Report generated: {report_path}')
         
     # Stop Spark session
     integration.stop()
     print('Analysis completed successfully!')
+    logging.info('Analysis completed successfully')
     
 except Exception as e:
     print(f'Error: {str(e)}')
+    logging.error(f'Error: {str(e)}', exc_info=True)
     sys.exit(1)
 "
 

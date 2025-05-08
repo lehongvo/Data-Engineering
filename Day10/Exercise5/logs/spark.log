@@ -1,4 +1,7 @@
-2025-05-08 16:29:43,371 - spark-logs - INFO - Starting Spark session initialization
-2025-05-08 16:29:43,372 - spark-logs - INFO - Adding BigQuery connector JAR: /Users/user/Desktop/Data-Engineering/Day10/Exercise5/jars/spark-bigquery-connector.jar
-2025-05-08 16:29:47,338 - spark-logs - INFO - Spark session created with application ID: local-1746696586346
-2025-05-08 16:29:47,338 - spark-logs - INFO - Connected to BigQuery Project: unique-axle-457602-n6
+2025-05-08 16:43:09,986 - spark-logs - INFO - Initializing Spark for BigQuery integration
+2025-05-08 16:43:11,506 - spark-logs - INFO - Starting Spark session initialization
+2025-05-08 16:43:11,507 - spark-logs - INFO - Adding BigQuery connector JAR: /Users/user/Desktop/Data-Engineering/Day10/Exercise5/jars/spark-bigquery-connector.jar
+2025-05-08 16:43:15,204 - spark-logs - INFO - Spark session created with application ID: local-1746697394712
+2025-05-08 16:43:15,204 - spark-logs - INFO - Connected to BigQuery Project: unique-axle-457602-n6
+- Spark session created with application ID: local-1746697394712
+2025-05-08 16:43:15,204 - spark-logs - INFO - Connected to BigQuery Project: unique-axle-457602-n6
