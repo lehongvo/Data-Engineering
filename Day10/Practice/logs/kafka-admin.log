@@ -1,0 +1,4 @@
+2025-05-08 14:21:28,696 - kafka-admin - INFO - Starting Kafka topic administration...
+2025-05-08 14:21:29,032 - kafka-admin - INFO - Existing topics: ['sensor-data', 'ethereum-transactions', 'event-stream', 'ethereum-blocks', '__consumer_offsets']
+2025-05-08 14:21:29,188 - kafka-admin - INFO - Successfully created topics: ['ethereum-filtered-transactions', 'ethereum-high-value-transactions', 'ethereum-transaction-windows', 'ethereum-suspicious-transactions']
+2025-05-08 14:21:29,189 - kafka-admin - INFO - Kafka topic administration completed
