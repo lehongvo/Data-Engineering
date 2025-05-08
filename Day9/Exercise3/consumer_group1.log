@@ -1,0 +1,490 @@
+Consumer Group 1 started: Aggregating revenue by product
+======================================================
+Processed: Tablet - $699.98
+Processed: Bluetooth Speaker - $79.99
+Processed: Laptop - $2599.98
+Processed: Gaming Console - $999.98
+Processed: Laptop - $2599.98
+Processed: External Hard Drive - $129.99
+Processed: External Hard Drive - $129.99
+Processed: Wireless Earbuds - $119.99
+Processed: External Hard Drive - $129.99
+Processed: Smartphone - $699.99
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $5199.96 (Sold: 4 units)
+Gaming Console: $999.98 (Sold: 2 units)
+Smartphone: $699.99 (Sold: 1 units)
+Tablet: $699.98 (Sold: 2 units)
+External Hard Drive: $389.97 (Sold: 3 units)
+Wireless Earbuds: $119.99 (Sold: 1 units)
+Bluetooth Speaker: $79.99 (Sold: 1 units)
+Total Revenue: $8189.86
+===================================
+
+Processed: Wireless Earbuds - $239.98
+Processed: Camera - $1199.98
+Processed: External Hard Drive - $259.98
+Processed: Camera - $1199.98
+Processed: Smartwatch - $999.95
+Processed: Wireless Earbuds - $119.99
+Processed: Bluetooth Speaker - $79.99
+Processed: Gaming Console - $999.98
+Processed: Smartphone - $1399.98
+Processed: Bluetooth Speaker - $79.99
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $5199.96 (Sold: 4 units)
+Camera: $2399.96 (Sold: 4 units)
+Smartphone: $2099.97 (Sold: 3 units)
+Gaming Console: $1999.96 (Sold: 4 units)
+Smartwatch: $999.95 (Sold: 5 units)
+Tablet: $699.98 (Sold: 2 units)
+External Hard Drive: $649.95 (Sold: 5 units)
+Wireless Earbuds: $479.96 (Sold: 4 units)
+Bluetooth Speaker: $239.97 (Sold: 3 units)
+Total Revenue: $14769.66
+===================================
+
+Processed: Bluetooth Speaker - $79.99
+Processed: Smartwatch - $199.99
+Processed: Wireless Earbuds - $359.97
+Processed: Smartwatch - $199.99
+Processed: Wireless Earbuds - $119.99
+Processed: Camera - $1199.98
+Processed: Wireless Earbuds - $239.98
+Processed: Smartphone - $2799.96
+Processed: External Hard Drive - $259.98
+Processed: Gaming Console - $499.99
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $5199.96 (Sold: 4 units)
+Smartphone: $4899.93 (Sold: 7 units)
+Camera: $3599.94 (Sold: 6 units)
+Gaming Console: $2499.95 (Sold: 5 units)
+Smartwatch: $1399.93 (Sold: 7 units)
+Wireless Earbuds: $1199.90 (Sold: 10 units)
+External Hard Drive: $909.93 (Sold: 7 units)
+Tablet: $699.98 (Sold: 2 units)
+Bluetooth Speaker: $319.96 (Sold: 4 units)
+Total Revenue: $20729.48
+===================================
+
+Processed: Headphones - $149.99
+Processed: Gaming Console - $499.99
+Processed: Gaming Console - $499.99
+Processed: Camera - $2399.96
+Processed: Gaming Console - $499.99
+Processed: Laptop - $1299.99
+Processed: Wireless Earbuds - $359.97
+Processed: Smartphone - $1399.98
+Processed: Camera - $1199.98
+Processed: Bluetooth Speaker - $159.98
+
+===== PRODUCT REVENUE SUMMARY =====
+Camera: $7199.88 (Sold: 12 units)
+Laptop: $6499.95 (Sold: 5 units)
+Smartphone: $6299.91 (Sold: 9 units)
+Gaming Console: $3999.92 (Sold: 8 units)
+Wireless Earbuds: $1559.87 (Sold: 13 units)
+Smartwatch: $1399.93 (Sold: 7 units)
+External Hard Drive: $909.93 (Sold: 7 units)
+Tablet: $699.98 (Sold: 2 units)
+Bluetooth Speaker: $479.94 (Sold: 6 units)
+Headphones: $149.99 (Sold: 1 units)
+Total Revenue: $29199.30
+===================================
+
+Processed: External Hard Drive - $129.99
+Processed: Smartwatch - $399.98
+Processed: Tablet - $1049.97
+Processed: Laptop - $1299.99
+Processed: Laptop - $5199.96
+Processed: Smartphone - $1399.98
+Processed: Smartwatch - $199.99
+Processed: Wireless Earbuds - $119.99
+Processed: Camera - $1199.98
+Processed: Wireless Earbuds - $119.99
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $12999.90 (Sold: 10 units)
+Camera: $8399.86 (Sold: 14 units)
+Smartphone: $7699.89 (Sold: 11 units)
+Gaming Console: $3999.92 (Sold: 8 units)
+Smartwatch: $1999.90 (Sold: 10 units)
+Wireless Earbuds: $1799.85 (Sold: 15 units)
+Tablet: $1749.95 (Sold: 5 units)
+External Hard Drive: $1039.92 (Sold: 8 units)
+Bluetooth Speaker: $479.94 (Sold: 6 units)
+Headphones: $149.99 (Sold: 1 units)
+Total Revenue: $40319.12
+===================================
+
+Processed: Smartphone - $1399.98
+Processed: Wireless Earbuds - $239.98
+Processed: Smartwatch - $399.98
+Processed: Camera - $1199.98
+Processed: Wireless Earbuds - $239.98
+Processed: Smartwatch - $199.99
+Processed: Bluetooth Speaker - $79.99
+Processed: Smartwatch - $399.98
+Processed: Tablet - $699.98
+Processed: Bluetooth Speaker - $159.98
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $12999.90 (Sold: 10 units)
+Camera: $9599.84 (Sold: 16 units)
+Smartphone: $9099.87 (Sold: 13 units)
+Gaming Console: $3999.92 (Sold: 8 units)
+Smartwatch: $2999.85 (Sold: 15 units)
+Tablet: $2449.93 (Sold: 7 units)
+Wireless Earbuds: $2279.81 (Sold: 19 units)
+External Hard Drive: $1039.92 (Sold: 8 units)
+Bluetooth Speaker: $719.91 (Sold: 9 units)
+Headphones: $149.99 (Sold: 1 units)
+Total Revenue: $45338.94
+===================================
+
+Processed: Gaming Console - $499.99
+Processed: Gaming Console - $499.99
+Processed: Bluetooth Speaker - $159.98
+Processed: Smartphone - $3499.95
+Processed: Smartphone - $699.99
+Processed: Gaming Console - $999.98
+Processed: Wireless Earbuds - $119.99
+Processed: Laptop - $1299.99
+Processed: Smartwatch - $199.99
+Processed: Bluetooth Speaker - $239.97
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $14299.89 (Sold: 11 units)
+Smartphone: $13299.81 (Sold: 19 units)
+Camera: $9599.84 (Sold: 16 units)
+Gaming Console: $5999.88 (Sold: 12 units)
+Smartwatch: $3199.84 (Sold: 16 units)
+Tablet: $2449.93 (Sold: 7 units)
+Wireless Earbuds: $2399.80 (Sold: 20 units)
+Bluetooth Speaker: $1119.86 (Sold: 14 units)
+External Hard Drive: $1039.92 (Sold: 8 units)
+Headphones: $149.99 (Sold: 1 units)
+Total Revenue: $53558.76
+===================================
+
+Processed: Headphones - $149.99
+Processed: Bluetooth Speaker - $159.98
+Processed: Gaming Console - $499.99
+Processed: Camera - $1199.98
+Processed: Bluetooth Speaker - $159.98
+Processed: External Hard Drive - $649.95
+Processed: Laptop - $1299.99
+Processed: Bluetooth Speaker - $159.98
+Processed: Smartwatch - $399.98
+Processed: Smartphone - $699.99
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $15599.88 (Sold: 12 units)
+Smartphone: $13999.80 (Sold: 20 units)
+Camera: $10799.82 (Sold: 18 units)
+Gaming Console: $6499.87 (Sold: 13 units)
+Smartwatch: $3599.82 (Sold: 18 units)
+Tablet: $2449.93 (Sold: 7 units)
+Wireless Earbuds: $2399.80 (Sold: 20 units)
+External Hard Drive: $1689.87 (Sold: 13 units)
+Bluetooth Speaker: $1599.80 (Sold: 20 units)
+Headphones: $299.98 (Sold: 2 units)
+Total Revenue: $58938.57
+===================================
+
+Processed: Smartwatch - $199.99
+Processed: Camera - $599.99
+Processed: Headphones - $299.98
+Processed: Laptop - $1299.99
+Processed: Smartphone - $699.99
+Processed: Smartphone - $699.99
+Processed: Wireless Earbuds - $239.98
+Processed: Smartwatch - $399.98
+Processed: Wireless Earbuds - $119.99
+Processed: Laptop - $2599.98
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $19499.85 (Sold: 15 units)
+Smartphone: $15399.78 (Sold: 22 units)
+Camera: $11399.81 (Sold: 19 units)
+Gaming Console: $6499.87 (Sold: 13 units)
+Smartwatch: $4199.79 (Sold: 21 units)
+Wireless Earbuds: $2759.77 (Sold: 23 units)
+Tablet: $2449.93 (Sold: 7 units)
+External Hard Drive: $1689.87 (Sold: 13 units)
+Bluetooth Speaker: $1599.80 (Sold: 20 units)
+Headphones: $599.96 (Sold: 4 units)
+Total Revenue: $66098.43
+===================================
+
+Processed: Headphones - $449.97
+Processed: Wireless Earbuds - $119.99
+Processed: Gaming Console - $499.99
+Processed: Gaming Console - $999.98
+Processed: Laptop - $1299.99
+Processed: Gaming Console - $2499.95
+Processed: Tablet - $699.98
+Processed: Headphones - $299.98
+Processed: Smartphone - $699.99
+Processed: Tablet - $699.98
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $20799.84 (Sold: 16 units)
+Smartphone: $16099.77 (Sold: 23 units)
+Camera: $11399.81 (Sold: 19 units)
+Gaming Console: $10499.79 (Sold: 21 units)
+Smartwatch: $4199.79 (Sold: 21 units)
+Tablet: $3849.89 (Sold: 11 units)
+Wireless Earbuds: $2879.76 (Sold: 24 units)
+External Hard Drive: $1689.87 (Sold: 13 units)
+Bluetooth Speaker: $1599.80 (Sold: 20 units)
+Headphones: $1349.91 (Sold: 9 units)
+Total Revenue: $74368.23
+===================================
+
+Processed: Camera - $599.99
+Processed: Smartphone - $699.99
+Processed: Smartwatch - $399.98
+Processed: Bluetooth Speaker - $79.99
+Processed: Laptop - $2599.98
+Processed: Camera - $599.99
+Processed: Gaming Console - $1499.97
+Processed: Wireless Earbuds - $119.99
+Processed: Smartphone - $1399.98
+Processed: Wireless Earbuds - $119.99
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $23399.82 (Sold: 18 units)
+Smartphone: $18199.74 (Sold: 26 units)
+Camera: $12599.79 (Sold: 21 units)
+Gaming Console: $11999.76 (Sold: 24 units)
+Smartwatch: $4599.77 (Sold: 23 units)
+Tablet: $3849.89 (Sold: 11 units)
+Wireless Earbuds: $3119.74 (Sold: 26 units)
+External Hard Drive: $1689.87 (Sold: 13 units)
+Bluetooth Speaker: $1679.79 (Sold: 21 units)
+Headphones: $1349.91 (Sold: 9 units)
+Total Revenue: $82488.08
+===================================
+
+Processed: Bluetooth Speaker - $159.98
+Processed: Smartwatch - $199.99
+Processed: Gaming Console - $499.99
+Processed: Smartwatch - $399.98
+Processed: Tablet - $1049.97
+Processed: Bluetooth Speaker - $79.99
+Processed: Gaming Console - $499.99
+Processed: Bluetooth Speaker - $239.97
+Processed: Smartwatch - $399.98
+Processed: Headphones - $149.99
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $23399.82 (Sold: 18 units)
+Smartphone: $18199.74 (Sold: 26 units)
+Gaming Console: $12999.74 (Sold: 26 units)
+Camera: $12599.79 (Sold: 21 units)
+Smartwatch: $5599.72 (Sold: 28 units)
+Tablet: $4899.86 (Sold: 14 units)
+Wireless Earbuds: $3119.74 (Sold: 26 units)
+Bluetooth Speaker: $2159.73 (Sold: 27 units)
+External Hard Drive: $1689.87 (Sold: 13 units)
+Headphones: $1499.90 (Sold: 10 units)
+Total Revenue: $86167.91
+===================================
+
+Processed: External Hard Drive - $129.99
+Processed: Camera - $599.99
+Processed: Wireless Earbuds - $239.98
+Processed: Laptop - $2599.98
+Processed: Smartphone - $1399.98
+Processed: External Hard Drive - $259.98
+Processed: Smartphone - $1399.98
+Processed: Camera - $599.99
+Processed: Smartphone - $699.99
+Processed: External Hard Drive - $259.98
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $25999.80 (Sold: 20 units)
+Smartphone: $21699.69 (Sold: 31 units)
+Camera: $13799.77 (Sold: 23 units)
+Gaming Console: $12999.74 (Sold: 26 units)
+Smartwatch: $5599.72 (Sold: 28 units)
+Tablet: $4899.86 (Sold: 14 units)
+Wireless Earbuds: $3359.72 (Sold: 28 units)
+External Hard Drive: $2339.82 (Sold: 18 units)
+Bluetooth Speaker: $2159.73 (Sold: 27 units)
+Headphones: $1499.90 (Sold: 10 units)
+Total Revenue: $94357.75
+===================================
+
+Processed: Smartphone - $699.99
+Processed: Headphones - $299.98
+Processed: Wireless Earbuds - $239.98
+Processed: Wireless Earbuds - $239.98
+Processed: Headphones - $149.99
+Processed: Smartwatch - $399.98
+Processed: Gaming Console - $999.98
+Processed: Gaming Console - $999.98
+Processed: Smartphone - $699.99
+Processed: Tablet - $699.98
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $25999.80 (Sold: 20 units)
+Smartphone: $23099.67 (Sold: 33 units)
+Gaming Console: $14999.70 (Sold: 30 units)
+Camera: $13799.77 (Sold: 23 units)
+Smartwatch: $5999.70 (Sold: 30 units)
+Tablet: $5599.84 (Sold: 16 units)
+Wireless Earbuds: $3839.68 (Sold: 32 units)
+External Hard Drive: $2339.82 (Sold: 18 units)
+Bluetooth Speaker: $2159.73 (Sold: 27 units)
+Headphones: $1949.87 (Sold: 13 units)
+Total Revenue: $99787.58
+===================================
+
+Processed: Tablet - $1399.96
+Processed: Bluetooth Speaker - $79.99
+Processed: Smartphone - $1399.98
+Processed: Camera - $1199.98
+Processed: Headphones - $749.95
+Processed: Laptop - $2599.98
+Processed: Tablet - $349.99
+Processed: External Hard Drive - $259.98
+Processed: Camera - $599.99
+Processed: Smartwatch - $799.96
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $28599.78 (Sold: 22 units)
+Smartphone: $24499.65 (Sold: 35 units)
+Camera: $15599.74 (Sold: 26 units)
+Gaming Console: $14999.70 (Sold: 30 units)
+Tablet: $7349.79 (Sold: 21 units)
+Smartwatch: $6799.66 (Sold: 34 units)
+Wireless Earbuds: $3839.68 (Sold: 32 units)
+Headphones: $2699.82 (Sold: 18 units)
+External Hard Drive: $2599.80 (Sold: 20 units)
+Bluetooth Speaker: $2239.72 (Sold: 28 units)
+Total Revenue: $109227.34
+===================================
+
+Processed: Smartphone - $1399.98
+Processed: Smartphone - $1399.98
+Processed: Smartwatch - $399.98
+Processed: Smartphone - $1399.98
+Processed: Wireless Earbuds - $239.98
+Processed: External Hard Drive - $129.99
+Processed: Wireless Earbuds - $119.99
+Processed: Wireless Earbuds - $119.99
+Processed: Laptop - $2599.98
+Processed: Gaming Console - $999.98
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $31199.76 (Sold: 24 units)
+Smartphone: $28699.59 (Sold: 41 units)
+Gaming Console: $15999.68 (Sold: 32 units)
+Camera: $15599.74 (Sold: 26 units)
+Tablet: $7349.79 (Sold: 21 units)
+Smartwatch: $7199.64 (Sold: 36 units)
+Wireless Earbuds: $4319.64 (Sold: 36 units)
+External Hard Drive: $2729.79 (Sold: 21 units)
+Headphones: $2699.82 (Sold: 18 units)
+Bluetooth Speaker: $2239.72 (Sold: 28 units)
+Total Revenue: $118037.17
+===================================
+
+Processed: Wireless Earbuds - $239.98
+Processed: Wireless Earbuds - $239.98
+Processed: Smartwatch - $399.98
+Processed: Laptop - $1299.99
+Processed: External Hard Drive - $259.98
+Processed: Wireless Earbuds - $239.98
+Processed: Bluetooth Speaker - $79.99
+Processed: Gaming Console - $499.99
+Processed: External Hard Drive - $129.99
+Processed: Headphones - $299.98
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $32499.75 (Sold: 25 units)
+Smartphone: $28699.59 (Sold: 41 units)
+Gaming Console: $16499.67 (Sold: 33 units)
+Camera: $15599.74 (Sold: 26 units)
+Smartwatch: $7599.62 (Sold: 38 units)
+Tablet: $7349.79 (Sold: 21 units)
+Wireless Earbuds: $5039.58 (Sold: 42 units)
+External Hard Drive: $3119.76 (Sold: 24 units)
+Headphones: $2999.80 (Sold: 20 units)
+Bluetooth Speaker: $2319.71 (Sold: 29 units)
+Total Revenue: $121727.01
+===================================
+
+Processed: Tablet - $349.99
+Processed: Bluetooth Speaker - $159.98
+Processed: Camera - $2999.95
+Processed: Smartphone - $1399.98
+Processed: Tablet - $699.98
+Processed: Headphones - $149.99
+Processed: Bluetooth Speaker - $159.98
+Processed: Headphones - $749.95
+Processed: Laptop - $1299.99
+Processed: Smartphone - $1399.98
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $33799.74 (Sold: 26 units)
+Smartphone: $31499.55 (Sold: 45 units)
+Camera: $18599.69 (Sold: 31 units)
+Gaming Console: $16499.67 (Sold: 33 units)
+Tablet: $8399.76 (Sold: 24 units)
+Smartwatch: $7599.62 (Sold: 38 units)
+Wireless Earbuds: $5039.58 (Sold: 42 units)
+Headphones: $3899.74 (Sold: 26 units)
+External Hard Drive: $3119.76 (Sold: 24 units)
+Bluetooth Speaker: $2639.67 (Sold: 33 units)
+Total Revenue: $131096.78
+===================================
+
+Processed: Smartphone - $1399.98
+Processed: Smartphone - $2799.96
+Processed: Gaming Console - $999.98
+Processed: Wireless Earbuds - $239.98
+Processed: Tablet - $349.99
+Processed: Wireless Earbuds - $239.98
+Processed: Gaming Console - $2499.95
+Processed: Camera - $1799.97
+Processed: External Hard Drive - $129.99
+Processed: Gaming Console - $499.99
+
+===== PRODUCT REVENUE SUMMARY =====
+Smartphone: $35699.49 (Sold: 51 units)
+Laptop: $33799.74 (Sold: 26 units)
+Gaming Console: $20499.59 (Sold: 41 units)
+Camera: $20399.66 (Sold: 34 units)
+Tablet: $8749.75 (Sold: 25 units)
+Smartwatch: $7599.62 (Sold: 38 units)
+Wireless Earbuds: $5519.54 (Sold: 46 units)
+Headphones: $3899.74 (Sold: 26 units)
+External Hard Drive: $3249.75 (Sold: 25 units)
+Bluetooth Speaker: $2639.67 (Sold: 33 units)
+Total Revenue: $142056.55
+===================================
+
+Processed: Camera - $599.99
+Processed: Headphones - $299.98
+Processed: Smartwatch - $199.99
+Processed: Laptop - $6499.95
+Processed: Camera - $599.99
+Processed: External Hard Drive - $129.99
+Processed: Wireless Earbuds - $119.99
+Processed: Wireless Earbuds - $239.98
+Processed: Tablet - $349.99
+Processed: Tablet - $349.99
+
+===== PRODUCT REVENUE SUMMARY =====
+Laptop: $40299.69 (Sold: 31 units)
+Smartphone: $35699.49 (Sold: 51 units)
+Camera: $21599.64 (Sold: 36 units)
+Gaming Console: $20499.59 (Sold: 41 units)
+Tablet: $9449.73 (Sold: 27 units)
+Smartwatch: $7799.61 (Sold: 39 units)

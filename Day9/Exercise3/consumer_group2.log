@@ -1,0 +1,1100 @@
+Consumer Group 2 started: Analyzing user behavior and identifying high-value customers
+===================================================================================
+Processed: User 17 purchased $699.98
+Processed: User 93 purchased $79.99
+Processed: User 31 purchased $2599.98
+Processed: User 4 purchased $999.98
+Processed: User 83 purchased $2599.98
+Processed: User 100 purchased $129.99
+Processed: User 68 purchased $129.99
+Processed: User 64 purchased $119.99
+Processed: User 58 purchased $129.99
+Processed: User 97 purchased $699.99
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 31 (HIGH-VALUE)
+   Total Spending: $2599.98
+   Transactions: 1
+   Avg Order Value: $2599.98
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:24
+2. User 83 (HIGH-VALUE)
+   Total Spending: $2599.98
+   Transactions: 1
+   Avg Order Value: $2599.98
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:26
+3. User 4 (Regular)
+   Total Spending: $999.98
+   Transactions: 1
+   Avg Order Value: $999.98
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:25
+4. User 97 (Regular)
+   Total Spending: $699.99
+   Transactions: 1
+   Avg Order Value: $699.99
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:32
+5. User 17 (Regular)
+   Total Spending: $699.98
+   Transactions: 1
+   Avg Order Value: $699.98
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:21
+
+High-value customers: 2 out of 10 (20.0%)
+===================================
+
+Processed: User 76 purchased $239.98
+Processed: User 83 purchased $1199.98
+Processed: User 94 purchased $259.98
+Processed: User 83 purchased $1199.98
+Processed: User 10 purchased $999.95
+Processed: User 49 purchased $119.99
+Processed: User 89 purchased $79.99
+Processed: User 71 purchased $999.98
+Processed: User 29 purchased $1399.98
+Processed: User 20 purchased $79.99
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+2. User 31 (HIGH-VALUE)
+   Total Spending: $2599.98
+   Transactions: 1
+   Avg Order Value: $2599.98
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:24
+3. User 29 (HIGH-VALUE)
+   Total Spending: $1399.98
+   Transactions: 1
+   Avg Order Value: $1399.98
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:42
+4. User 4 (Regular)
+   Total Spending: $999.98
+   Transactions: 1
+   Avg Order Value: $999.98
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:25
+5. User 71 (Regular)
+   Total Spending: $999.98
+   Transactions: 1
+   Avg Order Value: $999.98
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:41
+
+High-value customers: 3 out of 18 (16.7%)
+===================================
+
+Processed: User 12 purchased $79.99
+Processed: User 5 purchased $199.99
+Processed: User 8 purchased $359.97
+Processed: User 27 purchased $199.99
+Processed: User 31 purchased $119.99
+Processed: User 29 purchased $1199.98
+Processed: User 73 purchased $239.98
+Processed: User 9 purchased $2799.96
+Processed: User 67 purchased $259.98
+Processed: User 47 purchased $499.99
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+2. User 9 (HIGH-VALUE)
+   Total Spending: $2799.96
+   Transactions: 1
+   Avg Order Value: $2799.96
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:55
+3. User 31 (HIGH-VALUE)
+   Total Spending: $2719.97
+   Transactions: 2
+   Avg Order Value: $1359.98
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:50
+4. User 29 (HIGH-VALUE)
+   Total Spending: $2599.96
+   Transactions: 2
+   Avg Order Value: $1299.98
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:51
+5. User 4 (Regular)
+   Total Spending: $999.98
+   Transactions: 1
+   Avg Order Value: $999.98
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:25
+
+High-value customers: 4 out of 26 (15.4%)
+===================================
+
+Processed: User 5 purchased $149.99
+Processed: User 30 purchased $499.99
+Processed: User 53 purchased $499.99
+Processed: User 1 purchased $2399.96
+Processed: User 95 purchased $499.99
+Processed: User 31 purchased $1299.99
+Processed: User 1 purchased $359.97
+Processed: User 10 purchased $1399.98
+Processed: User 90 purchased $1199.98
+Processed: User 25 purchased $159.98
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+2. User 31 (HIGH-VALUE)
+   Total Spending: $4019.96
+   Transactions: 3
+   Avg Order Value: $1339.99
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:15:05
+3. User 9 (HIGH-VALUE)
+   Total Spending: $2799.96
+   Transactions: 1
+   Avg Order Value: $2799.96
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:55
+4. User 1 (HIGH-VALUE)
+   Total Spending: $2759.93
+   Transactions: 2
+   Avg Order Value: $1379.97
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:15:06
+5. User 29 (HIGH-VALUE)
+   Total Spending: $2599.96
+   Transactions: 2
+   Avg Order Value: $1299.98
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:51
+
+High-value customers: 7 out of 32 (21.9%)
+===================================
+
+Processed: User 37 purchased $129.99
+Processed: User 32 purchased $399.98
+Processed: User 2 purchased $1049.97
+Processed: User 84 purchased $1299.99
+Processed: User 1 purchased $5199.96
+Processed: User 59 purchased $1399.98
+Processed: User 61 purchased $199.99
+Processed: User 99 purchased $119.99
+Processed: User 13 purchased $1199.98
+Processed: User 33 purchased $119.99
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $7959.89
+   Transactions: 3
+   Avg Order Value: $2653.30
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:15:16
+2. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+3. User 31 (HIGH-VALUE)
+   Total Spending: $4019.96
+   Transactions: 3
+   Avg Order Value: $1339.99
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:15:05
+4. User 9 (HIGH-VALUE)
+   Total Spending: $2799.96
+   Transactions: 1
+   Avg Order Value: $2799.96
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:55
+5. User 29 (HIGH-VALUE)
+   Total Spending: $2599.96
+   Transactions: 2
+   Avg Order Value: $1299.98
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:51
+
+High-value customers: 11 out of 41 (26.8%)
+===================================
+
+Processed: User 32 purchased $1399.98
+Processed: User 32 purchased $239.98
+Processed: User 52 purchased $399.98
+Processed: User 26 purchased $1199.98
+Processed: User 94 purchased $239.98
+Processed: User 59 purchased $199.99
+Processed: User 94 purchased $79.99
+Processed: User 93 purchased $399.98
+Processed: User 98 purchased $699.98
+Processed: User 34 purchased $159.98
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $7959.89
+   Transactions: 3
+   Avg Order Value: $2653.30
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:15:16
+2. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+3. User 31 (HIGH-VALUE)
+   Total Spending: $4019.96
+   Transactions: 3
+   Avg Order Value: $1339.99
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:15:05
+4. User 9 (HIGH-VALUE)
+   Total Spending: $2799.96
+   Transactions: 1
+   Avg Order Value: $2799.96
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:55
+5. User 29 (HIGH-VALUE)
+   Total Spending: $2599.96
+   Transactions: 2
+   Avg Order Value: $1299.98
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:51
+
+High-value customers: 13 out of 45 (28.9%)
+===================================
+
+Processed: User 44 purchased $499.99
+Processed: User 52 purchased $499.99
+Processed: User 84 purchased $159.98
+Processed: User 5 purchased $3499.95
+Processed: User 40 purchased $699.99
+Processed: User 65 purchased $999.98
+Processed: User 29 purchased $119.99
+Processed: User 55 purchased $1299.99
+Processed: User 79 purchased $199.99
+Processed: User 8 purchased $239.97
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $7959.89
+   Transactions: 3
+   Avg Order Value: $2653.30
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:15:16
+2. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+3. User 31 (HIGH-VALUE)
+   Total Spending: $4019.96
+   Transactions: 3
+   Avg Order Value: $1339.99
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:15:05
+4. User 5 (HIGH-VALUE)
+   Total Spending: $3849.93
+   Transactions: 3
+   Avg Order Value: $1283.31
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:15:40
+5. User 9 (HIGH-VALUE)
+   Total Spending: $2799.96
+   Transactions: 1
+   Avg Order Value: $2799.96
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:55
+
+High-value customers: 15 out of 50 (30.0%)
+===================================
+
+Processed: User 25 purchased $149.99
+Processed: User 21 purchased $159.98
+Processed: User 31 purchased $499.99
+Processed: User 89 purchased $1199.98
+Processed: User 24 purchased $159.98
+Processed: User 2 purchased $649.95
+Processed: User 28 purchased $1299.99
+Processed: User 34 purchased $159.98
+Processed: User 94 purchased $399.98
+Processed: User 6 purchased $699.99
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $7959.89
+   Transactions: 3
+   Avg Order Value: $2653.30
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:15:16
+2. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+3. User 31 (HIGH-VALUE)
+   Total Spending: $4519.95
+   Transactions: 4
+   Avg Order Value: $1129.99
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:15:53
+4. User 5 (HIGH-VALUE)
+   Total Spending: $3849.93
+   Transactions: 3
+   Avg Order Value: $1283.31
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:15:40
+5. User 9 (HIGH-VALUE)
+   Total Spending: $2799.96
+   Transactions: 1
+   Avg Order Value: $2799.96
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:55
+
+High-value customers: 17 out of 54 (31.5%)
+===================================
+
+Processed: User 16 purchased $199.99
+Processed: User 46 purchased $599.99
+Processed: User 66 purchased $299.98
+Processed: User 73 purchased $1299.99
+Processed: User 61 purchased $699.99
+Processed: User 46 purchased $699.99
+Processed: User 61 purchased $239.98
+Processed: User 50 purchased $399.98
+Processed: User 70 purchased $119.99
+Processed: User 12 purchased $2599.98
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $7959.89
+   Transactions: 3
+   Avg Order Value: $2653.30
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:15:16
+2. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+3. User 31 (HIGH-VALUE)
+   Total Spending: $4519.95
+   Transactions: 4
+   Avg Order Value: $1129.99
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:15:53
+4. User 5 (HIGH-VALUE)
+   Total Spending: $3849.93
+   Transactions: 3
+   Avg Order Value: $1283.31
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:15:40
+5. User 9 (HIGH-VALUE)
+   Total Spending: $2799.96
+   Transactions: 1
+   Avg Order Value: $2799.96
+   Product Diversity: 1 unique products
+   Last Active: 2025-05-08 11:14:55
+
+High-value customers: 21 out of 59 (35.6%)
+===================================
+
+Processed: User 9 purchased $449.97
+Processed: User 58 purchased $119.99
+Processed: User 31 purchased $499.99
+Processed: User 37 purchased $999.98
+Processed: User 100 purchased $1299.99
+Processed: User 1 purchased $2499.95
+Processed: User 19 purchased $699.98
+Processed: User 85 purchased $299.98
+Processed: User 25 purchased $699.99
+Processed: User 16 purchased $699.98
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $10459.84
+   Transactions: 4
+   Avg Order Value: $2614.96
+   Product Diversity: 4 unique products
+   Last Active: 2025-05-08 11:16:22
+2. User 31 (HIGH-VALUE)
+   Total Spending: $5019.94
+   Transactions: 5
+   Avg Order Value: $1003.99
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:16:17
+3. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+4. User 5 (HIGH-VALUE)
+   Total Spending: $3849.93
+   Transactions: 3
+   Avg Order Value: $1283.31
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:15:40
+5. User 9 (HIGH-VALUE)
+   Total Spending: $3249.93
+   Transactions: 2
+   Avg Order Value: $1624.97
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:16:15
+
+High-value customers: 24 out of 61 (39.3%)
+===================================
+
+Processed: User 29 purchased $599.99
+Processed: User 25 purchased $699.99
+Processed: User 32 purchased $399.98
+Processed: User 73 purchased $79.99
+Processed: User 22 purchased $2599.98
+Processed: User 32 purchased $599.99
+Processed: User 5 purchased $1499.97
+Processed: User 85 purchased $119.99
+Processed: User 30 purchased $1399.98
+Processed: User 61 purchased $119.99
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $10459.84
+   Transactions: 4
+   Avg Order Value: $2614.96
+   Product Diversity: 4 unique products
+   Last Active: 2025-05-08 11:16:22
+2. User 5 (HIGH-VALUE)
+   Total Spending: $5349.90
+   Transactions: 4
+   Avg Order Value: $1337.47
+   Product Diversity: 4 unique products
+   Last Active: 2025-05-08 11:16:35
+3. User 31 (HIGH-VALUE)
+   Total Spending: $5019.94
+   Transactions: 5
+   Avg Order Value: $1003.99
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:16:17
+4. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+5. User 29 (HIGH-VALUE)
+   Total Spending: $3319.94
+   Transactions: 4
+   Avg Order Value: $829.98
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:16:27
+
+High-value customers: 26 out of 62 (41.9%)
+===================================
+
+Processed: User 30 purchased $159.98
+Processed: User 100 purchased $199.99
+Processed: User 14 purchased $499.99
+Processed: User 99 purchased $399.98
+Processed: User 3 purchased $1049.97
+Processed: User 91 purchased $79.99
+Processed: User 90 purchased $499.99
+Processed: User 2 purchased $239.97
+Processed: User 98 purchased $399.98
+Processed: User 22 purchased $149.99
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $10459.84
+   Transactions: 4
+   Avg Order Value: $2614.96
+   Product Diversity: 4 unique products
+   Last Active: 2025-05-08 11:16:22
+2. User 5 (HIGH-VALUE)
+   Total Spending: $5349.90
+   Transactions: 4
+   Avg Order Value: $1337.47
+   Product Diversity: 4 unique products
+   Last Active: 2025-05-08 11:16:35
+3. User 31 (HIGH-VALUE)
+   Total Spending: $5019.94
+   Transactions: 5
+   Avg Order Value: $1003.99
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:16:17
+4. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+5. User 29 (HIGH-VALUE)
+   Total Spending: $3319.94
+   Transactions: 4
+   Avg Order Value: $829.98
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:16:27
+
+High-value customers: 28 out of 65 (43.1%)
+===================================
+
+Processed: User 34 purchased $129.99
+Processed: User 82 purchased $599.99
+Processed: User 70 purchased $239.98
+Processed: User 85 purchased $2599.98
+Processed: User 75 purchased $1399.98
+Processed: User 61 purchased $259.98
+Processed: User 55 purchased $1399.98
+Processed: User 33 purchased $599.99
+Processed: User 21 purchased $699.99
+Processed: User 82 purchased $259.98
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $10459.84
+   Transactions: 4
+   Avg Order Value: $2614.96
+   Product Diversity: 4 unique products
+   Last Active: 2025-05-08 11:16:22
+2. User 5 (HIGH-VALUE)
+   Total Spending: $5349.90
+   Transactions: 4
+   Avg Order Value: $1337.47
+   Product Diversity: 4 unique products
+   Last Active: 2025-05-08 11:16:35
+3. User 31 (HIGH-VALUE)
+   Total Spending: $5019.94
+   Transactions: 5
+   Avg Order Value: $1003.99
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:16:17
+4. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+5. User 29 (HIGH-VALUE)
+   Total Spending: $3319.94
+   Transactions: 4
+   Avg Order Value: $829.98
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:16:27
+
+High-value customers: 30 out of 67 (44.8%)
+===================================
+
+Processed: User 4 purchased $699.99
+Processed: User 1 purchased $299.98
+Processed: User 88 purchased $239.98
+Processed: User 44 purchased $239.98
+Processed: User 7 purchased $149.99
+Processed: User 76 purchased $399.98
+Processed: User 39 purchased $999.98
+Processed: User 78 purchased $999.98
+Processed: User 84 purchased $699.99
+Processed: User 91 purchased $699.98
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $10759.82
+   Transactions: 5
+   Avg Order Value: $2151.96
+   Product Diversity: 5 unique products
+   Last Active: 2025-05-08 11:17:06
+2. User 5 (HIGH-VALUE)
+   Total Spending: $5349.90
+   Transactions: 4
+   Avg Order Value: $1337.47
+   Product Diversity: 4 unique products
+   Last Active: 2025-05-08 11:16:35
+3. User 31 (HIGH-VALUE)
+   Total Spending: $5019.94
+   Transactions: 5
+   Avg Order Value: $1003.99
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:16:17
+4. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+5. User 29 (HIGH-VALUE)
+   Total Spending: $3319.94
+   Transactions: 4
+   Avg Order Value: $829.98
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:16:27
+
+High-value customers: 31 out of 71 (43.7%)
+===================================
+
+Processed: User 4 purchased $1399.96
+Processed: User 7 purchased $79.99
+Processed: User 9 purchased $1399.98
+Processed: User 26 purchased $1199.98
+Processed: User 4 purchased $749.95
+Processed: User 86 purchased $2599.98
+Processed: User 30 purchased $349.99
+Processed: User 90 purchased $259.98
+Processed: User 53 purchased $599.99
+Processed: User 1 purchased $799.96
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $11559.78
+   Transactions: 6
+   Avg Order Value: $1926.63
+   Product Diversity: 6 unique products
+   Last Active: 2025-05-08 11:17:27
+2. User 5 (HIGH-VALUE)
+   Total Spending: $5349.90
+   Transactions: 4
+   Avg Order Value: $1337.47
+   Product Diversity: 4 unique products
+   Last Active: 2025-05-08 11:16:35
+3. User 31 (HIGH-VALUE)
+   Total Spending: $5019.94
+   Transactions: 5
+   Avg Order Value: $1003.99
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:16:17
+4. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+5. User 9 (HIGH-VALUE)
+   Total Spending: $4649.91
+   Transactions: 3
+   Avg Order Value: $1549.97
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:17:20
+
+High-value customers: 33 out of 72 (45.8%)
+===================================
+
+Processed: User 22 purchased $1399.98
+Processed: User 16 purchased $1399.98
+Processed: User 40 purchased $399.98
+Processed: User 45 purchased $1399.98
+Processed: User 84 purchased $239.98
+Processed: User 51 purchased $129.99
+Processed: User 34 purchased $119.99
+Processed: User 2 purchased $119.99
+Processed: User 89 purchased $2599.98
+Processed: User 69 purchased $999.98
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $11559.78
+   Transactions: 6
+   Avg Order Value: $1926.63
+   Product Diversity: 6 unique products
+   Last Active: 2025-05-08 11:17:27
+2. User 5 (HIGH-VALUE)
+   Total Spending: $5349.90
+   Transactions: 4
+   Avg Order Value: $1337.47
+   Product Diversity: 4 unique products
+   Last Active: 2025-05-08 11:16:35
+3. User 31 (HIGH-VALUE)
+   Total Spending: $5019.94
+   Transactions: 5
+   Avg Order Value: $1003.99
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:16:17
+4. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+5. User 9 (HIGH-VALUE)
+   Total Spending: $4649.91
+   Transactions: 3
+   Avg Order Value: $1549.97
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:17:20
+
+High-value customers: 36 out of 75 (48.0%)
+===================================
+
+Processed: User 27 purchased $239.98
+Processed: User 5 purchased $239.98
+Processed: User 35 purchased $399.98
+Processed: User 20 purchased $1299.99
+Processed: User 14 purchased $259.98
+Processed: User 99 purchased $239.98
+Processed: User 29 purchased $79.99
+Processed: User 80 purchased $499.99
+Processed: User 19 purchased $129.99
+Processed: User 59 purchased $299.98
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $11559.78
+   Transactions: 6
+   Avg Order Value: $1926.63
+   Product Diversity: 6 unique products
+   Last Active: 2025-05-08 11:17:27
+2. User 5 (HIGH-VALUE)
+   Total Spending: $5589.88
+   Transactions: 5
+   Avg Order Value: $1117.98
+   Product Diversity: 5 unique products
+   Last Active: 2025-05-08 11:17:43
+3. User 31 (HIGH-VALUE)
+   Total Spending: $5019.94
+   Transactions: 5
+   Avg Order Value: $1003.99
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:16:17
+4. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+5. User 9 (HIGH-VALUE)
+   Total Spending: $4649.91
+   Transactions: 3
+   Avg Order Value: $1549.97
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:17:20
+
+High-value customers: 37 out of 77 (48.1%)
+===================================
+
+Processed: User 28 purchased $349.99
+Processed: User 23 purchased $159.98
+Processed: User 10 purchased $2999.95
+Processed: User 12 purchased $1399.98
+Processed: User 25 purchased $699.98
+Processed: User 12 purchased $149.99
+Processed: User 97 purchased $159.98
+Processed: User 6 purchased $749.95
+Processed: User 94 purchased $1299.99
+Processed: User 96 purchased $1399.98
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $11559.78
+   Transactions: 6
+   Avg Order Value: $1926.63
+   Product Diversity: 6 unique products
+   Last Active: 2025-05-08 11:17:27
+2. User 5 (HIGH-VALUE)
+   Total Spending: $5589.88
+   Transactions: 5
+   Avg Order Value: $1117.98
+   Product Diversity: 5 unique products
+   Last Active: 2025-05-08 11:17:43
+3. User 10 (HIGH-VALUE)
+   Total Spending: $5399.88
+   Transactions: 3
+   Avg Order Value: $1799.96
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:17:56
+4. User 31 (HIGH-VALUE)
+   Total Spending: $5019.94
+   Transactions: 5
+   Avg Order Value: $1003.99
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:16:17
+5. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+
+High-value customers: 40 out of 79 (50.6%)
+===================================
+
+Processed: User 57 purchased $1399.98
+Processed: User 6 purchased $2799.96
+Processed: User 54 purchased $999.98
+Processed: User 100 purchased $239.98
+Processed: User 89 purchased $349.99
+Processed: User 25 purchased $239.98
+Processed: User 5 purchased $2499.95
+Processed: User 3 purchased $1799.97
+Processed: User 75 purchased $129.99
+Processed: User 36 purchased $499.99
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $11559.78
+   Transactions: 6
+   Avg Order Value: $1926.63
+   Product Diversity: 6 unique products
+   Last Active: 2025-05-08 11:17:27
+2. User 5 (HIGH-VALUE)
+   Total Spending: $8089.83
+   Transactions: 6
+   Avg Order Value: $1348.30
+   Product Diversity: 5 unique products
+   Last Active: 2025-05-08 11:18:13
+3. User 10 (HIGH-VALUE)
+   Total Spending: $5399.88
+   Transactions: 3
+   Avg Order Value: $1799.96
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:17:56
+4. User 31 (HIGH-VALUE)
+   Total Spending: $5019.94
+   Transactions: 5
+   Avg Order Value: $1003.99
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:16:17
+5. User 83 (HIGH-VALUE)
+   Total Spending: $4999.94
+   Transactions: 3
+   Avg Order Value: $1666.65
+   Product Diversity: 2 unique products
+   Last Active: 2025-05-08 11:14:37
+
+High-value customers: 41 out of 82 (50.0%)
+===================================
+
+Processed: User 30 purchased $599.99
+Processed: User 57 purchased $299.98
+Processed: User 31 purchased $199.99
+Processed: User 2 purchased $6499.95
+Processed: User 67 purchased $599.99
+Processed: User 57 purchased $129.99
+Processed: User 43 purchased $119.99
+Processed: User 34 purchased $239.98
+Processed: User 54 purchased $349.99
+Processed: User 89 purchased $349.99
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $11559.78
+   Transactions: 6
+   Avg Order Value: $1926.63
+   Product Diversity: 6 unique products
+   Last Active: 2025-05-08 11:17:27
+2. User 2 (HIGH-VALUE)
+   Total Spending: $8559.83
+   Transactions: 5
+   Avg Order Value: $1711.97
+   Product Diversity: 5 unique products
+   Last Active: 2025-05-08 11:18:23
+3. User 5 (HIGH-VALUE)
+   Total Spending: $8089.83
+   Transactions: 6
+   Avg Order Value: $1348.30
+   Product Diversity: 5 unique products
+   Last Active: 2025-05-08 11:18:13
+4. User 10 (HIGH-VALUE)
+   Total Spending: $5399.88
+   Transactions: 3
+   Avg Order Value: $1799.96
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:17:56
+5. User 31 (HIGH-VALUE)
+   Total Spending: $5219.93
+   Transactions: 6
+   Avg Order Value: $869.99
+   Product Diversity: 4 unique products
+   Last Active: 2025-05-08 11:18:22
+
+High-value customers: 42 out of 83 (50.6%)
+===================================
+
+Processed: User 26 purchased $999.98
+Processed: User 1 purchased $199.99
+Processed: User 3 purchased $5199.96
+Processed: User 52 purchased $199.99
+Processed: User 39 purchased $119.99
+Processed: User 8 purchased $129.99
+Processed: User 76 purchased $129.99
+Processed: User 64 purchased $2599.98
+Processed: User 8 purchased $699.99
+Processed: User 7 purchased $999.95
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $11759.77
+   Transactions: 7
+   Avg Order Value: $1679.97
+   Product Diversity: 6 unique products
+   Last Active: 2025-05-08 11:18:33
+2. User 2 (HIGH-VALUE)
+   Total Spending: $8559.83
+   Transactions: 5
+   Avg Order Value: $1711.97
+   Product Diversity: 5 unique products
+   Last Active: 2025-05-08 11:18:23
+3. User 5 (HIGH-VALUE)
+   Total Spending: $8089.83
+   Transactions: 6
+   Avg Order Value: $1348.30
+   Product Diversity: 5 unique products
+   Last Active: 2025-05-08 11:18:13
+4. User 3 (HIGH-VALUE)
+   Total Spending: $8049.90
+   Transactions: 3
+   Avg Order Value: $2683.30
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:18:34
+5. User 10 (HIGH-VALUE)
+   Total Spending: $5399.88
+   Transactions: 3
+   Avg Order Value: $1799.96
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:17:56
+
+High-value customers: 47 out of 83 (56.6%)
+===================================
+
+Processed: User 96 purchased $239.98
+Processed: User 53 purchased $239.98
+Processed: User 2 purchased $2999.95
+Processed: User 52 purchased $129.99
+Processed: User 7 purchased $2999.95
+Processed: User 30 purchased $159.98
+Processed: User 74 purchased $2599.98
+Processed: User 87 purchased $259.98
+Processed: User 38 purchased $1299.99
+Processed: User 80 purchased $129.99
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $11759.77
+   Transactions: 7
+   Avg Order Value: $1679.97
+   Product Diversity: 6 unique products
+   Last Active: 2025-05-08 11:18:33
+2. User 2 (HIGH-VALUE)
+   Total Spending: $11559.78
+   Transactions: 6
+   Avg Order Value: $1926.63
+   Product Diversity: 6 unique products
+   Last Active: 2025-05-08 11:18:45
+3. User 5 (HIGH-VALUE)
+   Total Spending: $8089.83
+   Transactions: 6
+   Avg Order Value: $1348.30
+   Product Diversity: 5 unique products
+   Last Active: 2025-05-08 11:18:13
+4. User 3 (HIGH-VALUE)
+   Total Spending: $8049.90
+   Transactions: 3
+   Avg Order Value: $2683.30
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:18:34
+5. User 10 (HIGH-VALUE)
+   Total Spending: $5399.88
+   Transactions: 3
+   Avg Order Value: $1799.96
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:17:56
+
+High-value customers: 49 out of 86 (57.0%)
+===================================
+
+Processed: User 65 purchased $1299.99
+Processed: User 28 purchased $199.99
+Processed: User 10 purchased $479.96
+Processed: User 63 purchased $159.98
+Processed: User 54 purchased $79.99
+Processed: User 9 purchased $299.98
+Processed: User 86 purchased $699.98
+Processed: User 16 purchased $239.98
+Processed: User 36 purchased $999.98
+Processed: User 67 purchased $239.98
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $11759.77
+   Transactions: 7
+   Avg Order Value: $1679.97
+   Product Diversity: 6 unique products
+   Last Active: 2025-05-08 11:18:33
+2. User 2 (HIGH-VALUE)
+   Total Spending: $11559.78
+   Transactions: 6
+   Avg Order Value: $1926.63
+   Product Diversity: 6 unique products
+   Last Active: 2025-05-08 11:18:45
+3. User 5 (HIGH-VALUE)
+   Total Spending: $8089.83
+   Transactions: 6
+   Avg Order Value: $1348.30
+   Product Diversity: 5 unique products
+   Last Active: 2025-05-08 11:18:13
+4. User 3 (HIGH-VALUE)
+   Total Spending: $8049.90
+   Transactions: 3
+   Avg Order Value: $2683.30
+   Product Diversity: 3 unique products
+   Last Active: 2025-05-08 11:18:34
+5. User 10 (HIGH-VALUE)
+   Total Spending: $5879.84
+   Transactions: 4
+   Avg Order Value: $1469.96
+   Product Diversity: 4 unique products
+   Last Active: 2025-05-08 11:18:56
+
+High-value customers: 52 out of 87 (59.8%)
+===================================
+
+Processed: User 76 purchased $1199.98
+Processed: User 45 purchased $2599.98
+Processed: User 60 purchased $2599.98
+Processed: User 92 purchased $199.99
+Processed: User 58 purchased $599.99
+Processed: User 7 purchased $3499.95
+Processed: User 51 purchased $1299.99
+Processed: User 9 purchased $699.98
+Processed: User 5 purchased $239.97
+Processed: User 7 purchased $499.99
+
+===== USER BEHAVIOR ANALYSIS =====
+Top 5 customers by spending:
+1. User 1 (HIGH-VALUE)
+   Total Spending: $11759.77
+   Transactions: 7
+   Avg Order Value: $1679.97
