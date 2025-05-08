@@ -1,0 +1,12 @@
+========================================
+Starting data flow logging: Thu May  8 12:04:30 +07 2025
+========================================
+Waiting 20 seconds for Kafka Connect to start up...
+Waiting 30 seconds for data to flow through Kafka...
+
+========================================
+Data flow logging results: Thu May  8 12:05:38 +07 2025
+- Kafka topics log: logs/kafka_topics.log
+- Kafka messages log: logs/kafka_messages.log
+- Connector status log: logs/connector_status.log
+========================================

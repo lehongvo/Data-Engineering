@@ -1,0 +1,6 @@
+Checking Kafka Connect status...
+{"version":"3.4.1","commit":"8a516edc2755df89","kafka_cluster_id":"WD8_UsXhQhauqaT_1FNY-A"}
+Available connector plugins:
+[{"class":"org.apache.kafka.connect.mirror.MirrorCheckpointConnector","type":"source","version":"3.4.1"},{"class":"org.apache.kafka.connect.mirror.MirrorHeartbeatConnector","type":"source","version":"3.4.1"},{"class":"org.apache.kafka.connect.mirror.MirrorSourceConnector","type":"source","version":"3.4.1"}]
+Active connectors:
+["postgres-source","mongodb-sink"]
