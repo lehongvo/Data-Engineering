@@ -11,3 +11,218 @@
 2025-05-08 12:41:42,254 - sensor-producer - WARNING - Generated pressure anomaly: 1055.8 hPa at living_room
 2025-05-08 12:41:42,842 - sensor-producer - WARNING - Generated pressure anomaly: 1049.2 hPa at outdoor
 2025-05-08 12:41:46,082 - sensor-producer - WARNING - Generated temperature anomaly: -0.8°C at bathroom
+2025-05-08 12:41:52,297 - sensor-producer - WARNING - Generated humidity anomaly: 99.4% at bathroom
+2025-05-08 12:41:52,302 - sensor-producer - INFO - Sent 300 sensor readings
+2025-05-08 12:41:54,051 - sensor-producer - WARNING - Generated temperature anomaly: -4.9°C at bedroom
+2025-05-08 12:41:54,056 - sensor-producer - WARNING - Generated pressure anomaly: 965.1 hPa at bedroom
+2025-05-08 12:42:03,203 - sensor-producer - INFO - Sent 450 sensor readings
+2025-05-08 12:42:06,172 - sensor-producer - WARNING - Generated humidity anomaly: 98.9% at outdoor
+2025-05-08 12:42:08,020 - sensor-producer - WARNING - Generated humidity anomaly: 89.5% at bedroom
+2025-05-08 12:42:14,209 - sensor-producer - WARNING - Generated temperature anomaly: -7.1°C at outdoor
+2025-05-08 12:42:14,212 - sensor-producer - WARNING - Generated pressure anomaly: 1052.7 hPa at outdoor
+2025-05-08 12:42:17,966 - sensor-producer - WARNING - Generated temperature anomaly: -3.7°C at living_room
+2025-05-08 12:42:19,498 - sensor-producer - INFO - Sent 600 sensor readings
+2025-05-08 12:42:25,005 - sensor-producer - WARNING - Generated pressure anomaly: 1056.5 hPa at outdoor
+2025-05-08 12:42:29,045 - sensor-producer - INFO - Sent 750 sensor readings
+2025-05-08 12:42:38,262 - sensor-producer - WARNING - Generated pressure anomaly: 974.5 hPa at bathroom
+2025-05-08 12:42:41,179 - sensor-producer - INFO - Sent 900 sensor readings
+2025-05-08 12:42:42,375 - sensor-producer - WARNING - Generated humidity anomaly: 86.4% at bedroom
+2025-05-08 12:42:51,994 - sensor-producer - WARNING - Generated temperature anomaly: 44.3°C at bathroom
+2025-05-08 12:42:55,589 - sensor-producer - INFO - Sent 1050 sensor readings
+2025-05-08 12:43:02,574 - sensor-producer - WARNING - Generated temperature anomaly: 41.6°C at outdoor
+2025-05-08 12:43:02,579 - sensor-producer - WARNING - Generated humidity anomaly: 99.3% at outdoor
+2025-05-08 12:43:04,505 - sensor-producer - WARNING - Generated humidity anomaly: 10.2% at bedroom
+2025-05-08 12:43:07,662 - sensor-producer - INFO - Sent 1200 sensor readings
+2025-05-08 12:43:15,860 - sensor-producer - WARNING - Generated humidity anomaly: 87.6% at outdoor
+2025-05-08 12:43:20,266 - sensor-producer - WARNING - Generated humidity anomaly: 85.2% at bedroom
+2025-05-08 12:43:20,286 - sensor-producer - INFO - Sent 1350 sensor readings
+2025-05-08 12:43:23,258 - sensor-producer - WARNING - Generated pressure anomaly: 959.3 hPa at bathroom
+2025-05-08 12:43:24,885 - sensor-producer - WARNING - Generated temperature anomaly: 44.9°C at bathroom
+2025-05-08 12:43:25,969 - sensor-producer - WARNING - Generated pressure anomaly: 1053.9 hPa at bedroom
+2025-05-08 12:43:34,661 - sensor-producer - INFO - Sent 1500 sensor readings
+2025-05-08 12:43:40,529 - sensor-producer - WARNING - Generated pressure anomaly: 1050.0 hPa at kitchen
+2025-05-08 12:43:41,859 - sensor-producer - WARNING - Generated humidity anomaly: 9.9% at bathroom
+2025-05-08 12:43:41,861 - sensor-producer - WARNING - Generated pressure anomaly: 1041.1 hPa at bathroom
+2025-05-08 12:43:44,279 - sensor-producer - WARNING - Generated temperature anomaly: 45.7°C at kitchen
+2025-05-08 12:43:47,442 - sensor-producer - INFO - Sent 1650 sensor readings
+2025-05-08 12:43:49,003 - sensor-producer - WARNING - Generated humidity anomaly: 86.0% at bathroom
+2025-05-08 12:44:01,068 - sensor-producer - INFO - Sent 1800 sensor readings
+2025-05-08 12:44:15,926 - sensor-producer - INFO - Sent 1950 sensor readings
+2025-05-08 12:44:30,231 - sensor-producer - INFO - Sent 2100 sensor readings
+2025-05-08 12:44:32,729 - sensor-producer - WARNING - Generated pressure anomaly: 1058.4 hPa at bathroom
+2025-05-08 12:44:36,211 - sensor-producer - WARNING - Generated temperature anomaly: 46.2°C at kitchen
+2025-05-08 12:44:40,541 - sensor-producer - WARNING - Generated temperature anomaly: 47.2°C at living_room
+2025-05-08 12:44:40,700 - sensor-producer - WARNING - Generated humidity anomaly: 90.9% at living_room
+2025-05-08 12:44:43,217 - sensor-producer - WARNING - Generated temperature anomaly: -4.8°C at bathroom
+2025-05-08 12:44:44,636 - sensor-producer - INFO - Sent 2250 sensor readings
+2025-05-08 12:44:56,252 - sensor-producer - INFO - Sent 2400 sensor readings
+2025-05-08 12:44:57,098 - sensor-producer - WARNING - Generated temperature anomaly: 43.6°C at bathroom
+2025-05-08 12:45:00,313 - sensor-producer - WARNING - Generated temperature anomaly: 49.6°C at bathroom
+2025-05-08 12:45:00,320 - sensor-producer - WARNING - Generated humidity anomaly: 1.7% at outdoor
+2025-05-08 12:45:00,915 - sensor-producer - WARNING - Generated humidity anomaly: 12.8% at living_room
+2025-05-08 12:45:08,347 - sensor-producer - INFO - Sent 2550 sensor readings
+2025-05-08 12:45:13,144 - sensor-producer - WARNING - Generated pressure anomaly: 963.2 hPa at kitchen
+2025-05-08 12:45:21,349 - sensor-producer - INFO - Sent 2700 sensor readings
+2025-05-08 12:45:26,502 - sensor-producer - WARNING - Generated humidity anomaly: 3.3% at outdoor
+2025-05-08 12:45:27,596 - sensor-producer - WARNING - Generated temperature anomaly: 44.9°C at living_room
+2025-05-08 12:45:34,896 - sensor-producer - INFO - Sent 2850 sensor readings
+2025-05-08 12:45:47,012 - sensor-producer - WARNING - Generated humidity anomaly: 8.2% at outdoor
+2025-05-08 12:45:47,014 - sensor-producer - INFO - Sent 3000 sensor readings
+2025-05-08 12:45:51,473 - sensor-producer - WARNING - Generated humidity anomaly: 6.5% at kitchen
+2025-05-08 12:45:53,769 - sensor-producer - WARNING - Generated pressure anomaly: 958.0 hPa at bathroom
+2025-05-08 12:45:55,191 - sensor-producer - WARNING - Generated temperature anomaly: -9.2°C at bathroom
+2025-05-08 12:45:55,192 - sensor-producer - WARNING - Generated humidity anomaly: 91.1% at bathroom
+2025-05-08 12:45:57,014 - sensor-producer - WARNING - Generated pressure anomaly: 971.6 hPa at kitchen
+2025-05-08 12:46:00,286 - sensor-producer - WARNING - Generated pressure anomaly: 1056.6 hPa at kitchen
+2025-05-08 12:46:00,295 - sensor-producer - WARNING - Generated pressure anomaly: 978.5 hPa at bathroom
+2025-05-08 12:46:01,061 - sensor-producer - INFO - Sent 3150 sensor readings
+2025-05-08 12:46:03,220 - sensor-producer - WARNING - Generated humidity anomaly: 92.8% at bedroom
+2025-05-08 12:46:13,838 - sensor-producer - INFO - Sent 3300 sensor readings
+2025-05-08 12:46:19,916 - sensor-producer - WARNING - Generated temperature anomaly: 44.6°C at bathroom
+2025-05-08 12:46:25,243 - sensor-producer - WARNING - Generated humidity anomaly: 13.5% at bedroom
+2025-05-08 12:46:25,244 - sensor-producer - WARNING - Generated pressure anomaly: 1053.9 hPa at bedroom
+2025-05-08 12:46:27,089 - sensor-producer - INFO - Sent 3450 sensor readings
+2025-05-08 12:46:29,637 - sensor-producer - WARNING - Generated temperature anomaly: -2.1°C at bathroom
+2025-05-08 12:46:33,064 - sensor-producer - WARNING - Generated temperature anomaly: -5.1°C at living_room
+2025-05-08 12:46:33,078 - sensor-producer - WARNING - Generated pressure anomaly: 968.1 hPa at bathroom
+2025-05-08 12:46:34,648 - sensor-producer - WARNING - Generated pressure anomaly: 956.6 hPa at living_room
+2025-05-08 12:46:36,820 - sensor-producer - WARNING - Generated humidity anomaly: 7.3% at bathroom
+2025-05-08 12:46:38,145 - sensor-producer - WARNING - Generated humidity anomaly: 96.4% at bedroom
+2025-05-08 12:46:40,025 - sensor-producer - INFO - Sent 3600 sensor readings
+2025-05-08 12:46:41,024 - sensor-producer - WARNING - Generated temperature anomaly: 41.7°C at outdoor
+2025-05-08 12:46:49,206 - sensor-producer - WARNING - Generated temperature anomaly: 45.9°C at living_room
+2025-05-08 12:46:49,865 - sensor-producer - INFO - Sent 3750 sensor readings
+2025-05-08 12:47:01,878 - sensor-producer - WARNING - Generated pressure anomaly: 971.2 hPa at bathroom
+2025-05-08 12:47:01,887 - sensor-producer - INFO - Sent 3900 sensor readings
+2025-05-08 12:47:09,405 - sensor-producer - WARNING - Generated humidity anomaly: 88.8% at bathroom
+2025-05-08 12:47:15,370 - sensor-producer - INFO - Sent 4050 sensor readings
+2025-05-08 12:47:17,066 - sensor-producer - WARNING - Generated temperature anomaly: -2.9°C at kitchen
+2025-05-08 12:47:18,740 - sensor-producer - WARNING - Generated pressure anomaly: 973.2 hPa at living_room
+2025-05-08 12:47:26,823 - sensor-producer - WARNING - Generated temperature anomaly: 46.5°C at outdoor
+2025-05-08 12:47:28,294 - sensor-producer - INFO - Sent 4200 sensor readings
+2025-05-08 12:47:31,798 - sensor-producer - WARNING - Generated humidity anomaly: 14.7% at outdoor
+2025-05-08 12:47:34,930 - sensor-producer - WARNING - Generated pressure anomaly: 1053.0 hPa at kitchen
+2025-05-08 12:47:34,938 - sensor-producer - WARNING - Generated pressure anomaly: 950.3 hPa at bedroom
+2025-05-08 12:47:38,124 - sensor-producer - WARNING - Generated temperature anomaly: -9.0°C at bathroom
+2025-05-08 12:47:41,631 - sensor-producer - WARNING - Generated pressure anomaly: 1047.2 hPa at bathroom
+2025-05-08 12:47:41,636 - sensor-producer - INFO - Sent 4350 sensor readings
+2025-05-08 12:47:54,672 - sensor-producer - INFO - Sent 4500 sensor readings
+2025-05-08 12:47:58,321 - sensor-producer - WARNING - Generated temperature anomaly: -3.8°C at kitchen
+2025-05-08 12:47:58,327 - sensor-producer - WARNING - Generated temperature anomaly: -7.2°C at bathroom
+2025-05-08 12:48:07,456 - sensor-producer - INFO - Sent 4650 sensor readings
+2025-05-08 12:48:16,254 - sensor-producer - WARNING - Generated temperature anomaly: -1.4°C at bathroom
+2025-05-08 12:48:16,256 - sensor-producer - WARNING - Generated pressure anomaly: 950.1 hPa at bathroom
+2025-05-08 12:48:22,026 - sensor-producer - INFO - Sent 4800 sensor readings
+2025-05-08 12:48:23,270 - sensor-producer - WARNING - Generated humidity anomaly: 4.1% at bathroom
+2025-05-08 12:48:24,874 - sensor-producer - WARNING - Generated humidity anomaly: 3.6% at bedroom
+2025-05-08 12:48:28,438 - sensor-producer - WARNING - Generated temperature anomaly: -5.1°C at outdoor
+2025-05-08 12:48:35,142 - sensor-producer - WARNING - Generated pressure anomaly: 975.8 hPa at bathroom
+2025-05-08 12:48:35,146 - sensor-producer - INFO - Sent 4950 sensor readings
+2025-05-08 12:48:36,529 - sensor-producer - WARNING - Generated temperature anomaly: 42.2°C at kitchen
+2025-05-08 12:48:36,530 - sensor-producer - WARNING - Generated humidity anomaly: 1.8% at kitchen
+2025-05-08 12:48:47,416 - sensor-producer - WARNING - Generated humidity anomaly: 95.6% at bedroom
+2025-05-08 12:48:49,381 - sensor-producer - INFO - Sent 5100 sensor readings
+2025-05-08 12:49:01,486 - sensor-producer - INFO - Sent 5250 sensor readings
+2025-05-08 12:49:09,196 - sensor-producer - WARNING - Generated humidity anomaly: 91.9% at bedroom
+2025-05-08 12:49:12,416 - sensor-producer - WARNING - Generated humidity anomaly: 4.9% at living_room
+2025-05-08 12:49:14,717 - sensor-producer - WARNING - Generated humidity anomaly: 10.7% at outdoor
+2025-05-08 12:49:14,727 - sensor-producer - INFO - Sent 5400 sensor readings
+2025-05-08 12:49:23,543 - sensor-producer - WARNING - Generated humidity anomaly: 85.3% at outdoor
+2025-05-08 12:49:24,386 - sensor-producer - WARNING - Generated temperature anomaly: -7.3°C at kitchen
+2025-05-08 12:49:25,076 - sensor-producer - INFO - Sent 5550 sensor readings
+2025-05-08 12:49:25,822 - sensor-producer - WARNING - Generated humidity anomaly: 2.9% at outdoor
+2025-05-08 12:49:26,775 - sensor-producer - WARNING - Generated humidity anomaly: 14.1% at bathroom
+2025-05-08 12:49:28,855 - sensor-producer - WARNING - Generated temperature anomaly: -6.9°C at kitchen
+2025-05-08 12:49:30,655 - sensor-producer - WARNING - Generated pressure anomaly: 1048.6 hPa at bedroom
+2025-05-08 12:49:36,161 - sensor-producer - INFO - Sent 5700 sensor readings
+2025-05-08 12:49:38,794 - sensor-producer - WARNING - Generated temperature anomaly: 40.1°C at outdoor
+2025-05-08 12:49:38,799 - sensor-producer - WARNING - Generated humidity anomaly: 6.7% at outdoor
+2025-05-08 12:49:42,084 - sensor-producer - WARNING - Generated humidity anomaly: 12.2% at bedroom
+2025-05-08 12:49:42,086 - sensor-producer - WARNING - Generated temperature anomaly: -7.1°C at bathroom
+2025-05-08 12:49:43,053 - sensor-producer - WARNING - Generated pressure anomaly: 956.5 hPa at outdoor
+2025-05-08 12:49:47,988 - sensor-producer - INFO - Sent 5850 sensor readings
+2025-05-08 12:49:52,996 - sensor-producer - WARNING - Generated temperature anomaly: 45.1°C at living_room
+2025-05-08 12:49:53,536 - sensor-producer - WARNING - Generated humidity anomaly: 8.0% at bedroom
+2025-05-08 12:49:56,715 - sensor-producer - WARNING - Generated pressure anomaly: 974.5 hPa at outdoor
+2025-05-08 12:49:57,659 - sensor-producer - WARNING - Generated humidity anomaly: 5.3% at bathroom
+2025-05-08 12:49:57,667 - sensor-producer - INFO - Sent 6000 sensor readings
+2025-05-08 12:49:58,270 - sensor-producer - WARNING - Generated pressure anomaly: 955.2 hPa at outdoor
+2025-05-08 12:50:10,790 - sensor-producer - INFO - Sent 6150 sensor readings
+2025-05-08 12:50:11,333 - sensor-producer - WARNING - Generated temperature anomaly: -4.9°C at bathroom
+2025-05-08 12:50:19,621 - sensor-producer - WARNING - Generated temperature anomaly: 42.6°C at living_room
+2025-05-08 12:50:22,149 - sensor-producer - INFO - Sent 6300 sensor readings
+2025-05-08 12:50:26,306 - sensor-producer - WARNING - Generated pressure anomaly: 1055.0 hPa at living_room
+2025-05-08 12:50:32,434 - sensor-producer - WARNING - Generated pressure anomaly: 971.7 hPa at bathroom
+2025-05-08 12:50:34,428 - sensor-producer - WARNING - Generated temperature anomaly: 42.6°C at living_room
+2025-05-08 12:50:36,250 - sensor-producer - WARNING - Generated pressure anomaly: 1048.2 hPa at kitchen
+2025-05-08 12:50:36,308 - sensor-producer - INFO - Sent 6450 sensor readings
+2025-05-08 12:50:43,154 - sensor-producer - WARNING - Generated temperature anomaly: 42.5°C at bedroom
+2025-05-08 12:50:46,231 - sensor-producer - WARNING - Generated pressure anomaly: 1058.4 hPa at living_room
+2025-05-08 12:50:48,152 - sensor-producer - INFO - Sent 6600 sensor readings
+2025-05-08 12:50:53,189 - sensor-producer - WARNING - Generated temperature anomaly: 44.0°C at bedroom
+2025-05-08 12:50:59,910 - sensor-producer - WARNING - Generated humidity anomaly: 87.2% at kitchen
+2025-05-08 12:51:01,340 - sensor-producer - WARNING - Generated temperature anomaly: -1.3°C at living_room
+2025-05-08 12:51:01,355 - sensor-producer - INFO - Sent 6750 sensor readings
+2025-05-08 12:51:12,981 - sensor-producer - WARNING - Generated temperature anomaly: 45.3°C at bathroom
+2025-05-08 12:51:12,987 - sensor-producer - INFO - Sent 6900 sensor readings
+2025-05-08 12:51:13,507 - sensor-producer - WARNING - Generated temperature anomaly: -6.1°C at kitchen
+2025-05-08 12:51:16,206 - sensor-producer - WARNING - Generated humidity anomaly: 7.0% at living_room
+2025-05-08 12:51:16,219 - sensor-producer - WARNING - Generated pressure anomaly: 1047.0 hPa at outdoor
+2025-05-08 12:51:20,356 - sensor-producer - WARNING - Generated humidity anomaly: 12.2% at bathroom
+2025-05-08 12:51:22,406 - sensor-producer - WARNING - Generated temperature anomaly: 46.1°C at bathroom
+2025-05-08 12:51:23,548 - sensor-producer - INFO - Sent 7050 sensor readings
+2025-05-08 12:51:34,229 - sensor-producer - WARNING - Generated temperature anomaly: 44.3°C at outdoor
+2025-05-08 12:51:35,144 - sensor-producer - WARNING - Generated humidity anomaly: 97.3% at kitchen
+2025-05-08 12:51:36,819 - sensor-producer - INFO - Sent 7200 sensor readings
+2025-05-08 12:51:49,331 - sensor-producer - WARNING - Generated humidity anomaly: 90.4% at bedroom
+2025-05-08 12:51:51,185 - sensor-producer - INFO - Sent 7350 sensor readings
+2025-05-08 12:52:03,084 - sensor-producer - INFO - Sent 7500 sensor readings
+2025-05-08 12:52:04,911 - sensor-producer - WARNING - Generated humidity anomaly: 7.7% at living_room
+2025-05-08 12:52:12,410 - sensor-producer - WARNING - Generated pressure anomaly: 1041.1 hPa at living_room
+2025-05-08 12:52:14,393 - sensor-producer - WARNING - Generated pressure anomaly: 1056.7 hPa at outdoor
+2025-05-08 12:52:16,996 - sensor-producer - INFO - Sent 7650 sensor readings
+2025-05-08 12:52:22,075 - sensor-producer - WARNING - Generated humidity anomaly: 0.2% at bathroom
+2025-05-08 12:52:26,863 - sensor-producer - WARNING - Generated humidity anomaly: 98.5% at living_room
+2025-05-08 12:52:29,219 - sensor-producer - WARNING - Generated temperature anomaly: 49.3°C at living_room
+2025-05-08 12:52:29,221 - sensor-producer - WARNING - Generated humidity anomaly: 0.7% at living_room
+2025-05-08 12:52:29,235 - sensor-producer - INFO - Sent 7800 sensor readings
+2025-05-08 12:52:31,747 - sensor-producer - WARNING - Generated pressure anomaly: 1040.7 hPa at kitchen
+2025-05-08 12:52:40,348 - sensor-producer - WARNING - Generated humidity anomaly: 86.2% at bathroom
+2025-05-08 12:52:40,349 - sensor-producer - WARNING - Generated pressure anomaly: 971.3 hPa at bathroom
+2025-05-08 12:52:41,826 - sensor-producer - WARNING - Generated pressure anomaly: 1041.9 hPa at bedroom
+2025-05-08 12:52:43,459 - sensor-producer - WARNING - Generated pressure anomaly: 1047.7 hPa at kitchen
+2025-05-08 12:52:43,468 - sensor-producer - INFO - Sent 7950 sensor readings
+2025-05-08 12:52:56,839 - sensor-producer - INFO - Sent 8100 sensor readings
+2025-05-08 12:52:58,170 - sensor-producer - WARNING - Generated pressure anomaly: 957.7 hPa at bedroom
+2025-05-08 12:52:59,672 - sensor-producer - WARNING - Generated pressure anomaly: 1059.7 hPa at kitchen
+2025-05-08 12:53:03,116 - sensor-producer - WARNING - Generated pressure anomaly: 1043.3 hPa at outdoor
+2025-05-08 12:53:07,782 - sensor-producer - WARNING - Generated temperature anomaly: 47.4°C at kitchen
+2025-05-08 12:53:07,787 - sensor-producer - WARNING - Generated pressure anomaly: 1054.0 hPa at bedroom
+2025-05-08 12:53:11,266 - sensor-producer - INFO - Sent 8250 sensor readings
+2025-05-08 12:53:11,924 - sensor-producer - WARNING - Generated pressure anomaly: 951.9 hPa at living_room
+2025-05-08 12:53:11,929 - sensor-producer - WARNING - Generated humidity anomaly: 88.6% at bedroom
+2025-05-08 12:53:14,405 - sensor-producer - WARNING - Generated temperature anomaly: 42.6°C at outdoor
+2025-05-08 12:53:14,408 - sensor-producer - WARNING - Generated pressure anomaly: 1054.1 hPa at outdoor
+2025-05-08 12:53:23,530 - sensor-producer - WARNING - Generated humidity anomaly: 13.7% at kitchen
+2025-05-08 12:53:23,542 - sensor-producer - INFO - Sent 8400 sensor readings
+2025-05-08 12:53:26,622 - sensor-producer - WARNING - Generated temperature anomaly: 41.3°C at bathroom
+2025-05-08 12:53:34,418 - sensor-producer - WARNING - Generated pressure anomaly: 1047.7 hPa at bathroom
+2025-05-08 12:53:35,702 - sensor-producer - WARNING - Generated pressure anomaly: 971.3 hPa at bathroom
+2025-05-08 12:53:37,082 - sensor-producer - WARNING - Generated pressure anomaly: 1057.6 hPa at bathroom
+2025-05-08 12:53:37,086 - sensor-producer - INFO - Sent 8550 sensor readings
+2025-05-08 12:53:41,038 - sensor-producer - WARNING - Generated pressure anomaly: 1052.2 hPa at kitchen
+2025-05-08 12:53:47,207 - sensor-producer - WARNING - Generated temperature anomaly: -0.5°C at bedroom
+2025-05-08 12:53:48,076 - sensor-producer - WARNING - Generated temperature anomaly: 48.8°C at kitchen
+2025-05-08 12:53:49,130 - sensor-producer - INFO - Sent 8700 sensor readings
+2025-05-08 12:53:50,960 - sensor-producer - WARNING - Generated humidity anomaly: 1.1% at kitchen
+2025-05-08 12:53:50,969 - sensor-producer - WARNING - Generated temperature anomaly: -2.8°C at bathroom
+2025-05-08 12:53:50,971 - sensor-producer - WARNING - Generated humidity anomaly: 94.7% at bathroom
+2025-05-08 12:53:52,314 - sensor-producer - WARNING - Generated temperature anomaly: 43.9°C at bedroom
+2025-05-08 12:53:54,825 - sensor-producer - WARNING - Generated temperature anomaly: 40.9°C at bedroom
+2025-05-08 12:54:00,135 - sensor-producer - INFO - Sent 8850 sensor readings
+2025-05-08 12:54:00,910 - sensor-producer - WARNING - Generated temperature anomaly: -2.0°C at bedroom
+2025-05-08 12:54:04,685 - sensor-producer - WARNING - Generated humidity anomaly: 13.7% at living_room
+2025-05-08 12:54:13,835 - sensor-producer - INFO - Sent 9000 sensor readings
+2025-05-08 12:54:18,584 - sensor-producer - WARNING - Generated pressure anomaly: 962.7 hPa at outdoor
+2025-05-08 12:54:20,123 - sensor-producer - WARNING - Generated humidity anomaly: 11.5% at outdoor
+2025-05-08 12:54:26,160 - sensor-producer - INFO - Sent 9150 sensor readings

@@ -1,0 +1,574 @@
+2025-05-08 17:02:08,847 - kafka.conn - WARNING - DNS lookup failed for kafka:9092, exception was [Errno 8] nodename nor servname provided, or not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-05-08 17:02:08,847 - kafka.conn - ERROR - DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-05-08 17:02:08,848 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-05-08 17:02:08,849 - kafka.conn - WARNING - DNS lookup failed for kafka:9092, exception was [Errno 8] nodename nor servname provided, or not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-05-08 17:02:08,849 - kafka.conn - ERROR - DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-05-08 17:02:08,849 - stock-market-consumer - ERROR - Failed to start consumer: NoBrokersAvailable
+2025-05-08 17:05:18,504 - kafka.conn - WARNING - DNS lookup failed for kafka:9092, exception was [Errno 8] nodename nor servname provided, or not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-05-08 17:05:18,504 - kafka.conn - ERROR - DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-05-08 17:05:18,504 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-05-08 17:05:18,507 - kafka.conn - WARNING - DNS lookup failed for kafka:9092, exception was [Errno 8] nodename nor servname provided, or not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+2025-05-08 17:05:18,507 - kafka.conn - ERROR - DNS lookup failed for kafka:9092 (AddressFamily.AF_UNSPEC)
+2025-05-08 17:05:18,507 - stock-market-consumer - ERROR - Failed to start consumer: NoBrokersAvailable
+2025-05-08 17:09:29,211 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap-0 host=localhost:29092 <connecting> [IPv6 ('::1', 29092, 0, 0)]>: connecting to localhost:29092 [('::1', 29092, 0, 0) IPv6]
+2025-05-08 17:09:29,211 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-05-08 17:09:29,212 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap-0 host=localhost:29092 <connecting> [IPv6 ('::1', 29092, 0, 0)]>: Connection complete.
+2025-05-08 17:09:29,320 - kafka.conn - INFO - Broker version identified as 2.5.0
+2025-05-08 17:09:29,321 - kafka.conn - INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+2025-05-08 17:09:29,321 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('stock-market-data',)
+2025-05-08 17:09:29,321 - stock-market-consumer - INFO - Consumer initialized with bootstrap servers: localhost:29092
+2025-05-08 17:09:29,321 - stock-market-consumer - INFO - Consuming from topic: stock-market-data
+2025-05-08 17:09:29,321 - stock-market-consumer - INFO - Consumer group: stock-market-group
+2025-05-08 17:09:29,321 - stock-market-consumer - INFO - Output directory: ../data
+2025-05-08 17:09:29,322 - stock-market-consumer - INFO - CSV file initialized: ../data/stock_data_20250508_170929.csv
+2025-05-08 17:09:29,322 - stock-market-consumer - INFO - Starting to consume stock market data...
+2025-05-08 17:09:29,342 - kafka.cluster - INFO - Group coordinator for stock-market-group is BrokerMetadata(nodeId='coordinator-1', host='localhost', port=29092, rack=None)
+2025-05-08 17:09:29,342 - kafka.coordinator - INFO - Discovered coordinator coordinator-1 for group stock-market-group
+2025-05-08 17:09:29,342 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-05-08 17:09:29,342 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group stock-market-group
+2025-05-08 17:09:29,343 - kafka.conn - INFO - <BrokerConnection node_id=coordinator-1 host=localhost:29092 <connecting> [IPv6 ('::1', 29092, 0, 0)]>: connecting to localhost:29092 [('::1', 29092, 0, 0) IPv6]
+2025-05-08 17:09:29,343 - kafka.conn - INFO - <BrokerConnection node_id=coordinator-1 host=localhost:29092 <connecting> [IPv6 ('::1', 29092, 0, 0)]>: Connection complete.
+2025-05-08 17:09:29,343 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap-0 host=localhost:29092 <connected> [IPv6 ('::1', 29092, 0, 0)]>: Closing connection. 
+2025-05-08 17:09:29,444 - kafka.coordinator - INFO - (Re-)joining group stock-market-group
+2025-05-08 17:09:29,446 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap-0 host=localhost:29092 <connecting> [IPv6 ('::1', 29092, 0, 0)]>: connecting to localhost:29092 [('::1', 29092, 0, 0) IPv6]
+2025-05-08 17:09:29,446 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap-0 host=localhost:29092 <connecting> [IPv6 ('::1', 29092, 0, 0)]>: Connection complete.
+2025-05-08 17:09:32,505 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-05-08 17:09:32,508 - kafka.conn - INFO - <BrokerConnection node_id=1 host=localhost:29092 <connecting> [IPv6 ('::1', 29092, 0, 0)]>: connecting to localhost:29092 [('::1', 29092, 0, 0) IPv6]
+2025-05-08 17:09:32,508 - kafka.conn - INFO - <BrokerConnection node_id=1 host=localhost:29092 <connecting> [IPv6 ('::1', 29092, 0, 0)]>: Connection complete.
+2025-05-08 17:09:32,508 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap-0 host=localhost:29092 <connected> [IPv6 ('::1', 29092, 0, 0)]>: Closing connection. 
+2025-05-08 17:09:32,534 - kafka.coordinator - INFO - Successfully joined group stock-market-group with generation 1
+2025-05-08 17:09:32,534 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='stock-market-data', partition=0)]
+2025-05-08 17:09:32,534 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='stock-market-data', partition=0)} for group stock-market-group
+2025-05-08 17:09:32,694 - stock-market-consumer - INFO - Received: AAPL - Price: 74.45 - Volume: 6112
+2025-05-08 17:09:32,694 - stock-market-consumer - INFO - Received: META - Price: 286.48 - Volume: 5778
+2025-05-08 17:09:32,695 - stock-market-consumer - INFO - Received: AMZN - Price: 78.14 - Volume: 6588
+2025-05-08 17:09:32,695 - stock-market-consumer - INFO - Received: META - Price: 218.5 - Volume: 2136
+2025-05-08 17:09:32,695 - stock-market-consumer - INFO - Received: AAPL - Price: 372.89 - Volume: 9090
+2025-05-08 17:09:32,695 - stock-market-consumer - INFO - Received: ADBE - Price: 403.59 - Volume: 1357
+2025-05-08 17:09:32,696 - stock-market-consumer - INFO - Received: TSLA - Price: 358.99 - Volume: 6118
+2025-05-08 17:09:32,698 - stock-market-consumer - INFO - Received: META - Price: 110.67 - Volume: 8759
+2025-05-08 17:09:32,698 - stock-market-consumer - INFO - Received: PYPL - Price: 404.16 - Volume: 1938
+2025-05-08 17:09:32,698 - stock-market-consumer - INFO - Received: MSFT - Price: 493.93 - Volume: 3079
+2025-05-08 17:09:32,699 - stock-market-consumer - INFO - Received: META - Price: 374.63 - Volume: 1190
+2025-05-08 17:09:32,699 - stock-market-consumer - INFO - Received: GOOG - Price: 64.33 - Volume: 8715
+2025-05-08 17:09:32,699 - stock-market-consumer - INFO - Received: AAPL - Price: 284.3 - Volume: 6276
+2025-05-08 17:09:32,925 - stock-market-consumer - INFO - Received: AMZN - Price: 334.1 - Volume: 8400
+2025-05-08 17:09:33,933 - stock-market-consumer - INFO - Received: AAPL - Price: 457.21 - Volume: 3558
+2025-05-08 17:09:34,949 - stock-market-consumer - INFO - Received: TSLA - Price: 487.19 - Volume: 8630
+2025-05-08 17:09:36,015 - stock-market-consumer - INFO - Received: PYPL - Price: 177.83 - Volume: 5306
+2025-05-08 17:09:37,039 - stock-market-consumer - INFO - Received: AMZN - Price: 72.24 - Volume: 4337
+2025-05-08 17:09:38,065 - stock-market-consumer - INFO - Received: GOOG - Price: 366.82 - Volume: 5216
+2025-05-08 17:09:39,103 - stock-market-consumer - INFO - Received: MSFT - Price: 460.68 - Volume: 2625
+2025-05-08 17:09:40,096 - stock-market-consumer - INFO - Received: META - Price: 88.62 - Volume: 9744
+2025-05-08 17:09:41,106 - stock-market-consumer - INFO - Received: PYPL - Price: 110.8 - Volume: 7611
+2025-05-08 17:09:42,124 - stock-market-consumer - INFO - Received: NFLX - Price: 155.45 - Volume: 1132
+2025-05-08 17:09:43,243 - stock-market-consumer - INFO - Received: AMZN - Price: 137.5 - Volume: 7923
+2025-05-08 17:09:44,269 - stock-market-consumer - INFO - Received: ADBE - Price: 253.78 - Volume: 9574
+2025-05-08 17:09:45,279 - stock-market-consumer - INFO - Received: PYPL - Price: 309.45 - Volume: 8328
+2025-05-08 17:09:46,285 - stock-market-consumer - INFO - Received: GOOG - Price: 60.93 - Volume: 8896
+2025-05-08 17:09:47,350 - stock-market-consumer - INFO - Received: META - Price: 374.62 - Volume: 4993
+2025-05-08 17:09:48,362 - stock-market-consumer - INFO - Received: PYPL - Price: 413.57 - Volume: 7245
+2025-05-08 17:09:49,401 - stock-market-consumer - INFO - Received: META - Price: 264.17 - Volume: 8205
+2025-05-08 17:09:50,440 - stock-market-consumer - INFO - Received: NFLX - Price: 369.43 - Volume: 5265
+2025-05-08 17:09:51,456 - stock-market-consumer - INFO - Received: META - Price: 459.71 - Volume: 9962
+2025-05-08 17:09:52,463 - stock-market-consumer - INFO - Received: AAPL - Price: 383.11 - Volume: 8791
+2025-05-08 17:09:53,476 - stock-market-consumer - INFO - Received: TSLA - Price: 126.27 - Volume: 4750
+2025-05-08 17:09:54,484 - stock-market-consumer - INFO - Received: MSFT - Price: 88.46 - Volume: 1954
+2025-05-08 17:09:55,513 - stock-market-consumer - INFO - Received: NVDA - Price: 376.43 - Volume: 6288
+2025-05-08 17:09:56,517 - stock-market-consumer - INFO - Received: META - Price: 99.51 - Volume: 1759
+2025-05-08 17:09:57,546 - stock-market-consumer - INFO - Received: META - Price: 200.39 - Volume: 1148
+2025-05-08 17:09:58,541 - stock-market-consumer - INFO - Received: MSFT - Price: 102.91 - Volume: 7717
+2025-05-08 17:18:17,975 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap-0 host=localhost:29092 <connecting> [IPv6 ('::1', 29092, 0, 0)]>: connecting to localhost:29092 [('::1', 29092, 0, 0) IPv6]
+2025-05-08 17:18:17,975 - kafka.conn - INFO - Probing node bootstrap-0 broker version
+2025-05-08 17:18:17,976 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap-0 host=localhost:29092 <connecting> [IPv6 ('::1', 29092, 0, 0)]>: Connection complete.
+2025-05-08 17:18:18,332 - kafka.conn - INFO - Broker version identified as 2.5.0
+2025-05-08 17:18:18,332 - kafka.conn - INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+2025-05-08 17:18:18,386 - kafka.consumer.subscription_state - INFO - Updating subscribed topics to: ('stock-market-data',)
+2025-05-08 17:18:18,386 - stock-market-consumer - INFO - Consumer initialized with bootstrap servers: localhost:29092
+2025-05-08 17:18:18,386 - stock-market-consumer - INFO - Consuming from topic: stock-market-data
+2025-05-08 17:18:18,391 - stock-market-consumer - INFO - Consumer group: stock-market-group
+2025-05-08 17:18:18,391 - stock-market-consumer - INFO - Output directory: ../data
+2025-05-08 17:18:18,399 - stock-market-consumer - INFO - CSV file initialized: ../data/stock_data_20250508_171818.csv
+2025-05-08 17:18:18,399 - stock-market-consumer - INFO - Starting to consume stock market data...
+2025-05-08 17:18:18,456 - kafka.cluster - INFO - Group coordinator for stock-market-group is BrokerMetadata(nodeId='coordinator-1', host='localhost', port=29092, rack=None)
+2025-05-08 17:18:18,456 - kafka.coordinator - INFO - Discovered coordinator coordinator-1 for group stock-market-group
+2025-05-08 17:18:18,456 - kafka.coordinator - INFO - Starting new heartbeat thread
+2025-05-08 17:18:18,457 - kafka.coordinator.consumer - INFO - Revoking previously assigned partitions set() for group stock-market-group
+2025-05-08 17:18:18,459 - kafka.conn - INFO - <BrokerConnection node_id=coordinator-1 host=localhost:29092 <connecting> [IPv6 ('::1', 29092, 0, 0)]>: connecting to localhost:29092 [('::1', 29092, 0, 0) IPv6]
+2025-05-08 17:18:18,461 - kafka.conn - INFO - <BrokerConnection node_id=coordinator-1 host=localhost:29092 <connecting> [IPv6 ('::1', 29092, 0, 0)]>: Connection complete.
+2025-05-08 17:18:18,461 - kafka.conn - INFO - <BrokerConnection node_id=bootstrap-0 host=localhost:29092 <connected> [IPv6 ('::1', 29092, 0, 0)]>: Closing connection. 
+2025-05-08 17:18:18,563 - kafka.coordinator - INFO - (Re-)joining group stock-market-group
+2025-05-08 17:18:21,965 - kafka.coordinator - INFO - Elected group leader -- performing partition assignments using range
+2025-05-08 17:18:21,966 - kafka.conn - INFO - <BrokerConnection node_id=1 host=localhost:29092 <connecting> [IPv6 ('::1', 29092, 0, 0)]>: connecting to localhost:29092 [('::1', 29092, 0, 0) IPv6]
+2025-05-08 17:18:21,967 - kafka.conn - INFO - <BrokerConnection node_id=1 host=localhost:29092 <connecting> [IPv6 ('::1', 29092, 0, 0)]>: Connection complete.
+2025-05-08 17:18:22,005 - kafka.coordinator - INFO - Successfully joined group stock-market-group with generation 3
+2025-05-08 17:18:22,006 - kafka.consumer.subscription_state - INFO - Updated partition assignment: [TopicPartition(topic='stock-market-data', partition=0)]
+2025-05-08 17:18:22,006 - kafka.coordinator.consumer - INFO - Setting newly assigned partitions {TopicPartition(topic='stock-market-data', partition=0)} for group stock-market-group
+2025-05-08 17:18:22,069 - stock-market-consumer - INFO - Received: MSFT - Price: 102.91 - Volume: 7717
+2025-05-08 17:18:22,069 - stock-market-consumer - INFO - Received: AAPL - Price: 109.26 - Volume: 6057
+2025-05-08 17:18:22,069 - stock-market-consumer - INFO - Received: NVDA - Price: 321.83 - Volume: 7873
+2025-05-08 17:18:22,070 - stock-market-consumer - INFO - Received: NVDA - Price: 146.07 - Volume: 1735
+2025-05-08 17:18:22,070 - stock-market-consumer - INFO - Received: MSFT - Price: 371.13 - Volume: 1832
+2025-05-08 17:18:22,070 - stock-market-consumer - INFO - Received: NVDA - Price: 208.78 - Volume: 2477
+2025-05-08 17:18:22,070 - stock-market-consumer - INFO - Received: PYPL - Price: 132.25 - Volume: 6734
+2025-05-08 17:18:22,070 - stock-market-consumer - INFO - Received: NVDA - Price: 212.89 - Volume: 7612
+2025-05-08 17:18:22,071 - stock-market-consumer - INFO - Received: GOOG - Price: 126.55 - Volume: 9237
+2025-05-08 17:18:22,071 - stock-market-consumer - INFO - Received: ADBE - Price: 436.47 - Volume: 4019
+2025-05-08 17:18:22,071 - stock-market-consumer - INFO - Received: META - Price: 489.14 - Volume: 4647
+2025-05-08 17:18:22,071 - stock-market-consumer - INFO - Received: META - Price: 117.29 - Volume: 5072
+2025-05-08 17:18:22,071 - stock-market-consumer - INFO - Received: TSLA - Price: 155.06 - Volume: 5313
+2025-05-08 17:18:22,071 - stock-market-consumer - INFO - Received: PYPL - Price: 166.4 - Volume: 9607
+2025-05-08 17:18:22,071 - stock-market-consumer - INFO - Received: NVDA - Price: 247.86 - Volume: 7618
+2025-05-08 17:18:22,072 - stock-market-consumer - INFO - Received: AAPL - Price: 443.35 - Volume: 8751
+2025-05-08 17:18:22,072 - stock-market-consumer - INFO - Received: AMZN - Price: 330.12 - Volume: 2414
+2025-05-08 17:18:22,072 - stock-market-consumer - INFO - Received: NVDA - Price: 396.94 - Volume: 3405
+2025-05-08 17:18:22,072 - stock-market-consumer - INFO - Received: TSLA - Price: 235.78 - Volume: 2156
+2025-05-08 17:18:22,072 - stock-market-consumer - INFO - Received: AAPL - Price: 373.34 - Volume: 8967
+2025-05-08 17:18:22,072 - stock-market-consumer - INFO - Received: NVDA - Price: 227.23 - Volume: 9493
+2025-05-08 17:18:22,072 - stock-market-consumer - INFO - Received: AAPL - Price: 375.94 - Volume: 4772
+2025-05-08 17:18:22,072 - stock-market-consumer - INFO - Received: AAPL - Price: 99.51 - Volume: 5629
+2025-05-08 17:18:22,072 - stock-market-consumer - INFO - Received: NVDA - Price: 81.35 - Volume: 7302
+2025-05-08 17:18:22,072 - stock-market-consumer - INFO - Received: TSLA - Price: 93.89 - Volume: 2036
+2025-05-08 17:18:22,072 - stock-market-consumer - INFO - Received: ADBE - Price: 137.55 - Volume: 6485
+2025-05-08 17:18:22,072 - stock-market-consumer - INFO - Received: MSFT - Price: 479.59 - Volume: 3421
+2025-05-08 17:18:22,073 - stock-market-consumer - INFO - Received: META - Price: 265.33 - Volume: 3306
+2025-05-08 17:18:22,073 - stock-market-consumer - INFO - Received: ADBE - Price: 466.38 - Volume: 8840
+2025-05-08 17:18:22,073 - stock-market-consumer - INFO - Received: AAPL - Price: 292.21 - Volume: 3060
+2025-05-08 17:18:22,073 - stock-market-consumer - INFO - Received: AMZN - Price: 182.34 - Volume: 7785
+2025-05-08 17:18:22,073 - stock-market-consumer - INFO - Received: ADBE - Price: 393.24 - Volume: 5635
+2025-05-08 17:18:22,073 - stock-market-consumer - INFO - Received: META - Price: 63.45 - Volume: 4972
+2025-05-08 17:18:22,073 - stock-market-consumer - INFO - Received: NVDA - Price: 377.2 - Volume: 4590
+2025-05-08 17:18:22,073 - stock-market-consumer - INFO - Received: AMZN - Price: 236.46 - Volume: 7726
+2025-05-08 17:18:22,073 - stock-market-consumer - INFO - Received: AAPL - Price: 352.38 - Volume: 3950
+2025-05-08 17:18:22,073 - stock-market-consumer - INFO - Received: MSFT - Price: 318.88 - Volume: 2856
+2025-05-08 17:18:22,074 - stock-market-consumer - INFO - Received: META - Price: 254.66 - Volume: 3975
+2025-05-08 17:18:22,074 - stock-market-consumer - INFO - Received: NFLX - Price: 131.37 - Volume: 1810
+2025-05-08 17:18:22,074 - stock-market-consumer - INFO - Received: TSLA - Price: 187.17 - Volume: 4693
+2025-05-08 17:18:22,074 - stock-market-consumer - INFO - Received: AAPL - Price: 194.41 - Volume: 9144
+2025-05-08 17:18:22,074 - stock-market-consumer - INFO - Received: AAPL - Price: 380.95 - Volume: 4736
+2025-05-08 17:18:22,074 - stock-market-consumer - INFO - Received: NVDA - Price: 464.65 - Volume: 4549
+2025-05-08 17:18:22,074 - stock-market-consumer - INFO - Received: MSFT - Price: 294.34 - Volume: 8290
+2025-05-08 17:18:22,074 - stock-market-consumer - INFO - Received: NVDA - Price: 378.98 - Volume: 7154
+2025-05-08 17:18:22,074 - stock-market-consumer - INFO - Received: MSFT - Price: 472.53 - Volume: 5452
+2025-05-08 17:18:22,074 - stock-market-consumer - INFO - Received: AAPL - Price: 447.31 - Volume: 6257
+2025-05-08 17:18:22,075 - stock-market-consumer - INFO - Received: NVDA - Price: 349.64 - Volume: 4807
+2025-05-08 17:18:22,075 - stock-market-consumer - INFO - Received: META - Price: 74.66 - Volume: 4945
+2025-05-08 17:18:22,075 - stock-market-consumer - INFO - Received: AMZN - Price: 414.76 - Volume: 3297
+2025-05-08 17:18:22,075 - stock-market-consumer - INFO - Received: ADBE - Price: 267.11 - Volume: 7419
+2025-05-08 17:18:22,075 - stock-market-consumer - INFO - Received: NVDA - Price: 214.45 - Volume: 6583
+2025-05-08 17:18:22,075 - stock-market-consumer - INFO - Received: AAPL - Price: 409.35 - Volume: 6784
+2025-05-08 17:18:22,075 - stock-market-consumer - INFO - Received: AMZN - Price: 420.24 - Volume: 3411
+2025-05-08 17:18:22,075 - stock-market-consumer - INFO - Received: NVDA - Price: 240.58 - Volume: 1517
+2025-05-08 17:18:22,075 - stock-market-consumer - INFO - Received: PYPL - Price: 202.8 - Volume: 7360
+2025-05-08 17:18:22,075 - stock-market-consumer - INFO - Received: GOOG - Price: 227.83 - Volume: 1458
+2025-05-08 17:18:22,075 - stock-market-consumer - INFO - Received: AMZN - Price: 310.32 - Volume: 6438
+2025-05-08 17:18:22,075 - stock-market-consumer - INFO - Received: AAPL - Price: 242.87 - Volume: 8100
+2025-05-08 17:18:22,076 - stock-market-consumer - INFO - Received: MSFT - Price: 446.16 - Volume: 7693
+2025-05-08 17:18:22,076 - stock-market-consumer - INFO - Received: AMZN - Price: 226.01 - Volume: 1718
+2025-05-08 17:18:22,076 - stock-market-consumer - INFO - Received: TSLA - Price: 149.69 - Volume: 9021
+2025-05-08 17:18:22,076 - stock-market-consumer - INFO - Received: NFLX - Price: 400.57 - Volume: 7088
+2025-05-08 17:18:22,076 - stock-market-consumer - INFO - Received: PYPL - Price: 135.29 - Volume: 9011
+2025-05-08 17:18:22,076 - stock-market-consumer - INFO - Received: NVDA - Price: 256.4 - Volume: 6814
+2025-05-08 17:18:22,076 - stock-market-consumer - INFO - Received: AAPL - Price: 156.4 - Volume: 9709
+2025-05-08 17:18:22,076 - stock-market-consumer - INFO - Received: GOOG - Price: 350.72 - Volume: 5280
+2025-05-08 17:18:22,076 - stock-market-consumer - INFO - Received: PYPL - Price: 418.86 - Volume: 7796
+2025-05-08 17:18:22,076 - stock-market-consumer - INFO - Received: NVDA - Price: 471.78 - Volume: 8246
+2025-05-08 17:18:22,077 - stock-market-consumer - INFO - Received: ADBE - Price: 133.62 - Volume: 9193
+2025-05-08 17:18:22,077 - stock-market-consumer - INFO - Received: ADBE - Price: 432.79 - Volume: 4422
+2025-05-08 17:18:22,077 - stock-market-consumer - INFO - Received: ADBE - Price: 426.08 - Volume: 6759
+2025-05-08 17:18:22,078 - stock-market-consumer - INFO - Received: PYPL - Price: 324.94 - Volume: 7387
+2025-05-08 17:18:22,078 - stock-market-consumer - INFO - Received: AAPL - Price: 149.89 - Volume: 7770
+2025-05-08 17:18:22,079 - stock-market-consumer - INFO - Received: NVDA - Price: 139.92 - Volume: 2189
+2025-05-08 17:18:22,080 - stock-market-consumer - INFO - Received: META - Price: 56.53 - Volume: 5563
+2025-05-08 17:18:22,081 - stock-market-consumer - INFO - Received: MSFT - Price: 257.13 - Volume: 5137
+2025-05-08 17:18:22,081 - stock-market-consumer - INFO - Received: NFLX - Price: 340.84 - Volume: 7807
+2025-05-08 17:18:22,081 - stock-market-consumer - INFO - Received: AAPL - Price: 336.27 - Volume: 5077
+2025-05-08 17:18:22,081 - stock-market-consumer - INFO - Received: NFLX - Price: 97.54 - Volume: 5481
+2025-05-08 17:18:22,081 - stock-market-consumer - INFO - Received: NVDA - Price: 332.21 - Volume: 1145
+2025-05-08 17:18:22,081 - stock-market-consumer - INFO - Received: META - Price: 465.07 - Volume: 1949
+2025-05-08 17:18:22,082 - stock-market-consumer - INFO - Received: TSLA - Price: 252.28 - Volume: 9591
+2025-05-08 17:18:22,082 - stock-market-consumer - INFO - Received: MSFT - Price: 339.32 - Volume: 8388
+2025-05-08 17:18:22,082 - stock-market-consumer - INFO - Received: NFLX - Price: 50.9 - Volume: 6657
+2025-05-08 17:18:22,082 - stock-market-consumer - INFO - Received: NVDA - Price: 224.22 - Volume: 7174
+2025-05-08 17:18:22,082 - stock-market-consumer - INFO - Received: TSLA - Price: 472.38 - Volume: 8121
+2025-05-08 17:18:22,082 - stock-market-consumer - INFO - Received: NFLX - Price: 405.46 - Volume: 1216
+2025-05-08 17:18:22,082 - stock-market-consumer - INFO - Received: AAPL - Price: 281.97 - Volume: 6815
+2025-05-08 17:18:22,082 - stock-market-consumer - INFO - Received: NFLX - Price: 334.76 - Volume: 4986
+2025-05-08 17:18:22,082 - stock-market-consumer - INFO - Received: ADBE - Price: 113.07 - Volume: 7054
+2025-05-08 17:18:22,082 - stock-market-consumer - INFO - Received: ADBE - Price: 499.74 - Volume: 7019
+2025-05-08 17:18:22,083 - stock-market-consumer - INFO - Received: AMZN - Price: 490.84 - Volume: 4905
+2025-05-08 17:18:22,083 - stock-market-consumer - INFO - Received: GOOG - Price: 393.47 - Volume: 8302
+2025-05-08 17:18:22,083 - stock-market-consumer - INFO - Received: AMZN - Price: 346.67 - Volume: 9279
+2025-05-08 17:18:22,083 - stock-market-consumer - INFO - Received: MSFT - Price: 345.0 - Volume: 9090
+2025-05-08 17:18:22,083 - stock-market-consumer - INFO - Received: AAPL - Price: 137.98 - Volume: 1645
+2025-05-08 17:18:22,083 - stock-market-consumer - INFO - Received: GOOG - Price: 180.77 - Volume: 7898
+2025-05-08 17:18:22,083 - stock-market-consumer - INFO - Received: TSLA - Price: 330.39 - Volume: 3705
+2025-05-08 17:18:22,083 - stock-market-consumer - INFO - Received: META - Price: 498.3 - Volume: 5057
+2025-05-08 17:18:22,083 - stock-market-consumer - INFO - Received: NVDA - Price: 143.47 - Volume: 3379
+2025-05-08 17:18:22,084 - stock-market-consumer - INFO - Received: PYPL - Price: 455.52 - Volume: 5476
+2025-05-08 17:18:22,084 - stock-market-consumer - INFO - Received: NFLX - Price: 415.0 - Volume: 7474
+2025-05-08 17:18:22,084 - stock-market-consumer - INFO - Received: AAPL - Price: 96.08 - Volume: 2003
+2025-05-08 17:18:22,084 - stock-market-consumer - INFO - Received: NFLX - Price: 90.7 - Volume: 5815
+2025-05-08 17:18:22,084 - stock-market-consumer - INFO - Received: TSLA - Price: 311.89 - Volume: 1001
+2025-05-08 17:18:22,084 - stock-market-consumer - INFO - Received: NFLX - Price: 340.2 - Volume: 1055
+2025-05-08 17:18:22,084 - stock-market-consumer - INFO - Received: GOOG - Price: 144.45 - Volume: 3614
+2025-05-08 17:18:22,084 - stock-market-consumer - INFO - Received: MSFT - Price: 415.41 - Volume: 1126
+2025-05-08 17:18:22,084 - stock-market-consumer - INFO - Received: GOOG - Price: 291.6 - Volume: 7299
+2025-05-08 17:18:22,084 - stock-market-consumer - INFO - Received: GOOG - Price: 348.55 - Volume: 1506
+2025-05-08 17:18:22,084 - stock-market-consumer - INFO - Received: AMZN - Price: 419.64 - Volume: 8810
+2025-05-08 17:18:22,085 - stock-market-consumer - INFO - Received: GOOG - Price: 149.78 - Volume: 6309
+2025-05-08 17:18:22,085 - stock-market-consumer - INFO - Received: AAPL - Price: 166.3 - Volume: 7474
+2025-05-08 17:18:22,085 - stock-market-consumer - INFO - Received: MSFT - Price: 94.88 - Volume: 6378
+2025-05-08 17:18:22,085 - stock-market-consumer - INFO - Received: ADBE - Price: 351.55 - Volume: 5310
+2025-05-08 17:18:22,085 - stock-market-consumer - INFO - Received: GOOG - Price: 225.87 - Volume: 4392
+2025-05-08 17:18:22,085 - stock-market-consumer - INFO - Received: PYPL - Price: 215.99 - Volume: 5945
+2025-05-08 17:18:22,085 - stock-market-consumer - INFO - Received: ADBE - Price: 447.75 - Volume: 2489
+2025-05-08 17:18:22,085 - stock-market-consumer - INFO - Received: GOOG - Price: 464.02 - Volume: 8398
+2025-05-08 17:18:22,085 - stock-market-consumer - INFO - Received: ADBE - Price: 383.78 - Volume: 1538
+2025-05-08 17:18:22,085 - stock-market-consumer - INFO - Received: META - Price: 258.24 - Volume: 1512
+2025-05-08 17:18:22,085 - stock-market-consumer - INFO - Received: AAPL - Price: 262.5 - Volume: 9077
+2025-05-08 17:18:22,085 - stock-market-consumer - INFO - Received: NVDA - Price: 133.35 - Volume: 2908
+2025-05-08 17:18:22,086 - stock-market-consumer - INFO - Received: NVDA - Price: 307.96 - Volume: 3274
+2025-05-08 17:18:22,086 - stock-market-consumer - INFO - Received: NVDA - Price: 355.31 - Volume: 6814
+2025-05-08 17:18:22,086 - stock-market-consumer - INFO - Received: AMZN - Price: 457.23 - Volume: 1860
+2025-05-08 17:18:22,086 - stock-market-consumer - INFO - Received: TSLA - Price: 50.94 - Volume: 9651
+2025-05-08 17:18:22,086 - stock-market-consumer - INFO - Received: GOOG - Price: 291.77 - Volume: 4544
+2025-05-08 17:18:22,086 - stock-market-consumer - INFO - Received: PYPL - Price: 414.26 - Volume: 7145
+2025-05-08 17:18:22,086 - stock-market-consumer - INFO - Received: AAPL - Price: 134.64 - Volume: 2064
+2025-05-08 17:18:22,086 - stock-market-consumer - INFO - Received: NFLX - Price: 489.62 - Volume: 2802
+2025-05-08 17:18:22,086 - stock-market-consumer - INFO - Received: META - Price: 343.87 - Volume: 9878
+2025-05-08 17:18:22,086 - stock-market-consumer - INFO - Received: NVDA - Price: 382.06 - Volume: 6260
+2025-05-08 17:18:22,086 - stock-market-consumer - INFO - Received: NVDA - Price: 424.34 - Volume: 5259
+2025-05-08 17:18:22,086 - stock-market-consumer - INFO - Received: NVDA - Price: 143.9 - Volume: 4043
+2025-05-08 17:18:22,087 - stock-market-consumer - INFO - Received: META - Price: 491.91 - Volume: 2184
+2025-05-08 17:18:22,087 - stock-market-consumer - INFO - Received: MSFT - Price: 477.49 - Volume: 7551
+2025-05-08 17:18:22,087 - stock-market-consumer - INFO - Received: GOOG - Price: 492.44 - Volume: 7198
+2025-05-08 17:18:22,087 - stock-market-consumer - INFO - Received: AMZN - Price: 248.94 - Volume: 5471
+2025-05-08 17:18:22,087 - stock-market-consumer - INFO - Received: AMZN - Price: 156.15 - Volume: 6861
+2025-05-08 17:18:22,087 - stock-market-consumer - INFO - Received: AMZN - Price: 101.27 - Volume: 3361
+2025-05-08 17:18:22,088 - stock-market-consumer - INFO - Received: AAPL - Price: 213.64 - Volume: 9035
+2025-05-08 17:18:22,088 - stock-market-consumer - INFO - Received: TSLA - Price: 62.73 - Volume: 7219
+2025-05-08 17:18:22,088 - stock-market-consumer - INFO - Received: NFLX - Price: 485.69 - Volume: 6329
+2025-05-08 17:18:22,088 - stock-market-consumer - INFO - Received: NFLX - Price: 324.9 - Volume: 6932
+2025-05-08 17:18:22,088 - stock-market-consumer - INFO - Received: NFLX - Price: 171.59 - Volume: 1849
+2025-05-08 17:18:22,089 - stock-market-consumer - INFO - Received: META - Price: 178.7 - Volume: 1919
+2025-05-08 17:18:22,089 - stock-market-consumer - INFO - Received: NVDA - Price: 310.19 - Volume: 4760
+2025-05-08 17:18:22,089 - stock-market-consumer - INFO - Received: NVDA - Price: 72.74 - Volume: 1743
+2025-05-08 17:18:22,089 - stock-market-consumer - INFO - Received: ADBE - Price: 50.19 - Volume: 1950
+2025-05-08 17:18:22,089 - stock-market-consumer - INFO - Received: NVDA - Price: 349.67 - Volume: 2704
+2025-05-08 17:18:22,089 - stock-market-consumer - INFO - Received: AAPL - Price: 402.86 - Volume: 5636
+2025-05-08 17:18:22,089 - stock-market-consumer - INFO - Received: META - Price: 411.8 - Volume: 1194
+2025-05-08 17:18:22,090 - stock-market-consumer - INFO - Received: TSLA - Price: 104.6 - Volume: 8651
+2025-05-08 17:18:22,090 - stock-market-consumer - INFO - Received: AAPL - Price: 121.17 - Volume: 7089
+2025-05-08 17:18:22,090 - stock-market-consumer - INFO - Received: TSLA - Price: 482.1 - Volume: 8421
+2025-05-08 17:18:22,090 - stock-market-consumer - INFO - Received: NVDA - Price: 159.36 - Volume: 8658
+2025-05-08 17:18:22,090 - stock-market-consumer - INFO - Received: GOOG - Price: 319.85 - Volume: 5314
+2025-05-08 17:18:22,090 - stock-market-consumer - INFO - Received: MSFT - Price: 314.95 - Volume: 6606
+2025-05-08 17:18:22,090 - stock-market-consumer - INFO - Received: NVDA - Price: 260.7 - Volume: 5244
+2025-05-08 17:18:22,091 - stock-market-consumer - INFO - Received: META - Price: 200.79 - Volume: 5774
+2025-05-08 17:18:22,091 - stock-market-consumer - INFO - Received: META - Price: 141.38 - Volume: 7448
+2025-05-08 17:18:22,091 - stock-market-consumer - INFO - Received: PYPL - Price: 114.56 - Volume: 8537
+2025-05-08 17:18:22,091 - stock-market-consumer - INFO - Received: AMZN - Price: 153.51 - Volume: 1333
+2025-05-08 17:18:22,091 - stock-market-consumer - INFO - Received: NFLX - Price: 292.55 - Volume: 7365
+2025-05-08 17:18:22,091 - stock-market-consumer - INFO - Received: AMZN - Price: 242.68 - Volume: 7282
+2025-05-08 17:18:22,092 - stock-market-consumer - INFO - Received: AMZN - Price: 386.45 - Volume: 4851
+2025-05-08 17:18:22,092 - stock-market-consumer - INFO - Received: AAPL - Price: 206.47 - Volume: 7376
+2025-05-08 17:18:22,092 - stock-market-consumer - INFO - Received: PYPL - Price: 407.51 - Volume: 6418
+2025-05-08 17:18:22,093 - stock-market-consumer - INFO - Received: PYPL - Price: 219.9 - Volume: 2002
+2025-05-08 17:18:22,093 - stock-market-consumer - INFO - Received: NVDA - Price: 331.49 - Volume: 3983
+2025-05-08 17:18:22,093 - stock-market-consumer - INFO - Received: AAPL - Price: 267.94 - Volume: 7772
+2025-05-08 17:18:22,093 - stock-market-consumer - INFO - Received: AAPL - Price: 277.8 - Volume: 8875
+2025-05-08 17:18:22,094 - stock-market-consumer - INFO - Received: TSLA - Price: 275.99 - Volume: 7015
+2025-05-08 17:18:22,094 - stock-market-consumer - INFO - Received: NVDA - Price: 204.27 - Volume: 4379
+2025-05-08 17:18:22,094 - stock-market-consumer - INFO - Received: GOOG - Price: 50.78 - Volume: 1647
+2025-05-08 17:18:22,095 - stock-market-consumer - INFO - Received: NVDA - Price: 333.04 - Volume: 8410
+2025-05-08 17:18:22,095 - stock-market-consumer - INFO - Received: META - Price: 79.73 - Volume: 6763
+2025-05-08 17:18:22,095 - stock-market-consumer - INFO - Received: TSLA - Price: 316.4 - Volume: 7583
+2025-05-08 17:18:22,095 - stock-market-consumer - INFO - Received: GOOG - Price: 338.3 - Volume: 6676
+2025-05-08 17:18:22,095 - stock-market-consumer - INFO - Received: NFLX - Price: 238.97 - Volume: 3555
+2025-05-08 17:18:22,095 - stock-market-consumer - INFO - Received: NVDA - Price: 380.56 - Volume: 1173
+2025-05-08 17:18:22,096 - stock-market-consumer - INFO - Received: TSLA - Price: 324.1 - Volume: 7801
+2025-05-08 17:18:22,096 - stock-market-consumer - INFO - Received: NVDA - Price: 323.87 - Volume: 2570
+2025-05-08 17:18:22,096 - stock-market-consumer - INFO - Received: NFLX - Price: 344.99 - Volume: 4261
+2025-05-08 17:18:22,096 - stock-market-consumer - INFO - Received: AAPL - Price: 277.42 - Volume: 7784
+2025-05-08 17:18:22,096 - stock-market-consumer - INFO - Received: META - Price: 180.51 - Volume: 8108
+2025-05-08 17:18:22,097 - stock-market-consumer - INFO - Received: AAPL - Price: 469.9 - Volume: 9691
+2025-05-08 17:18:22,097 - stock-market-consumer - INFO - Received: MSFT - Price: 206.59 - Volume: 6561
+2025-05-08 17:18:22,099 - stock-market-consumer - INFO - Received: MSFT - Price: 353.96 - Volume: 4908
+2025-05-08 17:18:22,101 - stock-market-consumer - INFO - Received: AMZN - Price: 184.6 - Volume: 7665
+2025-05-08 17:18:22,104 - stock-market-consumer - INFO - Received: META - Price: 245.34 - Volume: 9489
+2025-05-08 17:18:22,105 - stock-market-consumer - INFO - Received: MSFT - Price: 408.54 - Volume: 8938
+2025-05-08 17:18:22,105 - stock-market-consumer - INFO - Received: PYPL - Price: 493.24 - Volume: 3697
+2025-05-08 17:18:22,106 - stock-market-consumer - INFO - Received: AAPL - Price: 278.13 - Volume: 5289
+2025-05-08 17:18:22,106 - stock-market-consumer - INFO - Received: PYPL - Price: 148.18 - Volume: 6811
+2025-05-08 17:18:22,106 - stock-market-consumer - INFO - Received: MSFT - Price: 435.85 - Volume: 1775
+2025-05-08 17:18:22,107 - stock-market-consumer - INFO - Received: MSFT - Price: 254.02 - Volume: 9038
+2025-05-08 17:18:22,107 - stock-market-consumer - INFO - Received: NFLX - Price: 426.6 - Volume: 1350
+2025-05-08 17:18:22,108 - stock-market-consumer - INFO - Received: NVDA - Price: 414.27 - Volume: 2524
+2025-05-08 17:18:22,108 - stock-market-consumer - INFO - Received: MSFT - Price: 267.57 - Volume: 8614
+2025-05-08 17:18:22,108 - stock-market-consumer - INFO - Received: TSLA - Price: 313.58 - Volume: 9701
+2025-05-08 17:18:22,109 - stock-market-consumer - INFO - Received: AAPL - Price: 155.99 - Volume: 9161
+2025-05-08 17:18:22,110 - stock-market-consumer - INFO - Received: AAPL - Price: 378.87 - Volume: 7812
+2025-05-08 17:18:22,110 - stock-market-consumer - INFO - Received: TSLA - Price: 463.67 - Volume: 3009
+2025-05-08 17:18:22,110 - stock-market-consumer - INFO - Received: PYPL - Price: 301.97 - Volume: 4173
+2025-05-08 17:18:22,111 - stock-market-consumer - INFO - Received: MSFT - Price: 478.86 - Volume: 5092
+2025-05-08 17:18:22,111 - stock-market-consumer - INFO - Received: GOOG - Price: 258.14 - Volume: 9680
+2025-05-08 17:18:22,111 - stock-market-consumer - INFO - Received: TSLA - Price: 356.61 - Volume: 4627
+2025-05-08 17:18:22,111 - stock-market-consumer - INFO - Received: AMZN - Price: 449.66 - Volume: 3853
+2025-05-08 17:18:22,111 - stock-market-consumer - INFO - Received: MSFT - Price: 361.6 - Volume: 4296
+2025-05-08 17:18:22,111 - stock-market-consumer - INFO - Received: META - Price: 50.54 - Volume: 9625
+2025-05-08 17:18:22,111 - stock-market-consumer - INFO - Received: MSFT - Price: 497.88 - Volume: 9005
+2025-05-08 17:18:22,112 - stock-market-consumer - INFO - Received: GOOG - Price: 336.21 - Volume: 6985
+2025-05-08 17:18:22,112 - stock-market-consumer - INFO - Received: MSFT - Price: 89.18 - Volume: 2688
+2025-05-08 17:18:22,112 - stock-market-consumer - INFO - Received: AMZN - Price: 295.5 - Volume: 2007
+2025-05-08 17:18:22,112 - stock-market-consumer - INFO - Received: MSFT - Price: 62.07 - Volume: 2385
+2025-05-08 17:18:22,112 - stock-market-consumer - INFO - Received: ADBE - Price: 488.62 - Volume: 5610
+2025-05-08 17:18:22,112 - stock-market-consumer - INFO - Received: PYPL - Price: 209.63 - Volume: 8957
+2025-05-08 17:18:22,113 - stock-market-consumer - INFO - Received: AMZN - Price: 480.43 - Volume: 4673
+2025-05-08 17:18:22,113 - stock-market-consumer - INFO - Received: AAPL - Price: 102.91 - Volume: 9910
+2025-05-08 17:18:22,113 - stock-market-consumer - INFO - Received: AAPL - Price: 461.61 - Volume: 6404
+2025-05-08 17:18:22,113 - stock-market-consumer - INFO - Received: META - Price: 270.73 - Volume: 8950
+2025-05-08 17:18:22,113 - stock-market-consumer - INFO - Received: NFLX - Price: 327.17 - Volume: 6526
+2025-05-08 17:18:22,113 - stock-market-consumer - INFO - Received: GOOG - Price: 271.81 - Volume: 6288
+2025-05-08 17:18:22,113 - stock-market-consumer - INFO - Received: NFLX - Price: 460.48 - Volume: 2866
+2025-05-08 17:18:22,113 - stock-market-consumer - INFO - Received: AMZN - Price: 121.64 - Volume: 1608
+2025-05-08 17:18:22,113 - stock-market-consumer - INFO - Received: NVDA - Price: 173.44 - Volume: 1347
+2025-05-08 17:18:22,114 - stock-market-consumer - INFO - Received: META - Price: 245.28 - Volume: 6525
+2025-05-08 17:18:22,114 - stock-market-consumer - INFO - Received: PYPL - Price: 307.47 - Volume: 4965
+2025-05-08 17:18:22,114 - stock-market-consumer - INFO - Received: NFLX - Price: 293.92 - Volume: 6932
+2025-05-08 17:18:22,114 - stock-market-consumer - INFO - Received: TSLA - Price: 476.68 - Volume: 3479
+2025-05-08 17:18:22,114 - stock-market-consumer - INFO - Received: NVDA - Price: 146.68 - Volume: 9324
+2025-05-08 17:18:22,114 - stock-market-consumer - INFO - Received: GOOG - Price: 164.87 - Volume: 7455
+2025-05-08 17:18:22,114 - stock-market-consumer - INFO - Received: META - Price: 326.94 - Volume: 6386
+2025-05-08 17:18:22,114 - stock-market-consumer - INFO - Received: MSFT - Price: 56.25 - Volume: 4323
+2025-05-08 17:18:22,114 - stock-market-consumer - INFO - Received: META - Price: 255.93 - Volume: 9592
+2025-05-08 17:18:22,115 - stock-market-consumer - INFO - Received: NVDA - Price: 145.1 - Volume: 2352
+2025-05-08 17:18:22,115 - stock-market-consumer - INFO - Received: NVDA - Price: 274.26 - Volume: 1321
+2025-05-08 17:18:22,115 - stock-market-consumer - INFO - Received: NFLX - Price: 92.71 - Volume: 1418
+2025-05-08 17:18:22,115 - stock-market-consumer - INFO - Received: NFLX - Price: 350.52 - Volume: 4910
+2025-05-08 17:18:22,115 - stock-market-consumer - INFO - Received: AMZN - Price: 171.54 - Volume: 8861
+2025-05-08 17:18:22,115 - stock-market-consumer - INFO - Received: AAPL - Price: 369.29 - Volume: 9956
+2025-05-08 17:18:22,116 - stock-market-consumer - INFO - Received: AMZN - Price: 75.69 - Volume: 2798
+2025-05-08 17:18:22,116 - stock-market-consumer - INFO - Received: MSFT - Price: 425.87 - Volume: 3706
+2025-05-08 17:18:22,116 - stock-market-consumer - INFO - Received: TSLA - Price: 262.19 - Volume: 5204
+2025-05-08 17:18:22,117 - stock-market-consumer - INFO - Received: NFLX - Price: 226.05 - Volume: 2967
+2025-05-08 17:18:22,117 - stock-market-consumer - INFO - Received: META - Price: 222.56 - Volume: 2768
+2025-05-08 17:18:22,118 - stock-market-consumer - INFO - Received: NFLX - Price: 390.2 - Volume: 1316
+2025-05-08 17:18:22,118 - stock-market-consumer - INFO - Received: PYPL - Price: 202.35 - Volume: 4164
+2025-05-08 17:18:22,118 - stock-market-consumer - INFO - Received: NFLX - Price: 210.12 - Volume: 1924
+2025-05-08 17:18:22,118 - stock-market-consumer - INFO - Received: MSFT - Price: 240.7 - Volume: 4740
+2025-05-08 17:18:22,119 - stock-market-consumer - INFO - Received: ADBE - Price: 241.38 - Volume: 7860
+2025-05-08 17:18:22,119 - stock-market-consumer - INFO - Received: MSFT - Price: 313.12 - Volume: 9679
+2025-05-08 17:18:22,119 - stock-market-consumer - INFO - Received: TSLA - Price: 260.96 - Volume: 7399
+2025-05-08 17:18:22,119 - stock-market-consumer - INFO - Received: GOOG - Price: 94.01 - Volume: 1098
+2025-05-08 17:18:22,120 - stock-market-consumer - INFO - Received: AMZN - Price: 316.02 - Volume: 3592
+2025-05-08 17:18:22,120 - stock-market-consumer - INFO - Received: PYPL - Price: 76.39 - Volume: 8261
+2025-05-08 17:18:22,120 - stock-market-consumer - INFO - Received: NFLX - Price: 328.76 - Volume: 1192
+2025-05-08 17:18:22,120 - stock-market-consumer - INFO - Received: NFLX - Price: 88.5 - Volume: 7482
+2025-05-08 17:18:22,121 - stock-market-consumer - INFO - Received: AMZN - Price: 418.85 - Volume: 2079
+2025-05-08 17:18:22,124 - stock-market-consumer - INFO - Received: AAPL - Price: 338.68 - Volume: 3400
+2025-05-08 17:18:22,124 - stock-market-consumer - INFO - Received: AMZN - Price: 458.47 - Volume: 1308
+2025-05-08 17:18:22,124 - stock-market-consumer - INFO - Received: ADBE - Price: 231.23 - Volume: 6541
+2025-05-08 17:18:22,125 - stock-market-consumer - INFO - Received: GOOG - Price: 350.67 - Volume: 9690
+2025-05-08 17:18:22,126 - stock-market-consumer - INFO - Received: MSFT - Price: 139.14 - Volume: 6543
+2025-05-08 17:18:22,126 - stock-market-consumer - INFO - Received: MSFT - Price: 183.82 - Volume: 4029
+2025-05-08 17:18:22,127 - stock-market-consumer - INFO - Received: AMZN - Price: 197.06 - Volume: 1839
+2025-05-08 17:18:22,127 - stock-market-consumer - INFO - Received: ADBE - Price: 449.23 - Volume: 9600
+2025-05-08 17:18:22,127 - stock-market-consumer - INFO - Received: AMZN - Price: 144.02 - Volume: 4569
+2025-05-08 17:18:22,128 - stock-market-consumer - INFO - Received: NVDA - Price: 487.08 - Volume: 3948
+2025-05-08 17:18:22,128 - stock-market-consumer - INFO - Received: ADBE - Price: 171.94 - Volume: 7493
+2025-05-08 17:18:22,128 - stock-market-consumer - INFO - Received: NVDA - Price: 72.55 - Volume: 3322
+2025-05-08 17:18:22,128 - stock-market-consumer - INFO - Received: MSFT - Price: 381.17 - Volume: 7782
+2025-05-08 17:18:22,128 - stock-market-consumer - INFO - Received: AAPL - Price: 107.02 - Volume: 1047
+2025-05-08 17:18:22,128 - stock-market-consumer - INFO - Received: AMZN - Price: 51.04 - Volume: 8228
+2025-05-08 17:18:22,129 - stock-market-consumer - INFO - Received: AAPL - Price: 203.01 - Volume: 2897
+2025-05-08 17:18:22,129 - stock-market-consumer - INFO - Received: GOOG - Price: 196.87 - Volume: 9282
+2025-05-08 17:18:22,129 - stock-market-consumer - INFO - Received: NFLX - Price: 157.45 - Volume: 4009
+2025-05-08 17:18:22,130 - stock-market-consumer - INFO - Received: AAPL - Price: 334.76 - Volume: 2130
+2025-05-08 17:18:22,130 - stock-market-consumer - INFO - Received: TSLA - Price: 477.45 - Volume: 8605
+2025-05-08 17:18:22,130 - stock-market-consumer - INFO - Received: TSLA - Price: 143.61 - Volume: 9050
+2025-05-08 17:18:22,130 - stock-market-consumer - INFO - Received: AAPL - Price: 269.27 - Volume: 8841
+2025-05-08 17:18:22,131 - stock-market-consumer - INFO - Received: ADBE - Price: 302.7 - Volume: 3404
+2025-05-08 17:18:22,131 - stock-market-consumer - INFO - Received: TSLA - Price: 239.64 - Volume: 7822
+2025-05-08 17:18:22,131 - stock-market-consumer - INFO - Received: TSLA - Price: 61.9 - Volume: 2232
+2025-05-08 17:18:22,131 - stock-market-consumer - INFO - Received: PYPL - Price: 331.17 - Volume: 1132
+2025-05-08 17:18:22,132 - stock-market-consumer - INFO - Received: ADBE - Price: 117.88 - Volume: 8231
+2025-05-08 17:18:22,132 - stock-market-consumer - INFO - Received: AAPL - Price: 61.81 - Volume: 8817
+2025-05-08 17:18:22,132 - stock-market-consumer - INFO - Received: AAPL - Price: 370.28 - Volume: 6435
+2025-05-08 17:18:22,132 - stock-market-consumer - INFO - Received: NVDA - Price: 274.04 - Volume: 3609
+2025-05-08 17:18:22,132 - stock-market-consumer - INFO - Received: AMZN - Price: 373.18 - Volume: 8844
+2025-05-08 17:18:22,132 - stock-market-consumer - INFO - Received: META - Price: 184.25 - Volume: 1273
+2025-05-08 17:18:22,132 - stock-market-consumer - INFO - Received: AMZN - Price: 381.1 - Volume: 9522
+2025-05-08 17:18:22,132 - stock-market-consumer - INFO - Received: MSFT - Price: 178.33 - Volume: 6145
+2025-05-08 17:18:22,133 - stock-market-consumer - INFO - Received: NFLX - Price: 50.5 - Volume: 5531
+2025-05-08 17:18:22,133 - stock-market-consumer - INFO - Received: NVDA - Price: 289.75 - Volume: 8302
+2025-05-08 17:18:22,133 - stock-market-consumer - INFO - Received: TSLA - Price: 136.29 - Volume: 6271
+2025-05-08 17:18:22,133 - stock-market-consumer - INFO - Received: PYPL - Price: 232.24 - Volume: 7723
+2025-05-08 17:18:22,133 - stock-market-consumer - INFO - Received: PYPL - Price: 319.83 - Volume: 2830
+2025-05-08 17:18:22,133 - stock-market-consumer - INFO - Received: ADBE - Price: 499.25 - Volume: 2338
+2025-05-08 17:18:22,134 - stock-market-consumer - INFO - Received: AAPL - Price: 182.74 - Volume: 5796
+2025-05-08 17:18:22,134 - stock-market-consumer - INFO - Received: AAPL - Price: 178.12 - Volume: 9988
+2025-05-08 17:18:22,135 - stock-market-consumer - INFO - Received: META - Price: 431.17 - Volume: 5025
+2025-05-08 17:18:22,136 - stock-market-consumer - INFO - Received: PYPL - Price: 389.08 - Volume: 3838
+2025-05-08 17:18:22,136 - stock-market-consumer - INFO - Received: PYPL - Price: 339.03 - Volume: 7598
+2025-05-08 17:18:22,136 - stock-market-consumer - INFO - Received: ADBE - Price: 158.33 - Volume: 1491
+2025-05-08 17:18:22,136 - stock-market-consumer - INFO - Received: NFLX - Price: 261.67 - Volume: 7239
+2025-05-08 17:18:22,137 - stock-market-consumer - INFO - Received: TSLA - Price: 288.96 - Volume: 4489
+2025-05-08 17:18:22,137 - stock-market-consumer - INFO - Received: META - Price: 352.31 - Volume: 9476
+2025-05-08 17:18:22,137 - stock-market-consumer - INFO - Received: NFLX - Price: 274.82 - Volume: 7478
+2025-05-08 17:18:22,137 - stock-market-consumer - INFO - Received: META - Price: 401.58 - Volume: 8014
+2025-05-08 17:18:22,138 - stock-market-consumer - INFO - Received: TSLA - Price: 250.04 - Volume: 3517
+2025-05-08 17:18:22,138 - stock-market-consumer - INFO - Received: GOOG - Price: 499.6 - Volume: 3522
+2025-05-08 17:18:22,139 - stock-market-consumer - INFO - Received: META - Price: 282.97 - Volume: 7476
+2025-05-08 17:18:22,139 - stock-market-consumer - INFO - Received: AAPL - Price: 295.0 - Volume: 6274
+2025-05-08 17:18:22,139 - stock-market-consumer - INFO - Received: NVDA - Price: 432.0 - Volume: 2083
+2025-05-08 17:18:22,139 - stock-market-consumer - INFO - Received: NVDA - Price: 262.88 - Volume: 2011
+2025-05-08 17:18:22,139 - stock-market-consumer - INFO - Received: AAPL - Price: 496.6 - Volume: 5131
+2025-05-08 17:18:22,139 - stock-market-consumer - INFO - Received: ADBE - Price: 74.74 - Volume: 3843
+2025-05-08 17:18:22,140 - stock-market-consumer - INFO - Received: GOOG - Price: 499.87 - Volume: 1232
+2025-05-08 17:18:22,140 - stock-market-consumer - INFO - Received: NFLX - Price: 71.98 - Volume: 2989
+2025-05-08 17:18:22,140 - stock-market-consumer - INFO - Received: ADBE - Price: 331.41 - Volume: 9946
+2025-05-08 17:18:22,140 - stock-market-consumer - INFO - Received: PYPL - Price: 382.99 - Volume: 5825
+2025-05-08 17:18:22,140 - stock-market-consumer - INFO - Received: NFLX - Price: 347.28 - Volume: 3263
+2025-05-08 17:18:22,140 - stock-market-consumer - INFO - Received: AMZN - Price: 383.95 - Volume: 8733
+2025-05-08 17:18:22,141 - stock-market-consumer - INFO - Received: MSFT - Price: 259.14 - Volume: 4978
+2025-05-08 17:18:22,141 - stock-market-consumer - INFO - Received: NVDA - Price: 153.72 - Volume: 6369
+2025-05-08 17:18:22,141 - stock-market-consumer - INFO - Received: PYPL - Price: 225.94 - Volume: 1115
+2025-05-08 17:18:22,141 - stock-market-consumer - INFO - Received: NFLX - Price: 413.48 - Volume: 6754
+2025-05-08 17:18:22,141 - stock-market-consumer - INFO - Received: PYPL - Price: 124.53 - Volume: 6080
+2025-05-08 17:18:22,142 - stock-market-consumer - INFO - Received: NFLX - Price: 378.62 - Volume: 3320
+2025-05-08 17:18:22,142 - stock-market-consumer - INFO - Received: ADBE - Price: 77.98 - Volume: 6418
+2025-05-08 17:18:22,142 - stock-market-consumer - INFO - Received: GOOG - Price: 207.28 - Volume: 6532
+2025-05-08 17:18:22,142 - stock-market-consumer - INFO - Received: MSFT - Price: 169.81 - Volume: 9224
+2025-05-08 17:18:22,142 - stock-market-consumer - INFO - Received: NVDA - Price: 378.61 - Volume: 9818
+2025-05-08 17:18:22,143 - stock-market-consumer - INFO - Received: ADBE - Price: 319.0 - Volume: 5188
+2025-05-08 17:18:22,143 - stock-market-consumer - INFO - Received: NVDA - Price: 269.42 - Volume: 9373
+2025-05-08 17:18:22,143 - stock-market-consumer - INFO - Received: ADBE - Price: 124.99 - Volume: 7030
+2025-05-08 17:18:22,143 - stock-market-consumer - INFO - Received: MSFT - Price: 461.8 - Volume: 7459
+2025-05-08 17:18:22,143 - stock-market-consumer - INFO - Received: TSLA - Price: 487.27 - Volume: 4994
+2025-05-08 17:18:22,144 - stock-market-consumer - INFO - Received: NFLX - Price: 346.55 - Volume: 5925
+2025-05-08 17:18:22,144 - stock-market-consumer - INFO - Received: TSLA - Price: 397.11 - Volume: 3148
+2025-05-08 17:18:22,144 - stock-market-consumer - INFO - Received: NFLX - Price: 215.66 - Volume: 7195
+2025-05-08 17:18:22,145 - stock-market-consumer - INFO - Received: TSLA - Price: 215.01 - Volume: 6123
+2025-05-08 17:18:22,145 - stock-market-consumer - INFO - Received: TSLA - Price: 242.33 - Volume: 4381
+2025-05-08 17:18:22,145 - stock-market-consumer - INFO - Received: PYPL - Price: 279.39 - Volume: 9090
+2025-05-08 17:18:22,145 - stock-market-consumer - INFO - Received: NVDA - Price: 145.75 - Volume: 6505
+2025-05-08 17:18:22,145 - stock-market-consumer - INFO - Received: TSLA - Price: 140.61 - Volume: 9066
+2025-05-08 17:18:22,145 - stock-market-consumer - INFO - Received: MSFT - Price: 396.71 - Volume: 9211
+2025-05-08 17:18:22,145 - stock-market-consumer - INFO - Received: MSFT - Price: 489.66 - Volume: 8564
+2025-05-08 17:18:22,145 - stock-market-consumer - INFO - Received: MSFT - Price: 390.28 - Volume: 3053
+2025-05-08 17:18:22,146 - stock-market-consumer - INFO - Received: ADBE - Price: 279.34 - Volume: 5561
+2025-05-08 17:18:22,146 - stock-market-consumer - INFO - Received: NFLX - Price: 258.09 - Volume: 7445
+2025-05-08 17:18:22,146 - stock-market-consumer - INFO - Received: TSLA - Price: 56.93 - Volume: 3405
+2025-05-08 17:18:22,146 - stock-market-consumer - INFO - Received: TSLA - Price: 157.84 - Volume: 1159
+2025-05-08 17:18:22,146 - stock-market-consumer - INFO - Received: GOOG - Price: 392.51 - Volume: 3852
+2025-05-08 17:18:22,147 - stock-market-consumer - INFO - Received: AMZN - Price: 107.67 - Volume: 9308
+2025-05-08 17:18:22,147 - stock-market-consumer - INFO - Received: MSFT - Price: 191.58 - Volume: 5816
+2025-05-08 17:18:22,148 - stock-market-consumer - INFO - Received: NFLX - Price: 430.13 - Volume: 8990
+2025-05-08 17:18:22,148 - stock-market-consumer - INFO - Received: GOOG - Price: 248.05 - Volume: 9039
+2025-05-08 17:18:22,148 - stock-market-consumer - INFO - Received: META - Price: 341.54 - Volume: 1024
+2025-05-08 17:18:22,149 - stock-market-consumer - INFO - Received: PYPL - Price: 65.18 - Volume: 3281
+2025-05-08 17:18:22,149 - stock-market-consumer - INFO - Received: AAPL - Price: 437.52 - Volume: 4673
+2025-05-08 17:18:22,149 - stock-market-consumer - INFO - Received: AAPL - Price: 211.57 - Volume: 2448
+2025-05-08 17:18:22,149 - stock-market-consumer - INFO - Received: NFLX - Price: 349.3 - Volume: 3212
+2025-05-08 17:18:22,149 - stock-market-consumer - INFO - Received: NFLX - Price: 428.35 - Volume: 7567
+2025-05-08 17:18:22,149 - stock-market-consumer - INFO - Received: AMZN - Price: 246.64 - Volume: 7878
+2025-05-08 17:18:22,149 - stock-market-consumer - INFO - Received: PYPL - Price: 362.0 - Volume: 3797
+2025-05-08 17:18:22,149 - stock-market-consumer - INFO - Received: ADBE - Price: 424.32 - Volume: 1613
+2025-05-08 17:18:22,149 - stock-market-consumer - INFO - Received: TSLA - Price: 90.59 - Volume: 1055
+2025-05-08 17:18:22,149 - stock-market-consumer - INFO - Received: PYPL - Price: 203.3 - Volume: 3950
+2025-05-08 17:18:22,150 - stock-market-consumer - INFO - Received: AAPL - Price: 402.67 - Volume: 6895
+2025-05-08 17:18:22,150 - stock-market-consumer - INFO - Received: ADBE - Price: 60.59 - Volume: 8496
+2025-05-08 17:18:22,150 - stock-market-consumer - INFO - Received: META - Price: 92.45 - Volume: 6622
+2025-05-08 17:18:22,150 - stock-market-consumer - INFO - Received: TSLA - Price: 361.87 - Volume: 3176
+2025-05-08 17:18:22,150 - stock-market-consumer - INFO - Received: ADBE - Price: 57.52 - Volume: 1119
+2025-05-08 17:18:22,150 - stock-market-consumer - INFO - Received: GOOG - Price: 426.04 - Volume: 9742
+2025-05-08 17:18:22,150 - stock-market-consumer - INFO - Received: GOOG - Price: 120.33 - Volume: 4905
+2025-05-08 17:18:22,151 - stock-market-consumer - INFO - Received: TSLA - Price: 189.89 - Volume: 8918
+2025-05-08 17:18:22,151 - stock-market-consumer - INFO - Received: AMZN - Price: 319.21 - Volume: 2342
+2025-05-08 17:18:22,152 - stock-market-consumer - INFO - Received: PYPL - Price: 104.0 - Volume: 9279
+2025-05-08 17:18:22,152 - stock-market-consumer - INFO - Received: META - Price: 211.18 - Volume: 9284
+2025-05-08 17:18:22,152 - stock-market-consumer - INFO - Received: META - Price: 167.83 - Volume: 6818
+2025-05-08 17:18:22,153 - stock-market-consumer - INFO - Received: META - Price: 464.7 - Volume: 6961
+2025-05-08 17:18:22,153 - stock-market-consumer - INFO - Received: ADBE - Price: 267.29 - Volume: 1710
+2025-05-08 17:18:22,153 - stock-market-consumer - INFO - Received: AMZN - Price: 444.77 - Volume: 1157
+2025-05-08 17:18:22,153 - stock-market-consumer - INFO - Received: AMZN - Price: 208.22 - Volume: 4501
+2025-05-08 17:18:22,153 - stock-market-consumer - INFO - Received: AAPL - Price: 267.89 - Volume: 2912
+2025-05-08 17:18:22,153 - stock-market-consumer - INFO - Received: TSLA - Price: 134.57 - Volume: 8207
+2025-05-08 17:18:22,153 - stock-market-consumer - INFO - Received: MSFT - Price: 476.47 - Volume: 1759
+2025-05-08 17:18:22,153 - stock-market-consumer - INFO - Received: ADBE - Price: 331.95 - Volume: 3094
+2025-05-08 17:18:22,153 - stock-market-consumer - INFO - Received: GOOG - Price: 135.01 - Volume: 3073
+2025-05-08 17:18:22,154 - stock-market-consumer - INFO - Received: MSFT - Price: 247.59 - Volume: 4175
+2025-05-08 17:18:22,154 - stock-market-consumer - INFO - Received: GOOG - Price: 440.98 - Volume: 8807
+2025-05-08 17:18:22,154 - stock-market-consumer - INFO - Received: MSFT - Price: 91.92 - Volume: 6191
+2025-05-08 17:18:22,154 - stock-market-consumer - INFO - Received: AAPL - Price: 193.47 - Volume: 8733
+2025-05-08 17:18:22,154 - stock-market-consumer - INFO - Received: ADBE - Price: 338.49 - Volume: 9226
+2025-05-08 17:18:22,154 - stock-market-consumer - INFO - Received: AMZN - Price: 152.79 - Volume: 6026
+2025-05-08 17:18:22,154 - stock-market-consumer - INFO - Received: AAPL - Price: 75.31 - Volume: 7665
+2025-05-08 17:18:22,155 - stock-market-consumer - INFO - Received: PYPL - Price: 206.18 - Volume: 2566
+2025-05-08 17:18:22,155 - stock-market-consumer - INFO - Received: AAPL - Price: 179.45 - Volume: 8346
+2025-05-08 17:18:22,155 - stock-market-consumer - INFO - Received: ADBE - Price: 268.0 - Volume: 4881
+2025-05-08 17:18:22,155 - stock-market-consumer - INFO - Received: NFLX - Price: 394.01 - Volume: 6520
+2025-05-08 17:18:22,155 - stock-market-consumer - INFO - Received: META - Price: 302.11 - Volume: 5448
+2025-05-08 17:18:22,155 - stock-market-consumer - INFO - Received: NFLX - Price: 283.55 - Volume: 5595
+2025-05-08 17:18:22,155 - stock-market-consumer - INFO - Received: AAPL - Price: 134.25 - Volume: 5976
+2025-05-08 17:18:22,155 - stock-market-consumer - INFO - Received: AAPL - Price: 189.02 - Volume: 9898
+2025-05-08 17:18:22,156 - stock-market-consumer - INFO - Received: TSLA - Price: 453.1 - Volume: 5127
+2025-05-08 17:18:22,156 - stock-market-consumer - INFO - Received: NVDA - Price: 400.23 - Volume: 2481
+2025-05-08 17:18:22,156 - stock-market-consumer - INFO - Received: AMZN - Price: 304.99 - Volume: 5389
+2025-05-08 17:18:22,156 - stock-market-consumer - INFO - Received: AAPL - Price: 140.49 - Volume: 4064
+2025-05-08 17:18:22,157 - stock-market-consumer - INFO - Received: META - Price: 240.33 - Volume: 1690
+2025-05-08 17:18:22,157 - stock-market-consumer - INFO - Received: TSLA - Price: 434.16 - Volume: 9806
+2025-05-08 17:18:22,157 - stock-market-consumer - INFO - Received: MSFT - Price: 75.92 - Volume: 5999
+2025-05-08 17:18:22,225 - stock-market-consumer - INFO - Received: ADBE - Price: 98.45 - Volume: 6248
+2025-05-08 17:18:22,228 - stock-market-consumer - INFO - Received: AAPL - Price: 296.95 - Volume: 5828
+2025-05-08 17:18:23,233 - stock-market-consumer - INFO - Received: META - Price: 344.35 - Volume: 6275
+2025-05-08 17:18:23,236 - stock-market-consumer - INFO - Received: ADBE - Price: 359.83 - Volume: 5020
+2025-05-08 17:18:24,237 - stock-market-consumer - INFO - Received: AAPL - Price: 81.01 - Volume: 8395
+2025-05-08 17:18:24,239 - stock-market-consumer - INFO - Received: AMZN - Price: 329.22 - Volume: 4061
+2025-05-08 17:18:25,250 - stock-market-consumer - INFO - Received: AMZN - Price: 172.71 - Volume: 9888
+2025-05-08 17:18:25,250 - stock-market-consumer - INFO - Received: GOOG - Price: 133.49 - Volume: 7437
+2025-05-08 17:18:26,279 - stock-market-consumer - INFO - Received: NVDA - Price: 409.52 - Volume: 1029
+2025-05-08 17:18:26,281 - stock-market-consumer - INFO - Received: ADBE - Price: 488.0 - Volume: 2148
+2025-05-08 17:18:27,290 - stock-market-consumer - INFO - Received: PYPL - Price: 152.47 - Volume: 7098
+2025-05-08 17:18:27,291 - stock-market-consumer - INFO - Received: META - Price: 207.82 - Volume: 4727
+2025-05-08 17:18:28,297 - stock-market-consumer - INFO - Received: AMZN - Price: 203.53 - Volume: 8631
+2025-05-08 17:18:28,298 - stock-market-consumer - INFO - Received: AAPL - Price: 153.02 - Volume: 7748
+2025-05-08 17:18:29,313 - stock-market-consumer - INFO - Received: MSFT - Price: 186.67 - Volume: 1204
+2025-05-08 17:18:29,314 - stock-market-consumer - INFO - Received: META - Price: 297.56 - Volume: 3053
+2025-05-08 17:18:30,327 - stock-market-consumer - INFO - Received: NVDA - Price: 70.05 - Volume: 8441
+2025-05-08 17:18:30,329 - stock-market-consumer - INFO - Received: AAPL - Price: 59.5 - Volume: 4946
+2025-05-08 17:18:31,340 - stock-market-consumer - INFO - Received: AMZN - Price: 443.08 - Volume: 4742
+2025-05-08 17:18:31,340 - stock-market-consumer - INFO - Received: ADBE - Price: 371.52 - Volume: 5680
+2025-05-08 17:18:32,352 - stock-market-consumer - INFO - Received: PYPL - Price: 232.25 - Volume: 9261
+2025-05-08 17:18:32,352 - stock-market-consumer - INFO - Received: MSFT - Price: 173.27 - Volume: 5925
+2025-05-08 17:18:33,354 - stock-market-consumer - INFO - Received: GOOG - Price: 136.08 - Volume: 9849
+2025-05-08 17:18:33,356 - stock-market-consumer - INFO - Received: NFLX - Price: 341.15 - Volume: 9164
+2025-05-08 17:18:34,363 - stock-market-consumer - INFO - Received: TSLA - Price: 339.91 - Volume: 7946
+2025-05-08 17:18:34,364 - stock-market-consumer - INFO - Received: GOOG - Price: 482.63 - Volume: 4732
+2025-05-08 17:18:35,438 - stock-market-consumer - INFO - Received: NFLX - Price: 264.87 - Volume: 5461
+2025-05-08 17:18:35,438 - stock-market-consumer - INFO - Received: AMZN - Price: 300.52 - Volume: 1220
+2025-05-08 17:18:36,434 - stock-market-consumer - INFO - Received: AMZN - Price: 79.06 - Volume: 8783
+2025-05-08 17:18:36,437 - stock-market-consumer - INFO - Received: AMZN - Price: 265.02 - Volume: 7616
+2025-05-08 17:18:37,441 - stock-market-consumer - INFO - Received: TSLA - Price: 271.05 - Volume: 1194
+2025-05-08 17:18:37,441 - stock-market-consumer - INFO - Received: ADBE - Price: 400.68 - Volume: 7529
+2025-05-08 17:18:38,446 - stock-market-consumer - INFO - Received: AMZN - Price: 79.76 - Volume: 5906
+2025-05-08 17:18:38,447 - stock-market-consumer - INFO - Received: TSLA - Price: 230.83 - Volume: 5003
+2025-05-08 17:18:39,464 - stock-market-consumer - INFO - Received: MSFT - Price: 416.06 - Volume: 8386
+2025-05-08 17:18:39,469 - stock-market-consumer - INFO - Received: AAPL - Price: 173.31 - Volume: 1013
+2025-05-08 17:18:40,469 - stock-market-consumer - INFO - Received: NVDA - Price: 494.61 - Volume: 1487
+2025-05-08 17:18:40,472 - stock-market-consumer - INFO - Received: NVDA - Price: 178.16 - Volume: 8793
+2025-05-08 17:18:41,476 - stock-market-consumer - INFO - Received: PYPL - Price: 311.05 - Volume: 5570
+2025-05-08 17:18:41,476 - stock-market-consumer - INFO - Received: ADBE - Price: 436.48 - Volume: 6695
+2025-05-08 17:18:42,481 - stock-market-consumer - INFO - Received: GOOG - Price: 153.15 - Volume: 3412
+2025-05-08 17:18:42,485 - stock-market-consumer - INFO - Received: ADBE - Price: 233.29 - Volume: 2542
+2025-05-08 17:18:43,547 - stock-market-consumer - INFO - Received: NVDA - Price: 404.75 - Volume: 9006
+2025-05-08 17:18:43,553 - stock-market-consumer - INFO - Received: NVDA - Price: 108.42 - Volume: 4546
+2025-05-08 17:18:44,555 - stock-market-consumer - INFO - Received: META - Price: 253.62 - Volume: 6695
+2025-05-08 17:18:44,556 - stock-market-consumer - INFO - Received: NVDA - Price: 72.96 - Volume: 2091
+2025-05-08 17:18:45,566 - stock-market-consumer - INFO - Received: AAPL - Price: 214.01 - Volume: 2553
+2025-05-08 17:18:45,571 - stock-market-consumer - INFO - Received: NFLX - Price: 122.82 - Volume: 6268
+2025-05-08 17:18:46,591 - stock-market-consumer - INFO - Received: NVDA - Price: 305.27 - Volume: 2555
+2025-05-08 17:18:46,616 - stock-market-consumer - INFO - Received: AMZN - Price: 431.01 - Volume: 9883
+2025-05-08 17:18:47,598 - stock-market-consumer - INFO - Received: NVDA - Price: 413.98 - Volume: 5244
+2025-05-08 17:18:47,601 - stock-market-consumer - INFO - Received: PYPL - Price: 384.24 - Volume: 9691

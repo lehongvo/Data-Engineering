@@ -868,3 +868,1184 @@
 2025-05-08 14:54:43,091 - eth-producer - INFO - Sent block 22437469 to Kafka
 2025-05-08 14:54:45,983 - eth-producer - INFO - New blocks found: 22437469 to 22437469
 2025-05-08 14:54:46,326 - eth-producer - INFO - Sent block 22437469 to Kafka
+2025-05-08 14:54:53,575 - eth-producer - INFO - New blocks found: 22437470 to 22437470
+2025-05-08 14:54:54,104 - eth-producer - INFO - Sent block 22437470 to Kafka
+2025-05-08 14:54:56,727 - eth-producer - INFO - New blocks found: 22437470 to 22437470
+2025-05-08 14:54:57,736 - eth-producer - INFO - New blocks found: 22437470 to 22437470
+2025-05-08 14:54:57,923 - eth-producer - INFO - Sent block 22437470 to Kafka
+2025-05-08 14:54:58,292 - eth-producer - INFO - Sent block 22437470 to Kafka
+2025-05-08 14:55:05,335 - eth-producer - INFO - New blocks found: 22437471 to 22437471
+2025-05-08 14:55:05,703 - eth-producer - INFO - Sent block 22437471 to Kafka
+2025-05-08 14:55:08,637 - eth-producer - INFO - New blocks found: 22437471 to 22437471
+2025-05-08 14:55:10,181 - eth-producer - INFO - New blocks found: 22437471 to 22437471
+2025-05-08 14:55:10,276 - eth-producer - INFO - Sent block 22437471 to Kafka
+2025-05-08 14:55:11,082 - eth-producer - INFO - Sent block 22437471 to Kafka
+2025-05-08 14:55:16,172 - eth-producer - INFO - New blocks found: 22437472 to 22437472
+2025-05-08 14:55:16,834 - eth-producer - INFO - Sent block 22437472 to Kafka
+2025-05-08 14:55:20,753 - eth-producer - INFO - New blocks found: 22437472 to 22437472
+2025-05-08 14:55:21,133 - eth-producer - INFO - Sent block 22437472 to Kafka
+2025-05-08 14:55:21,566 - eth-producer - INFO - New blocks found: 22437472 to 22437472
+2025-05-08 14:55:21,957 - eth-producer - INFO - Sent block 22437472 to Kafka
+2025-05-08 14:55:27,272 - eth-producer - INFO - New blocks found: 22437473 to 22437473
+2025-05-08 14:55:28,484 - eth-producer - INFO - Sent block 22437473 to Kafka
+2025-05-08 14:55:31,564 - eth-producer - INFO - New blocks found: 22437473 to 22437473
+2025-05-08 14:55:32,153 - eth-producer - INFO - Sent block 22437473 to Kafka
+2025-05-08 14:55:32,432 - eth-producer - INFO - New blocks found: 22437473 to 22437473
+2025-05-08 14:55:33,127 - eth-producer - INFO - Sent block 22437473 to Kafka
+2025-05-08 14:55:39,085 - eth-producer - INFO - New blocks found: 22437474 to 22437474
+2025-05-08 14:55:40,506 - eth-producer - INFO - Sent block 22437474 to Kafka
+2025-05-08 14:55:42,936 - eth-producer - INFO - New blocks found: 22437474 to 22437474
+2025-05-08 14:55:43,465 - eth-producer - INFO - Sent block 22437474 to Kafka
+2025-05-08 14:55:44,135 - eth-producer - INFO - New blocks found: 22437474 to 22437474
+2025-05-08 14:55:44,809 - eth-producer - INFO - Sent block 22437474 to Kafka
+2025-05-08 14:55:51,530 - eth-producer - INFO - New blocks found: 22437475 to 22437475
+2025-05-08 14:55:52,393 - eth-producer - INFO - Sent block 22437475 to Kafka
+2025-05-08 14:55:54,415 - eth-producer - INFO - New blocks found: 22437475 to 22437475
+2025-05-08 14:55:54,818 - eth-producer - INFO - Sent block 22437475 to Kafka
+2025-05-08 14:55:55,424 - eth-producer - INFO - New blocks found: 22437475 to 22437475
+2025-05-08 14:55:56,552 - eth-producer - INFO - Sent block 22437475 to Kafka
+2025-05-08 14:56:03,522 - eth-producer - INFO - New blocks found: 22437476 to 22437476
+2025-05-08 14:56:04,489 - eth-producer - INFO - Sent block 22437476 to Kafka
+2025-05-08 14:56:05,257 - eth-producer - INFO - New blocks found: 22437476 to 22437476
+2025-05-08 14:56:05,719 - eth-producer - INFO - Sent block 22437476 to Kafka
+2025-05-08 14:56:06,963 - eth-producer - INFO - New blocks found: 22437476 to 22437476
+2025-05-08 14:56:07,466 - eth-producer - INFO - Sent block 22437476 to Kafka
+2025-05-08 14:56:15,151 - eth-producer - INFO - New blocks found: 22437477 to 22437477
+2025-05-08 14:56:15,554 - eth-producer - INFO - Sent block 22437477 to Kafka
+2025-05-08 14:56:16,357 - eth-producer - INFO - New blocks found: 22437477 to 22437477
+2025-05-08 14:56:16,903 - eth-producer - INFO - Sent block 22437477 to Kafka
+2025-05-08 14:56:18,034 - eth-producer - INFO - New blocks found: 22437477 to 22437477
+2025-05-08 14:56:18,831 - eth-producer - INFO - Sent block 22437477 to Kafka
+2025-05-08 14:56:25,978 - eth-producer - INFO - New blocks found: 22437478 to 22437478
+2025-05-08 14:56:26,713 - eth-producer - INFO - Sent block 22437478 to Kafka
+2025-05-08 14:56:27,321 - eth-producer - INFO - New blocks found: 22437478 to 22437478
+2025-05-08 14:56:27,721 - eth-producer - INFO - Sent block 22437478 to Kafka
+2025-05-08 14:56:29,268 - eth-producer - INFO - New blocks found: 22437478 to 22437478
+2025-05-08 14:56:30,456 - eth-producer - INFO - Sent block 22437478 to Kafka
+2025-05-08 14:56:37,193 - eth-producer - INFO - New blocks found: 22437479 to 22437479
+2025-05-08 14:56:37,544 - eth-producer - INFO - Sent block 22437479 to Kafka
+2025-05-08 14:56:38,201 - eth-producer - INFO - New blocks found: 22437479 to 22437479
+2025-05-08 14:56:38,774 - eth-producer - INFO - Sent block 22437479 to Kafka
+2025-05-08 14:56:40,924 - eth-producer - INFO - New blocks found: 22437479 to 22437479
+2025-05-08 14:56:41,421 - eth-producer - INFO - Sent block 22437479 to Kafka
+2025-05-08 14:56:51,869 - eth-producer - INFO - New blocks found: 22437480 to 22437480
+2025-05-08 14:56:52,941 - eth-producer - INFO - Sent block 22437480 to Kafka
+2025-05-08 14:56:58,194 - eth-producer - INFO - New blocks found: 22437480 to 22437480
+2025-05-08 14:56:59,298 - eth-producer - INFO - Sent block 22437480 to Kafka
+2025-05-08 14:56:59,507 - eth-producer - INFO - New blocks found: 22437480 to 22437480
+2025-05-08 14:57:00,057 - eth-producer - INFO - Sent block 22437480 to Kafka
+2025-05-08 14:57:03,642 - eth-producer - INFO - New blocks found: 22437481 to 22437481
+2025-05-08 14:57:04,028 - eth-producer - INFO - Sent block 22437481 to Kafka
+2025-05-08 14:57:09,981 - eth-producer - INFO - New blocks found: 22437481 to 22437481
+2025-05-08 14:57:10,343 - eth-producer - INFO - Sent block 22437481 to Kafka
+2025-05-08 14:57:10,906 - eth-producer - INFO - New blocks found: 22437481 to 22437481
+2025-05-08 14:57:11,668 - eth-producer - INFO - Sent block 22437481 to Kafka
+2025-05-08 14:57:20,760 - eth-producer - INFO - New blocks found: 22437482 to 22437482
+2025-05-08 14:57:21,300 - eth-producer - INFO - Sent block 22437482 to Kafka
+2025-05-08 14:57:22,098 - eth-producer - INFO - New blocks found: 22437482 to 22437482
+2025-05-08 14:57:22,446 - eth-producer - INFO - Sent block 22437482 to Kafka
+2025-05-08 14:57:24,700 - eth-producer - INFO - New blocks found: 22437482 to 22437482
+2025-05-08 14:57:25,061 - eth-producer - INFO - Sent block 22437482 to Kafka
+2025-05-08 14:57:31,692 - eth-producer - INFO - New blocks found: 22437483 to 22437483
+2025-05-08 14:57:32,080 - eth-producer - INFO - Sent block 22437483 to Kafka
+2025-05-08 14:57:32,846 - eth-producer - INFO - New blocks found: 22437483 to 22437483
+2025-05-08 14:57:33,167 - eth-producer - INFO - Sent block 22437483 to Kafka
+2025-05-08 14:57:35,454 - eth-producer - INFO - New blocks found: 22437483 to 22437483
+2025-05-08 14:57:36,119 - eth-producer - INFO - Sent block 22437483 to Kafka
+2025-05-08 14:57:42,565 - eth-producer - INFO - New blocks found: 22437484 to 22437484
+2025-05-08 14:57:43,563 - eth-producer - INFO - New blocks found: 22437484 to 22437484
+2025-05-08 14:57:43,893 - eth-producer - INFO - Sent block 22437484 to Kafka
+2025-05-08 14:57:44,484 - eth-producer - INFO - Sent block 22437484 to Kafka
+2025-05-08 14:57:46,571 - eth-producer - INFO - New blocks found: 22437484 to 22437484
+2025-05-08 14:57:47,454 - eth-producer - INFO - Sent block 22437484 to Kafka
+2025-05-08 14:57:54,950 - eth-producer - INFO - New blocks found: 22437485 to 22437485
+2025-05-08 14:57:55,440 - eth-producer - INFO - New blocks found: 22437485 to 22437485
+2025-05-08 14:57:55,802 - eth-producer - INFO - Sent block 22437485 to Kafka
+2025-05-08 14:57:56,316 - eth-producer - INFO - Sent block 22437485 to Kafka
+2025-05-08 14:57:58,967 - eth-producer - INFO - New blocks found: 22437485 to 22437485
+2025-05-08 14:57:59,547 - eth-producer - INFO - Sent block 22437485 to Kafka
+2025-05-08 14:58:06,280 - eth-producer - INFO - New blocks found: 22437486 to 22437486
+2025-05-08 14:58:06,794 - eth-producer - INFO - New blocks found: 22437486 to 22437486
+2025-05-08 14:58:06,833 - eth-producer - INFO - Sent block 22437486 to Kafka
+2025-05-08 14:58:07,321 - eth-producer - INFO - Sent block 22437486 to Kafka
+2025-05-08 14:58:09,980 - eth-producer - INFO - New blocks found: 22437486 to 22437486
+2025-05-08 14:58:10,498 - eth-producer - INFO - Sent block 22437486 to Kafka
+2025-05-08 14:58:17,419 - eth-producer - INFO - New blocks found: 22437487 to 22437487
+2025-05-08 14:58:17,921 - eth-producer - INFO - New blocks found: 22437487 to 22437487
+2025-05-08 14:58:17,997 - eth-producer - INFO - Sent block 22437487 to Kafka
+2025-05-08 14:58:18,704 - eth-producer - INFO - Sent block 22437487 to Kafka
+2025-05-08 14:58:21,106 - eth-producer - INFO - New blocks found: 22437487 to 22437487
+2025-05-08 14:58:21,620 - eth-producer - INFO - Sent block 22437487 to Kafka
+2025-05-08 14:58:28,443 - eth-producer - INFO - New blocks found: 22437488 to 22437488
+2025-05-08 14:58:28,835 - eth-producer - INFO - Sent block 22437488 to Kafka
+2025-05-08 14:58:29,143 - eth-producer - INFO - New blocks found: 22437488 to 22437488
+2025-05-08 14:58:29,547 - eth-producer - INFO - Sent block 22437488 to Kafka
+2025-05-08 14:58:32,272 - eth-producer - INFO - New blocks found: 22437488 to 22437488
+2025-05-08 14:58:32,840 - eth-producer - INFO - Sent block 22437488 to Kafka
+2025-05-08 14:58:39,374 - eth-producer - INFO - New blocks found: 22437489 to 22437489
+2025-05-08 14:58:40,115 - eth-producer - INFO - New blocks found: 22437489 to 22437489
+2025-05-08 14:58:40,432 - eth-producer - INFO - Sent block 22437489 to Kafka
+2025-05-08 14:58:40,777 - eth-producer - INFO - Sent block 22437489 to Kafka
+2025-05-08 14:58:44,039 - eth-producer - INFO - New blocks found: 22437489 to 22437489
+2025-05-08 14:58:44,558 - eth-producer - INFO - Sent block 22437489 to Kafka
+2025-05-08 14:58:51,030 - eth-producer - INFO - New blocks found: 22437490 to 22437490
+2025-05-08 14:58:51,358 - eth-producer - INFO - New blocks found: 22437490 to 22437490
+2025-05-08 14:58:51,986 - eth-producer - INFO - Sent block 22437490 to Kafka
+2025-05-08 14:58:52,111 - eth-producer - INFO - Sent block 22437490 to Kafka
+2025-05-08 14:58:55,528 - eth-producer - INFO - New blocks found: 22437490 to 22437490
+2025-05-08 14:58:55,944 - eth-producer - INFO - Sent block 22437490 to Kafka
+2025-05-08 14:59:02,712 - eth-producer - INFO - New blocks found: 22437491 to 22437491
+2025-05-08 14:59:02,766 - eth-producer - INFO - New blocks found: 22437491 to 22437491
+2025-05-08 14:59:03,111 - eth-producer - INFO - Sent block 22437491 to Kafka
+2025-05-08 14:59:03,296 - eth-producer - INFO - Sent block 22437491 to Kafka
+2025-05-08 14:59:06,468 - eth-producer - INFO - New blocks found: 22437491 to 22437491
+2025-05-08 14:59:07,406 - eth-producer - INFO - Sent block 22437491 to Kafka
+2025-05-08 14:59:13,718 - eth-producer - INFO - New blocks found: 22437492 to 22437492
+2025-05-08 14:59:14,249 - eth-producer - INFO - Sent block 22437492 to Kafka
+2025-05-08 14:59:18,001 - eth-producer - INFO - New blocks found: 22437492 to 22437492
+2025-05-08 14:59:18,880 - eth-producer - INFO - Sent block 22437492 to Kafka
+2025-05-08 14:59:23,806 - eth-producer - INFO - New blocks found: 22437492 to 22437492
+2025-05-08 14:59:24,997 - eth-producer - INFO - Sent block 22437492 to Kafka
+2025-05-08 14:59:30,018 - eth-producer - INFO - New blocks found: 22437493 to 22437493
+2025-05-08 14:59:30,459 - eth-producer - INFO - Sent block 22437493 to Kafka
+2025-05-08 14:59:35,058 - eth-producer - INFO - New blocks found: 22437493 to 22437493
+2025-05-08 14:59:35,460 - eth-producer - INFO - Sent block 22437493 to Kafka
+2025-05-08 14:59:35,533 - eth-producer - INFO - New blocks found: 22437493 to 22437493
+2025-05-08 14:59:35,875 - eth-producer - INFO - Sent block 22437493 to Kafka
+2025-05-08 14:59:40,856 - eth-producer - INFO - New blocks found: 22437494 to 22437494
+2025-05-08 14:59:41,717 - eth-producer - INFO - Sent block 22437494 to Kafka
+2025-05-08 14:59:45,887 - eth-producer - INFO - New blocks found: 22437494 to 22437494
+2025-05-08 14:59:46,372 - eth-producer - INFO - New blocks found: 22437494 to 22437494
+2025-05-08 14:59:46,568 - eth-producer - INFO - Sent block 22437494 to Kafka
+2025-05-08 14:59:47,426 - eth-producer - INFO - Sent block 22437494 to Kafka
+2025-05-08 14:59:52,178 - eth-producer - INFO - New blocks found: 22437495 to 22437495
+2025-05-08 14:59:52,577 - eth-producer - INFO - Sent block 22437495 to Kafka
+2025-05-08 14:59:57,042 - eth-producer - INFO - New blocks found: 22437495 to 22437495
+2025-05-08 14:59:57,658 - eth-producer - INFO - Sent block 22437495 to Kafka
+2025-05-08 14:59:57,882 - eth-producer - INFO - New blocks found: 22437495 to 22437495
+2025-05-08 14:59:58,603 - eth-producer - INFO - Sent block 22437495 to Kafka
+2025-05-08 15:00:03,022 - eth-producer - INFO - New blocks found: 22437496 to 22437496
+2025-05-08 15:00:03,787 - eth-producer - INFO - Sent block 22437496 to Kafka
+2025-05-08 15:00:08,098 - eth-producer - INFO - New blocks found: 22437496 to 22437496
+2025-05-08 15:00:09,482 - eth-producer - INFO - New blocks found: 22437496 to 22437496
+2025-05-08 15:00:09,705 - eth-producer - INFO - Sent block 22437496 to Kafka
+2025-05-08 15:00:10,586 - eth-producer - INFO - Sent block 22437496 to Kafka
+2025-05-08 15:00:14,766 - eth-producer - INFO - New blocks found: 22437497 to 22437497
+2025-05-08 15:00:15,608 - eth-producer - INFO - Sent block 22437497 to Kafka
+2025-05-08 15:00:20,713 - eth-producer - INFO - New blocks found: 22437497 to 22437497
+2025-05-08 15:00:21,118 - eth-producer - INFO - New blocks found: 22437497 to 22437497
+2025-05-08 15:00:21,594 - eth-producer - INFO - Sent block 22437497 to Kafka
+2025-05-08 15:00:21,947 - eth-producer - INFO - Sent block 22437497 to Kafka
+2025-05-08 15:00:26,497 - eth-producer - INFO - New blocks found: 22437498 to 22437498
+2025-05-08 15:00:27,632 - eth-producer - INFO - Sent block 22437498 to Kafka
+2025-05-08 15:00:32,132 - eth-producer - INFO - New blocks found: 22437498 to 22437498
+2025-05-08 15:00:32,400 - eth-producer - INFO - New blocks found: 22437498 to 22437498
+2025-05-08 15:00:32,751 - eth-producer - INFO - Sent block 22437498 to Kafka
+2025-05-08 15:00:33,583 - eth-producer - INFO - Sent block 22437498 to Kafka
+2025-05-08 15:00:38,400 - eth-producer - INFO - New blocks found: 22437499 to 22437499
+2025-05-08 15:00:39,046 - eth-producer - INFO - Sent block 22437499 to Kafka
+2025-05-08 15:00:43,502 - eth-producer - INFO - New blocks found: 22437499 to 22437499
+2025-05-08 15:00:44,285 - eth-producer - INFO - Sent block 22437499 to Kafka
+2025-05-08 15:00:44,341 - eth-producer - INFO - New blocks found: 22437499 to 22437499
+2025-05-08 15:00:45,131 - eth-producer - INFO - Sent block 22437499 to Kafka
+2025-05-08 15:00:54,703 - eth-producer - INFO - New blocks found: 22437500 to 22437500
+2025-05-08 15:00:55,154 - eth-producer - INFO - Sent block 22437500 to Kafka
+2025-05-08 15:00:55,669 - eth-producer - INFO - New blocks found: 22437500 to 22437500
+2025-05-08 15:00:56,853 - eth-producer - INFO - Sent block 22437500 to Kafka
+2025-05-08 15:01:00,304 - eth-producer - INFO - New blocks found: 22437500 to 22437500
+2025-05-08 15:01:01,415 - eth-producer - INFO - Sent block 22437500 to Kafka
+2025-05-08 15:01:06,184 - eth-producer - INFO - New blocks found: 22437501 to 22437501
+2025-05-08 15:01:07,048 - eth-producer - INFO - Sent block 22437501 to Kafka
+2025-05-08 15:01:07,868 - eth-producer - INFO - New blocks found: 22437501 to 22437501
+2025-05-08 15:01:08,596 - eth-producer - INFO - Sent block 22437501 to Kafka
+2025-05-08 15:01:12,079 - eth-producer - INFO - New blocks found: 22437501 to 22437501
+2025-05-08 15:01:12,997 - eth-producer - INFO - Sent block 22437501 to Kafka
+2025-05-08 15:01:17,551 - eth-producer - INFO - New blocks found: 22437502 to 22437502
+2025-05-08 15:01:18,558 - eth-producer - INFO - Sent block 22437502 to Kafka
+2025-05-08 15:01:19,240 - eth-producer - INFO - New blocks found: 22437502 to 22437502
+2025-05-08 15:01:20,521 - eth-producer - INFO - Sent block 22437502 to Kafka
+2025-05-08 15:01:23,512 - eth-producer - INFO - New blocks found: 22437502 to 22437502
+2025-05-08 15:01:24,455 - eth-producer - INFO - Sent block 22437502 to Kafka
+2025-05-08 15:01:29,298 - eth-producer - INFO - New blocks found: 22437503 to 22437503
+2025-05-08 15:01:30,599 - eth-producer - INFO - Sent block 22437503 to Kafka
+2025-05-08 15:01:31,125 - eth-producer - INFO - New blocks found: 22437503 to 22437503
+2025-05-08 15:01:32,283 - eth-producer - INFO - Sent block 22437503 to Kafka
+2025-05-08 15:01:35,054 - eth-producer - INFO - New blocks found: 22437503 to 22437503
+2025-05-08 15:01:36,188 - eth-producer - INFO - Sent block 22437503 to Kafka
+2025-05-08 15:01:41,273 - eth-producer - INFO - New blocks found: 22437504 to 22437504
+2025-05-08 15:01:41,758 - eth-producer - INFO - Sent block 22437504 to Kafka
+2025-05-08 15:01:42,878 - eth-producer - INFO - New blocks found: 22437504 to 22437504
+2025-05-08 15:01:43,641 - eth-producer - INFO - Sent block 22437504 to Kafka
+2025-05-08 15:01:46,847 - eth-producer - INFO - New blocks found: 22437504 to 22437504
+2025-05-08 15:01:47,529 - eth-producer - INFO - Sent block 22437504 to Kafka
+2025-05-08 15:01:52,650 - eth-producer - INFO - New blocks found: 22437505 to 22437505
+2025-05-08 15:01:53,444 - eth-producer - INFO - Sent block 22437505 to Kafka
+2025-05-08 15:01:54,422 - eth-producer - INFO - New blocks found: 22437505 to 22437505
+2025-05-08 15:01:54,809 - eth-producer - INFO - Sent block 22437505 to Kafka
+2025-05-08 15:01:58,018 - eth-producer - INFO - New blocks found: 22437505 to 22437505
+2025-05-08 15:01:58,507 - eth-producer - INFO - Sent block 22437505 to Kafka
+2025-05-08 15:02:03,900 - eth-producer - INFO - New blocks found: 22437506 to 22437506
+2025-05-08 15:02:04,381 - eth-producer - INFO - Sent block 22437506 to Kafka
+2025-05-08 15:02:05,336 - eth-producer - INFO - New blocks found: 22437506 to 22437506
+2025-05-08 15:02:05,829 - eth-producer - INFO - Sent block 22437506 to Kafka
+2025-05-08 15:02:08,934 - eth-producer - INFO - New blocks found: 22437506 to 22437506
+2025-05-08 15:02:10,117 - eth-producer - INFO - Sent block 22437506 to Kafka
+2025-05-08 15:02:15,245 - eth-producer - INFO - New blocks found: 22437507 to 22437507
+2025-05-08 15:02:15,767 - eth-producer - INFO - Sent block 22437507 to Kafka
+2025-05-08 15:02:16,360 - eth-producer - INFO - New blocks found: 22437507 to 22437507
+2025-05-08 15:02:16,781 - eth-producer - INFO - Sent block 22437507 to Kafka
+2025-05-08 15:02:20,657 - eth-producer - INFO - New blocks found: 22437507 to 22437507
+2025-05-08 15:02:21,078 - eth-producer - INFO - Sent block 22437507 to Kafka
+2025-05-08 15:02:26,256 - eth-producer - INFO - New blocks found: 22437508 to 22437508
+2025-05-08 15:02:27,217 - eth-producer - INFO - Sent block 22437508 to Kafka
+2025-05-08 15:02:27,311 - eth-producer - INFO - New blocks found: 22437508 to 22437508
+2025-05-08 15:02:27,750 - eth-producer - INFO - Sent block 22437508 to Kafka
+2025-05-08 15:02:31,585 - eth-producer - INFO - New blocks found: 22437508 to 22437508
+2025-05-08 15:02:32,383 - eth-producer - INFO - Sent block 22437508 to Kafka
+2025-05-08 15:02:37,943 - eth-producer - INFO - New blocks found: 22437509 to 22437509
+2025-05-08 15:02:38,408 - eth-producer - INFO - New blocks found: 22437509 to 22437509
+2025-05-08 15:02:38,881 - eth-producer - INFO - Sent block 22437509 to Kafka
+2025-05-08 15:02:39,092 - eth-producer - INFO - Sent block 22437509 to Kafka
+2025-05-08 15:02:42,928 - eth-producer - INFO - New blocks found: 22437509 to 22437509
+2025-05-08 15:02:43,569 - eth-producer - INFO - Sent block 22437509 to Kafka
+2025-05-08 15:02:49,422 - eth-producer - INFO - New blocks found: 22437510 to 22437510
+2025-05-08 15:02:49,607 - eth-producer - INFO - New blocks found: 22437510 to 22437510
+2025-05-08 15:02:49,814 - eth-producer - INFO - Sent block 22437510 to Kafka
+2025-05-08 15:02:50,144 - eth-producer - INFO - Sent block 22437510 to Kafka
+2025-05-08 15:02:54,165 - eth-producer - INFO - New blocks found: 22437510 to 22437510
+2025-05-08 15:02:54,646 - eth-producer - INFO - Sent block 22437510 to Kafka
+2025-05-08 15:03:01,017 - eth-producer - INFO - New blocks found: 22437511 to 22437511
+2025-05-08 15:03:02,193 - eth-producer - INFO - Sent block 22437511 to Kafka
+2025-05-08 15:03:05,144 - eth-producer - INFO - New blocks found: 22437511 to 22437511
+2025-05-08 15:03:06,346 - eth-producer - INFO - Sent block 22437511 to Kafka
+2025-05-08 15:03:10,909 - eth-producer - INFO - New blocks found: 22437511 to 22437511
+2025-05-08 15:03:11,757 - eth-producer - INFO - Sent block 22437511 to Kafka
+2025-05-08 15:03:16,864 - eth-producer - INFO - New blocks found: 22437512 to 22437512
+2025-05-08 15:03:17,495 - eth-producer - INFO - Sent block 22437512 to Kafka
+2025-05-08 15:03:22,280 - eth-producer - INFO - New blocks found: 22437512 to 22437512
+2025-05-08 15:03:23,133 - eth-producer - INFO - New blocks found: 22437512 to 22437512
+2025-05-08 15:03:23,426 - eth-producer - INFO - Sent block 22437512 to Kafka
+2025-05-08 15:03:23,653 - eth-producer - INFO - Sent block 22437512 to Kafka
+2025-05-08 15:03:28,784 - eth-producer - INFO - New blocks found: 22437513 to 22437513
+2025-05-08 15:03:29,257 - eth-producer - INFO - Sent block 22437513 to Kafka
+2025-05-08 15:03:34,462 - eth-producer - INFO - New blocks found: 22437513 to 22437513
+2025-05-08 15:03:34,637 - eth-producer - INFO - New blocks found: 22437513 to 22437513
+2025-05-08 15:03:35,501 - eth-producer - INFO - Sent block 22437513 to Kafka
+2025-05-08 15:03:35,535 - eth-producer - INFO - Sent block 22437513 to Kafka
+2025-05-08 15:03:46,071 - eth-producer - INFO - New blocks found: 22437514 to 22437514
+2025-05-08 15:03:46,080 - eth-producer - INFO - New blocks found: 22437514 to 22437514
+2025-05-08 15:03:47,262 - eth-producer - INFO - Sent block 22437514 to Kafka
+2025-05-08 15:03:47,293 - eth-producer - INFO - Sent block 22437514 to Kafka
+2025-05-08 15:03:49,945 - eth-producer - INFO - New blocks found: 22437514 to 22437515
+2025-05-08 15:03:50,423 - eth-producer - INFO - Sent block 22437514 to Kafka
+2025-05-08 15:03:50,895 - eth-producer - INFO - Sent block 22437515 to Kafka
+2025-05-08 15:03:57,903 - eth-producer - INFO - New blocks found: 22437515 to 22437515
+2025-05-08 15:03:57,924 - eth-producer - INFO - New blocks found: 22437515 to 22437515
+2025-05-08 15:03:58,149 - eth-producer - INFO - Sent block 22437515 to Kafka
+2025-05-08 15:03:58,186 - eth-producer - INFO - Sent block 22437515 to Kafka
+2025-05-08 15:04:08,412 - eth-producer - INFO - New blocks found: 22437516 to 22437516
+2025-05-08 15:04:08,866 - eth-producer - INFO - New blocks found: 22437516 to 22437516
+2025-05-08 15:04:08,964 - eth-producer - INFO - Sent block 22437516 to Kafka
+2025-05-08 15:04:10,127 - eth-producer - INFO - Sent block 22437516 to Kafka
+2025-05-08 15:04:11,425 - eth-producer - INFO - New blocks found: 22437516 to 22437516
+2025-05-08 15:04:12,734 - eth-producer - INFO - Sent block 22437516 to Kafka
+2025-05-08 15:04:19,721 - eth-producer - INFO - New blocks found: 22437517 to 22437517
+2025-05-08 15:04:20,665 - eth-producer - INFO - Sent block 22437517 to Kafka
+2025-05-08 15:04:20,875 - eth-producer - INFO - New blocks found: 22437517 to 22437517
+2025-05-08 15:04:22,105 - eth-producer - INFO - Sent block 22437517 to Kafka
+2025-05-08 15:04:23,486 - eth-producer - INFO - New blocks found: 22437517 to 22437517
+2025-05-08 15:04:24,314 - eth-producer - INFO - Sent block 22437517 to Kafka
+2025-05-08 15:04:31,185 - eth-producer - INFO - New blocks found: 22437518 to 22437518
+2025-05-08 15:04:32,142 - eth-producer - INFO - Sent block 22437518 to Kafka
+2025-05-08 15:04:32,618 - eth-producer - INFO - New blocks found: 22437518 to 22437518
+2025-05-08 15:04:33,005 - eth-producer - INFO - Sent block 22437518 to Kafka
+2025-05-08 15:04:34,859 - eth-producer - INFO - New blocks found: 22437518 to 22437518
+2025-05-08 15:04:35,772 - eth-producer - INFO - Sent block 22437518 to Kafka
+2025-05-08 15:04:42,567 - eth-producer - INFO - New blocks found: 22437519 to 22437519
+2025-05-08 15:04:43,031 - eth-producer - INFO - Sent block 22437519 to Kafka
+2025-05-08 15:04:43,490 - eth-producer - INFO - New blocks found: 22437519 to 22437519
+2025-05-08 15:04:44,164 - eth-producer - INFO - Sent block 22437519 to Kafka
+2025-05-08 15:04:46,238 - eth-producer - INFO - New blocks found: 22437519 to 22437519
+2025-05-08 15:04:47,179 - eth-producer - INFO - Sent block 22437519 to Kafka
+2025-05-08 15:04:53,600 - eth-producer - INFO - New blocks found: 22437520 to 22437520
+2025-05-08 15:04:54,117 - eth-producer - INFO - Sent block 22437520 to Kafka
+2025-05-08 15:04:54,646 - eth-producer - INFO - New blocks found: 22437520 to 22437520
+2025-05-08 15:04:55,239 - eth-producer - INFO - Sent block 22437520 to Kafka
+2025-05-08 15:04:57,675 - eth-producer - INFO - New blocks found: 22437520 to 22437520
+2025-05-08 15:04:58,164 - eth-producer - INFO - Sent block 22437520 to Kafka
+2025-05-08 15:05:04,631 - eth-producer - INFO - New blocks found: 22437521 to 22437521
+2025-05-08 15:05:05,394 - eth-producer - INFO - Sent block 22437521 to Kafka
+2025-05-08 15:05:05,883 - eth-producer - INFO - New blocks found: 22437521 to 22437521
+2025-05-08 15:05:06,311 - eth-producer - INFO - Sent block 22437521 to Kafka
+2025-05-08 15:05:08,781 - eth-producer - INFO - New blocks found: 22437521 to 22437521
+2025-05-08 15:05:09,394 - eth-producer - INFO - Sent block 22437521 to Kafka
+2025-05-08 15:05:15,991 - eth-producer - INFO - New blocks found: 22437522 to 22437522
+2025-05-08 15:05:16,318 - eth-producer - INFO - Sent block 22437522 to Kafka
+2025-05-08 15:05:16,739 - eth-producer - INFO - New blocks found: 22437522 to 22437522
+2025-05-08 15:05:17,347 - eth-producer - INFO - Sent block 22437522 to Kafka
+2025-05-08 15:05:19,845 - eth-producer - INFO - New blocks found: 22437522 to 22437522
+2025-05-08 15:05:20,463 - eth-producer - INFO - Sent block 22437522 to Kafka
+2025-05-08 15:05:27,224 - eth-producer - INFO - New blocks found: 22437523 to 22437523
+2025-05-08 15:05:27,796 - eth-producer - INFO - New blocks found: 22437523 to 22437523
+2025-05-08 15:05:27,904 - eth-producer - INFO - Sent block 22437523 to Kafka
+2025-05-08 15:05:28,422 - eth-producer - INFO - Sent block 22437523 to Kafka
+2025-05-08 15:05:30,913 - eth-producer - INFO - New blocks found: 22437523 to 22437523
+2025-05-08 15:05:31,393 - eth-producer - INFO - Sent block 22437523 to Kafka
+2025-05-08 15:05:38,465 - eth-producer - INFO - New blocks found: 22437524 to 22437524
+2025-05-08 15:05:39,011 - eth-producer - INFO - New blocks found: 22437524 to 22437524
+2025-05-08 15:05:39,156 - eth-producer - INFO - Sent block 22437524 to Kafka
+2025-05-08 15:05:39,489 - eth-producer - INFO - Sent block 22437524 to Kafka
+2025-05-08 15:05:41,922 - eth-producer - INFO - New blocks found: 22437524 to 22437524
+2025-05-08 15:05:42,426 - eth-producer - INFO - Sent block 22437524 to Kafka
+2025-05-08 15:05:49,750 - eth-producer - INFO - New blocks found: 22437525 to 22437525
+2025-05-08 15:05:50,044 - eth-producer - INFO - New blocks found: 22437525 to 22437525
+2025-05-08 15:05:50,063 - eth-producer - INFO - Sent block 22437525 to Kafka
+2025-05-08 15:05:50,380 - eth-producer - INFO - Sent block 22437525 to Kafka
+2025-05-08 15:05:52,957 - eth-producer - INFO - New blocks found: 22437525 to 22437525
+2025-05-08 15:05:53,480 - eth-producer - INFO - Sent block 22437525 to Kafka
+2025-05-08 15:06:03,824 - eth-producer - INFO - New blocks found: 22437526 to 22437526
+2025-05-08 15:06:04,419 - eth-producer - INFO - Sent block 22437526 to Kafka
+2025-05-08 15:06:10,917 - eth-producer - INFO - New blocks found: 22437526 to 22437526
+2025-05-08 15:06:11,006 - eth-producer - INFO - New blocks found: 22437526 to 22437526
+2025-05-08 15:06:11,525 - eth-producer - INFO - Sent block 22437526 to Kafka
+2025-05-08 15:06:11,555 - eth-producer - INFO - Sent block 22437526 to Kafka
+2025-05-08 15:06:15,068 - eth-producer - INFO - New blocks found: 22437527 to 22437527
+2025-05-08 15:06:16,002 - eth-producer - INFO - Sent block 22437527 to Kafka
+2025-05-08 15:06:22,454 - eth-producer - INFO - New blocks found: 22437527 to 22437527
+2025-05-08 15:06:22,482 - eth-producer - INFO - New blocks found: 22437527 to 22437527
+2025-05-08 15:06:22,936 - eth-producer - INFO - Sent block 22437527 to Kafka
+2025-05-08 15:06:22,968 - eth-producer - INFO - Sent block 22437527 to Kafka
+2025-05-08 15:06:26,510 - eth-producer - INFO - New blocks found: 22437528 to 22437528
+2025-05-08 15:06:26,909 - eth-producer - INFO - Sent block 22437528 to Kafka
+2025-05-08 15:06:33,464 - eth-producer - INFO - New blocks found: 22437528 to 22437528
+2025-05-08 15:06:33,480 - eth-producer - INFO - New blocks found: 22437528 to 22437528
+2025-05-08 15:06:33,894 - eth-producer - INFO - Sent block 22437528 to Kafka
+2025-05-08 15:06:33,925 - eth-producer - INFO - Sent block 22437528 to Kafka
+2025-05-08 15:06:37,373 - eth-producer - INFO - New blocks found: 22437529 to 22437529
+2025-05-08 15:06:38,263 - eth-producer - INFO - Sent block 22437529 to Kafka
+2025-05-08 15:06:44,421 - eth-producer - INFO - New blocks found: 22437529 to 22437529
+2025-05-08 15:06:44,423 - eth-producer - INFO - New blocks found: 22437529 to 22437529
+2025-05-08 15:06:44,829 - eth-producer - INFO - Sent block 22437529 to Kafka
+2025-05-08 15:06:44,852 - eth-producer - INFO - Sent block 22437529 to Kafka
+2025-05-08 15:06:48,728 - eth-producer - INFO - New blocks found: 22437530 to 22437530
+2025-05-08 15:06:49,583 - eth-producer - INFO - Sent block 22437530 to Kafka
+2025-05-08 15:06:55,372 - eth-producer - INFO - New blocks found: 22437530 to 22437530
+2025-05-08 15:06:55,378 - eth-producer - INFO - New blocks found: 22437530 to 22437530
+2025-05-08 15:06:55,833 - eth-producer - INFO - Sent block 22437530 to Kafka
+2025-05-08 15:06:55,992 - eth-producer - INFO - Sent block 22437530 to Kafka
+2025-05-08 15:07:06,297 - eth-producer - INFO - New blocks found: 22437531 to 22437531
+2025-05-08 15:07:06,471 - eth-producer - INFO - New blocks found: 22437531 to 22437531
+2025-05-08 15:07:06,731 - eth-producer - INFO - Sent block 22437531 to Kafka
+2025-05-08 15:07:07,125 - eth-producer - INFO - Sent block 22437531 to Kafka
+2025-05-08 15:07:10,298 - eth-producer - INFO - New blocks found: 22437531 to 22437531
+2025-05-08 15:07:11,025 - eth-producer - INFO - Sent block 22437531 to Kafka
+2025-05-08 15:07:17,519 - eth-producer - INFO - New blocks found: 22437532 to 22437532
+2025-05-08 15:07:17,850 - eth-producer - INFO - New blocks found: 22437532 to 22437532
+2025-05-08 15:07:18,367 - eth-producer - INFO - Sent block 22437532 to Kafka
+2025-05-08 15:07:18,971 - eth-producer - INFO - Sent block 22437532 to Kafka
+2025-05-08 15:07:21,645 - eth-producer - INFO - New blocks found: 22437532 to 22437532
+2025-05-08 15:07:22,470 - eth-producer - INFO - Sent block 22437532 to Kafka
+2025-05-08 15:07:29,019 - eth-producer - INFO - New blocks found: 22437533 to 22437533
+2025-05-08 15:07:29,567 - eth-producer - INFO - New blocks found: 22437533 to 22437533
+2025-05-08 15:07:29,614 - eth-producer - INFO - Sent block 22437533 to Kafka
+2025-05-08 15:07:30,542 - eth-producer - INFO - Sent block 22437533 to Kafka
+2025-05-08 15:07:32,915 - eth-producer - INFO - New blocks found: 22437533 to 22437533
+2025-05-08 15:07:33,471 - eth-producer - INFO - Sent block 22437533 to Kafka
+2025-05-08 15:07:40,230 - eth-producer - INFO - New blocks found: 22437534 to 22437534
+2025-05-08 15:07:40,809 - eth-producer - INFO - Sent block 22437534 to Kafka
+2025-05-08 15:07:41,127 - eth-producer - INFO - New blocks found: 22437534 to 22437534
+2025-05-08 15:07:41,597 - eth-producer - INFO - Sent block 22437534 to Kafka
+2025-05-08 15:07:44,016 - eth-producer - INFO - New blocks found: 22437534 to 22437534
+2025-05-08 15:07:44,427 - eth-producer - INFO - Sent block 22437534 to Kafka
+2025-05-08 15:07:51,233 - eth-producer - INFO - New blocks found: 22437535 to 22437535
+2025-05-08 15:07:51,596 - eth-producer - INFO - Sent block 22437535 to Kafka
+2025-05-08 15:07:52,093 - eth-producer - INFO - New blocks found: 22437535 to 22437535
+2025-05-08 15:07:52,582 - eth-producer - INFO - Sent block 22437535 to Kafka
+2025-05-08 15:07:54,920 - eth-producer - INFO - New blocks found: 22437535 to 22437535
+2025-05-08 15:07:55,323 - eth-producer - INFO - Sent block 22437535 to Kafka
+2025-05-08 15:08:02,038 - eth-producer - INFO - New blocks found: 22437536 to 22437536
+2025-05-08 15:08:02,342 - eth-producer - INFO - Sent block 22437536 to Kafka
+2025-05-08 15:08:02,967 - eth-producer - INFO - New blocks found: 22437536 to 22437536
+2025-05-08 15:08:03,343 - eth-producer - INFO - Sent block 22437536 to Kafka
+2025-05-08 15:08:05,770 - eth-producer - INFO - New blocks found: 22437536 to 22437536
+2025-05-08 15:08:06,101 - eth-producer - INFO - Sent block 22437536 to Kafka
+2025-05-08 15:08:13,651 - eth-producer - INFO - New blocks found: 22437537 to 22437537
+2025-05-08 15:08:14,226 - eth-producer - INFO - Sent block 22437537 to Kafka
+2025-05-08 15:08:16,400 - eth-producer - INFO - New blocks found: 22437537 to 22437537
+2025-05-08 15:08:17,026 - eth-producer - INFO - Sent block 22437537 to Kafka
+2025-05-08 15:08:22,886 - eth-producer - INFO - New blocks found: 22437537 to 22437537
+2025-05-08 15:08:23,570 - eth-producer - INFO - Sent block 22437537 to Kafka
+2025-05-08 15:08:24,926 - eth-producer - INFO - New blocks found: 22437538 to 22437538
+2025-05-08 15:08:25,610 - eth-producer - INFO - Sent block 22437538 to Kafka
+2025-05-08 15:08:27,722 - eth-producer - INFO - New blocks found: 22437538 to 22437538
+2025-05-08 15:08:28,175 - eth-producer - INFO - Sent block 22437538 to Kafka
+2025-05-08 15:08:34,573 - eth-producer - INFO - New blocks found: 22437538 to 22437538
+2025-05-08 15:08:35,200 - eth-producer - INFO - Sent block 22437538 to Kafka
+2025-05-08 15:08:38,726 - eth-producer - INFO - New blocks found: 22437539 to 22437539
+2025-05-08 15:08:39,865 - eth-producer - INFO - Sent block 22437539 to Kafka
+2025-05-08 15:08:45,952 - eth-producer - INFO - New blocks found: 22437539 to 22437539
+2025-05-08 15:08:46,603 - eth-producer - INFO - Sent block 22437539 to Kafka
+2025-05-08 15:08:46,619 - eth-producer - INFO - New blocks found: 22437539 to 22437539
+2025-05-08 15:08:47,469 - eth-producer - INFO - Sent block 22437539 to Kafka
+2025-05-08 15:08:50,601 - eth-producer - INFO - New blocks found: 22437540 to 22437540
+2025-05-08 15:08:51,467 - eth-producer - INFO - Sent block 22437540 to Kafka
+2025-05-08 15:08:57,189 - eth-producer - INFO - New blocks found: 22437540 to 22437540
+2025-05-08 15:08:57,573 - eth-producer - INFO - Sent block 22437540 to Kafka
+2025-05-08 15:08:58,097 - eth-producer - INFO - New blocks found: 22437540 to 22437540
+2025-05-08 15:08:58,778 - eth-producer - INFO - Sent block 22437540 to Kafka
+2025-05-08 15:09:01,962 - eth-producer - INFO - New blocks found: 22437541 to 22437541
+2025-05-08 15:09:02,290 - eth-producer - INFO - Sent block 22437541 to Kafka
+2025-05-08 15:09:08,279 - eth-producer - INFO - New blocks found: 22437541 to 22437541
+2025-05-08 15:09:08,883 - eth-producer - INFO - Sent block 22437541 to Kafka
+2025-05-08 15:09:09,205 - eth-producer - INFO - New blocks found: 22437541 to 22437541
+2025-05-08 15:09:09,563 - eth-producer - INFO - Sent block 22437541 to Kafka
+2025-05-08 15:09:19,359 - eth-producer - INFO - New blocks found: 22437542 to 22437542
+2025-05-08 15:09:19,844 - eth-producer - INFO - Sent block 22437542 to Kafka
+2025-05-08 15:09:19,984 - eth-producer - INFO - New blocks found: 22437542 to 22437542
+2025-05-08 15:09:20,586 - eth-producer - INFO - Sent block 22437542 to Kafka
+2025-05-08 15:09:22,998 - eth-producer - INFO - New blocks found: 22437542 to 22437542
+2025-05-08 15:09:23,405 - eth-producer - INFO - Sent block 22437542 to Kafka
+2025-05-08 15:09:31,638 - eth-producer - INFO - New blocks found: 22437543 to 22437543
+2025-05-08 15:09:31,668 - eth-producer - INFO - New blocks found: 22437543 to 22437543
+2025-05-08 15:09:32,092 - eth-producer - INFO - Sent block 22437543 to Kafka
+2025-05-08 15:09:32,110 - eth-producer - INFO - Sent block 22437543 to Kafka
+2025-05-08 15:09:34,014 - eth-producer - INFO - New blocks found: 22437543 to 22437543
+2025-05-08 15:09:34,476 - eth-producer - INFO - Sent block 22437543 to Kafka
+2025-05-08 15:09:42,628 - eth-producer - INFO - New blocks found: 22437544 to 22437544
+2025-05-08 15:09:42,779 - eth-producer - INFO - New blocks found: 22437544 to 22437544
+2025-05-08 15:09:43,103 - eth-producer - INFO - Sent block 22437544 to Kafka
+2025-05-08 15:09:43,812 - eth-producer - INFO - Sent block 22437544 to Kafka
+2025-05-08 15:09:45,023 - eth-producer - INFO - New blocks found: 22437544 to 22437544
+2025-05-08 15:09:45,817 - eth-producer - INFO - Sent block 22437544 to Kafka
+2025-05-08 15:09:54,130 - eth-producer - INFO - New blocks found: 22437545 to 22437545
+2025-05-08 15:09:54,517 - eth-producer - INFO - Sent block 22437545 to Kafka
+2025-05-08 15:09:54,887 - eth-producer - INFO - New blocks found: 22437545 to 22437545
+2025-05-08 15:09:55,786 - eth-producer - INFO - Sent block 22437545 to Kafka
+2025-05-08 15:09:56,285 - eth-producer - INFO - New blocks found: 22437545 to 22437545
+2025-05-08 15:09:57,617 - eth-producer - INFO - Sent block 22437545 to Kafka
+2025-05-08 15:10:05,038 - eth-producer - INFO - New blocks found: 22437546 to 22437546
+2025-05-08 15:10:05,484 - eth-producer - INFO - Sent block 22437546 to Kafka
+2025-05-08 15:10:06,336 - eth-producer - INFO - New blocks found: 22437546 to 22437546
+2025-05-08 15:10:06,799 - eth-producer - INFO - Sent block 22437546 to Kafka
+2025-05-08 15:10:08,104 - eth-producer - INFO - New blocks found: 22437546 to 22437546
+2025-05-08 15:10:08,491 - eth-producer - INFO - Sent block 22437546 to Kafka
+2025-05-08 15:10:15,960 - eth-producer - INFO - New blocks found: 22437547 to 22437547
+2025-05-08 15:10:16,365 - eth-producer - INFO - Sent block 22437547 to Kafka
+2025-05-08 15:10:17,316 - eth-producer - INFO - New blocks found: 22437547 to 22437547
+2025-05-08 15:10:17,985 - eth-producer - INFO - Sent block 22437547 to Kafka
+2025-05-08 15:10:18,929 - eth-producer - INFO - New blocks found: 22437547 to 22437547
+2025-05-08 15:10:19,469 - eth-producer - INFO - Sent block 22437547 to Kafka
+2025-05-08 15:10:26,903 - eth-producer - INFO - New blocks found: 22437548 to 22437548
+2025-05-08 15:10:27,282 - eth-producer - INFO - Sent block 22437548 to Kafka
+2025-05-08 15:10:28,506 - eth-producer - INFO - New blocks found: 22437548 to 22437548
+2025-05-08 15:10:28,902 - eth-producer - INFO - Sent block 22437548 to Kafka
+2025-05-08 15:10:29,984 - eth-producer - INFO - New blocks found: 22437548 to 22437548
+2025-05-08 15:10:30,412 - eth-producer - INFO - Sent block 22437548 to Kafka
+2025-05-08 15:10:37,756 - eth-producer - INFO - New blocks found: 22437549 to 22437549
+2025-05-08 15:10:38,162 - eth-producer - INFO - Sent block 22437549 to Kafka
+2025-05-08 15:10:39,390 - eth-producer - INFO - New blocks found: 22437549 to 22437549
+2025-05-08 15:10:39,786 - eth-producer - INFO - Sent block 22437549 to Kafka
+2025-05-08 15:10:40,954 - eth-producer - INFO - New blocks found: 22437549 to 22437549
+2025-05-08 15:10:41,598 - eth-producer - INFO - Sent block 22437549 to Kafka
+2025-05-08 15:10:52,113 - eth-producer - INFO - New blocks found: 22437550 to 22437550
+2025-05-08 15:10:54,216 - eth-producer - INFO - Sent block 22437550 to Kafka
+2025-05-08 15:10:59,046 - eth-producer - INFO - New blocks found: 22437550 to 22437550
+2025-05-08 15:10:59,639 - eth-producer - INFO - Sent block 22437550 to Kafka
+2025-05-08 15:11:00,672 - eth-producer - INFO - New blocks found: 22437550 to 22437551
+2025-05-08 15:11:01,209 - eth-producer - INFO - Sent block 22437550 to Kafka
+2025-05-08 15:11:02,548 - eth-producer - INFO - Sent block 22437551 to Kafka
+2025-05-08 15:11:05,822 - eth-producer - INFO - New blocks found: 22437551 to 22437551
+2025-05-08 15:11:06,271 - eth-producer - INFO - Sent block 22437551 to Kafka
+2025-05-08 15:11:10,948 - eth-producer - INFO - New blocks found: 22437551 to 22437551
+2025-05-08 15:11:11,382 - eth-producer - INFO - Sent block 22437551 to Kafka
+2025-05-08 15:11:13,215 - eth-producer - INFO - New blocks found: 22437552 to 22437552
+2025-05-08 15:11:14,161 - eth-producer - INFO - Sent block 22437552 to Kafka
+2025-05-08 15:11:16,845 - eth-producer - INFO - New blocks found: 22437552 to 22437552
+2025-05-08 15:11:18,043 - eth-producer - INFO - Sent block 22437552 to Kafka
+2025-05-08 15:11:21,907 - eth-producer - INFO - New blocks found: 22437552 to 22437552
+2025-05-08 15:11:22,533 - eth-producer - INFO - Sent block 22437552 to Kafka
+2025-05-08 15:11:29,527 - eth-producer - INFO - New blocks found: 22437553 to 22437553
+2025-05-08 15:11:30,024 - eth-producer - INFO - Sent block 22437553 to Kafka
+2025-05-08 15:11:33,162 - eth-producer - INFO - New blocks found: 22437553 to 22437553
+2025-05-08 15:11:33,775 - eth-producer - INFO - Sent block 22437553 to Kafka
+2025-05-08 15:11:35,200 - eth-producer - INFO - New blocks found: 22437553 to 22437553
+2025-05-08 15:11:36,175 - eth-producer - INFO - Sent block 22437553 to Kafka
+2025-05-08 15:11:40,856 - eth-producer - INFO - New blocks found: 22437554 to 22437554
+2025-05-08 15:11:41,724 - eth-producer - INFO - Sent block 22437554 to Kafka
+2025-05-08 15:11:44,525 - eth-producer - INFO - New blocks found: 22437554 to 22437554
+2025-05-08 15:11:44,854 - eth-producer - INFO - Sent block 22437554 to Kafka
+2025-05-08 15:11:46,797 - eth-producer - INFO - New blocks found: 22437554 to 22437554
+2025-05-08 15:11:47,162 - eth-producer - INFO - Sent block 22437554 to Kafka
+2025-05-08 15:11:52,453 - eth-producer - INFO - New blocks found: 22437555 to 22437555
+2025-05-08 15:11:53,358 - eth-producer - INFO - Sent block 22437555 to Kafka
+2025-05-08 15:11:55,552 - eth-producer - INFO - New blocks found: 22437555 to 22437555
+2025-05-08 15:11:55,935 - eth-producer - INFO - Sent block 22437555 to Kafka
+2025-05-08 15:11:57,605 - eth-producer - INFO - New blocks found: 22437555 to 22437555
+2025-05-08 15:11:58,516 - eth-producer - INFO - Sent block 22437555 to Kafka
+2025-05-08 15:12:04,033 - eth-producer - INFO - New blocks found: 22437556 to 22437556
+2025-05-08 15:12:04,312 - eth-producer - INFO - Sent block 22437556 to Kafka
+2025-05-08 15:12:06,420 - eth-producer - INFO - New blocks found: 22437556 to 22437556
+2025-05-08 15:12:06,679 - eth-producer - INFO - Sent block 22437556 to Kafka
+2025-05-08 15:12:09,167 - eth-producer - INFO - New blocks found: 22437556 to 22437556
+2025-05-08 15:12:09,430 - eth-producer - INFO - Sent block 22437556 to Kafka
+2025-05-08 15:12:14,596 - eth-producer - INFO - New blocks found: 22437557 to 22437557
+2025-05-08 15:12:15,785 - eth-producer - INFO - Sent block 22437557 to Kafka
+2025-05-08 15:12:16,929 - eth-producer - INFO - New blocks found: 22437557 to 22437557
+2025-05-08 15:12:17,698 - eth-producer - INFO - Sent block 22437557 to Kafka
+2025-05-08 15:12:19,697 - eth-producer - INFO - New blocks found: 22437557 to 22437557
+2025-05-08 15:12:20,432 - eth-producer - INFO - Sent block 22437557 to Kafka
+2025-05-08 15:12:26,651 - eth-producer - INFO - New blocks found: 22437558 to 22437558
+2025-05-08 15:12:27,216 - eth-producer - INFO - Sent block 22437558 to Kafka
+2025-05-08 15:12:28,578 - eth-producer - INFO - New blocks found: 22437558 to 22437558
+2025-05-08 15:12:28,915 - eth-producer - INFO - Sent block 22437558 to Kafka
+2025-05-08 15:12:31,991 - eth-producer - INFO - New blocks found: 22437558 to 22437558
+2025-05-08 15:12:32,322 - eth-producer - INFO - Sent block 22437558 to Kafka
+2025-05-08 15:12:37,658 - eth-producer - INFO - New blocks found: 22437559 to 22437559
+2025-05-08 15:12:38,121 - eth-producer - INFO - Sent block 22437559 to Kafka
+2025-05-08 15:12:39,312 - eth-producer - INFO - New blocks found: 22437559 to 22437559
+2025-05-08 15:12:39,705 - eth-producer - INFO - Sent block 22437559 to Kafka
+2025-05-08 15:12:42,762 - eth-producer - INFO - New blocks found: 22437559 to 22437559
+2025-05-08 15:12:43,308 - eth-producer - INFO - Sent block 22437559 to Kafka
+2025-05-08 15:12:50,646 - eth-producer - INFO - New blocks found: 22437560 to 22437560
+2025-05-08 15:12:51,237 - eth-producer - INFO - Sent block 22437560 to Kafka
+2025-05-08 15:12:54,941 - eth-producer - INFO - New blocks found: 22437560 to 22437560
+2025-05-08 15:12:55,407 - eth-producer - INFO - Sent block 22437560 to Kafka
+2025-05-08 15:12:58,942 - eth-producer - INFO - New blocks found: 22437560 to 22437560
+2025-05-08 15:12:59,411 - eth-producer - INFO - Sent block 22437560 to Kafka
+2025-05-08 15:13:01,875 - eth-producer - INFO - New blocks found: 22437561 to 22437561
+2025-05-08 15:13:02,360 - eth-producer - INFO - Sent block 22437561 to Kafka
+2025-05-08 15:13:05,896 - eth-producer - INFO - New blocks found: 22437561 to 22437561
+2025-05-08 15:13:06,978 - eth-producer - INFO - Sent block 22437561 to Kafka
+2025-05-08 15:13:09,979 - eth-producer - INFO - New blocks found: 22437561 to 22437561
+2025-05-08 15:13:10,822 - eth-producer - INFO - Sent block 22437561 to Kafka
+2025-05-08 15:13:13,007 - eth-producer - INFO - New blocks found: 22437562 to 22437562
+2025-05-08 15:13:13,776 - eth-producer - INFO - Sent block 22437562 to Kafka
+2025-05-08 15:13:17,644 - eth-producer - INFO - New blocks found: 22437562 to 22437562
+2025-05-08 15:13:18,105 - eth-producer - INFO - Sent block 22437562 to Kafka
+2025-05-08 15:13:21,555 - eth-producer - INFO - New blocks found: 22437562 to 22437562
+2025-05-08 15:13:22,857 - eth-producer - INFO - Sent block 22437562 to Kafka
+2025-05-08 15:13:29,103 - eth-producer - INFO - New blocks found: 22437563 to 22437563
+2025-05-08 15:13:29,548 - eth-producer - INFO - Sent block 22437563 to Kafka
+2025-05-08 15:13:33,482 - eth-producer - INFO - New blocks found: 22437563 to 22437563
+2025-05-08 15:13:33,859 - eth-producer - INFO - Sent block 22437563 to Kafka
+2025-05-08 15:13:34,632 - eth-producer - INFO - New blocks found: 22437563 to 22437563
+2025-05-08 15:13:35,487 - eth-producer - INFO - Sent block 22437563 to Kafka
+2025-05-08 15:13:39,958 - eth-producer - INFO - New blocks found: 22437564 to 22437564
+2025-05-08 15:13:40,931 - eth-producer - INFO - Sent block 22437564 to Kafka
+2025-05-08 15:13:44,341 - eth-producer - INFO - New blocks found: 22437564 to 22437564
+2025-05-08 15:13:45,075 - eth-producer - INFO - Sent block 22437564 to Kafka
+2025-05-08 15:13:46,002 - eth-producer - INFO - New blocks found: 22437564 to 22437564
+2025-05-08 15:13:46,384 - eth-producer - INFO - Sent block 22437564 to Kafka
+2025-05-08 15:13:51,490 - eth-producer - INFO - New blocks found: 22437565 to 22437565
+2025-05-08 15:13:51,880 - eth-producer - INFO - Sent block 22437565 to Kafka
+2025-05-08 15:13:55,645 - eth-producer - INFO - New blocks found: 22437565 to 22437565
+2025-05-08 15:13:56,023 - eth-producer - INFO - Sent block 22437565 to Kafka
+2025-05-08 15:13:56,915 - eth-producer - INFO - New blocks found: 22437565 to 22437565
+2025-05-08 15:13:57,270 - eth-producer - INFO - Sent block 22437565 to Kafka
+2025-05-08 15:14:02,515 - eth-producer - INFO - New blocks found: 22437566 to 22437566
+2025-05-08 15:14:03,510 - eth-producer - INFO - Sent block 22437566 to Kafka
+2025-05-08 15:14:06,535 - eth-producer - INFO - New blocks found: 22437566 to 22437566
+2025-05-08 15:14:06,965 - eth-producer - INFO - Sent block 22437566 to Kafka
+2025-05-08 15:14:07,770 - eth-producer - INFO - New blocks found: 22437566 to 22437566
+2025-05-08 15:14:08,323 - eth-producer - INFO - Sent block 22437566 to Kafka
+2025-05-08 15:14:14,063 - eth-producer - INFO - New blocks found: 22437567 to 22437567
+2025-05-08 15:14:14,641 - eth-producer - INFO - Sent block 22437567 to Kafka
+2025-05-08 15:14:17,527 - eth-producer - INFO - New blocks found: 22437567 to 22437567
+2025-05-08 15:14:18,150 - eth-producer - INFO - Sent block 22437567 to Kafka
+2025-05-08 15:14:18,881 - eth-producer - INFO - New blocks found: 22437567 to 22437567
+2025-05-08 15:14:19,690 - eth-producer - INFO - Sent block 22437567 to Kafka
+2025-05-08 15:14:25,400 - eth-producer - INFO - New blocks found: 22437568 to 22437568
+2025-05-08 15:14:25,923 - eth-producer - INFO - Sent block 22437568 to Kafka
+2025-05-08 15:14:28,758 - eth-producer - INFO - New blocks found: 22437568 to 22437568
+2025-05-08 15:14:29,712 - eth-producer - INFO - Sent block 22437568 to Kafka
+2025-05-08 15:14:31,870 - eth-producer - INFO - New blocks found: 22437568 to 22437568
+2025-05-08 15:14:32,519 - eth-producer - INFO - Sent block 22437568 to Kafka
+2025-05-08 15:14:40,348 - eth-producer - INFO - New blocks found: 22437569 to 22437569
+2025-05-08 15:14:40,766 - eth-producer - INFO - Sent block 22437569 to Kafka
+2025-05-08 15:14:42,995 - eth-producer - INFO - New blocks found: 22437569 to 22437569
+2025-05-08 15:14:43,587 - eth-producer - INFO - Sent block 22437569 to Kafka
+2025-05-08 15:14:46,695 - eth-producer - INFO - New blocks found: 22437569 to 22437569
+2025-05-08 15:14:47,128 - eth-producer - INFO - Sent block 22437569 to Kafka
+2025-05-08 15:14:51,303 - eth-producer - INFO - New blocks found: 22437570 to 22437570
+2025-05-08 15:14:51,640 - eth-producer - INFO - Sent block 22437570 to Kafka
+2025-05-08 15:14:54,052 - eth-producer - INFO - New blocks found: 22437570 to 22437570
+2025-05-08 15:14:54,396 - eth-producer - INFO - Sent block 22437570 to Kafka
+2025-05-08 15:14:57,629 - eth-producer - INFO - New blocks found: 22437570 to 22437570
+2025-05-08 15:14:58,187 - eth-producer - INFO - Sent block 22437570 to Kafka
+2025-05-08 15:15:02,004 - eth-producer - INFO - New blocks found: 22437571 to 22437571
+2025-05-08 15:15:02,510 - eth-producer - INFO - Sent block 22437571 to Kafka
+2025-05-08 15:15:04,749 - eth-producer - INFO - New blocks found: 22437571 to 22437571
+2025-05-08 15:15:05,176 - eth-producer - INFO - Sent block 22437571 to Kafka
+2025-05-08 15:15:09,017 - eth-producer - INFO - New blocks found: 22437571 to 22437571
+2025-05-08 15:15:10,015 - eth-producer - INFO - Sent block 22437571 to Kafka
+2025-05-08 15:15:16,505 - eth-producer - INFO - New blocks found: 22437572 to 22437572
+2025-05-08 15:15:16,912 - eth-producer - INFO - Sent block 22437572 to Kafka
+2025-05-08 15:15:20,635 - eth-producer - INFO - New blocks found: 22437572 to 22437572
+2025-05-08 15:15:21,698 - eth-producer - INFO - Sent block 22437572 to Kafka
+2025-05-08 15:15:23,337 - eth-producer - INFO - New blocks found: 22437572 to 22437572
+2025-05-08 15:15:24,701 - eth-producer - INFO - Sent block 22437572 to Kafka
+2025-05-08 15:15:27,551 - eth-producer - INFO - New blocks found: 22437573 to 22437573
+2025-05-08 15:15:27,921 - eth-producer - INFO - Sent block 22437573 to Kafka
+2025-05-08 15:15:32,326 - eth-producer - INFO - New blocks found: 22437573 to 22437573
+2025-05-08 15:15:32,689 - eth-producer - INFO - Sent block 22437573 to Kafka
+2025-05-08 15:15:35,372 - eth-producer - INFO - New blocks found: 22437573 to 22437573
+2025-05-08 15:15:35,761 - eth-producer - INFO - Sent block 22437573 to Kafka
+2025-05-08 15:15:38,372 - eth-producer - INFO - New blocks found: 22437574 to 22437574
+2025-05-08 15:15:38,714 - eth-producer - INFO - Sent block 22437574 to Kafka
+2025-05-08 15:15:43,146 - eth-producer - INFO - New blocks found: 22437574 to 22437574
+2025-05-08 15:15:43,475 - eth-producer - INFO - Sent block 22437574 to Kafka
+2025-05-08 15:15:46,226 - eth-producer - INFO - New blocks found: 22437574 to 22437574
+2025-05-08 15:15:46,557 - eth-producer - INFO - Sent block 22437574 to Kafka
+2025-05-08 15:15:49,159 - eth-producer - INFO - New blocks found: 22437575 to 22437575
+2025-05-08 15:15:49,461 - eth-producer - INFO - Sent block 22437575 to Kafka
+2025-05-08 15:15:53,950 - eth-producer - INFO - New blocks found: 22437575 to 22437575
+2025-05-08 15:15:54,216 - eth-producer - INFO - Sent block 22437575 to Kafka
+2025-05-08 15:15:57,059 - eth-producer - INFO - New blocks found: 22437575 to 22437575
+2025-05-08 15:15:57,390 - eth-producer - INFO - Sent block 22437575 to Kafka
+2025-05-08 15:16:04,485 - eth-producer - INFO - New blocks found: 22437576 to 22437576
+2025-05-08 15:16:05,773 - eth-producer - INFO - Sent block 22437576 to Kafka
+2025-05-08 15:16:07,685 - eth-producer - INFO - New blocks found: 22437576 to 22437576
+2025-05-08 15:16:08,571 - eth-producer - INFO - Sent block 22437576 to Kafka
+2025-05-08 15:16:10,019 - eth-producer - INFO - New blocks found: 22437576 to 22437576
+2025-05-08 15:16:10,517 - eth-producer - INFO - Sent block 22437576 to Kafka
+2025-05-08 15:16:16,607 - eth-producer - INFO - New blocks found: 22437577 to 22437577
+2025-05-08 15:16:17,350 - eth-producer - INFO - Sent block 22437577 to Kafka
+2025-05-08 15:16:19,366 - eth-producer - INFO - New blocks found: 22437577 to 22437577
+2025-05-08 15:16:19,833 - eth-producer - INFO - Sent block 22437577 to Kafka
+2025-05-08 15:16:21,320 - eth-producer - INFO - New blocks found: 22437577 to 22437577
+2025-05-08 15:16:22,319 - eth-producer - INFO - Sent block 22437577 to Kafka
+2025-05-08 15:16:28,309 - eth-producer - INFO - New blocks found: 22437578 to 22437578
+2025-05-08 15:16:28,679 - eth-producer - INFO - Sent block 22437578 to Kafka
+2025-05-08 15:16:31,801 - eth-producer - INFO - New blocks found: 22437578 to 22437578
+2025-05-08 15:16:32,155 - eth-producer - INFO - Sent block 22437578 to Kafka
+2025-05-08 15:16:34,480 - eth-producer - INFO - New blocks found: 22437578 to 22437578
+2025-05-08 15:16:35,089 - eth-producer - INFO - Sent block 22437578 to Kafka
+2025-05-08 15:16:39,212 - eth-producer - INFO - New blocks found: 22437579 to 22437579
+2025-05-08 15:16:39,860 - eth-producer - INFO - Sent block 22437579 to Kafka
+2025-05-08 15:16:42,540 - eth-producer - INFO - New blocks found: 22437579 to 22437579
+2025-05-08 15:16:43,627 - eth-producer - INFO - Sent block 22437579 to Kafka
+2025-05-08 15:16:45,845 - eth-producer - INFO - New blocks found: 22437579 to 22437579
+2025-05-08 15:16:46,536 - eth-producer - INFO - Sent block 22437579 to Kafka
+2025-05-08 15:16:50,637 - eth-producer - INFO - New blocks found: 22437580 to 22437580
+2025-05-08 15:16:51,696 - eth-producer - INFO - Sent block 22437580 to Kafka
+2025-05-08 15:16:54,181 - eth-producer - INFO - New blocks found: 22437580 to 22437580
+2025-05-08 15:16:54,640 - eth-producer - INFO - Sent block 22437580 to Kafka
+2025-05-08 15:16:57,186 - eth-producer - INFO - New blocks found: 22437580 to 22437580
+2025-05-08 15:16:58,065 - eth-producer - INFO - Sent block 22437580 to Kafka
+2025-05-08 15:17:02,387 - eth-producer - INFO - New blocks found: 22437581 to 22437581
+2025-05-08 15:17:03,531 - eth-producer - INFO - Sent block 22437581 to Kafka
+2025-05-08 15:17:05,190 - eth-producer - INFO - New blocks found: 22437581 to 22437581
+2025-05-08 15:17:06,375 - eth-producer - INFO - Sent block 22437581 to Kafka
+2025-05-08 15:17:08,608 - eth-producer - INFO - New blocks found: 22437581 to 22437581
+2025-05-08 15:17:09,357 - eth-producer - INFO - Sent block 22437581 to Kafka
+2025-05-08 15:17:14,098 - eth-producer - INFO - New blocks found: 22437582 to 22437582
+2025-05-08 15:17:14,568 - eth-producer - INFO - Sent block 22437582 to Kafka
+2025-05-08 15:17:16,890 - eth-producer - INFO - New blocks found: 22437582 to 22437582
+2025-05-08 15:17:17,429 - eth-producer - INFO - Sent block 22437582 to Kafka
+2025-05-08 15:17:19,902 - eth-producer - INFO - New blocks found: 22437582 to 22437582
+2025-05-08 15:17:20,551 - eth-producer - INFO - Sent block 22437582 to Kafka
+2025-05-08 15:17:25,092 - eth-producer - INFO - New blocks found: 22437583 to 22437583
+2025-05-08 15:17:26,172 - eth-producer - INFO - Sent block 22437583 to Kafka
+2025-05-08 15:17:28,078 - eth-producer - INFO - New blocks found: 22437583 to 22437583
+2025-05-08 15:17:28,841 - eth-producer - INFO - Sent block 22437583 to Kafka
+2025-05-08 15:17:31,226 - eth-producer - INFO - New blocks found: 22437583 to 22437583
+2025-05-08 15:17:31,798 - eth-producer - INFO - Sent block 22437583 to Kafka
+2025-05-08 15:17:39,254 - eth-producer - INFO - New blocks found: 22437584 to 22437584
+2025-05-08 15:17:39,892 - eth-producer - INFO - Sent block 22437584 to Kafka
+2025-05-08 15:17:42,204 - eth-producer - INFO - New blocks found: 22437584 to 22437584
+2025-05-08 15:17:42,713 - eth-producer - INFO - Sent block 22437584 to Kafka
+2025-05-08 15:17:46,863 - eth-producer - INFO - New blocks found: 22437584 to 22437584
+2025-05-08 15:17:47,218 - eth-producer - INFO - Sent block 22437584 to Kafka
+2025-05-08 15:17:50,377 - eth-producer - INFO - New blocks found: 22437585 to 22437585
+2025-05-08 15:17:50,874 - eth-producer - INFO - Sent block 22437585 to Kafka
+2025-05-08 15:17:53,096 - eth-producer - INFO - New blocks found: 22437585 to 22437585
+2025-05-08 15:17:53,623 - eth-producer - INFO - Sent block 22437585 to Kafka
+2025-05-08 15:17:57,613 - eth-producer - INFO - New blocks found: 22437585 to 22437585
+2025-05-08 15:17:58,568 - eth-producer - INFO - Sent block 22437585 to Kafka
+2025-05-08 15:18:01,541 - eth-producer - INFO - New blocks found: 22437586 to 22437586
+2025-05-08 15:18:02,421 - eth-producer - INFO - Sent block 22437586 to Kafka
+2025-05-08 15:18:04,389 - eth-producer - INFO - New blocks found: 22437586 to 22437586
+2025-05-08 15:18:05,135 - eth-producer - INFO - Sent block 22437586 to Kafka
+2025-05-08 15:18:09,137 - eth-producer - INFO - New blocks found: 22437586 to 22437586
+2025-05-08 15:18:09,504 - eth-producer - INFO - Sent block 22437586 to Kafka
+2025-05-08 15:18:15,672 - eth-producer - INFO - New blocks found: 22437587 to 22437587
+2025-05-08 15:18:16,020 - eth-producer - INFO - Sent block 22437587 to Kafka
+2025-05-08 15:18:19,912 - eth-producer - INFO - New blocks found: 22437587 to 22437587
+2025-05-08 15:18:20,964 - eth-producer - INFO - Sent block 22437587 to Kafka
+2025-05-08 15:18:23,163 - eth-producer - INFO - New blocks found: 22437587 to 22437587
+2025-05-08 15:18:23,521 - eth-producer - INFO - Sent block 22437587 to Kafka
+2025-05-08 15:18:26,484 - eth-producer - INFO - New blocks found: 22437588 to 22437588
+2025-05-08 15:18:26,949 - eth-producer - INFO - Sent block 22437588 to Kafka
+2025-05-08 15:18:31,460 - eth-producer - INFO - New blocks found: 22437588 to 22437588
+2025-05-08 15:18:31,991 - eth-producer - INFO - Sent block 22437588 to Kafka
+2025-05-08 15:18:33,976 - eth-producer - INFO - New blocks found: 22437588 to 22437588
+2025-05-08 15:18:35,049 - eth-producer - INFO - Sent block 22437588 to Kafka
+2025-05-08 15:18:37,539 - eth-producer - INFO - New blocks found: 22437589 to 22437589
+2025-05-08 15:18:37,936 - eth-producer - INFO - Sent block 22437589 to Kafka
+2025-05-08 15:18:42,568 - eth-producer - INFO - New blocks found: 22437589 to 22437589
+2025-05-08 15:18:43,472 - eth-producer - INFO - Sent block 22437589 to Kafka
+2025-05-08 15:18:45,820 - eth-producer - INFO - New blocks found: 22437589 to 22437589
+2025-05-08 15:18:46,203 - eth-producer - INFO - Sent block 22437589 to Kafka
+2025-05-08 15:18:49,075 - eth-producer - INFO - New blocks found: 22437590 to 22437590
+2025-05-08 15:18:49,620 - eth-producer - INFO - Sent block 22437590 to Kafka
+2025-05-08 15:18:53,978 - eth-producer - INFO - New blocks found: 22437590 to 22437590
+2025-05-08 15:18:54,307 - eth-producer - INFO - Sent block 22437590 to Kafka
+2025-05-08 15:18:56,803 - eth-producer - INFO - New blocks found: 22437590 to 22437590
+2025-05-08 15:18:57,559 - eth-producer - INFO - Sent block 22437590 to Kafka
+2025-05-08 15:19:04,718 - eth-producer - INFO - New blocks found: 22437591 to 22437591
+2025-05-08 15:19:05,556 - eth-producer - INFO - Sent block 22437591 to Kafka
+2025-05-08 15:19:07,968 - eth-producer - INFO - New blocks found: 22437591 to 22437591
+2025-05-08 15:19:08,578 - eth-producer - INFO - Sent block 22437591 to Kafka
+2025-05-08 15:19:10,316 - eth-producer - INFO - New blocks found: 22437591 to 22437591
+2025-05-08 15:19:10,781 - eth-producer - INFO - Sent block 22437591 to Kafka
+2025-05-08 15:19:16,192 - eth-producer - INFO - New blocks found: 22437592 to 22437592
+2025-05-08 15:19:16,569 - eth-producer - INFO - Sent block 22437592 to Kafka
+2025-05-08 15:19:19,689 - eth-producer - INFO - New blocks found: 22437592 to 22437592
+2025-05-08 15:19:20,106 - eth-producer - INFO - Sent block 22437592 to Kafka
+2025-05-08 15:19:21,362 - eth-producer - INFO - New blocks found: 22437592 to 22437592
+2025-05-08 15:19:21,974 - eth-producer - INFO - Sent block 22437592 to Kafka
+2025-05-08 15:19:27,007 - eth-producer - INFO - New blocks found: 22437593 to 22437593
+2025-05-08 15:19:27,537 - eth-producer - INFO - Sent block 22437593 to Kafka
+2025-05-08 15:19:30,808 - eth-producer - INFO - New blocks found: 22437593 to 22437593
+2025-05-08 15:19:31,253 - eth-producer - INFO - Sent block 22437593 to Kafka
+2025-05-08 15:19:32,545 - eth-producer - INFO - New blocks found: 22437593 to 22437593
+2025-05-08 15:19:33,165 - eth-producer - INFO - Sent block 22437593 to Kafka
+2025-05-08 15:19:37,904 - eth-producer - INFO - New blocks found: 22437594 to 22437594
+2025-05-08 15:19:38,908 - eth-producer - INFO - Sent block 22437594 to Kafka
+2025-05-08 15:19:41,591 - eth-producer - INFO - New blocks found: 22437594 to 22437594
+2025-05-08 15:19:42,933 - eth-producer - INFO - Sent block 22437594 to Kafka
+2025-05-08 15:19:43,511 - eth-producer - INFO - New blocks found: 22437594 to 22437594
+2025-05-08 15:19:44,240 - eth-producer - INFO - Sent block 22437594 to Kafka
+2025-05-08 15:19:49,585 - eth-producer - INFO - New blocks found: 22437595 to 22437595
+2025-05-08 15:19:50,089 - eth-producer - INFO - Sent block 22437595 to Kafka
+2025-05-08 15:19:53,668 - eth-producer - INFO - New blocks found: 22437595 to 22437595
+2025-05-08 15:19:54,078 - eth-producer - INFO - Sent block 22437595 to Kafka
+2025-05-08 15:19:54,949 - eth-producer - INFO - New blocks found: 22437595 to 22437595
+2025-05-08 15:19:55,353 - eth-producer - INFO - Sent block 22437595 to Kafka
+2025-05-08 15:20:00,936 - eth-producer - INFO - New blocks found: 22437596 to 22437596
+2025-05-08 15:20:02,426 - eth-producer - INFO - Sent block 22437596 to Kafka
+2025-05-08 15:20:04,629 - eth-producer - INFO - New blocks found: 22437596 to 22437596
+2025-05-08 15:20:05,290 - eth-producer - INFO - Sent block 22437596 to Kafka
+2025-05-08 15:20:05,838 - eth-producer - INFO - New blocks found: 22437596 to 22437596
+2025-05-08 15:20:07,269 - eth-producer - INFO - Sent block 22437596 to Kafka
+2025-05-08 15:20:12,947 - eth-producer - INFO - New blocks found: 22437597 to 22437597
+2025-05-08 15:20:13,268 - eth-producer - INFO - Sent block 22437597 to Kafka
+2025-05-08 15:20:15,883 - eth-producer - INFO - New blocks found: 22437597 to 22437597
+2025-05-08 15:20:16,211 - eth-producer - INFO - Sent block 22437597 to Kafka
+2025-05-08 15:20:19,123 - eth-producer - INFO - New blocks found: 22437597 to 22437597
+2025-05-08 15:20:19,477 - eth-producer - INFO - Sent block 22437597 to Kafka
+2025-05-08 15:20:26,585 - eth-producer - INFO - New blocks found: 22437598 to 22437598
+2025-05-08 15:20:27,203 - eth-producer - INFO - Sent block 22437598 to Kafka
+2025-05-08 15:20:29,898 - eth-producer - INFO - New blocks found: 22437598 to 22437598
+2025-05-08 15:20:30,285 - eth-producer - INFO - Sent block 22437598 to Kafka
+2025-05-08 15:20:33,971 - eth-producer - INFO - New blocks found: 22437598 to 22437598
+2025-05-08 15:20:34,579 - eth-producer - INFO - Sent block 22437598 to Kafka
+2025-05-08 15:20:37,714 - eth-producer - INFO - New blocks found: 22437599 to 22437599
+2025-05-08 15:20:38,764 - eth-producer - INFO - Sent block 22437599 to Kafka
+2025-05-08 15:20:40,826 - eth-producer - INFO - New blocks found: 22437599 to 22437599
+2025-05-08 15:20:41,258 - eth-producer - INFO - Sent block 22437599 to Kafka
+2025-05-08 15:20:45,087 - eth-producer - INFO - New blocks found: 22437599 to 22437599
+2025-05-08 15:20:45,608 - eth-producer - INFO - Sent block 22437599 to Kafka
+2025-05-08 15:20:49,422 - eth-producer - INFO - New blocks found: 22437600 to 22437600
+2025-05-08 15:20:49,818 - eth-producer - INFO - Sent block 22437600 to Kafka
+2025-05-08 15:20:51,885 - eth-producer - INFO - New blocks found: 22437600 to 22437600
+2025-05-08 15:20:52,274 - eth-producer - INFO - Sent block 22437600 to Kafka
+2025-05-08 15:20:56,565 - eth-producer - INFO - New blocks found: 22437600 to 22437600
+2025-05-08 15:20:57,508 - eth-producer - INFO - Sent block 22437600 to Kafka
+2025-05-08 15:21:02,777 - eth-producer - INFO - New blocks found: 22437601 to 22437601
+2025-05-08 15:21:03,152 - eth-producer - INFO - Sent block 22437601 to Kafka
+2025-05-08 15:21:08,024 - eth-producer - INFO - New blocks found: 22437601 to 22437601
+2025-05-08 15:21:08,425 - eth-producer - INFO - Sent block 22437601 to Kafka
+2025-05-08 15:21:10,710 - eth-producer - INFO - New blocks found: 22437601 to 22437601
+2025-05-08 15:21:11,058 - eth-producer - INFO - Sent block 22437601 to Kafka
+2025-05-08 15:21:13,625 - eth-producer - INFO - New blocks found: 22437602 to 22437602
+2025-05-08 15:21:13,942 - eth-producer - INFO - Sent block 22437602 to Kafka
+2025-05-08 15:21:18,888 - eth-producer - INFO - New blocks found: 22437602 to 22437602
+2025-05-08 15:21:19,230 - eth-producer - INFO - Sent block 22437602 to Kafka
+2025-05-08 15:21:21,776 - eth-producer - INFO - New blocks found: 22437602 to 22437602
+2025-05-08 15:21:22,124 - eth-producer - INFO - Sent block 22437602 to Kafka
+2025-05-08 15:21:29,615 - eth-producer - INFO - New blocks found: 22437603 to 22437603
+2025-05-08 15:21:30,376 - eth-producer - INFO - Sent block 22437603 to Kafka
+2025-05-08 15:21:32,496 - eth-producer - INFO - New blocks found: 22437603 to 22437603
+2025-05-08 15:21:33,705 - eth-producer - INFO - Sent block 22437603 to Kafka
+2025-05-08 15:21:34,589 - eth-producer - INFO - New blocks found: 22437603 to 22437603
+2025-05-08 15:21:36,115 - eth-producer - INFO - Sent block 22437603 to Kafka
+2025-05-08 15:21:41,241 - eth-producer - INFO - New blocks found: 22437604 to 22437604
+2025-05-08 15:21:42,406 - eth-producer - INFO - Sent block 22437604 to Kafka
+2025-05-08 15:21:44,441 - eth-producer - INFO - New blocks found: 22437604 to 22437604
+2025-05-08 15:21:45,318 - eth-producer - INFO - Sent block 22437604 to Kafka
+2025-05-08 15:21:47,126 - eth-producer - INFO - New blocks found: 22437604 to 22437604
+2025-05-08 15:21:47,516 - eth-producer - INFO - Sent block 22437604 to Kafka
+2025-05-08 15:21:52,886 - eth-producer - INFO - New blocks found: 22437605 to 22437605
+2025-05-08 15:21:53,404 - eth-producer - INFO - Sent block 22437605 to Kafka
+2025-05-08 15:21:55,796 - eth-producer - INFO - New blocks found: 22437605 to 22437605
+2025-05-08 15:21:56,266 - eth-producer - INFO - Sent block 22437605 to Kafka
+2025-05-08 15:21:58,035 - eth-producer - INFO - New blocks found: 22437605 to 22437605
+2025-05-08 15:21:58,466 - eth-producer - INFO - Sent block 22437605 to Kafka
+2025-05-08 15:22:14,289 - eth-producer - INFO - New blocks found: 22437606 to 22437606
+2025-05-08 15:22:15,041 - eth-producer - INFO - Sent block 22437606 to Kafka
+2025-05-08 15:22:17,084 - eth-producer - INFO - New blocks found: 22437606 to 22437606
+2025-05-08 15:22:17,702 - eth-producer - INFO - Sent block 22437606 to Kafka
+2025-05-08 15:22:19,291 - eth-producer - INFO - New blocks found: 22437606 to 22437606
+2025-05-08 15:22:19,751 - eth-producer - INFO - Sent block 22437606 to Kafka
+2025-05-08 15:22:28,276 - eth-producer - INFO - New blocks found: 22437607 to 22437607
+2025-05-08 15:22:29,370 - eth-producer - INFO - Sent block 22437607 to Kafka
+2025-05-08 15:22:30,351 - eth-producer - INFO - New blocks found: 22437607 to 22437607
+2025-05-08 15:22:31,217 - eth-producer - INFO - Sent block 22437607 to Kafka
+2025-05-08 15:22:35,910 - eth-producer - INFO - New blocks found: 22437607 to 22437607
+2025-05-08 15:22:36,379 - eth-producer - INFO - Sent block 22437607 to Kafka
+2025-05-08 15:22:39,974 - eth-producer - INFO - New blocks found: 22437608 to 22437608
+2025-05-08 15:22:40,401 - eth-producer - INFO - Sent block 22437608 to Kafka
+2025-05-08 15:22:41,787 - eth-producer - INFO - New blocks found: 22437608 to 22437608
+2025-05-08 15:22:42,539 - eth-producer - INFO - Sent block 22437608 to Kafka
+2025-05-08 15:22:47,093 - eth-producer - INFO - New blocks found: 22437608 to 22437608
+2025-05-08 15:22:47,736 - eth-producer - INFO - Sent block 22437608 to Kafka
+2025-05-08 15:22:53,058 - eth-producer - INFO - New blocks found: 22437609 to 22437609
+2025-05-08 15:22:54,590 - eth-producer - INFO - Sent block 22437609 to Kafka
+2025-05-08 15:22:58,186 - eth-producer - INFO - New blocks found: 22437609 to 22437609
+2025-05-08 15:22:58,512 - eth-producer - INFO - Sent block 22437609 to Kafka
+2025-05-08 15:23:01,240 - eth-producer - INFO - New blocks found: 22437609 to 22437610
+2025-05-08 15:23:01,644 - eth-producer - INFO - Sent block 22437609 to Kafka
+2025-05-08 15:23:02,851 - eth-producer - INFO - Sent block 22437610 to Kafka
+2025-05-08 15:23:05,072 - eth-producer - INFO - New blocks found: 22437610 to 22437610
+2025-05-08 15:23:06,137 - eth-producer - INFO - Sent block 22437610 to Kafka
+2025-05-08 15:23:08,889 - eth-producer - INFO - New blocks found: 22437610 to 22437610
+2025-05-08 15:23:09,982 - eth-producer - INFO - Sent block 22437610 to Kafka
+2025-05-08 15:23:13,412 - eth-producer - INFO - New blocks found: 22437611 to 22437611
+2025-05-08 15:23:13,877 - eth-producer - INFO - Sent block 22437611 to Kafka
+2025-05-08 15:23:16,792 - eth-producer - INFO - New blocks found: 22437611 to 22437611
+2025-05-08 15:23:17,169 - eth-producer - INFO - Sent block 22437611 to Kafka
+2025-05-08 15:23:20,721 - eth-producer - INFO - New blocks found: 22437611 to 22437611
+2025-05-08 15:23:21,170 - eth-producer - INFO - Sent block 22437611 to Kafka
+2025-05-08 15:23:27,770 - eth-producer - INFO - New blocks found: 22437612 to 22437612
+2025-05-08 15:23:28,482 - eth-producer - INFO - Sent block 22437612 to Kafka
+2025-05-08 15:23:31,723 - eth-producer - INFO - New blocks found: 22437612 to 22437612
+2025-05-08 15:23:32,212 - eth-producer - INFO - Sent block 22437612 to Kafka
+2025-05-08 15:23:34,657 - eth-producer - INFO - New blocks found: 22437612 to 22437612
+2025-05-08 15:23:35,104 - eth-producer - INFO - Sent block 22437612 to Kafka
+2025-05-08 15:23:39,149 - eth-producer - INFO - New blocks found: 22437613 to 22437613
+2025-05-08 15:23:39,894 - eth-producer - INFO - Sent block 22437613 to Kafka
+2025-05-08 15:23:42,744 - eth-producer - INFO - New blocks found: 22437613 to 22437613
+2025-05-08 15:23:43,367 - eth-producer - INFO - Sent block 22437613 to Kafka
+2025-05-08 15:23:46,920 - eth-producer - INFO - New blocks found: 22437613 to 22437613
+2025-05-08 15:23:47,382 - eth-producer - INFO - Sent block 22437613 to Kafka
+2025-05-08 15:23:50,430 - eth-producer - INFO - New blocks found: 22437614 to 22437614
+2025-05-08 15:23:50,745 - eth-producer - INFO - Sent block 22437614 to Kafka
+2025-05-08 15:23:54,360 - eth-producer - INFO - New blocks found: 22437614 to 22437614
+2025-05-08 15:23:55,034 - eth-producer - INFO - Sent block 22437614 to Kafka
+2025-05-08 15:23:57,921 - eth-producer - INFO - New blocks found: 22437614 to 22437614
+2025-05-08 15:23:58,499 - eth-producer - INFO - Sent block 22437614 to Kafka
+2025-05-08 15:24:05,533 - eth-producer - INFO - New blocks found: 22437615 to 22437615
+2025-05-08 15:24:06,039 - eth-producer - INFO - Sent block 22437615 to Kafka
+2025-05-08 15:24:08,884 - eth-producer - INFO - New blocks found: 22437615 to 22437615
+2025-05-08 15:24:09,380 - eth-producer - INFO - Sent block 22437615 to Kafka
+2025-05-08 15:24:11,458 - eth-producer - INFO - New blocks found: 22437615 to 22437615
+2025-05-08 15:24:11,884 - eth-producer - INFO - Sent block 22437615 to Kafka
+2025-05-08 15:24:16,601 - eth-producer - INFO - New blocks found: 22437616 to 22437616
+2025-05-08 15:24:17,580 - eth-producer - INFO - Sent block 22437616 to Kafka
+2025-05-08 15:24:19,913 - eth-producer - INFO - New blocks found: 22437616 to 22437616
+2025-05-08 15:24:20,898 - eth-producer - INFO - Sent block 22437616 to Kafka
+2025-05-08 15:24:22,515 - eth-producer - INFO - New blocks found: 22437616 to 22437616
+2025-05-08 15:24:23,411 - eth-producer - INFO - Sent block 22437616 to Kafka
+2025-05-08 15:24:28,074 - eth-producer - INFO - New blocks found: 22437617 to 22437617
+2025-05-08 15:24:28,444 - eth-producer - INFO - Sent block 22437617 to Kafka
+2025-05-08 15:24:31,548 - eth-producer - INFO - New blocks found: 22437617 to 22437617
+2025-05-08 15:24:32,368 - eth-producer - INFO - Sent block 22437617 to Kafka
+2025-05-08 15:24:34,478 - eth-producer - INFO - New blocks found: 22437617 to 22437617
+2025-05-08 15:24:35,432 - eth-producer - INFO - Sent block 22437617 to Kafka
+2025-05-08 15:24:38,895 - eth-producer - INFO - New blocks found: 22437618 to 22437618
+2025-05-08 15:24:39,527 - eth-producer - INFO - Sent block 22437618 to Kafka
+2025-05-08 15:24:42,799 - eth-producer - INFO - New blocks found: 22437618 to 22437618
+2025-05-08 15:24:43,242 - eth-producer - INFO - Sent block 22437618 to Kafka
+2025-05-08 15:24:45,946 - eth-producer - INFO - New blocks found: 22437618 to 22437618
+2025-05-08 15:24:46,371 - eth-producer - INFO - Sent block 22437618 to Kafka
+2025-05-08 15:24:50,156 - eth-producer - INFO - New blocks found: 22437619 to 22437619
+2025-05-08 15:24:50,603 - eth-producer - INFO - Sent block 22437619 to Kafka
+2025-05-08 15:24:53,760 - eth-producer - INFO - New blocks found: 22437619 to 22437619
+2025-05-08 15:24:54,188 - eth-producer - INFO - Sent block 22437619 to Kafka
+2025-05-08 15:24:56,905 - eth-producer - INFO - New blocks found: 22437619 to 22437619
+2025-05-08 15:24:57,286 - eth-producer - INFO - Sent block 22437619 to Kafka
+2025-05-08 15:25:15,000 - eth-producer - INFO - New blocks found: 22437620 to 22437620
+2025-05-08 15:25:15,399 - eth-producer - INFO - Sent block 22437620 to Kafka
+2025-05-08 15:25:18,084 - eth-producer - INFO - New blocks found: 22437620 to 22437620
+2025-05-08 15:25:18,558 - eth-producer - INFO - Sent block 22437620 to Kafka
+2025-05-08 15:25:21,729 - eth-producer - INFO - New blocks found: 22437620 to 22437620
+2025-05-08 15:25:22,161 - eth-producer - INFO - Sent block 22437620 to Kafka
+2025-05-08 15:25:25,926 - eth-producer - INFO - New blocks found: 22437621 to 22437621
+2025-05-08 15:25:27,123 - eth-producer - INFO - Sent block 22437621 to Kafka
+2025-05-08 15:25:29,201 - eth-producer - INFO - New blocks found: 22437621 to 22437621
+2025-05-08 15:25:29,700 - eth-producer - INFO - Sent block 22437621 to Kafka
+2025-05-08 15:25:32,876 - eth-producer - INFO - New blocks found: 22437621 to 22437621
+2025-05-08 15:25:33,998 - eth-producer - INFO - Sent block 22437621 to Kafka
+2025-05-08 15:25:37,742 - eth-producer - INFO - New blocks found: 22437622 to 22437622
+2025-05-08 15:25:38,649 - eth-producer - INFO - Sent block 22437622 to Kafka
+2025-05-08 15:25:40,810 - eth-producer - INFO - New blocks found: 22437622 to 22437622
+2025-05-08 15:25:41,574 - eth-producer - INFO - Sent block 22437622 to Kafka
+2025-05-08 15:25:44,553 - eth-producer - INFO - New blocks found: 22437622 to 22437622
+2025-05-08 15:25:45,654 - eth-producer - INFO - Sent block 22437622 to Kafka
+2025-05-08 15:25:50,321 - eth-producer - INFO - New blocks found: 22437623 to 22437623
+2025-05-08 15:25:51,282 - eth-producer - INFO - Sent block 22437623 to Kafka
+2025-05-08 15:25:52,296 - eth-producer - INFO - New blocks found: 22437623 to 22437623
+2025-05-08 15:25:52,693 - eth-producer - INFO - Sent block 22437623 to Kafka
+2025-05-08 15:25:56,225 - eth-producer - INFO - New blocks found: 22437623 to 22437623
+2025-05-08 15:25:57,079 - eth-producer - INFO - Sent block 22437623 to Kafka
+2025-05-08 15:26:03,120 - eth-producer - INFO - New blocks found: 22437624 to 22437624
+2025-05-08 15:26:03,773 - eth-producer - INFO - Sent block 22437624 to Kafka
+2025-05-08 15:26:04,526 - eth-producer - INFO - New blocks found: 22437624 to 22437624
+2025-05-08 15:26:04,878 - eth-producer - INFO - Sent block 22437624 to Kafka
+2025-05-08 15:26:07,626 - eth-producer - INFO - New blocks found: 22437624 to 22437624
+2025-05-08 15:26:08,022 - eth-producer - INFO - Sent block 22437624 to Kafka
+2025-05-08 15:26:14,235 - eth-producer - INFO - New blocks found: 22437625 to 22437625
+2025-05-08 15:26:14,755 - eth-producer - INFO - Sent block 22437625 to Kafka
+2025-05-08 15:26:15,583 - eth-producer - INFO - New blocks found: 22437625 to 22437625
+2025-05-08 15:26:17,249 - eth-producer - INFO - Sent block 22437625 to Kafka
+2025-05-08 15:26:18,425 - eth-producer - INFO - New blocks found: 22437625 to 22437625
+2025-05-08 15:26:19,574 - eth-producer - INFO - Sent block 22437625 to Kafka
+2025-05-08 15:26:27,522 - eth-producer - INFO - New blocks found: 22437626 to 22437626
+2025-05-08 15:26:28,311 - eth-producer - INFO - New blocks found: 22437626 to 22437626
+2025-05-08 15:26:28,710 - eth-producer - INFO - Sent block 22437626 to Kafka
+2025-05-08 15:26:29,292 - eth-producer - INFO - Sent block 22437626 to Kafka
+2025-05-08 15:26:30,204 - eth-producer - INFO - New blocks found: 22437626 to 22437626
+2025-05-08 15:26:31,141 - eth-producer - INFO - Sent block 22437626 to Kafka
+2025-05-08 15:26:39,266 - eth-producer - INFO - New blocks found: 22437627 to 22437627
+2025-05-08 15:26:39,740 - eth-producer - INFO - New blocks found: 22437627 to 22437627
+2025-05-08 15:26:40,012 - eth-producer - INFO - Sent block 22437627 to Kafka
+2025-05-08 15:26:40,327 - eth-producer - INFO - Sent block 22437627 to Kafka
+2025-05-08 15:26:41,593 - eth-producer - INFO - New blocks found: 22437627 to 22437627
+2025-05-08 15:26:42,506 - eth-producer - INFO - Sent block 22437627 to Kafka
+2025-05-08 15:26:50,798 - eth-producer - INFO - New blocks found: 22437628 to 22437628
+2025-05-08 15:26:50,867 - eth-producer - INFO - New blocks found: 22437628 to 22437628
+2025-05-08 15:26:51,343 - eth-producer - INFO - Sent block 22437628 to Kafka
+2025-05-08 15:26:51,753 - eth-producer - INFO - Sent block 22437628 to Kafka
+2025-05-08 15:26:53,048 - eth-producer - INFO - New blocks found: 22437628 to 22437628
+2025-05-08 15:26:53,456 - eth-producer - INFO - Sent block 22437628 to Kafka
+2025-05-08 15:27:02,781 - eth-producer - INFO - New blocks found: 22437629 to 22437629
+2025-05-08 15:27:02,861 - eth-producer - INFO - New blocks found: 22437629 to 22437629
+2025-05-08 15:27:03,263 - eth-producer - INFO - Sent block 22437629 to Kafka
+2025-05-08 15:27:03,655 - eth-producer - INFO - Sent block 22437629 to Kafka
+2025-05-08 15:27:04,126 - eth-producer - INFO - New blocks found: 22437629 to 22437629
+2025-05-08 15:27:04,576 - eth-producer - INFO - Sent block 22437629 to Kafka
+2025-05-08 15:27:13,762 - eth-producer - INFO - New blocks found: 22437630 to 22437630
+2025-05-08 15:27:14,159 - eth-producer - INFO - Sent block 22437630 to Kafka
+2025-05-08 15:27:14,217 - eth-producer - INFO - New blocks found: 22437630 to 22437630
+2025-05-08 15:27:14,653 - eth-producer - INFO - Sent block 22437630 to Kafka
+2025-05-08 15:27:15,038 - eth-producer - INFO - New blocks found: 22437630 to 22437630
+2025-05-08 15:27:15,600 - eth-producer - INFO - Sent block 22437630 to Kafka
+2025-05-08 15:27:25,081 - eth-producer - INFO - New blocks found: 22437631 to 22437631
+2025-05-08 15:27:25,753 - eth-producer - INFO - Sent block 22437631 to Kafka
+2025-05-08 15:27:26,026 - eth-producer - INFO - New blocks found: 22437631 to 22437631
+2025-05-08 15:27:28,000 - eth-producer - INFO - Sent block 22437631 to Kafka
+2025-05-08 15:27:34,799 - eth-producer - INFO - New blocks found: 22437631 to 22437631
+2025-05-08 15:27:35,489 - eth-producer - INFO - Sent block 22437631 to Kafka
+2025-05-08 15:27:38,617 - eth-producer - INFO - New blocks found: 22437632 to 22437632
+2025-05-08 15:27:38,984 - eth-producer - INFO - Sent block 22437632 to Kafka
+2025-05-08 15:27:46,381 - eth-producer - INFO - New blocks found: 22437632 to 22437632
+2025-05-08 15:27:46,648 - eth-producer - INFO - New blocks found: 22437632 to 22437632
+2025-05-08 15:27:46,763 - eth-producer - INFO - Sent block 22437632 to Kafka
+2025-05-08 15:27:47,015 - eth-producer - INFO - Sent block 22437632 to Kafka
+2025-05-08 15:27:49,467 - eth-producer - INFO - New blocks found: 22437633 to 22437633
+2025-05-08 15:27:50,418 - eth-producer - INFO - Sent block 22437633 to Kafka
+2025-05-08 15:27:57,173 - eth-producer - INFO - New blocks found: 22437633 to 22437633
+2025-05-08 15:27:57,417 - eth-producer - INFO - New blocks found: 22437633 to 22437633
+2025-05-08 15:27:57,672 - eth-producer - INFO - Sent block 22437633 to Kafka
+2025-05-08 15:27:57,835 - eth-producer - INFO - Sent block 22437633 to Kafka
+2025-05-08 15:28:08,311 - eth-producer - INFO - New blocks found: 22437634 to 22437634
+2025-05-08 15:28:08,425 - eth-producer - INFO - New blocks found: 22437634 to 22437634
+2025-05-08 15:28:08,966 - eth-producer - INFO - Sent block 22437634 to Kafka
+2025-05-08 15:28:09,487 - eth-producer - INFO - Sent block 22437634 to Kafka
+2025-05-08 15:28:11,283 - eth-producer - INFO - New blocks found: 22437634 to 22437634
+2025-05-08 15:28:12,374 - eth-producer - INFO - Sent block 22437634 to Kafka
+2025-05-08 15:28:20,669 - eth-producer - INFO - New blocks found: 22437635 to 22437635
+2025-05-08 15:28:20,824 - eth-producer - INFO - New blocks found: 22437635 to 22437635
+2025-05-08 15:28:21,089 - eth-producer - INFO - Sent block 22437635 to Kafka
+2025-05-08 15:28:21,425 - eth-producer - INFO - Sent block 22437635 to Kafka
+2025-05-08 15:28:22,927 - eth-producer - INFO - New blocks found: 22437635 to 22437635
+2025-05-08 15:28:23,927 - eth-producer - INFO - Sent block 22437635 to Kafka
+2025-05-08 15:28:31,608 - eth-producer - INFO - New blocks found: 22437636 to 22437636
+2025-05-08 15:28:31,908 - eth-producer - INFO - New blocks found: 22437636 to 22437636
+2025-05-08 15:28:31,962 - eth-producer - INFO - Sent block 22437636 to Kafka
+2025-05-08 15:28:32,706 - eth-producer - INFO - Sent block 22437636 to Kafka
+2025-05-08 15:28:34,418 - eth-producer - INFO - New blocks found: 22437636 to 22437636
+2025-05-08 15:28:35,486 - eth-producer - INFO - Sent block 22437636 to Kafka
+2025-05-08 15:28:42,411 - eth-producer - INFO - New blocks found: 22437637 to 22437637
+2025-05-08 15:28:43,010 - eth-producer - INFO - Sent block 22437637 to Kafka
+2025-05-08 15:28:43,185 - eth-producer - INFO - New blocks found: 22437637 to 22437637
+2025-05-08 15:28:43,783 - eth-producer - INFO - Sent block 22437637 to Kafka
+2025-05-08 15:28:46,014 - eth-producer - INFO - New blocks found: 22437637 to 22437637
+2025-05-08 15:28:46,384 - eth-producer - INFO - Sent block 22437637 to Kafka
+2025-05-08 15:28:53,554 - eth-producer - INFO - New blocks found: 22437638 to 22437638
+2025-05-08 15:28:54,079 - eth-producer - INFO - Sent block 22437638 to Kafka
+2025-05-08 15:28:54,442 - eth-producer - INFO - New blocks found: 22437638 to 22437638
+2025-05-08 15:28:54,750 - eth-producer - INFO - Sent block 22437638 to Kafka
+2025-05-08 15:28:56,810 - eth-producer - INFO - New blocks found: 22437638 to 22437638
+2025-05-08 15:28:57,593 - eth-producer - INFO - Sent block 22437638 to Kafka
+2025-05-08 15:29:04,438 - eth-producer - INFO - New blocks found: 22437639 to 22437639
+2025-05-08 15:29:04,910 - eth-producer - INFO - Sent block 22437639 to Kafka
+2025-05-08 15:29:05,118 - eth-producer - INFO - New blocks found: 22437639 to 22437639
+2025-05-08 15:29:06,392 - eth-producer - INFO - Sent block 22437639 to Kafka
+2025-05-08 15:29:08,063 - eth-producer - INFO - New blocks found: 22437639 to 22437639
+2025-05-08 15:29:08,760 - eth-producer - INFO - Sent block 22437639 to Kafka
+2025-05-08 15:29:15,788 - eth-producer - INFO - New blocks found: 22437640 to 22437640
+2025-05-08 15:29:16,212 - eth-producer - INFO - Sent block 22437640 to Kafka
+2025-05-08 15:29:18,504 - eth-producer - INFO - New blocks found: 22437640 to 22437640
+2025-05-08 15:29:19,043 - eth-producer - INFO - Sent block 22437640 to Kafka
+2025-05-08 15:29:19,616 - eth-producer - INFO - New blocks found: 22437640 to 22437640
+2025-05-08 15:29:20,569 - eth-producer - INFO - Sent block 22437640 to Kafka
+2025-05-08 15:29:26,788 - eth-producer - INFO - New blocks found: 22437641 to 22437641
+2025-05-08 15:29:27,310 - eth-producer - INFO - Sent block 22437641 to Kafka
+2025-05-08 15:29:29,532 - eth-producer - INFO - New blocks found: 22437641 to 22437641
+2025-05-08 15:29:30,772 - eth-producer - INFO - Sent block 22437641 to Kafka
+2025-05-08 15:29:31,591 - eth-producer - INFO - New blocks found: 22437641 to 22437641
+2025-05-08 15:29:32,502 - eth-producer - INFO - Sent block 22437641 to Kafka
+2025-05-08 15:29:37,850 - eth-producer - INFO - New blocks found: 22437642 to 22437642
+2025-05-08 15:29:38,353 - eth-producer - INFO - Sent block 22437642 to Kafka
+2025-05-08 15:29:41,305 - eth-producer - INFO - New blocks found: 22437642 to 22437642
+2025-05-08 15:29:41,830 - eth-producer - INFO - Sent block 22437642 to Kafka
+2025-05-08 15:29:42,974 - eth-producer - INFO - New blocks found: 22437642 to 22437642
+2025-05-08 15:29:43,396 - eth-producer - INFO - Sent block 22437642 to Kafka
+2025-05-08 15:29:52,718 - eth-producer - INFO - New blocks found: 22437643 to 22437643
+2025-05-08 15:29:53,722 - eth-producer - INFO - Sent block 22437643 to Kafka
+2025-05-08 15:29:53,927 - eth-producer - INFO - New blocks found: 22437643 to 22437643
+2025-05-08 15:29:54,569 - eth-producer - INFO - Sent block 22437643 to Kafka
+2025-05-08 15:29:59,323 - eth-producer - INFO - New blocks found: 22437643 to 22437643
+2025-05-08 15:29:59,721 - eth-producer - INFO - Sent block 22437643 to Kafka
+2025-05-08 15:30:04,321 - eth-producer - INFO - New blocks found: 22437644 to 22437644
+2025-05-08 15:30:05,149 - eth-producer - INFO - New blocks found: 22437644 to 22437644
+2025-05-08 15:30:05,310 - eth-producer - INFO - Sent block 22437644 to Kafka
+2025-05-08 15:30:05,604 - eth-producer - INFO - Sent block 22437644 to Kafka
+2025-05-08 15:30:10,394 - eth-producer - INFO - New blocks found: 22437644 to 22437644
+2025-05-08 15:30:10,785 - eth-producer - INFO - Sent block 22437644 to Kafka
+2025-05-08 15:30:15,800 - eth-producer - INFO - New blocks found: 22437645 to 22437645
+2025-05-08 15:30:16,079 - eth-producer - INFO - New blocks found: 22437645 to 22437645
+2025-05-08 15:30:16,240 - eth-producer - INFO - Sent block 22437645 to Kafka
+2025-05-08 15:30:16,554 - eth-producer - INFO - Sent block 22437645 to Kafka
+2025-05-08 15:30:21,254 - eth-producer - INFO - New blocks found: 22437645 to 22437645
+2025-05-08 15:30:21,837 - eth-producer - INFO - Sent block 22437645 to Kafka
+2025-05-08 15:30:27,291 - eth-producer - INFO - New blocks found: 22437646 to 22437646
+2025-05-08 15:30:27,611 - eth-producer - INFO - New blocks found: 22437646 to 22437646
+2025-05-08 15:30:28,479 - eth-producer - INFO - Sent block 22437646 to Kafka
+2025-05-08 15:30:28,867 - eth-producer - INFO - Sent block 22437646 to Kafka
+2025-05-08 15:30:33,775 - eth-producer - INFO - New blocks found: 22437646 to 22437646
+2025-05-08 15:30:34,322 - eth-producer - INFO - Sent block 22437646 to Kafka
+2025-05-08 15:30:39,252 - eth-producer - INFO - New blocks found: 22437647 to 22437647
+2025-05-08 15:30:39,520 - eth-producer - INFO - New blocks found: 22437647 to 22437647
+2025-05-08 15:30:39,655 - eth-producer - INFO - Sent block 22437647 to Kafka
+2025-05-08 15:30:40,332 - eth-producer - INFO - Sent block 22437647 to Kafka
+2025-05-08 15:30:46,683 - eth-producer - INFO - New blocks found: 22437647 to 22437647
+2025-05-08 15:30:47,114 - eth-producer - INFO - Sent block 22437647 to Kafka
+2025-05-08 15:30:50,609 - eth-producer - INFO - New blocks found: 22437648 to 22437648
+2025-05-08 15:30:50,968 - eth-producer - INFO - New blocks found: 22437648 to 22437648
+2025-05-08 15:30:51,286 - eth-producer - INFO - Sent block 22437648 to Kafka
+2025-05-08 15:30:51,440 - eth-producer - INFO - Sent block 22437648 to Kafka
+2025-05-08 15:30:57,703 - eth-producer - INFO - New blocks found: 22437648 to 22437648
+2025-05-08 15:30:58,336 - eth-producer - INFO - Sent block 22437648 to Kafka
+2025-05-08 15:31:01,913 - eth-producer - INFO - New blocks found: 22437649 to 22437649
+2025-05-08 15:31:02,000 - eth-producer - INFO - New blocks found: 22437649 to 22437649
+2025-05-08 15:31:02,509 - eth-producer - INFO - Sent block 22437649 to Kafka
+2025-05-08 15:31:03,155 - eth-producer - INFO - Sent block 22437649 to Kafka
+2025-05-08 15:31:08,894 - eth-producer - INFO - New blocks found: 22437649 to 22437649
+2025-05-08 15:31:09,319 - eth-producer - INFO - Sent block 22437649 to Kafka
+2025-05-08 15:31:12,982 - eth-producer - INFO - New blocks found: 22437650 to 22437650
+2025-05-08 15:31:13,293 - eth-producer - INFO - Sent block 22437650 to Kafka
+2025-05-08 15:31:13,603 - eth-producer - INFO - New blocks found: 22437650 to 22437650
+2025-05-08 15:31:13,932 - eth-producer - INFO - Sent block 22437650 to Kafka
+2025-05-08 15:31:19,744 - eth-producer - INFO - New blocks found: 22437650 to 22437650
+2025-05-08 15:31:20,026 - eth-producer - INFO - Sent block 22437650 to Kafka
+2025-05-08 15:31:30,313 - eth-producer - INFO - New blocks found: 22437651 to 22437651
+2025-05-08 15:31:30,806 - eth-producer - INFO - Sent block 22437651 to Kafka
+2025-05-08 15:31:33,858 - eth-producer - INFO - New blocks found: 22437651 to 22437651
+2025-05-08 15:31:34,505 - eth-producer - INFO - New blocks found: 22437651 to 22437651
+2025-05-08 15:31:34,660 - eth-producer - INFO - Sent block 22437651 to Kafka
+2025-05-08 15:31:35,998 - eth-producer - INFO - Sent block 22437651 to Kafka
+2025-05-08 15:31:41,504 - eth-producer - INFO - New blocks found: 22437652 to 22437652
+2025-05-08 15:31:42,024 - eth-producer - INFO - Sent block 22437652 to Kafka
+2025-05-08 15:31:45,322 - eth-producer - INFO - New blocks found: 22437652 to 22437652
+2025-05-08 15:31:45,893 - eth-producer - INFO - Sent block 22437652 to Kafka
+2025-05-08 15:31:46,642 - eth-producer - INFO - New blocks found: 22437652 to 22437652
+2025-05-08 15:31:47,231 - eth-producer - INFO - Sent block 22437652 to Kafka
+2025-05-08 15:31:52,393 - eth-producer - INFO - New blocks found: 22437653 to 22437653
+2025-05-08 15:31:53,065 - eth-producer - INFO - Sent block 22437653 to Kafka
+2025-05-08 15:31:56,237 - eth-producer - INFO - New blocks found: 22437653 to 22437653
+2025-05-08 15:31:56,763 - eth-producer - INFO - Sent block 22437653 to Kafka
+2025-05-08 15:31:57,609 - eth-producer - INFO - New blocks found: 22437653 to 22437653
+2025-05-08 15:31:58,938 - eth-producer - INFO - Sent block 22437653 to Kafka
+2025-05-08 15:32:03,717 - eth-producer - INFO - New blocks found: 22437654 to 22437654
+2025-05-08 15:32:04,141 - eth-producer - INFO - Sent block 22437654 to Kafka
+2025-05-08 15:32:07,390 - eth-producer - INFO - New blocks found: 22437654 to 22437654
+2025-05-08 15:32:07,793 - eth-producer - INFO - Sent block 22437654 to Kafka
+2025-05-08 15:32:09,588 - eth-producer - INFO - New blocks found: 22437654 to 22437654
+2025-05-08 15:32:10,557 - eth-producer - INFO - Sent block 22437654 to Kafka
+2025-05-08 15:32:14,596 - eth-producer - INFO - New blocks found: 22437655 to 22437655
+2025-05-08 15:32:14,975 - eth-producer - INFO - Sent block 22437655 to Kafka
+2025-05-08 15:32:18,292 - eth-producer - INFO - New blocks found: 22437655 to 22437655
+2025-05-08 15:32:18,811 - eth-producer - INFO - Sent block 22437655 to Kafka
+2025-05-08 15:32:21,075 - eth-producer - INFO - New blocks found: 22437655 to 22437655
+2025-05-08 15:32:21,856 - eth-producer - INFO - Sent block 22437655 to Kafka
+2025-05-08 15:32:29,411 - eth-producer - INFO - New blocks found: 22437656 to 22437656
+2025-05-08 15:32:30,449 - eth-producer - INFO - Sent block 22437656 to Kafka
+2025-05-08 15:32:32,412 - eth-producer - INFO - New blocks found: 22437656 to 22437656
+2025-05-08 15:32:33,641 - eth-producer - INFO - Sent block 22437656 to Kafka
+2025-05-08 15:32:35,647 - eth-producer - INFO - New blocks found: 22437656 to 22437656
+2025-05-08 15:32:36,109 - eth-producer - INFO - Sent block 22437656 to Kafka
+2025-05-08 15:32:41,013 - eth-producer - INFO - New blocks found: 22437657 to 22437657
+2025-05-08 15:32:41,608 - eth-producer - INFO - Sent block 22437657 to Kafka
+2025-05-08 15:32:44,433 - eth-producer - INFO - New blocks found: 22437657 to 22437657
+2025-05-08 15:32:44,778 - eth-producer - INFO - Sent block 22437657 to Kafka
+2025-05-08 15:32:46,681 - eth-producer - INFO - New blocks found: 22437657 to 22437657
+2025-05-08 15:32:47,244 - eth-producer - INFO - Sent block 22437657 to Kafka
+2025-05-08 15:32:51,999 - eth-producer - INFO - New blocks found: 22437658 to 22437658
+2025-05-08 15:32:52,969 - eth-producer - INFO - Sent block 22437658 to Kafka
+2025-05-08 15:32:55,145 - eth-producer - INFO - New blocks found: 22437658 to 22437658
+2025-05-08 15:32:56,018 - eth-producer - INFO - Sent block 22437658 to Kafka
+2025-05-08 15:32:57,624 - eth-producer - INFO - New blocks found: 22437658 to 22437658
+2025-05-08 15:32:58,043 - eth-producer - INFO - Sent block 22437658 to Kafka
+2025-05-08 15:33:03,597 - eth-producer - INFO - New blocks found: 22437659 to 22437659
+2025-05-08 15:33:04,178 - eth-producer - INFO - Sent block 22437659 to Kafka
+2025-05-08 15:33:06,683 - eth-producer - INFO - New blocks found: 22437659 to 22437659
+2025-05-08 15:33:07,110 - eth-producer - INFO - Sent block 22437659 to Kafka
+2025-05-08 15:33:08,571 - eth-producer - INFO - New blocks found: 22437659 to 22437659
+2025-05-08 15:33:08,943 - eth-producer - INFO - Sent block 22437659 to Kafka
+2025-05-08 15:33:14,613 - eth-producer - INFO - New blocks found: 22437660 to 22437660
+2025-05-08 15:33:15,229 - eth-producer - INFO - Sent block 22437660 to Kafka
+2025-05-08 15:33:17,518 - eth-producer - INFO - New blocks found: 22437660 to 22437660
+2025-05-08 15:33:18,351 - eth-producer - INFO - Sent block 22437660 to Kafka
+2025-05-08 15:33:19,366 - eth-producer - INFO - New blocks found: 22437660 to 22437660
+2025-05-08 15:33:19,746 - eth-producer - INFO - Sent block 22437660 to Kafka
+2025-05-08 15:33:39,176 - eth-producer - INFO - New blocks found: 22437661 to 22437661
+2025-05-08 15:33:39,660 - eth-producer - INFO - Sent block 22437661 to Kafka
+2025-05-08 15:33:41,742 - eth-producer - INFO - New blocks found: 22437661 to 22437661
+2025-05-08 15:33:42,258 - eth-producer - INFO - Sent block 22437661 to Kafka
+2025-05-08 15:33:46,350 - eth-producer - INFO - New blocks found: 22437661 to 22437661
+2025-05-08 15:33:46,758 - eth-producer - INFO - Sent block 22437661 to Kafka
+2025-05-08 15:33:50,604 - eth-producer - INFO - New blocks found: 22437662 to 22437662
+2025-05-08 15:33:51,420 - eth-producer - INFO - Sent block 22437662 to Kafka
+2025-05-08 15:33:52,807 - eth-producer - INFO - New blocks found: 22437662 to 22437662
+2025-05-08 15:33:53,297 - eth-producer - INFO - Sent block 22437662 to Kafka
+2025-05-08 15:33:57,291 - eth-producer - INFO - New blocks found: 22437662 to 22437662
+2025-05-08 15:33:57,832 - eth-producer - INFO - Sent block 22437662 to Kafka
+2025-05-08 15:34:02,449 - eth-producer - INFO - New blocks found: 22437663 to 22437663
+2025-05-08 15:34:03,840 - eth-producer - INFO - Sent block 22437663 to Kafka
+2025-05-08 15:34:03,999 - eth-producer - INFO - New blocks found: 22437663 to 22437663
+2025-05-08 15:34:04,558 - eth-producer - INFO - Sent block 22437663 to Kafka
+2025-05-08 15:34:08,507 - eth-producer - INFO - New blocks found: 22437663 to 22437663
+2025-05-08 15:34:08,998 - eth-producer - INFO - Sent block 22437663 to Kafka
+2025-05-08 15:34:15,442 - eth-producer - INFO - New blocks found: 22437664 to 22437664
+2025-05-08 15:34:15,865 - eth-producer - INFO - Sent block 22437664 to Kafka
+2025-05-08 15:34:17,055 - eth-producer - INFO - New blocks found: 22437664 to 22437664
+2025-05-08 15:34:18,049 - eth-producer - INFO - Sent block 22437664 to Kafka
+2025-05-08 15:34:19,905 - eth-producer - INFO - New blocks found: 22437664 to 22437664
+2025-05-08 15:34:20,531 - eth-producer - INFO - Sent block 22437664 to Kafka
+2025-05-08 15:34:26,443 - eth-producer - INFO - New blocks found: 22437665 to 22437665
+2025-05-08 15:34:27,016 - eth-producer - INFO - Sent block 22437665 to Kafka
+2025-05-08 15:34:28,651 - eth-producer - INFO - New blocks found: 22437665 to 22437665
+2025-05-08 15:34:29,011 - eth-producer - INFO - Sent block 22437665 to Kafka
+2025-05-08 15:34:31,978 - eth-producer - INFO - New blocks found: 22437665 to 22437665
+2025-05-08 15:34:32,352 - eth-producer - INFO - Sent block 22437665 to Kafka
+2025-05-08 15:34:38,606 - eth-producer - INFO - New blocks found: 22437666 to 22437666
+2025-05-08 15:34:39,474 - eth-producer - INFO - Sent block 22437666 to Kafka
+2025-05-08 15:34:39,658 - eth-producer - INFO - New blocks found: 22437666 to 22437666
+2025-05-08 15:34:40,274 - eth-producer - INFO - Sent block 22437666 to Kafka
+2025-05-08 15:34:49,957 - eth-producer - INFO - New blocks found: 22437667 to 22437667
+2025-05-08 15:34:50,773 - eth-producer - INFO - Sent block 22437667 to Kafka
+2025-05-08 15:34:50,816 - eth-producer - INFO - New blocks found: 22437667 to 22437667
+2025-05-08 15:34:51,368 - eth-producer - INFO - Sent block 22437667 to Kafka

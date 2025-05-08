@@ -1,0 +1,152 @@
+id: stock_market_pipeline
+namespace: data.pipelines
+revision: 1
+
+description: |
+  End-to-end data pipeline for stock market data.
+  This workflow collects stock market data using Kafka, 
+  processes it with Spark, and stores it in a data warehouse.
+
+tasks:
+  - id: start_kafka
+    type: io.kestra.plugin.scripts.shell.Commands
+    commands:
+      - docker-compose -f /app/flows/../../../../docker-compose.yml ps kafka | grep -q "Up" || \
+        docker-compose -f /app/flows/../../../../docker-compose.yml up -d kafka
+    timeout: PT5M
+  
+  - id: create_topic
+    type: io.kestra.plugin.scripts.shell.Commands
+    dependsOn:
+      - start_kafka
+    commands:
+      - |
+        docker-compose -f /app/flows/../../../../docker-compose.yml exec -T kafka \
+        kafka-topics --bootstrap-server localhost:9092 --create --if-not-exists \
+        --topic stock-market-data --partitions 1 --replication-factor 1
+    timeout: PT1M
+  
+  - id: produce_stock_data
+    type: io.kestra.plugin.scripts.python.Script
+    dependsOn:
+      - create_topic
+    inputFiles:
+      producer.py: |
+        import sys
+        sys.path.append('/app/flows/../../../../src/kafka')
+        from producer import StockMarketProducer
+        
+        producer = StockMarketProducer('kafka:9092', 'stock-market-data')
+        producer.start_streaming(interval=0.5, count=100)
+    script: |
+      import os
+      os.makedirs('/app/flows/../../../../logs', exist_ok=True)
+      
+      # Run the producer script
+      exec(open('producer.py').read())
+      
+      # Let Kestra know it's done
+      print("Producer finished successfully")
+    timeout: PT5M
+  
+  - id: consume_stock_data
+    type: io.kestra.plugin.scripts.python.Script
+    dependsOn:
+      - produce_stock_data
+    inputFiles:
+      consumer.py: |
+        import sys
+        import os
+        sys.path.append('/app/flows/../../../../src/kafka')
+        from consumer import StockMarketConsumer
+        
+        os.makedirs('/app/flows/../../../../data', exist_ok=True)
+        
+        consumer = StockMarketConsumer(
+            bootstrap_servers='kafka:9092',
+            topic_name='stock-market-data',
+            group_id='kestra-consumer-group',
+            output_dir='/app/flows/../../../../data'
+        )
+        consumer.start_consuming(limit=100)
+    script: |
+      import os
+      os.makedirs('/app/flows/../../../../logs', exist_ok=True)
+      
+      # Run the consumer script
+      exec(open('consumer.py').read())
+      
+      # Let Kestra know it's done
+      print("Consumer finished successfully")
+    timeout: PT5M
+  
+  - id: process_with_spark
+    type: io.kestra.plugin.scripts.python.Script
+    dependsOn:
+      - consume_stock_data
+    inputFiles:
+      spark_processor.py: |
+        import sys
+        import os
+        sys.path.append('/app/flows/../../../../src/spark')
+        os.environ['JAVA_HOME'] = '/usr/lib/jvm/java-11-openjdk-amd64'
+        
+        from stock_processor import StockMarketProcessor
+        
+        # Create necessary directories
+        os.makedirs('/app/flows/../../../../output', exist_ok=True)
+        
+        processor = StockMarketProcessor(
+            input_path='/app/flows/../../../../data',
+            output_path='/app/flows/../../../../output',
+            warehouse_jdbc_url='jdbc:postgresql://data-warehouse:5432/datawarehouse',
+            warehouse_properties={
+                "user": "datauser",
+                "password": "datapass",
+                "driver": "org.postgresql.Driver"
+            }
+        )
+        
+        processor.process_batch_data()
+        processor.stop()
+    script: |
+      import os
+      os.makedirs('/app/flows/../../../../logs', exist_ok=True)
+      
+      # Run the Spark processor script
+      try:
+          exec(open('spark_processor.py').read())
+          print("Spark processing finished successfully")
+      except Exception as e:
+          print(f"Spark processing failed: {e}")
+          raise
+    timeout: PT10M
+  
+  - id: check_results
+    type: io.kestra.plugin.scripts.shell.Commands
+    dependsOn:
+      - process_with_spark
+    commands:
+      - |
+        echo "Checking processed data in data warehouse"
+        docker-compose -f /app/flows/../../../../docker-compose.yml exec -T data-warehouse \
+        psql -U datauser -d datawarehouse -c "SELECT table_name FROM information_schema.tables WHERE table_schema='public';"
+        
+        echo "Sample data from stock_daily_stats:"
+        docker-compose -f /app/flows/../../../../docker-compose.yml exec -T data-warehouse \
+        psql -U datauser -d datawarehouse -c "SELECT * FROM stock_daily_stats LIMIT 5;"
+    timeout: PT1M
+
+  - id: log_completion
+    type: io.kestra.plugin.core.log.Log
+    dependsOn:
+      - check_results
+    level: INFO
+    message: |
+      Data pipeline completed successfully!
+      
+      Pipeline summary:
+      - Produced stock market data to Kafka
+      - Consumed and saved data to CSV
+      - Processed data with Spark
+      - Stored results in data warehouse 
