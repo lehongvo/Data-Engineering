@@ -1,0 +1,13 @@
+2025-05-08 12:41:28,213 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-05-08 12:41:28,227 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=localhost:9092 <checking_api_versions_recv> [IPv6 ('::1', 9092, 0, 0)]>: Broker version identified as 2.6
+2025-05-08 12:41:28,227 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-05-08 12:41:28,227 - sensor-producer - INFO - Successfully connected to Kafka producer
+2025-05-08 12:41:28,330 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1001 host=localhost:9092 <connecting> [IPv6 ('::1', 9092, 0, 0)]>: connecting to localhost:9092 [('::1', 9092, 0, 0) IPv6]
+2025-05-08 12:41:28,331 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=1001 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Connection complete.
+2025-05-08 12:41:28,331 - kafka.conn - INFO - <BrokerConnection client_id=kafka-python-producer-1, node_id=bootstrap-0 host=localhost:9092 <connected> [IPv6 ('::1', 9092, 0, 0)]>: Closing connection. 
+2025-05-08 12:41:35,791 - sensor-producer - WARNING - Generated humidity anomaly: 97.4% at kitchen
+2025-05-08 12:41:39,682 - sensor-producer - WARNING - Generated temperature anomaly: -1.4°C at bedroom
+2025-05-08 12:41:39,695 - sensor-producer - INFO - Sent 150 sensor readings
+2025-05-08 12:41:42,254 - sensor-producer - WARNING - Generated pressure anomaly: 1055.8 hPa at living_room
+2025-05-08 12:41:42,842 - sensor-producer - WARNING - Generated pressure anomaly: 1049.2 hPa at outdoor
+2025-05-08 12:41:46,082 - sensor-producer - WARNING - Generated temperature anomaly: -0.8°C at bathroom

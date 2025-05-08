@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Data-Engineering/Day9/Exercise6/./result_consumer.py", line 7, in <module>
+    from prettytable import PrettyTable
+ModuleNotFoundError: No module named 'prettytable'

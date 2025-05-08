@@ -1,0 +1,51 @@
+graph TD
+    subgraph "Data Sources"
+        TempSensor["Temperature Sensors"] --> TempTopic
+        HumSensor["Humidity Sensors"] --> HumTopic
+        PresSensor["Pressure Sensors"] --> PresTopic
+    end
+    
+    subgraph "Kafka Topics - Input"
+        TempTopic["temperature-data"] --> StreamProc
+        HumTopic["humidity-data"] --> StreamProc
+        PresTopic["pressure-data"] --> StreamProc
+    end
+    
+    subgraph "Stream Processing"
+        StreamProc["Stream Processor<br/>stream_processor.py"]
+        
+        subgraph "Feature 1: Anomaly Detection"
+            StreamProc --> |"Detect anomalies"| AlertsTopic["anomaly-alerts"]
+        end
+        
+        subgraph "Feature 2: Time Windows"
+            StreamProc --> |"Calculate time-windowed<br/>averages"| WindowTopic["window-aggregates"]
+        end
+        
+        subgraph "Feature 3: Stream Joining"
+            StreamProc --> |"Join data from<br/>multiple sensors"| JoinedTopic["joined-sensor-data"]
+        end
+    end
+    
+    subgraph "Kafka Topics - Output"
+        AlertsTopic --> ResultConsumer
+        WindowTopic --> ResultConsumer
+        JoinedTopic --> ResultConsumer
+    end
+    
+    subgraph "Results Display"
+        ResultConsumer["Result Consumer<br/>result_consumer.py"]
+        ResultConsumer --> |"Display alerts"| AlertDisplay["Anomaly Alerts"]
+        ResultConsumer --> |"Display averages"| AvgDisplay["Time-Windowed Averages"]
+        ResultConsumer --> |"Display joined data"| JoinDisplay["Joined Sensor Data"]
+    end
+    
+    classDef sensor fill:#e1d5e7,stroke:#9673a6,stroke-width:2px;
+    classDef topic fill:#dae8fc,stroke:#6c8ebf,stroke-width:2px;
+    classDef processor fill:#f8cecc,stroke:#b85450,stroke-width:2px;
+    classDef output fill:#d5e8d4,stroke:#82b366,stroke-width:2px;
+    
+    class TempSensor,HumSensor,PresSensor sensor;
+    class TempTopic,HumTopic,PresTopic,AlertsTopic,WindowTopic,JoinedTopic topic;
+    class StreamProc,ResultConsumer processor;
+    class AlertDisplay,AvgDisplay,JoinDisplay output; 

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/Users/user/Desktop/Data-Engineering/Day9/Exercise6/./stream_processor.py", line 7, in <module>
+    from confluent_kafka import Consumer, Producer, KafkaError, KafkaException
+ModuleNotFoundError: No module named 'confluent_kafka'
