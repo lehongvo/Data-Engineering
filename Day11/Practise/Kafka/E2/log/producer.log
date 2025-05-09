@@ -1,0 +1,226 @@
+[2025-05-09 12:40:07] --- Temperature Producer Started ---
+[2025-05-09 12:40:07] Hostname: ITs-Mac-mini.local
+[2025-05-09 12:40:07] Trying to connect to Kafka broker at localhost:9094
+[2025-05-09 12:40:07] Creating Kafka producer...
+[2025-05-09 12:40:07] Successfully created Kafka producer
+[2025-05-09 12:40:07] Generated: {"sensorId": "sensor-002", "temperature": 21.0, "timestamp": "2025-05-09T12:40:07.525156", "unit": "Celsius"}
+[2025-05-09 12:40:09] Generated: {"sensorId": "sensor-004", "temperature": 18.9, "timestamp": "2025-05-09T12:40:09.529592", "unit": "Celsius"}
+[2025-05-09 12:40:09] Message delivered to temperature-readings [0] at offset 0
+[2025-05-09 12:40:09] Message delivered to temperature-readings [0] at offset 1
+[2025-05-09 12:40:10] Generated: {"sensorId": "sensor-004", "temperature": 30.7, "timestamp": "2025-05-09T12:40:10.543397", "unit": "Celsius"}
+[2025-05-09 12:40:10] Message delivered to temperature-readings [0] at offset 2
+[2025-05-09 12:40:11] Generated: {"sensorId": "sensor-005", "temperature": 25.3, "timestamp": "2025-05-09T12:40:11.554667", "unit": "Celsius"}
+[2025-05-09 12:40:11] Message delivered to temperature-readings [0] at offset 3
+[2025-05-09 12:40:12] Generated: {"sensorId": "sensor-003", "temperature": 26.6, "timestamp": "2025-05-09T12:40:12.565867", "unit": "Celsius"}
+[2025-05-09 12:40:12] Message delivered to temperature-readings [0] at offset 4
+[2025-05-09 12:40:13] Generated: {"sensorId": "sensor-005", "temperature": 20.0, "timestamp": "2025-05-09T12:40:13.579009", "unit": "Celsius"}
+[2025-05-09 12:40:13] Message delivered to temperature-readings [0] at offset 5
+[2025-05-09 12:40:14] Generated: {"sensorId": "sensor-005", "temperature": 20.4, "timestamp": "2025-05-09T12:40:14.590140", "unit": "Celsius"}
+[2025-05-09 12:40:14] Message delivered to temperature-readings [0] at offset 6
+[2025-05-09 12:40:15] Generated: {"sensorId": "sensor-002", "temperature": 21.4, "timestamp": "2025-05-09T12:40:15.603134", "unit": "Celsius"}
+[2025-05-09 12:40:15] Message delivered to temperature-readings [0] at offset 7
+[2025-05-09 12:40:16] Generated: {"sensorId": "sensor-005", "temperature": 27.5, "timestamp": "2025-05-09T12:40:16.615527", "unit": "Celsius"}
+[2025-05-09 12:40:16] Message delivered to temperature-readings [0] at offset 8
+[2025-05-09 12:40:17] Generated: {"sensorId": "sensor-001", "temperature": 22.4, "timestamp": "2025-05-09T12:40:17.628352", "unit": "Celsius"}
+[2025-05-09 12:40:17] Message delivered to temperature-readings [0] at offset 9
+[2025-05-09 12:40:18] Generated: {"sensorId": "sensor-002", "temperature": 25.7, "timestamp": "2025-05-09T12:40:18.637301", "unit": "Celsius"}
+[2025-05-09 12:40:18] Message delivered to temperature-readings [0] at offset 10
+[2025-05-09 12:40:19] Generated: {"sensorId": "sensor-003", "temperature": 20.7, "timestamp": "2025-05-09T12:40:19.653463", "unit": "Celsius"}
+[2025-05-09 12:40:19] Message delivered to temperature-readings [0] at offset 11
+[2025-05-09 12:40:20] Generated: {"sensorId": "sensor-003", "temperature": 24.1, "timestamp": "2025-05-09T12:40:20.664802", "unit": "Celsius"}
+[2025-05-09 12:40:20] Message delivered to temperature-readings [0] at offset 12
+[2025-05-09 12:40:21] Generated: {"sensorId": "sensor-004", "temperature": 35.0, "timestamp": "2025-05-09T12:40:21.673926", "unit": "Celsius"}
+[2025-05-09 12:40:21] Message delivered to temperature-readings [0] at offset 13
+[2025-05-09 12:40:22] Generated: {"sensorId": "sensor-002", "temperature": 25.7, "timestamp": "2025-05-09T12:40:22.679423", "unit": "Celsius"}
+[2025-05-09 12:40:22] Message delivered to temperature-readings [0] at offset 14
+[2025-05-09 12:40:23] Generated: {"sensorId": "sensor-004", "temperature": 24.1, "timestamp": "2025-05-09T12:40:23.685605", "unit": "Celsius"}
+[2025-05-09 12:40:23] Message delivered to temperature-readings [0] at offset 15
+[2025-05-09 12:40:24] Generated: {"sensorId": "sensor-001", "temperature": 19.8, "timestamp": "2025-05-09T12:40:24.697609", "unit": "Celsius"}
+[2025-05-09 12:40:24] Message delivered to temperature-readings [0] at offset 16
+[2025-05-09 12:40:25] Generated: {"sensorId": "sensor-001", "temperature": 18.5, "timestamp": "2025-05-09T12:40:25.707174", "unit": "Celsius"}
+[2025-05-09 12:40:25] Message delivered to temperature-readings [0] at offset 17
+[2025-05-09 12:40:26] Generated: {"sensorId": "sensor-005", "temperature": 18.4, "timestamp": "2025-05-09T12:40:26.718849", "unit": "Celsius"}
+[2025-05-09 12:40:26] Message delivered to temperature-readings [0] at offset 18
+[2025-05-09 12:40:27] Generated: {"sensorId": "sensor-004", "temperature": 20.0, "timestamp": "2025-05-09T12:40:27.732816", "unit": "Celsius"}
+[2025-05-09 12:40:27] Message delivered to temperature-readings [0] at offset 19
+[2025-05-09 12:40:28] Generated: {"sensorId": "sensor-001", "temperature": 25.0, "timestamp": "2025-05-09T12:40:28.739899", "unit": "Celsius"}
+[2025-05-09 12:40:28] Message delivered to temperature-readings [0] at offset 20
+[2025-05-09 12:40:29] Generated: {"sensorId": "sensor-004", "temperature": 19.9, "timestamp": "2025-05-09T12:40:29.747131", "unit": "Celsius"}
+[2025-05-09 12:40:29] Message delivered to temperature-readings [0] at offset 21
+[2025-05-09 12:40:30] Generated: {"sensorId": "sensor-002", "temperature": 21.9, "timestamp": "2025-05-09T12:40:30.755903", "unit": "Celsius"}
+[2025-05-09 12:40:30] Message delivered to temperature-readings [0] at offset 22
+[2025-05-09 12:40:31] Generated: {"sensorId": "sensor-002", "temperature": 23.9, "timestamp": "2025-05-09T12:40:31.772040", "unit": "Celsius"}
+[2025-05-09 12:40:31] Message delivered to temperature-readings [0] at offset 23
+[2025-05-09 12:40:32] Generated: {"sensorId": "sensor-001", "temperature": 19.1, "timestamp": "2025-05-09T12:40:32.783745", "unit": "Celsius"}
+[2025-05-09 12:40:32] Message delivered to temperature-readings [0] at offset 24
+[2025-05-09 12:40:33] Generated: {"sensorId": "sensor-005", "temperature": 18.8, "timestamp": "2025-05-09T12:40:33.791300", "unit": "Celsius"}
+[2025-05-09 12:40:33] Message delivered to temperature-readings [0] at offset 25
+[2025-05-09 12:40:34] Generated: {"sensorId": "sensor-002", "temperature": 27.3, "timestamp": "2025-05-09T12:40:34.799343", "unit": "Celsius"}
+[2025-05-09 12:40:34] Message delivered to temperature-readings [0] at offset 26
+[2025-05-09 12:40:35] Generated: {"sensorId": "sensor-003", "temperature": 20.3, "timestamp": "2025-05-09T12:40:35.809959", "unit": "Celsius"}
+[2025-05-09 12:40:35] Message delivered to temperature-readings [0] at offset 27
+[2025-05-09 12:40:36] Generated: {"sensorId": "sensor-003", "temperature": 19.4, "timestamp": "2025-05-09T12:40:36.825230", "unit": "Celsius"}
+[2025-05-09 12:40:36] Message delivered to temperature-readings [0] at offset 28
+[2025-05-09 12:40:37] Generated: {"sensorId": "sensor-003", "temperature": 24.7, "timestamp": "2025-05-09T12:40:37.833858", "unit": "Celsius"}
+[2025-05-09 12:40:37] Message delivered to temperature-readings [0] at offset 29
+[2025-05-09 12:40:38] Generated: {"sensorId": "sensor-003", "temperature": 33.3, "timestamp": "2025-05-09T12:40:38.841159", "unit": "Celsius"}
+[2025-05-09 12:40:38] Message delivered to temperature-readings [0] at offset 30
+[2025-05-09 12:40:39] Generated: {"sensorId": "sensor-004", "temperature": 18.5, "timestamp": "2025-05-09T12:40:39.856182", "unit": "Celsius"}
+[2025-05-09 12:40:39] Message delivered to temperature-readings [0] at offset 31
+[2025-05-09 12:40:40] Generated: {"sensorId": "sensor-005", "temperature": 20.4, "timestamp": "2025-05-09T12:40:40.871009", "unit": "Celsius"}
+[2025-05-09 12:40:40] Message delivered to temperature-readings [0] at offset 32
+[2025-05-09 12:40:41] Generated: {"sensorId": "sensor-001", "temperature": 21.6, "timestamp": "2025-05-09T12:40:41.881257", "unit": "Celsius"}
+[2025-05-09 12:40:41] Message delivered to temperature-readings [0] at offset 33
+[2025-05-09 12:40:42] Generated: {"sensorId": "sensor-002", "temperature": 39.1, "timestamp": "2025-05-09T12:40:42.896306", "unit": "Celsius"}
+[2025-05-09 12:40:42] Message delivered to temperature-readings [0] at offset 34
+[2025-05-09 12:40:43] Generated: {"sensorId": "sensor-002", "temperature": 25.6, "timestamp": "2025-05-09T12:40:43.911866", "unit": "Celsius"}
+[2025-05-09 12:40:43] Message delivered to temperature-readings [0] at offset 35
+[2025-05-09 12:40:44] Generated: {"sensorId": "sensor-002", "temperature": 33.8, "timestamp": "2025-05-09T12:40:44.921871", "unit": "Celsius"}
+[2025-05-09 12:40:44] Message delivered to temperature-readings [0] at offset 36
+[2025-05-09 12:40:45] Generated: {"sensorId": "sensor-005", "temperature": 19.9, "timestamp": "2025-05-09T12:40:45.932909", "unit": "Celsius"}
+[2025-05-09 12:40:45] Message delivered to temperature-readings [0] at offset 37
+[2025-05-09 12:40:46] Generated: {"sensorId": "sensor-001", "temperature": 21.3, "timestamp": "2025-05-09T12:40:46.938942", "unit": "Celsius"}
+[2025-05-09 12:40:46] Message delivered to temperature-readings [0] at offset 38
+[2025-05-09 12:40:47] Generated: {"sensorId": "sensor-004", "temperature": 21.8, "timestamp": "2025-05-09T12:40:47.947613", "unit": "Celsius"}
+[2025-05-09 12:40:47] Message delivered to temperature-readings [0] at offset 39
+[2025-05-09 12:40:48] Generated: {"sensorId": "sensor-003", "temperature": 26.2, "timestamp": "2025-05-09T12:40:48.959776", "unit": "Celsius"}
+[2025-05-09 12:40:48] Message delivered to temperature-readings [0] at offset 40
+[2025-05-09 12:40:49] Generated: {"sensorId": "sensor-004", "temperature": 22.5, "timestamp": "2025-05-09T12:40:49.973769", "unit": "Celsius"}
+[2025-05-09 12:40:49] Message delivered to temperature-readings [0] at offset 41
+[2025-05-09 12:40:50] Generated: {"sensorId": "sensor-002", "temperature": 39.2, "timestamp": "2025-05-09T12:40:50.987913", "unit": "Celsius"}
+[2025-05-09 12:40:50] Message delivered to temperature-readings [0] at offset 42
+[2025-05-09 12:40:52] Generated: {"sensorId": "sensor-001", "temperature": 19.4, "timestamp": "2025-05-09T12:40:52.002690", "unit": "Celsius"}
+[2025-05-09 12:40:52] Message delivered to temperature-readings [0] at offset 43
+[2025-05-09 12:40:53] Generated: {"sensorId": "sensor-001", "temperature": 19.2, "timestamp": "2025-05-09T12:40:53.009426", "unit": "Celsius"}
+[2025-05-09 12:40:53] Message delivered to temperature-readings [0] at offset 44
+[2025-05-09 12:40:54] Generated: {"sensorId": "sensor-004", "temperature": 24.2, "timestamp": "2025-05-09T12:40:54.021599", "unit": "Celsius"}
+[2025-05-09 12:40:54] Message delivered to temperature-readings [0] at offset 45
+[2025-05-09 12:40:55] Generated: {"sensorId": "sensor-005", "temperature": 27.2, "timestamp": "2025-05-09T12:40:55.031646", "unit": "Celsius"}
+[2025-05-09 12:40:55] Message delivered to temperature-readings [0] at offset 46
+[2025-05-09 12:40:56] Generated: {"sensorId": "sensor-005", "temperature": 18.2, "timestamp": "2025-05-09T12:40:56.044943", "unit": "Celsius"}
+[2025-05-09 12:40:56] Message delivered to temperature-readings [0] at offset 47
+[2025-05-09 12:40:57] --- Temperature Producer Stopped ---
+[2025-05-09 12:46:12] --- Temperature Producer Started ---
+[2025-05-09 12:46:12] Hostname: ITs-Mac-mini.local
+[2025-05-09 12:46:12] Trying to connect to Kafka broker at localhost:9094
+[2025-05-09 12:46:12] Creating Kafka producer...
+[2025-05-09 12:46:12] Successfully created Kafka producer
+[2025-05-09 12:46:12] Generated: {"sensorId": "sensor-005", "temperature": 24.0, "timestamp": "2025-05-09T12:46:12.655009", "unit": "Celsius"}
+[2025-05-09 12:46:12] Message delivered to temperature-readings [0] at offset 48
+[2025-05-09 12:46:13] Generated: {"sensorId": "sensor-005", "temperature": 24.8, "timestamp": "2025-05-09T12:46:13.679922", "unit": "Celsius"}
+[2025-05-09 12:46:13] Message delivered to temperature-readings [0] at offset 49
+[2025-05-09 12:46:14] Generated: {"sensorId": "sensor-005", "temperature": 27.0, "timestamp": "2025-05-09T12:46:14.688712", "unit": "Celsius"}
+[2025-05-09 12:46:14] Message delivered to temperature-readings [0] at offset 50
+[2025-05-09 12:46:15] Generated: {"sensorId": "sensor-005", "temperature": 39.5, "timestamp": "2025-05-09T12:46:15.695974", "unit": "Celsius"}
+[2025-05-09 12:46:15] Message delivered to temperature-readings [0] at offset 51
+[2025-05-09 12:46:16] Generated: {"sensorId": "sensor-003", "temperature": 23.6, "timestamp": "2025-05-09T12:46:16.707337", "unit": "Celsius"}
+[2025-05-09 12:46:16] Message delivered to temperature-readings [0] at offset 52
+[2025-05-09 12:46:17] Generated: {"sensorId": "sensor-005", "temperature": 19.7, "timestamp": "2025-05-09T12:46:17.721402", "unit": "Celsius"}
+[2025-05-09 12:46:17] Message delivered to temperature-readings [0] at offset 53
+[2025-05-09 12:46:18] Generated: {"sensorId": "sensor-003", "temperature": 25.0, "timestamp": "2025-05-09T12:46:18.731727", "unit": "Celsius"}
+[2025-05-09 12:46:18] Message delivered to temperature-readings [0] at offset 54
+[2025-05-09 12:46:19] Generated: {"sensorId": "sensor-005", "temperature": 26.1, "timestamp": "2025-05-09T12:46:19.740507", "unit": "Celsius"}
+[2025-05-09 12:46:19] Message delivered to temperature-readings [0] at offset 55
+[2025-05-09 12:46:20] Generated: {"sensorId": "sensor-001", "temperature": 20.5, "timestamp": "2025-05-09T12:46:20.749391", "unit": "Celsius"}
+[2025-05-09 12:46:20] Message delivered to temperature-readings [0] at offset 56
+[2025-05-09 12:46:21] Generated: {"sensorId": "sensor-004", "temperature": 27.1, "timestamp": "2025-05-09T12:46:21.763785", "unit": "Celsius"}
+[2025-05-09 12:46:21] Message delivered to temperature-readings [0] at offset 57
+[2025-05-09 12:46:22] Generated: {"sensorId": "sensor-002", "temperature": 20.2, "timestamp": "2025-05-09T12:46:22.777202", "unit": "Celsius"}
+[2025-05-09 12:46:22] Message delivered to temperature-readings [0] at offset 58
+[2025-05-09 12:46:23] Generated: {"sensorId": "sensor-002", "temperature": 18.4, "timestamp": "2025-05-09T12:46:23.789598", "unit": "Celsius"}
+[2025-05-09 12:46:23] Message delivered to temperature-readings [0] at offset 59
+[2025-05-09 12:46:24] Generated: {"sensorId": "sensor-001", "temperature": 25.4, "timestamp": "2025-05-09T12:46:24.797635", "unit": "Celsius"}
+[2025-05-09 12:46:24] Message delivered to temperature-readings [0] at offset 60
+[2025-05-09 12:46:25] Generated: {"sensorId": "sensor-004", "temperature": 27.5, "timestamp": "2025-05-09T12:46:25.806476", "unit": "Celsius"}
+[2025-05-09 12:46:25] Message delivered to temperature-readings [0] at offset 61
+[2025-05-09 12:46:26] Generated: {"sensorId": "sensor-005", "temperature": 25.0, "timestamp": "2025-05-09T12:46:26.817828", "unit": "Celsius"}
+[2025-05-09 12:46:26] Message delivered to temperature-readings [0] at offset 62
+[2025-05-09 12:46:27] Generated: {"sensorId": "sensor-004", "temperature": 21.5, "timestamp": "2025-05-09T12:46:27.832672", "unit": "Celsius"}
+[2025-05-09 12:46:27] Message delivered to temperature-readings [0] at offset 63
+[2025-05-09 12:46:28] Generated: {"sensorId": "sensor-004", "temperature": 24.7, "timestamp": "2025-05-09T12:46:28.841056", "unit": "Celsius"}
+[2025-05-09 12:46:28] Message delivered to temperature-readings [0] at offset 64
+[2025-05-09 12:46:29] Generated: {"sensorId": "sensor-001", "temperature": 26.8, "timestamp": "2025-05-09T12:46:29.848633", "unit": "Celsius"}
+[2025-05-09 12:46:29] Message delivered to temperature-readings [0] at offset 65
+[2025-05-09 12:46:30] Generated: {"sensorId": "sensor-005", "temperature": 23.0, "timestamp": "2025-05-09T12:46:30.854526", "unit": "Celsius"}
+[2025-05-09 12:46:30] Message delivered to temperature-readings [0] at offset 66
+[2025-05-09 12:46:31] Generated: {"sensorId": "sensor-002", "temperature": 25.4, "timestamp": "2025-05-09T12:46:31.860608", "unit": "Celsius"}
+[2025-05-09 12:46:31] Message delivered to temperature-readings [0] at offset 67
+[2025-05-09 12:46:32] Generated: {"sensorId": "sensor-003", "temperature": 27.2, "timestamp": "2025-05-09T12:46:32.869759", "unit": "Celsius"}
+[2025-05-09 12:46:32] Message delivered to temperature-readings [0] at offset 68
+[2025-05-09 12:46:33] Generated: {"sensorId": "sensor-003", "temperature": 34.0, "timestamp": "2025-05-09T12:46:33.876271", "unit": "Celsius"}
+[2025-05-09 12:46:33] Message delivered to temperature-readings [0] at offset 69
+[2025-05-09 12:46:34] Generated: {"sensorId": "sensor-003", "temperature": 19.0, "timestamp": "2025-05-09T12:46:34.885366", "unit": "Celsius"}
+[2025-05-09 12:46:34] Message delivered to temperature-readings [0] at offset 70
+[2025-05-09 12:46:35] Generated: {"sensorId": "sensor-001", "temperature": 32.1, "timestamp": "2025-05-09T12:46:35.894919", "unit": "Celsius"}
+[2025-05-09 12:46:35] Message delivered to temperature-readings [0] at offset 71
+[2025-05-09 12:46:36] Generated: {"sensorId": "sensor-005", "temperature": 21.2, "timestamp": "2025-05-09T12:46:36.906360", "unit": "Celsius"}
+[2025-05-09 12:46:36] Message delivered to temperature-readings [0] at offset 72
+[2025-05-09 12:46:37] Generated: {"sensorId": "sensor-004", "temperature": 18.3, "timestamp": "2025-05-09T12:46:37.915526", "unit": "Celsius"}
+[2025-05-09 12:46:37] Message delivered to temperature-readings [0] at offset 73
+[2025-05-09 12:46:38] Generated: {"sensorId": "sensor-005", "temperature": 21.9, "timestamp": "2025-05-09T12:46:38.920814", "unit": "Celsius"}
+[2025-05-09 12:46:38] Message delivered to temperature-readings [0] at offset 74
+[2025-05-09 12:46:39] Generated: {"sensorId": "sensor-001", "temperature": 23.2, "timestamp": "2025-05-09T12:46:39.926157", "unit": "Celsius"}
+[2025-05-09 12:46:39] Message delivered to temperature-readings [0] at offset 75
+[2025-05-09 12:46:40] Generated: {"sensorId": "sensor-001", "temperature": 22.4, "timestamp": "2025-05-09T12:46:40.935719", "unit": "Celsius"}
+[2025-05-09 12:46:40] Message delivered to temperature-readings [0] at offset 76
+[2025-05-09 12:46:41] Generated: {"sensorId": "sensor-001", "temperature": 26.8, "timestamp": "2025-05-09T12:46:41.944434", "unit": "Celsius"}
+[2025-05-09 12:46:41] Message delivered to temperature-readings [0] at offset 77
+[2025-05-09 12:46:42] Generated: {"sensorId": "sensor-005", "temperature": 27.8, "timestamp": "2025-05-09T12:46:42.955962", "unit": "Celsius"}
+[2025-05-09 12:46:42] Message delivered to temperature-readings [0] at offset 78
+[2025-05-09 12:46:43] Generated: {"sensorId": "sensor-001", "temperature": 30.5, "timestamp": "2025-05-09T12:46:43.961708", "unit": "Celsius"}
+[2025-05-09 12:46:43] Message delivered to temperature-readings [0] at offset 79
+[2025-05-09 12:46:44] Generated: {"sensorId": "sensor-005", "temperature": 23.4, "timestamp": "2025-05-09T12:46:44.975452", "unit": "Celsius"}
+[2025-05-09 12:46:44] Message delivered to temperature-readings [0] at offset 80
+[2025-05-09 12:46:45] Generated: {"sensorId": "sensor-002", "temperature": 27.2, "timestamp": "2025-05-09T12:46:45.987708", "unit": "Celsius"}
+[2025-05-09 12:46:45] Message delivered to temperature-readings [0] at offset 81
+[2025-05-09 12:46:46] Generated: {"sensorId": "sensor-005", "temperature": 20.2, "timestamp": "2025-05-09T12:46:46.999396", "unit": "Celsius"}
+[2025-05-09 12:46:47] Message delivered to temperature-readings [0] at offset 82
+[2025-05-09 12:46:48] Generated: {"sensorId": "sensor-001", "temperature": 32.5, "timestamp": "2025-05-09T12:46:48.007415", "unit": "Celsius"}
+[2025-05-09 12:46:48] Message delivered to temperature-readings [0] at offset 83
+[2025-05-09 12:46:49] Generated: {"sensorId": "sensor-005", "temperature": 20.7, "timestamp": "2025-05-09T12:46:49.016323", "unit": "Celsius"}
+[2025-05-09 12:46:49] Message delivered to temperature-readings [0] at offset 84
+[2025-05-09 12:46:50] Generated: {"sensorId": "sensor-004", "temperature": 27.2, "timestamp": "2025-05-09T12:46:50.025973", "unit": "Celsius"}
+[2025-05-09 12:46:50] Message delivered to temperature-readings [0] at offset 85
+[2025-05-09 12:46:51] Generated: {"sensorId": "sensor-005", "temperature": 19.6, "timestamp": "2025-05-09T12:46:51.035251", "unit": "Celsius"}
+[2025-05-09 12:46:51] Message delivered to temperature-readings [0] at offset 86
+[2025-05-09 12:46:52] Generated: {"sensorId": "sensor-002", "temperature": 25.8, "timestamp": "2025-05-09T12:46:52.043697", "unit": "Celsius"}
+[2025-05-09 12:46:52] Message delivered to temperature-readings [0] at offset 87
+[2025-05-09 12:46:53] Generated: {"sensorId": "sensor-001", "temperature": 18.3, "timestamp": "2025-05-09T12:46:53.049800", "unit": "Celsius"}
+[2025-05-09 12:46:53] Message delivered to temperature-readings [0] at offset 88
+[2025-05-09 12:46:54] Generated: {"sensorId": "sensor-002", "temperature": 23.4, "timestamp": "2025-05-09T12:46:54.056877", "unit": "Celsius"}
+[2025-05-09 12:46:54] Message delivered to temperature-readings [0] at offset 89
+[2025-05-09 12:46:55] Generated: {"sensorId": "sensor-001", "temperature": 20.1, "timestamp": "2025-05-09T12:46:55.066341", "unit": "Celsius"}
+[2025-05-09 12:46:55] Message delivered to temperature-readings [0] at offset 90
+[2025-05-09 12:46:56] Generated: {"sensorId": "sensor-004", "temperature": 26.7, "timestamp": "2025-05-09T12:46:56.079279", "unit": "Celsius"}
+[2025-05-09 12:46:56] Message delivered to temperature-readings [0] at offset 91
+[2025-05-09 12:46:57] Generated: {"sensorId": "sensor-002", "temperature": 27.0, "timestamp": "2025-05-09T12:46:57.086923", "unit": "Celsius"}
+[2025-05-09 12:46:57] Message delivered to temperature-readings [0] at offset 92
+[2025-05-09 12:46:58] Generated: {"sensorId": "sensor-004", "temperature": 39.0, "timestamp": "2025-05-09T12:46:58.098962", "unit": "Celsius"}
+[2025-05-09 12:46:58] Message delivered to temperature-readings [0] at offset 93
+[2025-05-09 12:46:59] Generated: {"sensorId": "sensor-004", "temperature": 25.6, "timestamp": "2025-05-09T12:46:59.107094", "unit": "Celsius"}
+[2025-05-09 12:46:59] Message delivered to temperature-readings [0] at offset 94
+[2025-05-09 12:47:00] Generated: {"sensorId": "sensor-004", "temperature": 21.3, "timestamp": "2025-05-09T12:47:00.118151", "unit": "Celsius"}
+[2025-05-09 12:47:00] Message delivered to temperature-readings [0] at offset 95
+[2025-05-09 12:47:01] Generated: {"sensorId": "sensor-005", "temperature": 22.7, "timestamp": "2025-05-09T12:47:01.124871", "unit": "Celsius"}
+[2025-05-09 12:47:01] Message delivered to temperature-readings [0] at offset 96
+[2025-05-09 12:47:02] Generated: {"sensorId": "sensor-001", "temperature": 18.3, "timestamp": "2025-05-09T12:47:02.130066", "unit": "Celsius"}
+[2025-05-09 12:47:02] Message delivered to temperature-readings [0] at offset 97
+[2025-05-09 12:47:03] Generated: {"sensorId": "sensor-005", "temperature": 23.7, "timestamp": "2025-05-09T12:47:03.138943", "unit": "Celsius"}
+[2025-05-09 12:47:03] Message delivered to temperature-readings [0] at offset 98
+[2025-05-09 12:47:04] Generated: {"sensorId": "sensor-003", "temperature": 36.9, "timestamp": "2025-05-09T12:47:04.147307", "unit": "Celsius"}
+[2025-05-09 12:47:04] Message delivered to temperature-readings [0] at offset 99
+[2025-05-09 12:47:05] Generated: {"sensorId": "sensor-001", "temperature": 26.8, "timestamp": "2025-05-09T12:47:05.155708", "unit": "Celsius"}
+[2025-05-09 12:47:05] Message delivered to temperature-readings [0] at offset 100
+[2025-05-09 12:47:06] Generated: {"sensorId": "sensor-001", "temperature": 27.6, "timestamp": "2025-05-09T12:47:06.163586", "unit": "Celsius"}
+[2025-05-09 12:47:06] Message delivered to temperature-readings [0] at offset 101
+[2025-05-09 12:47:07] Generated: {"sensorId": "sensor-004", "temperature": 25.3, "timestamp": "2025-05-09T12:47:07.171514", "unit": "Celsius"}
+[2025-05-09 12:47:07] Message delivered to temperature-readings [0] at offset 102
+[2025-05-09 12:47:08] Generated: {"sensorId": "sensor-003", "temperature": 27.1, "timestamp": "2025-05-09T12:47:08.185152", "unit": "Celsius"}
+[2025-05-09 12:47:08] Message delivered to temperature-readings [0] at offset 103
+[2025-05-09 12:47:09] Generated: {"sensorId": "sensor-002", "temperature": 18.9, "timestamp": "2025-05-09T12:47:09.194383", "unit": "Celsius"}
+[2025-05-09 12:47:09] Message delivered to temperature-readings [0] at offset 104
+[2025-05-09 12:47:10] Generated: {"sensorId": "sensor-003", "temperature": 21.9, "timestamp": "2025-05-09T12:47:10.200417", "unit": "Celsius"}
+[2025-05-09 12:47:10] Message delivered to temperature-readings [0] at offset 105
+[2025-05-09 12:47:11] Generated: {"sensorId": "sensor-002", "temperature": 22.5, "timestamp": "2025-05-09T12:47:11.209363", "unit": "Celsius"}
+[2025-05-09 12:47:11] Message delivered to temperature-readings [0] at offset 106
+[2025-05-09 12:47:11] --- Temperature Producer Stopped ---

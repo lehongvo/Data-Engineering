@@ -1,0 +1,148 @@
+[2025-05-09 12:40:28] --- Temperature Processor Started ---
+[2025-05-09 12:40:28] Hostname: ITs-Mac-mini.local
+[2025-05-09 12:40:28] Trying to connect to Kafka broker at localhost:9094
+[2025-05-09 12:40:28] Creating Kafka consumer and producer...
+[2025-05-09 12:40:28] Successfully created Kafka consumer and producer
+[2025-05-09 12:40:28] Subscribed to temperature-readings topic
+[2025-05-09 12:40:32] Received: {"sensorId": "sensor-002", "temperature": 21.0, "timestamp": "2025-05-09T12:40:07.525156", "unit": "Celsius"}
+[2025-05-09 12:40:32] Received: {"sensorId": "sensor-004", "temperature": 18.9, "timestamp": "2025-05-09T12:40:09.529592", "unit": "Celsius"}
+[2025-05-09 12:40:32] Received: {"sensorId": "sensor-004", "temperature": 30.7, "timestamp": "2025-05-09T12:40:10.543397", "unit": "Celsius"}
+[2025-05-09 12:40:32] ALERT! Abnormal temperature: {"timestamp": "2025-05-09T12:40:32.814076", "sensorId": "sensor-004", "temperature": 30.7, "threshold": 30.0, "message": "Abnormal temperature detected: 30.7\u00b0C exceeds threshold of 30.0\u00b0C"}
+[2025-05-09 12:40:33] Received: {"sensorId": "sensor-005", "temperature": 25.3, "timestamp": "2025-05-09T12:40:11.554667", "unit": "Celsius"}
+[2025-05-09 12:40:34] Message delivered to temperature-alerts [0] at offset 0
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-003", "temperature": 26.6, "timestamp": "2025-05-09T12:40:12.565867", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-005", "temperature": 20.0, "timestamp": "2025-05-09T12:40:13.579009", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-005", "temperature": 20.4, "timestamp": "2025-05-09T12:40:14.590140", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-002", "temperature": 21.4, "timestamp": "2025-05-09T12:40:15.603134", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-005", "temperature": 27.5, "timestamp": "2025-05-09T12:40:16.615527", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-001", "temperature": 22.4, "timestamp": "2025-05-09T12:40:17.628352", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-002", "temperature": 25.7, "timestamp": "2025-05-09T12:40:18.637301", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-003", "temperature": 20.7, "timestamp": "2025-05-09T12:40:19.653463", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-003", "temperature": 24.1, "timestamp": "2025-05-09T12:40:20.664802", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-004", "temperature": 35.0, "timestamp": "2025-05-09T12:40:21.673926", "unit": "Celsius"}
+[2025-05-09 12:40:34] ALERT! Abnormal temperature: {"timestamp": "2025-05-09T12:40:34.645537", "sensorId": "sensor-004", "temperature": 35.0, "threshold": 30.0, "message": "Abnormal temperature detected: 35.0\u00b0C exceeds threshold of 30.0\u00b0C"}
+[2025-05-09 12:40:34] Message delivered to temperature-alerts [0] at offset 1
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-002", "temperature": 25.7, "timestamp": "2025-05-09T12:40:22.679423", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-004", "temperature": 24.1, "timestamp": "2025-05-09T12:40:23.685605", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-001", "temperature": 19.8, "timestamp": "2025-05-09T12:40:24.697609", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-001", "temperature": 18.5, "timestamp": "2025-05-09T12:40:25.707174", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-005", "temperature": 18.4, "timestamp": "2025-05-09T12:40:26.718849", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-004", "temperature": 20.0, "timestamp": "2025-05-09T12:40:27.732816", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-001", "temperature": 25.0, "timestamp": "2025-05-09T12:40:28.739899", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-004", "temperature": 19.9, "timestamp": "2025-05-09T12:40:29.747131", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-002", "temperature": 21.9, "timestamp": "2025-05-09T12:40:30.755903", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-002", "temperature": 23.9, "timestamp": "2025-05-09T12:40:31.772040", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-001", "temperature": 19.1, "timestamp": "2025-05-09T12:40:32.783745", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-005", "temperature": 18.8, "timestamp": "2025-05-09T12:40:33.791300", "unit": "Celsius"}
+[2025-05-09 12:40:34] Received: {"sensorId": "sensor-002", "temperature": 27.3, "timestamp": "2025-05-09T12:40:34.799343", "unit": "Celsius"}
+[2025-05-09 12:40:35] Produced 5-minute averages: {"timestamp": "2025-05-09T12:40:35.813190", "window_size_minutes": 5, "averages": {"sensor-002": 23.8, "sensor-004": 24.8, "sensor-005": 21.7, "sensor-003": 23.8, "sensor-001": 21.0}}
+[2025-05-09 12:40:36] Received: {"sensorId": "sensor-003", "temperature": 20.3, "timestamp": "2025-05-09T12:40:35.809959", "unit": "Celsius"}
+[2025-05-09 12:40:37] Message delivered to temperature-averages [0] at offset 0
+[2025-05-09 12:40:37] Received: {"sensorId": "sensor-003", "temperature": 19.4, "timestamp": "2025-05-09T12:40:36.825230", "unit": "Celsius"}
+[2025-05-09 12:40:37] Received: {"sensorId": "sensor-003", "temperature": 24.7, "timestamp": "2025-05-09T12:40:37.833858", "unit": "Celsius"}
+[2025-05-09 12:40:38] Received: {"sensorId": "sensor-003", "temperature": 33.3, "timestamp": "2025-05-09T12:40:38.841159", "unit": "Celsius"}
+[2025-05-09 12:40:38] ALERT! Abnormal temperature: {"timestamp": "2025-05-09T12:40:38.851587", "sensorId": "sensor-003", "temperature": 33.3, "threshold": 30.0, "message": "Abnormal temperature detected: 33.3\u00b0C exceeds threshold of 30.0\u00b0C"}
+[2025-05-09 12:40:38] Message delivered to temperature-alerts [0] at offset 2
+[2025-05-09 12:40:39] Received: {"sensorId": "sensor-004", "temperature": 18.5, "timestamp": "2025-05-09T12:40:39.856182", "unit": "Celsius"}
+[2025-05-09 12:40:40] Received: {"sensorId": "sensor-005", "temperature": 20.4, "timestamp": "2025-05-09T12:40:40.871009", "unit": "Celsius"}
+[2025-05-09 12:40:41] Received: {"sensorId": "sensor-001", "temperature": 21.6, "timestamp": "2025-05-09T12:40:41.881257", "unit": "Celsius"}
+[2025-05-09 12:40:42] Received: {"sensorId": "sensor-002", "temperature": 39.1, "timestamp": "2025-05-09T12:40:42.896306", "unit": "Celsius"}
+[2025-05-09 12:40:42] ALERT! Abnormal temperature: {"timestamp": "2025-05-09T12:40:42.906665", "sensorId": "sensor-002", "temperature": 39.1, "threshold": 30.0, "message": "Abnormal temperature detected: 39.1\u00b0C exceeds threshold of 30.0\u00b0C"}
+[2025-05-09 12:40:42] Message delivered to temperature-alerts [0] at offset 3
+[2025-05-09 12:40:43] Received: {"sensorId": "sensor-002", "temperature": 25.6, "timestamp": "2025-05-09T12:40:43.911866", "unit": "Celsius"}
+[2025-05-09 12:40:44] Received: {"sensorId": "sensor-002", "temperature": 33.8, "timestamp": "2025-05-09T12:40:44.921871", "unit": "Celsius"}
+[2025-05-09 12:40:44] ALERT! Abnormal temperature: {"timestamp": "2025-05-09T12:40:44.931608", "sensorId": "sensor-002", "temperature": 33.8, "threshold": 30.0, "message": "Abnormal temperature detected: 33.8\u00b0C exceeds threshold of 30.0\u00b0C"}
+[2025-05-09 12:40:44] Message delivered to temperature-alerts [0] at offset 4
+[2025-05-09 12:40:45] Received: {"sensorId": "sensor-005", "temperature": 19.9, "timestamp": "2025-05-09T12:40:45.932909", "unit": "Celsius"}
+[2025-05-09 12:40:46] Received: {"sensorId": "sensor-001", "temperature": 21.3, "timestamp": "2025-05-09T12:40:46.938942", "unit": "Celsius"}
+[2025-05-09 12:40:47] Received: {"sensorId": "sensor-004", "temperature": 21.8, "timestamp": "2025-05-09T12:40:47.947613", "unit": "Celsius"}
+[2025-05-09 12:40:48] Received: {"sensorId": "sensor-003", "temperature": 26.2, "timestamp": "2025-05-09T12:40:48.959776", "unit": "Celsius"}
+[2025-05-09 12:40:49] Received: {"sensorId": "sensor-004", "temperature": 22.5, "timestamp": "2025-05-09T12:40:49.973769", "unit": "Celsius"}
+[2025-05-09 12:40:51] Received: {"sensorId": "sensor-002", "temperature": 39.2, "timestamp": "2025-05-09T12:40:50.987913", "unit": "Celsius"}
+[2025-05-09 12:40:51] ALERT! Abnormal temperature: {"timestamp": "2025-05-09T12:40:51.001739", "sensorId": "sensor-002", "temperature": 39.2, "threshold": 30.0, "message": "Abnormal temperature detected: 39.2\u00b0C exceeds threshold of 30.0\u00b0C"}
+[2025-05-09 12:40:51] Message delivered to temperature-alerts [0] at offset 5
+[2025-05-09 12:40:52] Received: {"sensorId": "sensor-001", "temperature": 19.4, "timestamp": "2025-05-09T12:40:52.002690", "unit": "Celsius"}
+[2025-05-09 12:40:53] Received: {"sensorId": "sensor-001", "temperature": 19.2, "timestamp": "2025-05-09T12:40:53.009426", "unit": "Celsius"}
+[2025-05-09 12:40:54] Received: {"sensorId": "sensor-004", "temperature": 24.2, "timestamp": "2025-05-09T12:40:54.021599", "unit": "Celsius"}
+[2025-05-09 12:40:55] Received: {"sensorId": "sensor-005", "temperature": 27.2, "timestamp": "2025-05-09T12:40:55.031646", "unit": "Celsius"}
+[2025-05-09 12:40:56] Received: {"sensorId": "sensor-005", "temperature": 18.2, "timestamp": "2025-05-09T12:40:56.044943", "unit": "Celsius"}
+[2025-05-09 12:40:57] --- Temperature Processor Stopped ---
+[2025-05-09 12:46:17] --- Temperature Processor Started ---
+[2025-05-09 12:46:17] Hostname: ITs-Mac-mini.local
+[2025-05-09 12:46:17] Trying to connect to Kafka broker at localhost:9094
+[2025-05-09 12:46:17] Creating Kafka consumer and producer...
+[2025-05-09 12:46:17] Successfully created Kafka consumer and producer
+[2025-05-09 12:46:17] Subscribed to temperature-readings topic
+[2025-05-09 12:46:20] Received: {"sensorId": "sensor-005", "temperature": 24.0, "timestamp": "2025-05-09T12:46:12.655009", "unit": "Celsius"}
+[2025-05-09 12:46:20] Received: {"sensorId": "sensor-005", "temperature": 24.8, "timestamp": "2025-05-09T12:46:13.679922", "unit": "Celsius"}
+[2025-05-09 12:46:20] Received: {"sensorId": "sensor-005", "temperature": 27.0, "timestamp": "2025-05-09T12:46:14.688712", "unit": "Celsius"}
+[2025-05-09 12:46:20] Received: {"sensorId": "sensor-005", "temperature": 39.5, "timestamp": "2025-05-09T12:46:15.695974", "unit": "Celsius"}
+[2025-05-09 12:46:20] ALERT! Abnormal temperature: {"timestamp": "2025-05-09T12:46:20.309180", "sensorId": "sensor-005", "temperature": 39.5, "threshold": 30.0, "message": "Abnormal temperature detected: 39.5\u00b0C exceeds threshold of 30.0\u00b0C"}
+[2025-05-09 12:46:21] Message delivered to temperature-alerts [0] at offset 6
+[2025-05-09 12:46:21] Received: {"sensorId": "sensor-003", "temperature": 23.6, "timestamp": "2025-05-09T12:46:16.707337", "unit": "Celsius"}
+[2025-05-09 12:46:21] Received: {"sensorId": "sensor-005", "temperature": 19.7, "timestamp": "2025-05-09T12:46:17.721402", "unit": "Celsius"}
+[2025-05-09 12:46:21] Received: {"sensorId": "sensor-003", "temperature": 25.0, "timestamp": "2025-05-09T12:46:18.731727", "unit": "Celsius"}
+[2025-05-09 12:46:21] Received: {"sensorId": "sensor-005", "temperature": 26.1, "timestamp": "2025-05-09T12:46:19.740507", "unit": "Celsius"}
+[2025-05-09 12:46:21] Received: {"sensorId": "sensor-001", "temperature": 20.5, "timestamp": "2025-05-09T12:46:20.749391", "unit": "Celsius"}
+[2025-05-09 12:46:21] Received: {"sensorId": "sensor-004", "temperature": 27.1, "timestamp": "2025-05-09T12:46:21.763785", "unit": "Celsius"}
+[2025-05-09 12:46:22] Received: {"sensorId": "sensor-002", "temperature": 20.2, "timestamp": "2025-05-09T12:46:22.777202", "unit": "Celsius"}
+[2025-05-09 12:46:23] Received: {"sensorId": "sensor-002", "temperature": 18.4, "timestamp": "2025-05-09T12:46:23.789598", "unit": "Celsius"}
+[2025-05-09 12:46:24] Received: {"sensorId": "sensor-001", "temperature": 25.4, "timestamp": "2025-05-09T12:46:24.797635", "unit": "Celsius"}
+[2025-05-09 12:46:25] Received: {"sensorId": "sensor-004", "temperature": 27.5, "timestamp": "2025-05-09T12:46:25.806476", "unit": "Celsius"}
+[2025-05-09 12:46:26] Received: {"sensorId": "sensor-005", "temperature": 25.0, "timestamp": "2025-05-09T12:46:26.817828", "unit": "Celsius"}
+[2025-05-09 12:46:27] Received: {"sensorId": "sensor-004", "temperature": 21.5, "timestamp": "2025-05-09T12:46:27.832672", "unit": "Celsius"}
+[2025-05-09 12:46:28] Received: {"sensorId": "sensor-004", "temperature": 24.7, "timestamp": "2025-05-09T12:46:28.841056", "unit": "Celsius"}
+[2025-05-09 12:46:29] Received: {"sensorId": "sensor-001", "temperature": 26.8, "timestamp": "2025-05-09T12:46:29.848633", "unit": "Celsius"}
+[2025-05-09 12:46:30] Received: {"sensorId": "sensor-005", "temperature": 23.0, "timestamp": "2025-05-09T12:46:30.854526", "unit": "Celsius"}
+[2025-05-09 12:46:31] Received: {"sensorId": "sensor-002", "temperature": 25.4, "timestamp": "2025-05-09T12:46:31.860608", "unit": "Celsius"}
+[2025-05-09 12:46:32] Received: {"sensorId": "sensor-003", "temperature": 27.2, "timestamp": "2025-05-09T12:46:32.869759", "unit": "Celsius"}
+[2025-05-09 12:46:33] Received: {"sensorId": "sensor-003", "temperature": 34.0, "timestamp": "2025-05-09T12:46:33.876271", "unit": "Celsius"}
+[2025-05-09 12:46:33] ALERT! Abnormal temperature: {"timestamp": "2025-05-09T12:46:33.885209", "sensorId": "sensor-003", "temperature": 34.0, "threshold": 30.0, "message": "Abnormal temperature detected: 34.0\u00b0C exceeds threshold of 30.0\u00b0C"}
+[2025-05-09 12:46:33] Message delivered to temperature-alerts [0] at offset 7
+[2025-05-09 12:46:34] Received: {"sensorId": "sensor-003", "temperature": 19.0, "timestamp": "2025-05-09T12:46:34.885366", "unit": "Celsius"}
+[2025-05-09 12:46:35] Received: {"sensorId": "sensor-001", "temperature": 32.1, "timestamp": "2025-05-09T12:46:35.894919", "unit": "Celsius"}
+[2025-05-09 12:46:35] ALERT! Abnormal temperature: {"timestamp": "2025-05-09T12:46:35.903979", "sensorId": "sensor-001", "temperature": 32.1, "threshold": 30.0, "message": "Abnormal temperature detected: 32.1\u00b0C exceeds threshold of 30.0\u00b0C"}
+[2025-05-09 12:46:35] Message delivered to temperature-alerts [0] at offset 8
+[2025-05-09 12:46:36] Received: {"sensorId": "sensor-005", "temperature": 21.2, "timestamp": "2025-05-09T12:46:36.906360", "unit": "Celsius"}
+[2025-05-09 12:46:37] Received: {"sensorId": "sensor-004", "temperature": 18.3, "timestamp": "2025-05-09T12:46:37.915526", "unit": "Celsius"}
+[2025-05-09 12:46:38] Received: {"sensorId": "sensor-005", "temperature": 21.9, "timestamp": "2025-05-09T12:46:38.920814", "unit": "Celsius"}
+[2025-05-09 12:46:39] Received: {"sensorId": "sensor-001", "temperature": 23.2, "timestamp": "2025-05-09T12:46:39.926157", "unit": "Celsius"}
+[2025-05-09 12:46:40] Received: {"sensorId": "sensor-001", "temperature": 22.4, "timestamp": "2025-05-09T12:46:40.935719", "unit": "Celsius"}
+[2025-05-09 12:46:41] Received: {"sensorId": "sensor-001", "temperature": 26.8, "timestamp": "2025-05-09T12:46:41.944434", "unit": "Celsius"}
+[2025-05-09 12:46:42] Received: {"sensorId": "sensor-005", "temperature": 27.8, "timestamp": "2025-05-09T12:46:42.955962", "unit": "Celsius"}
+[2025-05-09 12:46:43] Received: {"sensorId": "sensor-001", "temperature": 30.5, "timestamp": "2025-05-09T12:46:43.961708", "unit": "Celsius"}
+[2025-05-09 12:46:43] ALERT! Abnormal temperature: {"timestamp": "2025-05-09T12:46:43.971913", "sensorId": "sensor-001", "temperature": 30.5, "threshold": 30.0, "message": "Abnormal temperature detected: 30.5\u00b0C exceeds threshold of 30.0\u00b0C"}
+[2025-05-09 12:46:43] Message delivered to temperature-alerts [0] at offset 9
+[2025-05-09 12:46:44] Received: {"sensorId": "sensor-005", "temperature": 23.4, "timestamp": "2025-05-09T12:46:44.975452", "unit": "Celsius"}
+[2025-05-09 12:46:45] Received: {"sensorId": "sensor-002", "temperature": 27.2, "timestamp": "2025-05-09T12:46:45.987708", "unit": "Celsius"}
+[2025-05-09 12:46:47] Received: {"sensorId": "sensor-005", "temperature": 20.2, "timestamp": "2025-05-09T12:46:46.999396", "unit": "Celsius"}
+[2025-05-09 12:46:48] Received: {"sensorId": "sensor-001", "temperature": 32.5, "timestamp": "2025-05-09T12:46:48.007415", "unit": "Celsius"}
+[2025-05-09 12:46:48] ALERT! Abnormal temperature: {"timestamp": "2025-05-09T12:46:48.012089", "sensorId": "sensor-001", "temperature": 32.5, "threshold": 30.0, "message": "Abnormal temperature detected: 32.5\u00b0C exceeds threshold of 30.0\u00b0C"}
+[2025-05-09 12:46:48] Message delivered to temperature-alerts [0] at offset 10
+[2025-05-09 12:46:49] Received: {"sensorId": "sensor-005", "temperature": 20.7, "timestamp": "2025-05-09T12:46:49.016323", "unit": "Celsius"}
+[2025-05-09 12:46:50] Received: {"sensorId": "sensor-004", "temperature": 27.2, "timestamp": "2025-05-09T12:46:50.025973", "unit": "Celsius"}
+[2025-05-09 12:46:51] Received: {"sensorId": "sensor-005", "temperature": 19.6, "timestamp": "2025-05-09T12:46:51.035251", "unit": "Celsius"}
+[2025-05-09 12:46:52] Received: {"sensorId": "sensor-002", "temperature": 25.8, "timestamp": "2025-05-09T12:46:52.043697", "unit": "Celsius"}
+[2025-05-09 12:46:53] Received: {"sensorId": "sensor-001", "temperature": 18.3, "timestamp": "2025-05-09T12:46:53.049800", "unit": "Celsius"}
+[2025-05-09 12:46:54] Received: {"sensorId": "sensor-002", "temperature": 23.4, "timestamp": "2025-05-09T12:46:54.056877", "unit": "Celsius"}
+[2025-05-09 12:46:55] Received: {"sensorId": "sensor-001", "temperature": 20.1, "timestamp": "2025-05-09T12:46:55.066341", "unit": "Celsius"}
+[2025-05-09 12:46:56] Received: {"sensorId": "sensor-004", "temperature": 26.7, "timestamp": "2025-05-09T12:46:56.079279", "unit": "Celsius"}
+[2025-05-09 12:46:57] Received: {"sensorId": "sensor-002", "temperature": 27.0, "timestamp": "2025-05-09T12:46:57.086923", "unit": "Celsius"}
+[2025-05-09 12:46:58] Received: {"sensorId": "sensor-004", "temperature": 39.0, "timestamp": "2025-05-09T12:46:58.098962", "unit": "Celsius"}
+[2025-05-09 12:46:58] ALERT! Abnormal temperature: {"timestamp": "2025-05-09T12:46:58.105501", "sensorId": "sensor-004", "temperature": 39.0, "threshold": 30.0, "message": "Abnormal temperature detected: 39.0\u00b0C exceeds threshold of 30.0\u00b0C"}
+[2025-05-09 12:46:58] Message delivered to temperature-alerts [0] at offset 11
+[2025-05-09 12:46:59] Received: {"sensorId": "sensor-004", "temperature": 25.6, "timestamp": "2025-05-09T12:46:59.107094", "unit": "Celsius"}
+[2025-05-09 12:47:00] Received: {"sensorId": "sensor-004", "temperature": 21.3, "timestamp": "2025-05-09T12:47:00.118151", "unit": "Celsius"}
+[2025-05-09 12:47:01] Received: {"sensorId": "sensor-005", "temperature": 22.7, "timestamp": "2025-05-09T12:47:01.124871", "unit": "Celsius"}
+[2025-05-09 12:47:02] Received: {"sensorId": "sensor-001", "temperature": 18.3, "timestamp": "2025-05-09T12:47:02.130066", "unit": "Celsius"}
+[2025-05-09 12:47:03] Received: {"sensorId": "sensor-005", "temperature": 23.7, "timestamp": "2025-05-09T12:47:03.138943", "unit": "Celsius"}
+[2025-05-09 12:47:04] Received: {"sensorId": "sensor-003", "temperature": 36.9, "timestamp": "2025-05-09T12:47:04.147307", "unit": "Celsius"}
+[2025-05-09 12:47:04] ALERT! Abnormal temperature: {"timestamp": "2025-05-09T12:47:04.152321", "sensorId": "sensor-003", "temperature": 36.9, "threshold": 30.0, "message": "Abnormal temperature detected: 36.9\u00b0C exceeds threshold of 30.0\u00b0C"}
+[2025-05-09 12:47:04] Message delivered to temperature-alerts [0] at offset 12
+[2025-05-09 12:47:05] Received: {"sensorId": "sensor-001", "temperature": 26.8, "timestamp": "2025-05-09T12:47:05.155708", "unit": "Celsius"}
+[2025-05-09 12:47:06] Received: {"sensorId": "sensor-001", "temperature": 27.6, "timestamp": "2025-05-09T12:47:06.163586", "unit": "Celsius"}
+[2025-05-09 12:47:07] Received: {"sensorId": "sensor-004", "temperature": 25.3, "timestamp": "2025-05-09T12:47:07.171514", "unit": "Celsius"}
+[2025-05-09 12:47:08] Received: {"sensorId": "sensor-003", "temperature": 27.1, "timestamp": "2025-05-09T12:47:08.185152", "unit": "Celsius"}
+[2025-05-09 12:47:09] Received: {"sensorId": "sensor-002", "temperature": 18.9, "timestamp": "2025-05-09T12:47:09.194383", "unit": "Celsius"}
+[2025-05-09 12:47:10] Received: {"sensorId": "sensor-003", "temperature": 21.9, "timestamp": "2025-05-09T12:47:10.200417", "unit": "Celsius"}
+[2025-05-09 12:47:11] Received: {"sensorId": "sensor-002", "temperature": 22.5, "timestamp": "2025-05-09T12:47:11.209363", "unit": "Celsius"}
