@@ -146,3 +146,4 @@
 [2025-05-09 12:47:09] Received: {"sensorId": "sensor-002", "temperature": 18.9, "timestamp": "2025-05-09T12:47:09.194383", "unit": "Celsius"}
 [2025-05-09 12:47:10] Received: {"sensorId": "sensor-003", "temperature": 21.9, "timestamp": "2025-05-09T12:47:10.200417", "unit": "Celsius"}
 [2025-05-09 12:47:11] Received: {"sensorId": "sensor-002", "temperature": 22.5, "timestamp": "2025-05-09T12:47:11.209363", "unit": "Celsius"}
+[2025-05-09 12:54:30] --- Temperature Processor Stopped ---

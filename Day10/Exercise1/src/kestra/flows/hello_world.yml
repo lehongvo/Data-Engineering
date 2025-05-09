@@ -1,0 +1,12 @@
+id: hello-world
+namespace: io.kestra.examples
+revision: 1
+
+description: |
+  A simple Hello World workflow to test Kestra
+
+tasks:
+  - id: hello
+    type: io.kestra.plugin.core.log.Log
+    level: INFO
+    message: Hello from Kestra!

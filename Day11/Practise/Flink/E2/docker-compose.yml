@@ -1,0 +1,42 @@
+version: '3'
+services:
+  jobmanager:
+    image: flink:1.16.1
+    container_name: flink-jobmanager-e2
+    ports:
+      - "8082:8081"
+    command: jobmanager
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager
+        rest.bind-address: 0.0.0.0
+    volumes:
+      - ./data:/data
+      - ./code:/code
+
+  taskmanager:
+    image: flink:1.16.1
+    container_name: flink-taskmanager-e2
+    depends_on:
+      - jobmanager
+    command: taskmanager
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        taskmanager.numberOfTaskSlots: 2
+        jobmanager.rpc.address: jobmanager
+    volumes:
+      - ./data:/data
+      - ./code:/code
+      
+  python:
+    image: python:3.9
+    container_name: python-e2
+    depends_on:
+      - jobmanager
+    volumes:
+      - ./data:/data
+      - ./code:/code
+    working_dir: /code
+    command: bash -c "pip install -r /code/requirements.txt && python generate_logs.py --count 5000 --output /data/web_logs.json && tail -f /dev/null" 

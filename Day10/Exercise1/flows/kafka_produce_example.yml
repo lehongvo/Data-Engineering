@@ -1,0 +1,29 @@
+id: kafka_produce_example
+namespace: io.kestra.examples
+revision: 1
+
+description: |
+  Example flow to produce data to Kafka topic
+
+tasks:
+  - id: produce_to_kafka
+    type: io.kestra.plugin.kafka.Produce
+    from: io.kestra.plugin.kafka.Produce
+    topic: stock-market-data
+    properties:
+      bootstrap.servers: kafka:9092
+    keySerializer: STRING
+    valueSerializer: JSON
+    records:
+      - key: "stock1"
+        value: "{\"symbol\":\"AAPL\",\"price\":150.25,\"volume\":1000,\"timestamp\":\"2023-05-01T10:00:00Z\"}"
+      - key: "stock2"
+        value: "{\"symbol\":\"MSFT\",\"price\":290.75,\"volume\":500,\"timestamp\":\"2023-05-01T10:01:00Z\"}"
+      - key: "stock3"
+        value: "{\"symbol\":\"GOOG\",\"price\":2400.50,\"volume\":200,\"timestamp\":\"2023-05-01T10:02:00Z\"}"
+  
+  - id: log_message
+    type: io.kestra.plugin.core.log.Log
+    level: INFO
+    message: |
+      Successfully produced messages to Kafka 

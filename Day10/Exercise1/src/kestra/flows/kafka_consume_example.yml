@@ -1,0 +1,30 @@
+id: kafka_consume_example
+namespace: io.kestra.examples
+revision: 1
+
+description: |
+  Example flow to consume data from Kafka topic
+
+tasks:
+  - id: consume_from_kafka
+    type: io.kestra.plugin.kafka.Consume
+    topic: stock-market-data
+    properties:
+      bootstrap.servers: kafka:9092
+      auto.offset.reset: earliest
+    pollDuration: PT20S
+    maxRecords: 50
+    keyDeserializer: STRING
+    valueDeserializer: JSON
+  
+  - id: log_message_count
+    type: io.kestra.plugin.core.log.Log
+    level: INFO
+    message: |
+      Successfully consumed {{ outputs.consume_from_kafka.messagesCount }} messages from Kafka
+      
+  - id: write_json
+    type: io.kestra.plugin.core.log.Log
+    level: INFO
+    message: |
+      Consumed data URI: {{ outputs.consume_from_kafka.uri }} 
