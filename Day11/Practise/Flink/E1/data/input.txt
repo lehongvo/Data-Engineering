@@ -1,0 +1,16 @@
+Apache Flink is a framework and distributed processing engine for stateful computations over unbounded and bounded data streams.
+Flink has been designed to run in all common cluster environments, perform computations at in-memory speed and at any scale.
+Apache Flink is an open source platform for distributed stream and batch data processing.
+Flink's core is a streaming dataflow engine that provides data distribution, communication, and fault tolerance for distributed computations over data streams.
+Flink includes several APIs for creating applications that use the Flink engine:
+DataStream API for unbounded and bounded streams
+DataSet API for bounded data sets
+Table API with SQL-like expression language
+Primitives for Graph Processing
+
+These APIs offer different levels of abstraction and tradeoffs between ease of use and expressiveness.
+Apache Flink excels at processing unbounded and bounded data sets.
+Unbounded streams have a start but no defined end.
+Bounded streams have defined start and end.
+Any kind of data is a stream: events, logs, objects, files, database changes.
+Apache Flink can be deployed on various resource providers like YARN, Apache Mesos, and Kubernetes. 
