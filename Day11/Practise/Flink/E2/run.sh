@@ -6,6 +6,16 @@ setup_environment() {
     
     # Create directories if they don't exist
     mkdir -p data
+    mkdir -p code
+    
+    # Check for required files
+    if [ ! -f "code/requirements.txt" ] || [ ! -f "code/web_log_analysis.py" ] || [ ! -f "code/generate_logs.py" ]; then
+        echo "Required files missing in code directory. Checking..."
+        if [ ! -d "code" ]; then
+            echo "Code directory doesn't exist. Creating it..."
+            mkdir -p code
+        fi
+    fi
     
     # Stop existing containers and start new ones
     echo "Starting Flink containers..."
@@ -16,19 +26,45 @@ setup_environment() {
     echo "Waiting for Flink to be ready..."
     
     # Check if services are ready
-    for i in {1..20}; do
+    for i in {1..30}; do
         if curl -s http://localhost:8082/config > /dev/null 2>&1; then
             echo "Flink JobManager is ready!"
             break
         fi
         echo -n "."
         sleep 2
-        if [ $i -eq 20 ]; then
+        if [ $i -eq 30 ]; then
             echo "Timeout waiting for Flink to start."
             echo "Checking logs for errors:"
             docker-compose logs
         fi
     done
+    
+    # Check if all containers are running
+    echo "Verifying all containers are running..."
+    
+    # Check Python container
+    if ! docker ps | grep -q python-e2; then
+        echo "Python container is not running. Starting it..."
+        docker-compose up -d python
+        sleep 5
+    fi
+    
+    # Create a marker file to track if we've already installed Python
+    MARKER_FILE="data/.python_installed"
+    
+    # Check if Python is already installed by looking for our marker file
+    if [ ! -f "$MARKER_FILE" ]; then
+        # Install Python and dependencies in the Flink JobManager container
+        echo "Installing Python in Flink JobManager container..."
+        docker exec flink-jobmanager-e2 bash -c "apt-get update && apt-get install -y python3 python3-pip && ln -sf /usr/bin/python3 /usr/bin/python && pip3 install apache-flink==1.16.1 pandas python-dateutil py4j numpy"
+        
+        # Create marker file to avoid reinstalling
+        touch "$MARKER_FILE"
+        echo "Python installation complete."
+    else
+        echo "Python is already installed in Flink JobManager container."
+    fi
     
     # Check Flink status
     echo "Checking Flink containers status..."
@@ -45,7 +81,13 @@ setup_environment() {
 generate_logs() {
     echo "Generating web access logs..."
     
-    docker exec -it python-e2 python generate_logs.py --count 5000 --output /data/web_logs.json
+    # Check if containers are running
+    if ! docker ps | grep -q python-e2; then
+        echo "Python container is not running. Setting up environment first..."
+        setup_environment
+    fi
+    
+    docker exec python-e2 python generate_logs.py --count 5000 --output /data/web_logs.json
     
     echo "Logs generated successfully!"
     echo "Press Enter to return to the menu..."
@@ -60,11 +102,16 @@ run_web_log_analysis() {
     
     # Check if containers are running
     if ! docker ps | grep -q flink-jobmanager-e2; then
-        echo "Flink containers are not running. Please set up the environment first (option 3)."
-        echo "Press Enter to return to the menu..."
-        read
-        show_menu
-        return
+        echo "Flink containers are not running. Setting up environment first..."
+        setup_environment
+    else
+        # Ensure Python is installed before running the job
+        echo "Checking Python installation..."
+        MARKER_FILE="data/.python_installed"
+        if [ ! -f "$MARKER_FILE" ]; then
+            echo "Python not detected. Setting up environment first..."
+            setup_environment
+        fi
     fi
     
     # Check if the logs file exists
@@ -83,7 +130,7 @@ run_web_log_analysis() {
     
     # Run the web log analysis job
     echo "Executing Flink Web Log Analysis job..."
-    docker exec -it flink-jobmanager-e2 bash -c "cd /code && /opt/flink/bin/flink run -py web_log_analysis.py"
+    docker exec flink-jobmanager-e2 bash -c "cd /code && /opt/flink/bin/flink run -py /code/web_log_analysis.py --pyFiles /code/web_log_analysis.py"
     
     echo "Job executed. Check results in data/output directory."
     echo "Press Enter to return to the menu..."
