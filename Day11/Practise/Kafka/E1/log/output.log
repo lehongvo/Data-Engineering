@@ -1,0 +1,48 @@
+[2025-05-09 12:16:13] --- Kafka Streams Application Started ---
+[2025-05-09 12:16:13] Subscribed to input-topic
+[2025-05-09 12:16:58] --- Kafka Streams Application Started ---
+[2025-05-09 12:16:58] Subscribed to input-topic
+[2025-05-09 12:17:01] --- Kafka Streams Application Stopped ---
+hello
+he  helo
+[2025-05-09 12:20:23] --- Kafka Streams Application Stopped ---
+[2025-05-09 05:20:25,799] WARN [Consumer clientId=console-consumer, groupId=console-consumer-53848] Connection to node 1 (localhost/127.0.0.1:9094) could not be established. Node may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-05-09 05:20:26,035] WARN [Consumer clientId=console-consumer, groupId=console-consumer-53848] Connection to node 1 (localhost/127.0.0.1:9094) could not be established. Node may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-05-09 12:20:45] --- Kafka Streams Application Started ---
+[2025-05-09 12:20:45] Subscribed to input-topic
+[2025-05-09 05:23:21,238] WARN [Consumer clientId=console-consumer, groupId=console-consumer-72183] Connection to node 1 (localhost/127.0.0.1:9094) could not be established. Node may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-05-09 05:23:21,435] WARN [Consumer clientId=console-consumer, groupId=console-consumer-72183] Connection to node 1 (localhost/127.0.0.1:9094) could not be established. Node may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-05-09 12:23:24] --- Kafka Streams Application Stopped ---
+[2025-05-09 12:23:48] --- Kafka Streams Application Started ---
+[2025-05-09 12:23:48] Subscribed to input-topic
+[2025-05-09 12:24:17] --- Kafka Streams Application Started ---
+[2025-05-09 12:24:17] Subscribed to input-topic
+[2025-05-09 12:27:09] --- Kafka Streams Application Stopped ---
+[2025-05-09 05:27:13,646] WARN [Consumer clientId=console-consumer, groupId=console-consumer-47412] Connection to node 1 (localhost/127.0.0.1:9094) could not be established. Node may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-05-09 05:27:13,879] WARN [Consumer clientId=console-consumer, groupId=console-consumer-47412] Connection to node 1 (localhost/127.0.0.1:9094) could not be established. Node may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-05-09 12:27:55] --- Kafka Streams Application Started ---
+[2025-05-09 12:27:55] Hostname: ITs-Mac-mini.local
+[2025-05-09 12:27:55] Trying to connect to Kafka broker at localhost:9094
+[2025-05-09 12:27:55] Creating Kafka consumer and producer...
+[2025-05-09 12:27:55] Successfully created Kafka consumer and producer
+[2025-05-09 12:27:55] Subscribed to input-topic
+[2025-05-09 12:29:01] --- Kafka Streams Application Stopped ---
+[2025-05-09 05:29:23,160] WARN [Consumer clientId=console-consumer, groupId=console-consumer-79278] Connection to node 1 (kafka/172.18.0.3:9092) could not be established. Node may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-05-09 05:29:23,376] WARN [Consumer clientId=console-consumer, groupId=console-consumer-79278] Connection to node 1 (kafka/172.18.0.3:9092) could not be established. Node may not be available. (org.apache.kafka.clients.NetworkClient)
+[2025-05-09 12:30:20] --- Kafka Streams Application Started ---
+[2025-05-09 12:30:20] Hostname: ITs-Mac-mini.local
+[2025-05-09 12:30:20] Trying to connect to Kafka broker at localhost:9094
+[2025-05-09 12:30:20] Creating Kafka consumer and producer...
+[2025-05-09 12:30:20] Successfully created Kafka consumer and producer
+[2025-05-09 12:30:20] Subscribed to input-topic
+[2025-05-09 12:30:23] Transformed: hello -> HELLO
+[2025-05-09 12:30:24] Message delivered to output-topic [0] at offset 0
+HELLO
+[2025-05-09 12:30:38] Transformed: Hi -> HI
+[2025-05-09 12:30:38] Message delivered to output-topic [0] at offset 1
+HI
+[2025-05-09 12:30:53] Transformed: Are yoy ok  -> ARE YOY OK 
+[2025-05-09 12:30:53] Message delivered to output-topic [0] at offset 2
+ARE YOY OK 
+^C^C^CProcessed a total of 3 messages
+^C^C[2025-05-09 12:31:48] --- Kafka Streams Application Stopped ---
