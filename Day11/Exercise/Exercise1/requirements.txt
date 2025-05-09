@@ -1,0 +1,4 @@
+kafka-python==2.0.2
+apache-flink==1.16.1
+google-cloud-bigquery==3.11.4
+uuid==1.30 
