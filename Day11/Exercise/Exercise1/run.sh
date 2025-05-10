@@ -99,9 +99,21 @@ check_account_key() {
     if [ ! -f "$CONFIG_DIR/account_key.json" ]; then
         echo -e "${RED}account_key.json file not found in $CONFIG_DIR${NC}"
         echo -e "${YELLOW}Please make sure you create this file before connecting to BigQuery${NC}"
+        echo -e "${YELLOW}You can create a service account key in Google Cloud Console:${NC}"
+        echo -e "${YELLOW}1. Go to IAM & Admin > Service Accounts${NC}"
+        echo -e "${YELLOW}2. Create a service account with BigQuery Admin permissions${NC}"
+        echo -e "${YELLOW}3. Create and download a JSON key${NC}"
+        echo -e "${YELLOW}4. Save it as $CONFIG_DIR/account_key.json${NC}"
         return 1
     else
-        echo -e "${GREEN}✓ Account key exists${NC}"
+        # Validate the key file contains valid JSON
+        if ! jq -e . "$CONFIG_DIR/account_key.json" >/dev/null 2>&1; then
+            echo -e "${RED}account_key.json file exists but is not valid JSON${NC}"
+            echo -e "${YELLOW}Please check the file contents and format${NC}"
+            return 1
+        fi
+        
+        echo -e "${GREEN}✓ Account key exists and is valid JSON${NC}"
         return 0
     fi
 }
@@ -239,6 +251,10 @@ prepare_flink_job() {
     if [ -f "$CONFIG_DIR/account_key.json" ]; then
         docker cp $CONFIG_DIR/account_key.json flink-jobmanager:/opt/flink/config/
         echo -e "${GREEN}✓ Copied account key to Flink container${NC}"
+        
+        # Set permissions to ensure file is readable
+        docker exec flink-jobmanager chmod 644 /opt/flink/config/account_key.json
+        echo -e "${GREEN}✓ Set read permissions for account key in Flink container${NC}"
     else
         echo -e "${YELLOW}Account key not found, will not connect to BigQuery${NC}"
     fi

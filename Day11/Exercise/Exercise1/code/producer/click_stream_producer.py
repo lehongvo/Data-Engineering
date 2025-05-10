@@ -9,7 +9,7 @@ import socket
 import os
 
 # Set up logging
-LOG_DIR = "/data/logs"
+LOG_DIR = "./data/logs"
 os.makedirs(LOG_DIR, exist_ok=True)
 LOG_FILE = os.path.join(LOG_DIR, "kafka_producer.log")
 
@@ -47,31 +47,56 @@ def main():
     logger.info("Initializing Kafka producer")
     logger.info(f"Hostname: {socket.gethostname()}")
     
-    try:
-        # Create Kafka producer
-        # Try first with localhost, then with container name if that fails
-        try:
-            producer = KafkaProducer(
-                bootstrap_servers=['localhost:9094'],
-                value_serializer=lambda v: json.dumps(v).encode('utf-8')
-            )
-            logger.info("Successfully connected to Kafka broker at localhost:9094")
-        except Exception as e:
-            logger.warning(f"Failed to connect to localhost:9094: {e}")
-            logger.info("Trying e1-kafka:9092 instead...")
-            producer = KafkaProducer(
-                bootstrap_servers=['e1-kafka:9092'],
-                value_serializer=lambda v: json.dumps(v).encode('utf-8')
-            )
-            logger.info("Successfully connected to Kafka broker at e1-kafka:9092")
-    except Exception as e:
-        logger.error(f"Failed to connect to Kafka broker: {e}")
-        return
+    # Define producer at a higher scope so it's accessible in the while loop
+    producer = None
+    connection_attempts = 0
+    max_connection_attempts = 10
     
     # Send data every second
     message_count = 0
+    
     while True:
         try:
+            # If producer is None, try to connect
+            if producer is None:
+                connection_attempts += 1
+                
+                try:
+                    # Try localhost first
+                    logger.info("Trying to connect to Kafka broker at localhost:9094")
+                    producer = KafkaProducer(
+                        bootstrap_servers=['localhost:9094'],
+                        value_serializer=lambda v: json.dumps(v).encode('utf-8'),
+                        acks='all',  # Wait for all replicas to acknowledge the message
+                        retries=3,   # Retry sending if fails
+                        request_timeout_ms=10000  # 10 seconds timeout for requests
+                    )
+                    logger.info("Successfully connected to Kafka broker at localhost:9094")
+                    # Reset connection attempts counter
+                    connection_attempts = 0
+                except Exception as e:
+                    logger.warning(f"Failed to connect to localhost:9094: {e}")
+                    logger.info("Trying e1-kafka:9092 instead...")
+                    try:
+                        producer = KafkaProducer(
+                            bootstrap_servers=['e1-kafka:9092'],
+                            value_serializer=lambda v: json.dumps(v).encode('utf-8'),
+                            acks='all',  # Wait for all replicas to acknowledge the message
+                            retries=3,   # Retry sending if fails
+                            request_timeout_ms=10000  # 10 seconds timeout for requests
+                        )
+                        logger.info("Successfully connected to Kafka broker at e1-kafka:9092")
+                        # Reset connection attempts counter
+                        connection_attempts = 0
+                    except Exception as e2:
+                        logger.error(f"Failed to connect to e1-kafka:9092: {e2}")
+                        if connection_attempts >= max_connection_attempts:
+                            logger.error(f"Failed to connect to any Kafka broker after {connection_attempts} attempts")
+                            # Wait longer between retries after many failures
+                            time.sleep(10)
+                        continue
+            
+            # Generate and send data
             data = generate_clickstream_data()
             future = producer.send('clickstream', data)
             # Wait for message to be sent and log metadata
@@ -82,9 +107,19 @@ def main():
                 logger.info(f"Successfully sent {message_count} messages to topic {metadata.topic}, partition {metadata.partition}")
             logger.debug(f"Sent: {data}")
             
+            # Wait 1 second between messages
             time.sleep(1)
+            
         except Exception as e:
             logger.error(f"Error sending message: {e}")
+            # Reset producer on error so connection will be retried
+            if producer is not None:
+                try:
+                    producer.close()  # Close the producer properly
+                except:
+                    pass
+                producer = None
+            # Wait before retrying
             time.sleep(5)
 
 if __name__ == "__main__":
