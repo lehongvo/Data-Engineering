@@ -66,6 +66,29 @@ File: `schema/user.avsc`
 - Kiểm tra consumer có đọc được dữ liệu mới không.
 - Có thể kiểm tra schema và compatibility tại: http://localhost:8081
 
+## Kiểm tra Schema Registry
+Bạn có thể kiểm tra schema đã đăng ký thông qua các endpoint sau:
+
+1. Xem danh sách subjects:
+```bash
+curl -s http://localhost:8081/subjects
+```
+
+2. Xem các phiên bản của schema:
+```bash
+curl -s http://localhost:8081/subjects/users-avro-value/versions
+```
+
+3. Xem phiên bản mới nhất của schema:
+```bash
+curl -s http://localhost:8081/subjects/users-avro-value/versions/latest
+```
+
+Hoặc truy cập trực tiếp qua trình duyệt:
+- http://localhost:8081/subjects
+- http://localhost:8081/subjects/users-avro-value/versions
+- http://localhost:8081/subjects/users-avro-value/versions/latest
+
 ## Tham khảo
 - [Confluent Schema Registry Docs](https://docs.confluent.io/platform/current/schema-registry/index.html)
 - [confluent-kafka-python](https://github.com/confluentinc/confluent-kafka-python)
