@@ -1,0 +1,290 @@
+2025-05-11 14:23:11,230 - BigQueryUploader - INFO [flink_processor.py:44] - BigQuery logging to file: /data/logs/bigquery.log
+2025-05-11 14:24:15,995 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:24:15,998 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:24:15,998 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:24:16,004 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:24:16,004 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:24:16,004 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:24:16,005 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:24:16,005 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:24:16,006 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:25:16,063 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:25:16,066 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:25:16,067 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:25:16,087 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:25:16,088 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:25:16,088 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:25:16,089 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:25:16,089 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:25:16,090 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:26:55,786 - BigQueryUploader - INFO [flink_processor.py:44] - BigQuery logging to file: /data/logs/bigquery.log
+2025-05-11 14:27:16,260 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:27:16,263 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:27:16,264 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:27:16,272 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:27:16,272 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:27:16,273 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:27:16,273 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:27:16,274 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:27:16,275 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:28:00,004 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:28:00,006 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:28:00,007 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:28:00,016 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:28:00,016 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:28:00,017 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:28:00,020 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:28:00,020 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:28:00,021 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:28:16,336 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:28:16,340 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:28:16,344 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:28:16,366 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:28:16,366 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:28:16,367 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:28:16,368 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:28:16,368 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:28:16,370 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:29:00,074 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:29:00,077 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:29:00,078 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:29:00,094 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:29:00,094 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:29:00,095 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:29:00,096 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:29:00,096 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:29:00,097 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:29:16,442 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:29:16,447 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:29:16,448 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:29:16,466 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:29:16,466 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:29:16,466 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:29:16,467 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:29:16,468 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:29:16,469 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:30:00,159 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:30:00,162 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:30:00,163 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:30:00,174 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:30:00,175 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:30:00,176 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:30:00,177 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:30:00,177 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:30:00,179 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:30:16,531 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:30:16,534 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:30:16,535 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:30:16,546 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:30:16,547 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:30:16,547 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:30:16,548 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:30:16,549 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:30:16,550 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:31:00,244 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:31:00,248 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:31:00,249 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:31:00,258 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:31:00,259 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:31:00,259 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:31:00,260 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:31:00,260 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:31:00,262 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:31:16,613 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:31:16,614 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:31:16,614 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:31:16,619 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:31:16,619 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:31:16,620 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:31:16,620 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:31:16,620 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:31:16,621 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:32:00,330 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:32:00,333 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:32:00,334 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:32:00,340 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:32:00,340 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:32:00,340 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:32:00,341 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:32:00,341 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:32:00,342 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:32:16,689 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:32:16,691 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:32:16,692 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:32:16,698 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:32:16,698 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:32:16,698 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:32:16,699 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:32:16,699 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:32:16,700 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:33:00,410 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:33:00,413 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:33:00,414 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:33:00,426 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:33:00,427 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:33:00,427 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:33:00,428 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:33:00,429 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:33:00,430 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:33:16,761 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:33:16,764 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:33:16,766 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:33:16,777 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:33:16,777 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:33:16,778 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:33:16,779 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:33:16,780 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:33:16,781 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:34:00,505 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:34:00,508 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:34:00,509 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:34:00,526 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:34:00,526 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:34:00,527 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:34:00,528 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:34:00,529 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:34:00,530 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:34:16,848 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:34:16,852 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:34:16,853 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:34:16,864 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:34:16,865 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:34:16,865 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:34:16,866 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:34:16,867 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:34:16,868 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:35:00,578 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:35:00,580 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:35:00,581 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:35:00,589 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:35:00,589 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:35:00,590 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:35:00,592 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:35:00,593 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:35:00,594 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:35:16,928 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:35:16,930 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:35:16,931 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:35:16,937 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:35:16,937 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:35:16,937 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:35:16,938 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:35:16,939 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:35:16,940 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:36:00,650 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:36:00,660 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:36:00,661 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:36:00,676 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:36:00,676 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:36:00,676 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:36:00,677 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:36:00,677 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:36:00,678 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:36:17,002 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:36:17,004 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:36:17,005 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:36:17,017 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:36:17,018 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:36:17,018 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:36:17,019 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:36:17,019 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:36:17,021 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:37:00,741 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:37:00,745 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:37:00,746 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:37:00,757 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:37:00,758 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:37:00,758 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:37:00,759 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:37:00,760 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:37:00,761 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:37:17,089 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:37:17,092 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:37:17,093 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:37:17,103 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:37:17,103 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:37:17,104 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:37:17,105 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:37:17,105 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:37:17,107 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:38:00,821 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:38:00,826 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:38:00,827 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:38:00,838 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:38:00,838 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:38:00,839 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:38:00,840 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:38:00,841 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:38:00,842 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:38:17,163 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:38:17,164 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:38:17,165 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:38:17,179 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:38:17,179 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:38:17,179 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:38:17,180 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:38:17,180 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:38:17,181 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:39:00,905 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:39:00,910 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:39:00,910 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:39:00,919 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:39:00,920 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:39:00,920 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:39:00,921 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:39:00,922 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:39:00,924 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:39:17,267 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:39:17,270 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:39:17,270 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:39:17,280 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:39:17,280 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:39:17,280 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:39:17,281 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:39:17,282 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:39:17,283 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:40:01,032 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:40:01,036 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:40:01,037 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:40:01,047 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:40:01,047 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:40:01,048 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:40:01,049 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:40:01,050 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:40:01,052 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:40:17,362 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:40:17,365 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:40:17,366 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:40:17,376 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:40:17,377 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:40:17,377 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:40:17,379 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:40:17,379 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:40:17,381 - BigQueryUploader - INFO [flink_processor.py:434] - Found 10 result files to process: [object]
+2025-05-11 14:41:01,116 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:41:01,120 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:41:01,121 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:41:01,129 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:41:01,129 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:41:01,130 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:41:01,131 - BigQueryUploader - INFO [flink_processor.py:407] - Found 8 files in container results directory
+2025-05-11 14:41:01,132 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:41:01,133 - BigQueryUploader - INFO [flink_processor.py:434] - Found 10 result files to process: [object]
+2025-05-11 14:42:01,192 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:42:01,196 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:42:01,197 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:42:01,206 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:42:01,207 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:42:01,207 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:42:01,208 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:42:01,209 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:42:01,210 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
+2025-05-11 14:42:17,484 - BigQueryUploader - INFO [flink_processor.py:326] - Starting BigQuery upload process
+2025-05-11 14:42:17,492 - BigQueryUploader - INFO [flink_processor.py:354] - Credentials file validated as valid JSON
+2025-05-11 14:42:17,493 - BigQueryUploader - INFO [flink_processor.py:362] - Using credentials from: /opt/flink/config/account_key.json
+2025-05-11 14:42:17,508 - BigQueryUploader - INFO [flink_processor.py:373] - BigQuery client created successfully with project: unique-axle-457602-n6
+2025-05-11 14:42:17,508 - BigQueryUploader - INFO [flink_processor.py:395] - Target BigQuery table: unique-axle-457602-n6.clickstream_analytics.user_page_stats
+2025-05-11 14:42:17,508 - BigQueryUploader - INFO [flink_processor.py:403] - Checking container results directory: /data/results
+2025-05-11 14:42:17,509 - BigQueryUploader - INFO [flink_processor.py:407] - Found 0 files in container results directory
+2025-05-11 14:42:17,509 - BigQueryUploader - INFO [flink_processor.py:424] - Checking data directory: /data
+2025-05-11 14:42:17,511 - BigQueryUploader - INFO [flink_processor.py:434] - Found 0 result files to process: []
