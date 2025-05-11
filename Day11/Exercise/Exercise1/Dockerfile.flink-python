@@ -1,4 +1,4 @@
-FROM flink:1.16.1
+FROM flink:1.17.2
 
 # install python3 and pip3
 RUN apt-get update -y && \
@@ -17,7 +17,8 @@ RUN ln -s /usr/bin/python3 /usr/bin/python
 COPY jars/* /opt/flink/lib/
 
 # Install other Python requirements
-RUN pip3 install kafka-python==2.0.2 google-cloud-bigquery==2.34.4
+RUN pip3 install --upgrade pip && \
+    pip3 install kafka-python==2.0.2 google-cloud-bigquery==2.34.4
 
 # Create log and results directories
 RUN mkdir -p /data/logs && chmod 777 /data/logs && \

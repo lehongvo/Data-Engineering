@@ -167,11 +167,10 @@ def create_kafka_source_table(t_env):
             page STRING,
             action STRING,
             device STRING,
-            timestamp STRING,
+            event_ts TIMESTAMP(3),
             session_duration INT,
             referrer STRING,
-            event_time AS TO_TIMESTAMP(timestamp),
-            WATERMARK FOR event_time AS event_time - INTERVAL '5' SECOND
+            WATERMARK FOR event_ts AS event_ts - INTERVAL '5' SECOND
         ) WITH (
             'connector' = 'kafka',
             'topic' = 'clickstream',
@@ -278,14 +277,14 @@ def process_clickstream_data(t_env):
             user_id,
             page,
             COUNT(*) as view_count,
-            AVG(session_duration) as avg_session_duration,
-            MAX(timestamp) as last_activity,
+            CAST(AVG(session_duration) AS DOUBLE) as avg_session_duration,
+            CAST(MAX(event_ts) AS STRING) as last_activity,
             window_start,
             window_end
         FROM TABLE(
             TUMBLE(
                 TABLE clickstream_source,
-                DESCRIPTOR(event_time),
+                DESCRIPTOR(event_ts),
                 INTERVAL '5' MINUTES
             )
         )
@@ -300,9 +299,8 @@ def process_clickstream_data(t_env):
         while retry_count < max_retries:
             try:
                 job = t_env.execute_sql(query)
-                job_id = job.get_job_id()
-                logger.info(f"Started clickstream processing job with ID: {job_id}")
-                return job, job_id
+                logger.info(f"Started clickstream processing job. TableResult: {job}")
+                return job, None
             except Exception as e:
                 retry_count += 1
                 last_error = e
@@ -545,240 +543,6 @@ def monitor_job_metrics(job_id):
         logger.error(f"Error monitoring job metrics: {e}")
         logger.error(traceback.format_exc())
 
-# Add FallbackKafkaProcessor class
-class FallbackKafkaProcessor:
-    """Fallback processor that reads from Kafka without using PyFlink"""
-    def __init__(self, results_dir):
-        self.results_dir = results_dir
-        self.running = True
-        self.user_page_stats = defaultdict(lambda: {
-            'view_count': 0,
-            'session_durations': [],
-            'last_activity': None
-        })
-        self.window_size = 60  # 1 minute window for faster testing
-        self.last_window_end = int(time.time()) - (int(time.time()) % self.window_size)
-        
-        # Ensure results directory exists
-        os.makedirs(self.results_dir, exist_ok=True)
-        
-        # Configure Kafka consumer
-        self.consumer = None
-        self.init_consumer()
-        
-        logger.info(f"Fallback Kafka processor initialized with window size: {self.window_size} seconds")
-        
-    def init_consumer(self):
-        """Initialize Kafka consumer with retry mechanism"""
-        max_retries = 5
-        retry_count = 0
-        last_error = None
-        
-        while retry_count < max_retries:
-            try:
-                # Try first with container hostname, then with localhost if that fails
-                try:
-                    self.consumer = KafkaConsumer(
-                        'clickstream',
-                        bootstrap_servers=['e1-kafka:9092'],
-                        auto_offset_reset='latest',
-                        enable_auto_commit=True,
-                        group_id='flink-fallback-consumer',
-                        value_deserializer=lambda m: json.loads(m.decode('utf-8'))
-                    )
-                    logger.info("Successfully connected to Kafka at e1-kafka:9092")
-                except Exception as e:
-                    logger.warning(f"Failed to connect to e1-kafka:9092: {e}")
-                    logger.info("Trying localhost:9094 instead...")
-                    self.consumer = KafkaConsumer(
-                        'clickstream',
-                        bootstrap_servers=['localhost:9094'],
-                        auto_offset_reset='latest',
-                        enable_auto_commit=True,
-                        group_id='flink-fallback-consumer',
-                        value_deserializer=lambda m: json.loads(m.decode('utf-8'))
-                    )
-                    logger.info("Successfully connected to Kafka at localhost:9094")
-                    
-                return True
-            except Exception as e:
-                retry_count += 1
-                last_error = e
-                logger.warning(f"Failed to connect to Kafka (attempt {retry_count}/{max_retries}): {e}")
-                if retry_count < max_retries:
-                    time.sleep(5)  # Wait before retry
-
-    def process_messages(self):
-        """Process messages from Kafka"""
-        logger.info("Starting to process messages from Kafka")
-        
-        try:
-            while self.running:
-                # Current time
-                current_time = int(time.time())
-                
-                # Check if it's time to output a window
-                if current_time - self.last_window_end >= self.window_size:
-                    logger.info("Window complete, writing results")
-                    self.write_results(self.last_window_end, current_time)
-                    self.last_window_end = current_time
-                
-                # Poll for messages with timeout
-                message_pack = self.consumer.poll(timeout_ms=1000)
-                
-                if not message_pack:
-                    continue
-                    
-                # Process each partition's messages
-                for _, messages in message_pack.items():
-                    for message in messages:
-                        try:
-                            if not isinstance(message.value, dict):
-                                logger.warning(f"Skipping non-dict message: {message.value}")
-                                continue
-                                
-                            # Extract fields
-                            user_id = message.value.get('user_id')
-                            page = message.value.get('page')
-                            timestamp = message.value.get('timestamp')
-                            session_duration = message.value.get('session_duration', 0)
-                            
-                            if not user_id or not page:
-                                logger.warning(f"Missing required fields in message: {message.value}")
-                                continue
-                            
-                            # Update stats for this user and page
-                            user_page_key = f"{user_id}_{page}"
-                            self.user_page_stats[user_page_key]['view_count'] += 1
-                            self.user_page_stats[user_page_key]['session_durations'].append(session_duration)
-                            self.user_page_stats[user_page_key]['last_activity'] = timestamp
-                            
-                            logger.debug(f"Processed message for {user_id} on {page}")
-                        except Exception as e:
-                            logger.error(f"Error processing message: {e}")
-                
-        except Exception as e:
-            logger.error(f"Error in Kafka message processing loop: {e}")
-            logger.error(traceback.format_exc())
-        finally:
-            if self.consumer:
-                self.consumer.close()
-                logger.info("Kafka consumer closed")
-    
-    def write_results(self, window_start, window_end):
-        """Write aggregated results to a file"""
-        try:
-            # Format timestamps for debugging only - not included in output
-            window_start_str = datetime.fromtimestamp(window_start).strftime('%Y-%m-%d %H:%M:%S')
-            window_end_str = datetime.fromtimestamp(window_end).strftime('%Y-%m-%d %H:%M:%S')
-            logger.info(f"Processing window from {window_start_str} to {window_end_str}")
-            
-            # Prepare results
-            results = []
-            for user_page_key, stats in self.user_page_stats.items():
-                user_id, page = user_page_key.split('_', 1)
-                view_count = stats['view_count']
-                session_durations = stats['session_durations']
-                avg_duration = sum(session_durations) / len(session_durations) if session_durations else 0
-                last_activity = stats['last_activity']
-                
-                # Create result object matching BigQuery schema (no window fields)
-                result = {
-                    'user_id': user_id,
-                    'page': page,
-                    'view_count': view_count,
-                    'avg_session_duration': avg_duration,
-                    'last_activity': last_activity
-                }
-                results.append(result)
-            
-            # Reset stats for next window
-            self.user_page_stats.clear()
-            
-            # Skip writing if no results
-            if not results:
-                logger.info("No results to write for this window")
-                return
-                
-            # Write to file
-            random_id = uuid.uuid4().hex[:8]
-            timestamp = int(time.time())
-            filename = f"fallback_results_{timestamp}_{random_id}.json"
-            file_path = os.path.join(self.results_dir, filename)
-            
-            with open(file_path, 'w') as f:
-                json.dump(results, f)
-                
-            logger.info(f"Wrote {len(results)} aggregated records to {file_path}")
-            
-        except Exception as e:
-            logger.error(f"Error writing results: {e}")
-            logger.error(traceback.format_exc())
-    
-    def start(self):
-        """Start processing in a background thread"""
-        self.thread = threading.Thread(target=self.process_messages)
-        self.thread.daemon = True
-        self.thread.start()
-        logger.info("Fallback processor started in background thread")
-        
-        # Start BigQuery upload thread
-        self.upload_thread = threading.Thread(target=self.upload_results_periodically)
-        self.upload_thread.daemon = True
-        self.upload_thread.start()
-        logger.info("BigQuery upload thread started")
-        
-        return self.thread
-    
-    def upload_results_periodically(self):
-        """Periodically upload results to BigQuery"""
-        logger.info("Starting periodic BigQuery upload process")
-        try:
-            upload_interval = 30  # seconds (reduced from 60 to avoid race conditions)
-            last_upload_time = time.time()
-            
-            while self.running:
-                # Check current time
-                current_time = time.time()
-                
-                # Upload to BigQuery at regular intervals
-                if current_time - last_upload_time >= upload_interval:
-                    logger.info("Uploading results to BigQuery")
-                    try:
-                        if upload_results_to_bigquery():
-                            last_upload_time = current_time
-                            logger.info("BigQuery upload completed successfully")
-                        else:
-                            logger.warning("Failed to upload results, will retry in next interval")
-                    except Exception as e:
-                        logger.error(f"Error in BigQuery upload: {e}")
-                        logger.error(traceback.format_exc())
-                
-                # Sleep to avoid busy waiting
-                time.sleep(5)
-                
-        except Exception as e:
-            logger.error(f"Error in upload thread: {e}")
-            logger.error(traceback.format_exc())
-            
-            # Try to restart thread after error
-            time.sleep(30)
-            if self.running:
-                logger.info("Attempting to restart BigQuery upload thread after error")
-                self.upload_thread = threading.Thread(target=self.upload_results_periodically)
-                self.upload_thread.daemon = True
-                self.upload_thread.start()
-        
-    def stop(self):
-        """Stop the processor"""
-        logger.info("Stopping fallback processor")
-        self.running = False
-        if self.thread:
-            self.thread.join(timeout=10)
-        if self.consumer:
-            self.consumer.close()
-        logger.info("Fallback processor stopped")
-
 def main():
     """Main entry point for the Flink processor"""
     try:
@@ -790,22 +554,10 @@ def main():
         
         # Check if PyFlink is available
         if not PYFLINK_AVAILABLE:
-            logger.warning("PyFlink is not available. Using fallback Kafka processor.")
-            # Use fallback processor
-            fallback = FallbackKafkaProcessor(results_dir)
-            fallback.start()
-            
-            try:
-                # Keep the main thread alive
-                while True:
-                    time.sleep(60)
-                    logger.info("Fallback processor is running...")
-            except KeyboardInterrupt:
-                logger.info("Process interrupted by user")
-                fallback.stop()
-                # One final upload
-                upload_results_to_bigquery()
-            return
+            logger.error("PyFlink is not available. Application requires PyFlink to run.")
+            logger.error("Please ensure PyFlink is properly installed.")
+            # Exit with error code
+            return 1
             
         # PyFlink is available, use it
         # Create and configure Table Environment
@@ -814,17 +566,17 @@ def main():
         # Create tables
         if not create_kafka_source_table(t_env):
             logger.error("Failed to create Kafka source table")
-            return
+            return 1
         
         if not create_file_sink_table(t_env, results_dir):
             logger.error("Failed to create file sink table")
-            return
+            return 1
         
         # Process data
         job, job_id = process_clickstream_data(t_env)
         if not job:
             logger.error("Failed to start processing job")
-            return
+            return 1
         
         # Monitor the job and periodically upload results to BigQuery
         logger.info("Starting job monitoring and BigQuery upload loop")
@@ -834,35 +586,31 @@ def main():
             last_upload_time = time.time()
             
             while True:
-                # Check current time
                 current_time = time.time()
-                
-                # Upload to BigQuery at regular intervals
                 if current_time - last_upload_time >= upload_interval:
                     logger.info("Uploading results to BigQuery")
                     if upload_results_to_bigquery():
                         last_upload_time = current_time
                     else:
                         logger.warning("Failed to upload results, will retry in next interval")
-                
-                # Monitor job metrics
-                monitor_job_metrics(job_id)
-                
                 # Sleep to avoid busy waiting
                 time.sleep(5)
                 
         except KeyboardInterrupt:
             logger.info("Process interrupted by user")
-            # One final upload
             upload_results_to_bigquery()
+            return 0
         
     except Exception as e:
         logger.error(f"Error in main: {e}")
         logger.error(traceback.format_exc())
+        return 1
 
 if __name__ == "__main__":
     try:
-        main()
+        exit_code = main()
+        sys.exit(exit_code if exit_code is not None else 1)
     except Exception as e:
         logger.error(f"Error running job: {e}")
-        logger.error(traceback.format_exc()) 
+        logger.error(traceback.format_exc())
+        sys.exit(1) 

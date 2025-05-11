@@ -82,7 +82,7 @@ def process_from_kafka_to_bigquery(kafka_data, bq_writer):
             "page": data.get("page"),
             "view_count": 1,  # In reality would be more complex calculation
             "avg_session_duration": data.get("session_duration", 0),
-            "last_activity": data.get("timestamp")
+            "last_activity": data.get("event_ts")
         }
         
         # Write to BigQuery

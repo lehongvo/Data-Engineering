@@ -37,7 +37,7 @@ def generate_clickstream_data():
         'page': random.choice(pages),
         'action': random.choice(actions),
         'device': random.choice(devices),
-        'timestamp': datetime.datetime.now().isoformat(),
+        'event_ts': datetime.datetime.now().isoformat(timespec='milliseconds'),
         'session_duration': random.randint(1, 300),  # seconds
         'referrer': random.choice(['google', 'facebook', 'twitter', 'direct', None])
     }

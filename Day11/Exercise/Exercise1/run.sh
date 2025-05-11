@@ -265,7 +265,7 @@ prepare_flink_job() {
 # Start Flink job
 start_flink_job() {
     echo -e "${BLUE}===== Starting Flink job =====${NC}"
-    docker exec -d flink-jobmanager /bin/bash -c 'cd /opt/flink && python3 flink_processor.py'
+    docker exec -d flink-jobmanager /opt/flink/bin/flink run -py /opt/flink/flink_processor.py
     echo -e "${GREEN}✓ Started Flink job${NC}"
 }
 
