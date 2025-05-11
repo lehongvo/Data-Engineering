@@ -3,7 +3,7 @@ schema-registry-1  | uid=1000(appuser) gid=1000(appuser) groups=1000(appuser)
 schema-registry-1  | ===> Configuring ...
 schema-registry-1  | ===> Running preflight checks ... 
 schema-registry-1  | ===> Check if Kafka is healthy ...
-schema-registry-1  | [2025-05-11 15:14:29,421] INFO AdminClientConfig values: 
+schema-registry-1  | [2025-05-11 15:40:33,347] INFO AdminClientConfig values: 
 schema-registry-1  | 	auto.include.jmx.reporter = true
 schema-registry-1  | 	bootstrap.servers = [PLAINTEXT://kafka:9092]
 schema-registry-1  | 	client.dns.lookup = use_all_dns_ips
@@ -74,13 +74,13 @@ schema-registry-1  | 	ssl.truststore.location = null
 schema-registry-1  | 	ssl.truststore.password = null
 schema-registry-1  | 	ssl.truststore.type = JKS
 schema-registry-1  |  (org.apache.kafka.clients.admin.AdminClientConfig)
-schema-registry-1  | [2025-05-11 15:14:29,525] INFO Kafka version: 7.4.0-ccs (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:29,525] INFO Kafka commitId: 30969fa33c185e88 (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:29,525] INFO Kafka startTimeMs: 1746976469523 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:33,458] INFO Kafka version: 7.4.0-ccs (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:33,458] INFO Kafka commitId: 30969fa33c185e88 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:33,458] INFO Kafka startTimeMs: 1746978033456 (org.apache.kafka.common.utils.AppInfoParser)
 schema-registry-1  | Using log4j config /etc/schema-registry/log4j.properties
 schema-registry-1  | ===> Launching ... 
 schema-registry-1  | ===> Launching schema-registry ... 
-schema-registry-1  | [2025-05-11 15:14:30,584] INFO SchemaRegistryConfig values: 
+schema-registry-1  | [2025-05-11 15:40:34,491] INFO SchemaRegistryConfig values: 
 schema-registry-1  | 	access.control.allow.headers = 
 schema-registry-1  | 	access.control.allow.methods = 
 schema-registry-1  | 	access.control.allow.origin = 
@@ -216,12 +216,12 @@ schema-registry-1  | 	thread.pool.min = 8
 schema-registry-1  | 	websocket.path.prefix = /ws
 schema-registry-1  | 	websocket.servlet.initializor.classes = []
 schema-registry-1  |  (io.confluent.kafka.schemaregistry.rest.SchemaRegistryConfig)
-schema-registry-1  | [2025-05-11 15:14:30,613] INFO Logging initialized @432ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log)
-schema-registry-1  | [2025-05-11 15:14:30,628] INFO Initial capacity 128, increased by 64, maximum capacity 2147483647. (io.confluent.rest.ApplicationServer)
-schema-registry-1  | [2025-05-11 15:14:30,687] INFO Adding listener with HTTP/2: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.rest.ApplicationServer)
-schema-registry-1  | [2025-05-11 15:14:30,844] INFO Found internal listener: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
-schema-registry-1  | [2025-05-11 15:14:30,845] INFO Setting my identity to version=1,host=schema-registry,port=8081,scheme=http,leaderEligibility=true (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
-schema-registry-1  | [2025-05-11 15:14:31,042] INFO AdminClientConfig values: 
+schema-registry-1  | [2025-05-11 15:40:34,517] INFO Logging initialized @411ms to org.eclipse.jetty.util.log.Slf4jLog (org.eclipse.jetty.util.log)
+schema-registry-1  | [2025-05-11 15:40:34,533] INFO Initial capacity 128, increased by 64, maximum capacity 2147483647. (io.confluent.rest.ApplicationServer)
+schema-registry-1  | [2025-05-11 15:40:34,592] INFO Adding listener with HTTP/2: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.rest.ApplicationServer)
+schema-registry-1  | [2025-05-11 15:40:34,753] INFO Found internal listener: NamedURI{uri=http://0.0.0.0:8081, name='null'} (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry-1  | [2025-05-11 15:40:34,754] INFO Setting my identity to version=1,host=schema-registry,port=8081,scheme=http,leaderEligibility=true (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry-1  | [2025-05-11 15:40:34,828] INFO AdminClientConfig values: 
 schema-registry-1  | 	auto.include.jmx.reporter = true
 schema-registry-1  | 	bootstrap.servers = [PLAINTEXT://kafka:9092]
 schema-registry-1  | 	client.dns.lookup = use_all_dns_ips
@@ -298,19 +298,19 @@ schema-registry-1  | 	ssl.truststore.location = null
 schema-registry-1  | 	ssl.truststore.password = null
 schema-registry-1  | 	ssl.truststore.type = JKS
 schema-registry-1  |  (org.apache.kafka.clients.admin.AdminClientConfig)
-schema-registry-1  | [2025-05-11 15:14:31,089] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:31,089] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:31,089] INFO Kafka startTimeMs: 1746976471088 (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:31,388] INFO App info kafka.admin.client for adminclient-1 unregistered (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:31,391] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics)
-schema-registry-1  | [2025-05-11 15:14:31,392] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics)
-schema-registry-1  | [2025-05-11 15:14:31,392] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics)
-schema-registry-1  | [2025-05-11 15:14:31,397] INFO Registering schema provider for AVRO: io.confluent.kafka.schemaregistry.avro.AvroSchemaProvider (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
-schema-registry-1  | [2025-05-11 15:14:31,397] INFO Registering schema provider for JSON: io.confluent.kafka.schemaregistry.json.JsonSchemaProvider (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
-schema-registry-1  | [2025-05-11 15:14:31,397] INFO Registering schema provider for PROTOBUF: io.confluent.kafka.schemaregistry.protobuf.ProtobufSchemaProvider (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
-schema-registry-1  | [2025-05-11 15:14:31,421] INFO Initializing KafkaStore with broker endpoints: PLAINTEXT://kafka:9092 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
-schema-registry-1  | [2025-05-11 15:14:31,509] WARN No value specified for metadata.encoder.secret, sensitive metadata will not be encoded (io.confluent.kafka.schemaregistry.storage.encoder.MetadataEncoderService)
-schema-registry-1  | [2025-05-11 15:14:31,509] INFO AdminClientConfig values: 
+schema-registry-1  | [2025-05-11 15:40:34,868] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:34,868] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:34,868] INFO Kafka startTimeMs: 1746978034867 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,131] INFO App info kafka.admin.client for adminclient-1 unregistered (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,135] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics)
+schema-registry-1  | [2025-05-11 15:40:35,135] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics)
+schema-registry-1  | [2025-05-11 15:40:35,135] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics)
+schema-registry-1  | [2025-05-11 15:40:35,141] INFO Registering schema provider for AVRO: io.confluent.kafka.schemaregistry.avro.AvroSchemaProvider (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry-1  | [2025-05-11 15:40:35,141] INFO Registering schema provider for JSON: io.confluent.kafka.schemaregistry.json.JsonSchemaProvider (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry-1  | [2025-05-11 15:40:35,141] INFO Registering schema provider for PROTOBUF: io.confluent.kafka.schemaregistry.protobuf.ProtobufSchemaProvider (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry-1  | [2025-05-11 15:40:35,161] INFO Initializing KafkaStore with broker endpoints: PLAINTEXT://kafka:9092 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+schema-registry-1  | [2025-05-11 15:40:35,236] WARN No value specified for metadata.encoder.secret, sensitive metadata will not be encoded (io.confluent.kafka.schemaregistry.storage.encoder.MetadataEncoderService)
+schema-registry-1  | [2025-05-11 15:40:35,237] INFO AdminClientConfig values: 
 schema-registry-1  | 	auto.include.jmx.reporter = true
 schema-registry-1  | 	bootstrap.servers = [PLAINTEXT://kafka:9092]
 schema-registry-1  | 	client.dns.lookup = use_all_dns_ips
@@ -387,16 +387,16 @@ schema-registry-1  | 	ssl.truststore.location = null
 schema-registry-1  | 	ssl.truststore.password = null
 schema-registry-1  | 	ssl.truststore.type = JKS
 schema-registry-1  |  (org.apache.kafka.clients.admin.AdminClientConfig)
-schema-registry-1  | [2025-05-11 15:14:31,513] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:31,513] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:31,513] INFO Kafka startTimeMs: 1746976471513 (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:31,528] INFO Creating schemas topic _schemas (io.confluent.kafka.schemaregistry.storage.KafkaStore)
-schema-registry-1  | [2025-05-11 15:14:31,529] WARN Creating the schema topic _schemas using a replication factor of 1, which is less than the desired one of 3. If this is a production environment, it's crucial to add more brokers and increase the replication factor of the topic. (io.confluent.kafka.schemaregistry.storage.KafkaStore)
-schema-registry-1  | [2025-05-11 15:14:31,615] INFO App info kafka.admin.client for adminclient-2 unregistered (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:31,616] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics)
-schema-registry-1  | [2025-05-11 15:14:31,617] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics)
-schema-registry-1  | [2025-05-11 15:14:31,617] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics)
-schema-registry-1  | [2025-05-11 15:14:31,623] INFO ProducerConfig values: 
+schema-registry-1  | [2025-05-11 15:40:35,239] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,239] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,239] INFO Kafka startTimeMs: 1746978035239 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,247] INFO Creating schemas topic _schemas (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+schema-registry-1  | [2025-05-11 15:40:35,248] WARN Creating the schema topic _schemas using a replication factor of 1, which is less than the desired one of 3. If this is a production environment, it's crucial to add more brokers and increase the replication factor of the topic. (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+schema-registry-1  | [2025-05-11 15:40:35,296] INFO App info kafka.admin.client for adminclient-2 unregistered (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,297] INFO Metrics scheduler closed (org.apache.kafka.common.metrics.Metrics)
+schema-registry-1  | [2025-05-11 15:40:35,297] INFO Closing reporter org.apache.kafka.common.metrics.JmxReporter (org.apache.kafka.common.metrics.Metrics)
+schema-registry-1  | [2025-05-11 15:40:35,297] INFO Metrics reporters closed (org.apache.kafka.common.metrics.Metrics)
+schema-registry-1  | [2025-05-11 15:40:35,305] INFO ProducerConfig values: 
 schema-registry-1  | 	acks = -1
 schema-registry-1  | 	auto.include.jmx.reporter = true
 schema-registry-1  | 	batch.size = 16384
@@ -489,13 +489,13 @@ schema-registry-1  | 	transaction.timeout.ms = 60000
 schema-registry-1  | 	transactional.id = null
 schema-registry-1  | 	value.serializer = class org.apache.kafka.common.serialization.ByteArraySerializer
 schema-registry-1  |  (org.apache.kafka.clients.producer.ProducerConfig)
-schema-registry-1  | [2025-05-11 15:14:31,634] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:31,634] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:31,634] INFO Kafka startTimeMs: 1746976471634 (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:31,639] INFO [Producer clientId=producer-1] Cluster ID: Fo8vH2B9RVqOS6vYmRbUUQ (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:31,650] INFO Registered kafka:type=kafka.Log4jController MBean (kafka.utils.Log4jControllerRegistration$)
-schema-registry-1  | [2025-05-11 15:14:31,650] INFO Kafka store reader thread starting consumer (io.confluent.kafka.schemaregistry.storage.KafkaStoreReaderThread)
-schema-registry-1  | [2025-05-11 15:14:31,655] INFO ConsumerConfig values: 
+schema-registry-1  | [2025-05-11 15:40:35,316] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,316] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,316] INFO Kafka startTimeMs: 1746978035316 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,322] INFO [Producer clientId=producer-1] Cluster ID: xZizC8z6SJWtwCsWVDlToA (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,330] INFO Registered kafka:type=kafka.Log4jController MBean (kafka.utils.Log4jControllerRegistration$)
+schema-registry-1  | [2025-05-11 15:40:35,330] INFO Kafka store reader thread starting consumer (io.confluent.kafka.schemaregistry.storage.KafkaStoreReaderThread)
+schema-registry-1  | [2025-05-11 15:40:35,335] INFO ConsumerConfig values: 
 schema-registry-1  | 	allow.auto.create.topics = true
 schema-registry-1  | 	auto.commit.interval.ms = 5000
 schema-registry-1  | 	auto.include.jmx.reporter = true
@@ -592,119 +592,116 @@ schema-registry-1  | 	ssl.truststore.password = null
 schema-registry-1  | 	ssl.truststore.type = JKS
 schema-registry-1  | 	value.deserializer = class org.apache.kafka.common.serialization.ByteArrayDeserializer
 schema-registry-1  |  (org.apache.kafka.clients.consumer.ConsumerConfig)
-schema-registry-1  | [2025-05-11 15:14:31,675] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:31,675] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:31,675] INFO Kafka startTimeMs: 1746976471675 (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:31,682] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Cluster ID: Fo8vH2B9RVqOS6vYmRbUUQ (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:31,685] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Assigned to partition(s): _schemas-0 (org.apache.kafka.clients.consumer.KafkaConsumer)
-schema-registry-1  | [2025-05-11 15:14:31,686] INFO Seeking to beginning for all partitions (io.confluent.kafka.schemaregistry.storage.KafkaStoreReaderThread)
-schema-registry-1  | [2025-05-11 15:14:31,687] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Seeking to earliest offset of partition _schemas-0 (org.apache.kafka.clients.consumer.internals.SubscriptionState)
-schema-registry-1  | [2025-05-11 15:14:31,687] INFO Initialized last consumed offset to -1 (io.confluent.kafka.schemaregistry.storage.KafkaStoreReaderThread)
-schema-registry-1  | [2025-05-11 15:14:31,688] INFO [kafka-store-reader-thread-_schemas]: Starting (io.confluent.kafka.schemaregistry.storage.KafkaStoreReaderThread)
-schema-registry-1  | [2025-05-11 15:14:31,719] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Resetting the last seen epoch of partition _schemas-0 to 0 since the associated topicId changed from null to NZOT0t3qTvKrzunxTR1YTQ (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:31,886] INFO [Producer clientId=producer-1] Resetting the last seen epoch of partition _schemas-0 to 0 since the associated topicId changed from null to NZOT0t3qTvKrzunxTR1YTQ (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:31,989] INFO Wait to catch up until the offset at 0 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
-schema-registry-1  | [2025-05-11 15:14:32,040] INFO Reached offset at 0 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
-schema-registry-1  | [2025-05-11 15:14:32,040] INFO Joining schema registry with Kafka-based coordination (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
-schema-registry-1  | [2025-05-11 15:14:32,062] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:32,062] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:32,062] INFO Kafka startTimeMs: 1746976472061 (org.apache.kafka.common.utils.AppInfoParser)
-schema-registry-1  | [2025-05-11 15:14:32,074] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _schemas-0 to 0 since the associated topicId changed from null to NZOT0t3qTvKrzunxTR1YTQ (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,074] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-0 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,074] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-10 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-20 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-40 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-30 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-9 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-11 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-31 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-39 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-13 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-18 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-22 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-8 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-32 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-43 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-29 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-34 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-1 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-6 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-41 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-27 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-48 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-5 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-15 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,075] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-35 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-25 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-46 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-26 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-36 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-44 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-16 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-37 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-17 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-45 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-3 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-24 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-38 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-33 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-23 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-28 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-2 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-12 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-19 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-14 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-4 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-47 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-49 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-42 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-7 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,076] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-21 to 0 since the associated topicId changed from null to BBFbIrdnTdCcb0aYr0j_Ow (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,077] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Cluster ID: Fo8vH2B9RVqOS6vYmRbUUQ (org.apache.kafka.clients.Metadata)
-schema-registry-1  | [2025-05-11 15:14:32,079] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null) (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
-schema-registry-1  | [2025-05-11 15:14:32,081] INFO [Schema registry clientId=sr-1, groupId=schema-registry] (Re-)joining group (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
-schema-registry-1  | [2025-05-11 15:14:32,136] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Request joining group due to: need to re-join with the given member-id: sr-1-ca9c6304-fe66-47d6-8770-7f5d72d1debe (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
-schema-registry-1  | [2025-05-11 15:14:32,137] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
-schema-registry-1  | [2025-05-11 15:14:32,137] INFO [Schema registry clientId=sr-1, groupId=schema-registry] (Re-)joining group (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
-schema-registry-1  | [2025-05-11 15:14:35,165] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Successfully joined group with generation Generation{generationId=1, memberId='sr-1-ca9c6304-fe66-47d6-8770-7f5d72d1debe', protocol='v0'} (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
-schema-registry-1  | [2025-05-11 15:14:35,210] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Successfully synced group in generation Generation{generationId=1, memberId='sr-1-ca9c6304-fe66-47d6-8770-7f5d72d1debe', protocol='v0'} (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
-schema-registry-1  | [2025-05-11 15:14:35,213] INFO Finished rebalance with leader election result: Assignment{version=1, error=0, leader='sr-1-ca9c6304-fe66-47d6-8770-7f5d72d1debe', leaderIdentity=version=1,host=schema-registry,port=8081,scheme=http,leaderEligibility=true} (io.confluent.kafka.schemaregistry.leaderelector.kafka.KafkaGroupLeaderElector)
-schema-registry-1  | [2025-05-11 15:14:35,313] INFO Wait to catch up until the offset at 1 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
-schema-registry-1  | [2025-05-11 15:14:35,319] INFO Reached offset at 1 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
-schema-registry-1  | [2025-05-11 15:14:35,399] INFO Binding SchemaRegistryRestApplication to all listeners. (io.confluent.rest.Application)
-schema-registry-1  | [2025-05-11 15:14:35,508] INFO jetty-9.4.48.v20220622; built: 2022-06-21T20:42:25.880Z; git: 6b67c5719d1f4371b33655ff2d047d24e171e49a; jvm 11.0.18+10-LTS (org.eclipse.jetty.server.Server)
-schema-registry-1  | [2025-05-11 15:14:35,543] INFO DefaultSessionIdManager workerName=node0 (org.eclipse.jetty.server.session)
-schema-registry-1  | [2025-05-11 15:14:35,543] INFO No SessionScavenger set, using defaults (org.eclipse.jetty.server.session)
-schema-registry-1  | [2025-05-11 15:14:35,543] INFO node0 Scavenging every 600000ms (org.eclipse.jetty.server.session)
-schema-registry-1  | May 11, 2025 3:14:35 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+schema-registry-1  | [2025-05-11 15:40:35,355] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,355] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,355] INFO Kafka startTimeMs: 1746978035355 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,359] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Cluster ID: xZizC8z6SJWtwCsWVDlToA (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,361] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Assigned to partition(s): _schemas-0 (org.apache.kafka.clients.consumer.KafkaConsumer)
+schema-registry-1  | [2025-05-11 15:40:35,363] INFO Seeking to beginning for all partitions (io.confluent.kafka.schemaregistry.storage.KafkaStoreReaderThread)
+schema-registry-1  | [2025-05-11 15:40:35,363] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Seeking to earliest offset of partition _schemas-0 (org.apache.kafka.clients.consumer.internals.SubscriptionState)
+schema-registry-1  | [2025-05-11 15:40:35,364] INFO Initialized last consumed offset to -1 (io.confluent.kafka.schemaregistry.storage.KafkaStoreReaderThread)
+schema-registry-1  | [2025-05-11 15:40:35,364] INFO [kafka-store-reader-thread-_schemas]: Starting (io.confluent.kafka.schemaregistry.storage.KafkaStoreReaderThread)
+schema-registry-1  | [2025-05-11 15:40:35,380] INFO [Consumer clientId=KafkaStore-reader-_schemas, groupId=schema-registry-schema-registry-8081] Resetting the last seen epoch of partition _schemas-0 to 0 since the associated topicId changed from null to rq1aUlHWS4WQLJC682VJOg (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,430] INFO [Producer clientId=producer-1] Resetting the last seen epoch of partition _schemas-0 to 0 since the associated topicId changed from null to rq1aUlHWS4WQLJC682VJOg (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,499] INFO Wait to catch up until the offset at 0 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+schema-registry-1  | [2025-05-11 15:40:35,538] INFO Reached offset at 0 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+schema-registry-1  | [2025-05-11 15:40:35,538] INFO Joining schema registry with Kafka-based coordination (io.confluent.kafka.schemaregistry.storage.KafkaSchemaRegistry)
+schema-registry-1  | [2025-05-11 15:40:35,542] INFO Kafka version: 7.4.0-ce (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,542] INFO Kafka commitId: aee97a585bd06866 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,542] INFO Kafka startTimeMs: 1746978035542 (org.apache.kafka.common.utils.AppInfoParser)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition _schemas-0 to 0 since the associated topicId changed from null to rq1aUlHWS4WQLJC682VJOg (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-0 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-10 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-20 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-40 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-30 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-9 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-11 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-31 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-39 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-13 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-18 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-22 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-8 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-32 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-43 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-29 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,548] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-34 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-1 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-6 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-41 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-27 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-48 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-5 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-15 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-35 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-25 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-46 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-26 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-36 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-44 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-16 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-37 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-17 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-45 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-3 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-24 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-38 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-33 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-23 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-28 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-2 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-12 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-19 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-14 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-4 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-47 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-49 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-42 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-7 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,549] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Resetting the last seen epoch of partition __consumer_offsets-21 to 0 since the associated topicId changed from null to 66-cazDVSLSTkkxdLhhgkQ (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,550] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Cluster ID: xZizC8z6SJWtwCsWVDlToA (org.apache.kafka.clients.Metadata)
+schema-registry-1  | [2025-05-11 15:40:35,550] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Discovered group coordinator kafka:9092 (id: 2147483646 rack: null) (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+schema-registry-1  | [2025-05-11 15:40:35,552] INFO [Schema registry clientId=sr-1, groupId=schema-registry] (Re-)joining group (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+schema-registry-1  | [2025-05-11 15:40:35,567] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Request joining group due to: need to re-join with the given member-id: sr-1-304f2482-b3c6-4787-a642-fdecca2d0416 (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+schema-registry-1  | [2025-05-11 15:40:35,567] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException) (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+schema-registry-1  | [2025-05-11 15:40:35,567] INFO [Schema registry clientId=sr-1, groupId=schema-registry] (Re-)joining group (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+schema-registry-1  | [2025-05-11 15:40:38,588] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Successfully joined group with generation Generation{generationId=1, memberId='sr-1-304f2482-b3c6-4787-a642-fdecca2d0416', protocol='v0'} (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+schema-registry-1  | [2025-05-11 15:40:38,620] INFO [Schema registry clientId=sr-1, groupId=schema-registry] Successfully synced group in generation Generation{generationId=1, memberId='sr-1-304f2482-b3c6-4787-a642-fdecca2d0416', protocol='v0'} (io.confluent.kafka.schemaregistry.leaderelector.kafka.SchemaRegistryCoordinator)
+schema-registry-1  | [2025-05-11 15:40:38,623] INFO Finished rebalance with leader election result: Assignment{version=1, error=0, leader='sr-1-304f2482-b3c6-4787-a642-fdecca2d0416', leaderIdentity=version=1,host=schema-registry,port=8081,scheme=http,leaderEligibility=true} (io.confluent.kafka.schemaregistry.leaderelector.kafka.KafkaGroupLeaderElector)
+schema-registry-1  | [2025-05-11 15:40:38,638] INFO Wait to catch up until the offset at 1 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+schema-registry-1  | [2025-05-11 15:40:38,640] INFO Reached offset at 1 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+schema-registry-1  | [2025-05-11 15:40:38,670] INFO Binding SchemaRegistryRestApplication to all listeners. (io.confluent.rest.Application)
+schema-registry-1  | [2025-05-11 15:40:38,727] INFO jetty-9.4.48.v20220622; built: 2022-06-21T20:42:25.880Z; git: 6b67c5719d1f4371b33655ff2d047d24e171e49a; jvm 11.0.18+10-LTS (org.eclipse.jetty.server.Server)
+schema-registry-1  | [2025-05-11 15:40:38,752] INFO DefaultSessionIdManager workerName=node0 (org.eclipse.jetty.server.session)
+schema-registry-1  | [2025-05-11 15:40:38,752] INFO No SessionScavenger set, using defaults (org.eclipse.jetty.server.session)
+schema-registry-1  | [2025-05-11 15:40:38,753] INFO node0 Scavenging every 600000ms (org.eclipse.jetty.server.session)
+schema-registry-1  | May 11, 2025 3:40:38 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
 schema-registry-1  | WARNING: A provider io.confluent.kafka.schemaregistry.rest.resources.ConfigResource registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider io.confluent.kafka.schemaregistry.rest.resources.ConfigResource will be ignored. 
-schema-registry-1  | May 11, 2025 3:14:35 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+schema-registry-1  | May 11, 2025 3:40:38 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
 schema-registry-1  | WARNING: A provider io.confluent.kafka.schemaregistry.rest.resources.ContextsResource registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider io.confluent.kafka.schemaregistry.rest.resources.ContextsResource will be ignored. 
-schema-registry-1  | May 11, 2025 3:14:35 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+schema-registry-1  | May 11, 2025 3:40:38 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
 schema-registry-1  | WARNING: A provider io.confluent.kafka.schemaregistry.rest.resources.SubjectsResource registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider io.confluent.kafka.schemaregistry.rest.resources.SubjectsResource will be ignored. 
-schema-registry-1  | May 11, 2025 3:14:35 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+schema-registry-1  | May 11, 2025 3:40:38 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
 schema-registry-1  | WARNING: A provider io.confluent.kafka.schemaregistry.rest.resources.SchemasResource registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider io.confluent.kafka.schemaregistry.rest.resources.SchemasResource will be ignored. 
-schema-registry-1  | May 11, 2025 3:14:35 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+schema-registry-1  | May 11, 2025 3:40:38 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
 schema-registry-1  | WARNING: A provider io.confluent.kafka.schemaregistry.rest.resources.SubjectVersionsResource registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider io.confluent.kafka.schemaregistry.rest.resources.SubjectVersionsResource will be ignored. 
-schema-registry-1  | May 11, 2025 3:14:35 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+schema-registry-1  | May 11, 2025 3:40:38 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
 schema-registry-1  | WARNING: A provider io.confluent.kafka.schemaregistry.rest.resources.CompatibilityResource registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider io.confluent.kafka.schemaregistry.rest.resources.CompatibilityResource will be ignored. 
-schema-registry-1  | May 11, 2025 3:14:35 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+schema-registry-1  | May 11, 2025 3:40:38 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
 schema-registry-1  | WARNING: A provider io.confluent.kafka.schemaregistry.rest.resources.ModeResource registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider io.confluent.kafka.schemaregistry.rest.resources.ModeResource will be ignored. 
-schema-registry-1  | May 11, 2025 3:14:35 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
+schema-registry-1  | May 11, 2025 3:40:38 PM org.glassfish.jersey.internal.inject.Providers checkProviderRuntime
 schema-registry-1  | WARNING: A provider io.confluent.kafka.schemaregistry.rest.resources.ServerMetadataResource registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider io.confluent.kafka.schemaregistry.rest.resources.ServerMetadataResource will be ignored. 
-schema-registry-1  | [2025-05-11 15:14:35,955] INFO HV000001: Hibernate Validator 6.1.7.Final (org.hibernate.validator.internal.util.Version)
-schema-registry-1  | [2025-05-11 15:14:36,203] INFO Started o.e.j.s.ServletContextHandler@6a4ccef7{/,null,AVAILABLE} (org.eclipse.jetty.server.handler.ContextHandler)
-schema-registry-1  | [2025-05-11 15:14:36,211] INFO Started o.e.j.s.ServletContextHandler@11a8042c{/ws,null,AVAILABLE} (org.eclipse.jetty.server.handler.ContextHandler)
-schema-registry-1  | [2025-05-11 15:14:36,222] INFO Started NetworkTrafficServerConnector@74eb909f{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8081} (org.eclipse.jetty.server.AbstractConnector)
-schema-registry-1  | [2025-05-11 15:14:36,222] INFO Started @6042ms (org.eclipse.jetty.server.Server)
-schema-registry-1  | [2025-05-11 15:14:36,223] INFO Schema Registry version: 7.4.0 commitId: 5698e3eec470f7e395341858f6a8f3d9d0629073 (io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain)
-schema-registry-1  | [2025-05-11 15:14:36,223] INFO Server started, listening for requests... (io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain)
-schema-registry-1  | [2025-05-11 15:15:18,401] INFO Registering new schema: subject users-avro-value, version null, id null, type null, schema size 207 (io.confluent.kafka.schemaregistry.rest.resources.SubjectVersionsResource)
-schema-registry-1  | [2025-05-11 15:15:18,457] INFO Wait to catch up until the offset at 1 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
-schema-registry-1  | [2025-05-11 15:15:18,457] INFO Reached offset at 1 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
-schema-registry-1  | [2025-05-11 15:15:18,476] INFO Wait to catch up until the offset at 2 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
-schema-registry-1  | [2025-05-11 15:15:18,493] INFO Reached offset at 2 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
-schema-registry-1  | [2025-05-11 15:15:18,519] INFO 192.168.65.1 - - [11/May/2025:15:15:18 +0000] "POST /subjects/users-avro-value/versions HTTP/1.1" 200 8 "-" "python-requests/2.32.3" 281 (io.confluent.rest-utils.requests)
-schema-registry-1  | [2025-05-11 15:15:25,737] INFO 192.168.65.1 - - [11/May/2025:15:15:25 +0000] "GET /schemas/ids/1 HTTP/1.1" 200 147 "-" "python-requests/2.32.3" 20 (io.confluent.rest-utils.requests)
-schema-registry-1  | [2025-05-11 15:16:48,223] INFO Registering new schema: subject users-avro-value, version null, id null, type null, schema size 207 (io.confluent.kafka.schemaregistry.rest.resources.SubjectVersionsResource)
-schema-registry-1  | [2025-05-11 15:16:48,238] INFO 192.168.65.1 - - [11/May/2025:15:16:48 +0000] "POST /subjects/users-avro-value/versions HTTP/1.1" 200 8 "-" "python-requests/2.32.3" 30 (io.confluent.rest-utils.requests)
+schema-registry-1  | [2025-05-11 15:40:39,009] INFO HV000001: Hibernate Validator 6.1.7.Final (org.hibernate.validator.internal.util.Version)
+schema-registry-1  | [2025-05-11 15:40:39,162] INFO Started o.e.j.s.ServletContextHandler@6a4ccef7{/,null,AVAILABLE} (org.eclipse.jetty.server.handler.ContextHandler)
+schema-registry-1  | [2025-05-11 15:40:39,178] INFO Started o.e.j.s.ServletContextHandler@11a8042c{/ws,null,AVAILABLE} (org.eclipse.jetty.server.handler.ContextHandler)
+schema-registry-1  | [2025-05-11 15:40:39,187] INFO Started NetworkTrafficServerConnector@74eb909f{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8081} (org.eclipse.jetty.server.AbstractConnector)
+schema-registry-1  | [2025-05-11 15:40:39,188] INFO Started @5083ms (org.eclipse.jetty.server.Server)
+schema-registry-1  | [2025-05-11 15:40:39,188] INFO Schema Registry version: 7.4.0 commitId: 5698e3eec470f7e395341858f6a8f3d9d0629073 (io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain)
+schema-registry-1  | [2025-05-11 15:40:39,188] INFO Server started, listening for requests... (io.confluent.kafka.schemaregistry.rest.SchemaRegistryMain)
+schema-registry-1  | [2025-05-11 15:41:07,876] INFO Registering new schema: subject users-avro-value, version null, id null, type null, schema size 207 (io.confluent.kafka.schemaregistry.rest.resources.SubjectVersionsResource)
+schema-registry-1  | [2025-05-11 15:41:07,917] INFO Wait to catch up until the offset at 1 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+schema-registry-1  | [2025-05-11 15:41:07,917] INFO Reached offset at 1 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+schema-registry-1  | [2025-05-11 15:41:07,931] INFO Wait to catch up until the offset at 2 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+schema-registry-1  | [2025-05-11 15:41:07,945] INFO Reached offset at 2 (io.confluent.kafka.schemaregistry.storage.KafkaStore)
+schema-registry-1  | [2025-05-11 15:41:07,968] INFO 192.168.65.1 - - [11/May/2025:15:41:07 +0000] "POST /subjects/users-avro-value/versions HTTP/1.1" 200 8 "-" "python-requests/2.32.3" 212 (io.confluent.rest-utils.requests)
