@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: ecommerce_raw
+    database: dbt_db_ex2
+    schema: public
+    description: "Raw data from e-commerce system"
+    
+    tables:
+      - name: customers
+        description: Raw customer data from source system
+        
+      - name: products
+        description: Raw product data
+        
+      - name: orders
+        description: Raw order data
+        
+      - name: order_items
+        description: Raw order items data 

@@ -1,0 +1,118 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Customer dimension table enriched with order information."
+    config:
+      tags: ['core', 'dimensions']
+    meta:
+      owner: "Analytics Team"
+      contains_pii: true
+    columns:
+      - name: customer_id
+        description: "Primary key for customer table"
+        meta:
+          is_primary_key: true
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Customer's full name"
+        meta:
+          contains_pii: true
+        tests:
+          - not_null
+      - name: email
+        description: "Customer's normalized email address"
+        meta:
+          contains_pii: true
+        tests:
+          - unique
+          - not_null
+          - dbt_expectations.expect_column_values_to_match_regex:
+              regex: '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
+      - name: lifetime_orders
+        description: "Total number of orders placed by customer"
+        tests:
+          - not_null
+      - name: first_order_date
+        description: "Date of customer's first order"
+      - name: most_recent_order_date
+        description: "Date of customer's most recent order"
+
+  - name: dim_products
+    description: "Product dimension table enriched with sales information."
+    config:
+      tags: ['core', 'dimensions']
+    meta:
+      owner: "Product Team"
+    columns:
+      - name: product_id
+        description: "Primary key for product table"
+        meta:
+          is_primary_key: true
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Product name"
+        tests:
+          - not_null
+      - name: price
+        description: "Product price (VND)"
+        tests:
+          - not_null
+      - name: category
+        description: "Product category"
+        tests:
+          - accepted_values:
+              values: ['Electronics', 'Clothing', 'Footwear', 'Accessories']
+      - name: total_quantity_sold
+        description: "Total quantity of the product sold"
+        tests:
+          - not_null
+      - name: total_revenue
+        description: "Total revenue from the product"
+        tests:
+          - not_null
+
+  - name: fct_orders
+    description: "Order fact table."
+    config:
+      tags: ['core', 'facts']
+    meta:
+      owner: "Sales Team"
+      update_frequency: "hourly"
+    columns:
+      - name: order_id
+        description: "Primary key for order table"
+        meta:
+          is_primary_key: true
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Foreign key to customer table"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+      - name: order_date
+        description: "Date when the order was placed"
+        tests:
+          - not_null
+      - name: status
+        description: "Order status"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['completed', 'processing', 'cancelled', 'refunded']
+      - name: total_items
+        description: "Total number of items in the order"
+        tests:
+          - not_null
+      - name: total_amount
+        description: "Total order amount"
+        tests:
+          - not_null 

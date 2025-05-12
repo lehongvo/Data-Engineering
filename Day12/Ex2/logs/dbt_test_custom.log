@@ -1,0 +1,58 @@
+[0m06:20:22  Running with dbt=1.9.4
+[0m06:20:22  Registered adapter: postgres=1.9.0
+[0m06:20:22  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.ecommerce_test.sources
+[0m06:20:22  Found 7 models, 25 data tests, 4 sources, 812 macros
+[0m06:20:22  
+
+# Log Custom Tests
+
+*Created at: 2025-05-12 13:20:22*
+
+## List of Custom Tests
+
+| Test Name | Description | File | Result |
+|----------|-------|------|---------|
+
+
+| `assert_no_duplicate_orders` | Checks for duplicate orders based on customer_id and order_date | tests/assert_no_duplicate_orders.sql | Fail (Found 2 duplicate orders) |
+| `assert_total_amount_equals_sum_of_items` | Checks consistency between order total amount and sum of item values | tests/assert_total_amount_equals_sum_of_items.sql | Pass |
+
+
+
+## Test Details: assert_no_duplicate_orders
+
+**File:** `tests/assert_no_duplicate_orders.sql`
+
+**Description:** Checks for duplicate orders based on customer_id and time interval between orders.
+
+**Logic:**
+- Find orders from the same customer with time intervals under 15 minutes
+- Use self-join to compare each order with all other orders from the same customer
+- Calculate time interval in minutes: `abs(extract(epoch from (o1.order_date - o2.order_date)) / 60)`
+
+**Result:** Found 2 potentially duplicate orders
+
+
+
+## Test Details: assert_total_amount_equals_sum_of_items
+
+**File:** `tests/assert_total_amount_equals_sum_of_items.sql`
+
+**Description:** Checks consistency between order total amount and sum of individual item prices.
+
+**Logic:**
+- Get order total amount from `fct_orders` table
+- Calculate sum of item prices: `sum(quantity * unit_price)` from `stg_order_items` table
+- Compare the two totals, allowing for small rounding differences (0.01)
+
+**Result:** Pass - No discrepancies found
+
+
+## Test Run Results
+
+Detailed test run results are stored in:
+- Log file: `reports/test_results.log`
+- Summary report: `reports/test_summary.md`
+

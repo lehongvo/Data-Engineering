@@ -1,0 +1,77 @@
+/Users/user/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[0m06:24:26  Running with dbt=1.9.4
+[0m06:24:27  Registered adapter: postgres=1.9.0
+[0m06:24:27  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.ecommerce_test.sources
+[0m06:24:27  Found 7 models, 25 data tests, 4 sources, 812 macros
+[0m06:24:27  
+[0m06:24:27  Concurrency: 4 threads (target='dev')
+[0m06:24:27  
+[0m06:24:27  1 of 25 START test accepted_values_dim_products_category__Electronics__Clothing__Footwear__Accessories  [RUN]
+[0m06:24:27  2 of 25 START test accepted_values_fct_orders_status__completed__processing__cancelled__refunded  [RUN]
+[0m06:24:27  3 of 25 START test assert_no_duplicate_orders .................................. [RUN]
+[0m06:24:27  4 of 25 START test assert_total_amount_equals_sum_of_items ..................... [RUN]
+[0m06:24:27  1 of 25 PASS accepted_values_dim_products_category__Electronics__Clothing__Footwear__Accessories  [[32mPASS[0m in 0.12s]
+[0m06:24:27  2 of 25 PASS accepted_values_fct_orders_status__completed__processing__cancelled__refunded  [[32mPASS[0m in 0.12s]
+[0m06:24:27  5 of 25 START test dbt_expectations_expect_column_values_to_match_regex_dim_customers_email___a_z0_9___a_z0_9_a_z_2_  [RUN]
+[0m06:24:27  6 of 25 START test not_null_dim_customers_customer_id .......................... [RUN]
+[0m06:24:27  4 of 25 PASS assert_total_amount_equals_sum_of_items ........................... [[32mPASS[0m in 0.16s]
+[0m06:24:27  3 of 25 FAIL 2 assert_no_duplicate_orders ...................................... [[31mFAIL 2[0m in 0.16s]
+[0m06:24:27  7 of 25 START test not_null_dim_customers_email ................................ [RUN]
+[0m06:24:27  8 of 25 START test not_null_dim_customers_lifetime_orders ...................... [RUN]
+[0m06:24:27  5 of 25 PASS dbt_expectations_expect_column_values_to_match_regex_dim_customers_email___a_z0_9___a_z0_9_a_z_2_  [[32mPASS[0m in 0.11s]
+[0m06:24:27  9 of 25 START test not_null_dim_customers_name ................................. [RUN]
+[0m06:24:27  6 of 25 PASS not_null_dim_customers_customer_id ................................ [[32mPASS[0m in 0.13s]
+[0m06:24:27  10 of 25 START test not_null_dim_products_name ................................. [RUN]
+[0m06:24:27  7 of 25 PASS not_null_dim_customers_email ...................................... [[32mPASS[0m in 0.12s]
+[0m06:24:27  8 of 25 PASS not_null_dim_customers_lifetime_orders ............................ [[32mPASS[0m in 0.12s]
+[0m06:24:27  11 of 25 START test not_null_dim_products_price ................................ [RUN]
+[0m06:24:27  12 of 25 START test not_null_dim_products_product_id ........................... [RUN]
+[0m06:24:27  9 of 25 PASS not_null_dim_customers_name ....................................... [[32mPASS[0m in 0.07s]
+[0m06:24:27  13 of 25 START test not_null_dim_products_total_quantity_sold .................. [RUN]
+[0m06:24:27  10 of 25 PASS not_null_dim_products_name ....................................... [[32mPASS[0m in 0.08s]
+[0m06:24:27  14 of 25 START test not_null_dim_products_total_revenue ........................ [RUN]
+[0m06:24:28  11 of 25 PASS not_null_dim_products_price ...................................... [[32mPASS[0m in 0.08s]
+[0m06:24:28  15 of 25 START test not_null_fct_orders_customer_id ............................ [RUN]
+[0m06:24:28  12 of 25 PASS not_null_dim_products_product_id ................................. [[32mPASS[0m in 0.08s]
+[0m06:24:28  16 of 25 START test not_null_fct_orders_order_date ............................. [RUN]
+[0m06:24:28  13 of 25 PASS not_null_dim_products_total_quantity_sold ........................ [[32mPASS[0m in 0.08s]
+[0m06:24:28  17 of 25 START test not_null_fct_orders_order_id ............................... [RUN]
+[0m06:24:28  14 of 25 PASS not_null_dim_products_total_revenue .............................. [[32mPASS[0m in 0.08s]
+[0m06:24:28  18 of 25 START test not_null_fct_orders_status ................................. [RUN]
+[0m06:24:28  15 of 25 PASS not_null_fct_orders_customer_id .................................. [[32mPASS[0m in 0.06s]
+[0m06:24:28  19 of 25 START test not_null_fct_orders_total_amount ........................... [RUN]
+[0m06:24:28  16 of 25 PASS not_null_fct_orders_order_date ................................... [[32mPASS[0m in 0.08s]
+[0m06:24:28  20 of 25 START test not_null_fct_orders_total_items ............................ [RUN]
+[0m06:24:28  17 of 25 PASS not_null_fct_orders_order_id ..................................... [[32mPASS[0m in 0.08s]
+[0m06:24:28  21 of 25 START test relationships_fct_orders_customer_id__customer_id__ref_dim_customers_  [RUN]
+[0m06:24:28  18 of 25 PASS not_null_fct_orders_status ....................................... [[32mPASS[0m in 0.12s]
+[0m06:24:28  22 of 25 START test unique_dim_customers_customer_id ........................... [RUN]
+[0m06:24:28  19 of 25 PASS not_null_fct_orders_total_amount ................................. [[32mPASS[0m in 0.14s]
+[0m06:24:28  23 of 25 START test unique_dim_customers_email ................................. [RUN]
+[0m06:24:28  20 of 25 PASS not_null_fct_orders_total_items .................................. [[32mPASS[0m in 0.15s]
+[0m06:24:28  24 of 25 START test unique_dim_products_product_id ............................. [RUN]
+[0m06:24:28  21 of 25 PASS relationships_fct_orders_customer_id__customer_id__ref_dim_customers_  [[32mPASS[0m in 0.20s]
+[0m06:24:28  25 of 25 START test unique_fct_orders_order_id ................................. [RUN]
+[0m06:24:28  22 of 25 PASS unique_dim_customers_customer_id ................................. [[32mPASS[0m in 0.17s]
+[0m06:24:28  23 of 25 PASS unique_dim_customers_email ....................................... [[32mPASS[0m in 0.13s]
+[0m06:24:28  24 of 25 PASS unique_dim_products_product_id ................................... [[32mPASS[0m in 0.05s]
+[0m06:24:28  25 of 25 PASS unique_fct_orders_order_id ....................................... [[32mPASS[0m in 0.04s]
+[0m06:24:28  
+[0m06:24:28  Finished running 25 data tests in 0 hours 0 minutes and 0.91 seconds (0.91s).
+[0m06:24:28  
+[0m06:24:28  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m06:24:28  
+[0m06:24:28  [31mFailure in test assert_no_duplicate_orders (tests/assert_no_duplicate_orders.sql)[0m
+[0m06:24:28    Got 2 results, configured to fail if != 0
+[0m06:24:28  
+[0m06:24:28    compiled code at target/compiled/ecommerce_test/tests/assert_no_duplicate_orders.sql
+[0m06:24:28  
+[0m06:24:28    See test failures:
+  --------------------------------------------------------------------------------
+  select * from "dbt_db_ex2"."public_dbt_test__audit"."assert_no_duplicate_orders"
+  --------------------------------------------------------------------------------
+[0m06:24:28  
+[0m06:24:28  Done. PASS=24 WARN=0 ERROR=1 SKIP=0 TOTAL=25

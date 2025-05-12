@@ -1,0 +1,36 @@
+name: 'ecommerce_test'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'ecommerce_test'
+
+# Paths to different types of files
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"  # directory which will store compiled SQL files
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Model configurations
+models:
+  ecommerce_test:
+    # Applied to all models
+    +materialized: view
+    sources:
+      +materialized: view
+    staging:
+      +materialized: view
+    core:
+      +materialized: table
+
+# Additional test configurations
+tests:
+  +store_failures: true  # Store records that fail tests
+  +severity: error       # Default test severity is error 

@@ -1,0 +1,51 @@
+[0m06:18:09  Running with dbt=1.9.4
+[0m06:18:09  Registered adapter: postgres=1.9.0
+[0m06:18:09  [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.ecommerce_test.sources
+[0m06:18:09  Found 7 models, 25 data tests, 4 sources, 811 macros
+[0m06:18:09  
+
+# Log Macro Tests
+
+*Tạo lúc: 2025-05-12 13:18:09*
+
+## Danh sách các Macros Test
+
+| Tên Macro | Mô tả | Tham số | Kiểu trả về |
+|-----------|-------|---------|------------|
+
+
+| `test_not_negative` | Kiểm tra giá trị không âm trong một cột | model, column_name | True nếu tất cả giá trị đều không âm, False nếu có giá trị âm |
+| `test_date_in_range` | Kiểm tra giá trị ngày nằm trong khoảng cho phép | model, column_name, min_date, max_date | True nếu tất cả ngày đều trong khoảng, False nếu có ngày nằm ngoài khoảng |
+
+
+
+## Ví dụ sử dụng
+
+### test_not_negative
+
+```yaml
+columns:
+  - name: amount
+    tests:
+      - test_not_negative
+```
+
+### test_date_in_range
+
+```yaml
+columns:
+  - name: order_date
+    tests:
+      - test_date_in_range:
+          min_date: '2020-01-01'
+          max_date: '2030-12-31'
+```
+
+
+## Tests đã chạy
+
+Các macro tests được tham chiếu trong schema.yml và chạy bằng lệnh `dbt test`.
+Xem kết quả chi tiết trong file `reports/test_summary.md`.
+
