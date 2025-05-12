@@ -64,7 +64,7 @@ cd ecommerce_dbt || exit
 
 # Install dbt packages
 log_info "Installing dbt packages..."
-dbt deps || {
+dbt deps --no-version-check || {
     log_error "Error installing dbt packages. Please check your dbt installation."
     exit 1
 }

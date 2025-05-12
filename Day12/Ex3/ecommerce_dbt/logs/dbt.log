@@ -1,0 +1,513 @@
+[0m13:42:04.078316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076a67c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1110394c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1110392e0>]}
+
+
+============================== 13:42:04.082051 | 18237f39-6d21-4953-bd6c-4ecd04ba7c1a ==============================
+[0m13:42:04.082051 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:42:04.082437 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/user/.dbt', 'log_path': '/Users/user/Desktop/Data-Engineering/Day12/Ex3/ecommerce_dbt/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt deps', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:42:04.216642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '18237f39-6d21-4953-bd6c-4ecd04ba7c1a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x110fa8d00>]}
+[0m13:42:04.229876 [debug] [MainThread]: Set downloads directory='/var/folders/ch/fmvg17wn41d7pj3kkrwn98w40000gp/T/dbt-downloads-38fnkbmj'
+[0m13:42:04.230310 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m13:42:04.500250 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m13:42:04.501678 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m13:42:04.519869 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m13:42:04.525291 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m13:42:04.542620 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m13:42:04.543987 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m13:42:04.544253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '18237f39-6d21-4953-bd6c-4ecd04ba7c1a', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1112f5340>]}
+[0m13:42:04.546346 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/metrics.json
+[0m13:42:04.856475 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/metrics.json 200
+[0m13:42:04.858723 [error] [MainThread]: Encountered an error:
+Could not find a matching compatible version for package dbt-labs/metrics
+  Requested range: =1.5.0, =1.5.0
+  Compatible versions: ['0.1.0', '0.1.1', '0.1.2', '0.1.3', '0.1.4', '0.1.5', '0.2.0', '0.3.0', '0.3.1', '0.3.2', '0.3.3', '0.3.4', '0.3.5']
+
+  Not shown: package versions incompatible with installed version of dbt-core
+  To include them, run 'dbt --no-version-check deps'
+[0m13:42:04.868655 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/main.py", line 455, in deps
+    results = task.run()
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/task/deps.py", line 211, in run
+    self.lock()
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/task/deps.py", line 187, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/resolver.py", line 131, in resolve_packages
+    target = final[package].resolved().fetch_metadata(project, renderer)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/registry.py", line 124, in resolved
+    raise PackageVersionNotFoundError(
+dbt.exceptions.PackageVersionNotFoundError: Could not find a matching compatible version for package dbt-labs/metrics
+  Requested range: =1.5.0, =1.5.0
+  Compatible versions: ['0.1.0', '0.1.1', '0.1.2', '0.1.3', '0.1.4', '0.1.5', '0.2.0', '0.3.0', '0.3.1', '0.3.2', '0.3.3', '0.3.4', '0.3.5']
+
+  Not shown: package versions incompatible with installed version of dbt-core
+  To include them, run 'dbt --no-version-check deps'
+
+[0m13:42:04.870440 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.85708606, "process_in_blocks": "0", "process_kernel_time": 0.151239, "process_mem_max_rss": "104349696", "process_out_blocks": "0", "process_user_time": 1.080628}
+[0m13:42:04.870730 [debug] [MainThread]: Command `dbt deps` failed at 13:42:04.870673 after 0.86 seconds
+[0m13:42:04.870961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1076a67c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1112f56a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1112f5190>]}
+[0m13:42:04.871204 [debug] [MainThread]: Flushing usage events
+[0m13:42:06.932663 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:42:44.297726 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106442760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1204b9520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1204b9340>]}
+
+
+============================== 13:42:44.302302 | 0336d048-f67f-48a5-a224-7cf0fe007185 ==============================
+[0m13:42:44.302302 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:42:44.302741 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/user/.dbt', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/Users/user/Desktop/Data-Engineering/Day12/Ex3/ecommerce_dbt/logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'invocation_command': 'dbt deps', 'introspect': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:42:44.448889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0336d048-f67f-48a5-a224-7cf0fe007185', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1066ee070>]}
+[0m13:42:44.467248 [debug] [MainThread]: Set downloads directory='/var/folders/ch/fmvg17wn41d7pj3kkrwn98w40000gp/T/dbt-downloads-hwvs1xwe'
+[0m13:42:44.467689 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m13:42:44.539985 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m13:42:44.541214 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m13:42:44.744957 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m13:42:44.755308 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m13:42:44.778220 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m13:42:44.780381 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m13:42:44.780782 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '0336d048-f67f-48a5-a224-7cf0fe007185', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1219750d0>]}
+[0m13:42:44.784090 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/metrics.json
+[0m13:42:44.804663 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/metrics.json 200
+[0m13:42:44.807647 [error] [MainThread]: Encountered an error:
+Could not find a matching compatible version for package dbt-labs/metrics
+  Requested range: =1.5.0, =1.5.0
+  Compatible versions: ['0.1.0', '0.1.1', '0.1.2', '0.1.3', '0.1.4', '0.1.5', '0.2.0', '0.3.0', '0.3.1', '0.3.2', '0.3.3', '0.3.4', '0.3.5']
+
+  Not shown: package versions incompatible with installed version of dbt-core
+  To include them, run 'dbt --no-version-check deps'
+[0m13:42:44.817260 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/main.py", line 455, in deps
+    results = task.run()
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/task/deps.py", line 211, in run
+    self.lock()
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/task/deps.py", line 187, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/resolver.py", line 131, in resolve_packages
+    target = final[package].resolved().fetch_metadata(project, renderer)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/registry.py", line 124, in resolved
+    raise PackageVersionNotFoundError(
+dbt.exceptions.PackageVersionNotFoundError: Could not find a matching compatible version for package dbt-labs/metrics
+  Requested range: =1.5.0, =1.5.0
+  Compatible versions: ['0.1.0', '0.1.1', '0.1.2', '0.1.3', '0.1.4', '0.1.5', '0.2.0', '0.3.0', '0.3.1', '0.3.2', '0.3.3', '0.3.4', '0.3.5']
+
+  Not shown: package versions incompatible with installed version of dbt-core
+  To include them, run 'dbt --no-version-check deps'
+
+[0m13:42:44.818393 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.5824963, "process_in_blocks": "0", "process_kernel_time": 0.133725, "process_mem_max_rss": "102383616", "process_out_blocks": "0", "process_user_time": 1.060152}
+[0m13:42:44.818685 [debug] [MainThread]: Command `dbt deps` failed at 13:42:44.818625 after 0.58 seconds
+[0m13:42:44.818899 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106442760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121975520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x121975460>]}
+[0m13:42:44.819131 [debug] [MainThread]: Flushing usage events
+[0m13:42:45.816060 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:43:22.729171 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10800e7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e854c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108e852e0>]}
+
+
+============================== 13:43:22.732348 | 64f43bc0-0025-49f3-81eb-49158b7ee3bb ==============================
+[0m13:43:22.732348 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:43:22.732773 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/user/.dbt', 'version_check': 'True', 'debug': 'False', 'log_path': '/Users/user/Desktop/Data-Engineering/Day12/Ex3/ecommerce_dbt/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt deps', 'send_anonymous_usage_stats': 'True'}
+[0m13:43:22.875425 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '64f43bc0-0025-49f3-81eb-49158b7ee3bb', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108df4d00>]}
+[0m13:43:22.888573 [debug] [MainThread]: Set downloads directory='/var/folders/ch/fmvg17wn41d7pj3kkrwn98w40000gp/T/dbt-downloads-gmwctvwd'
+[0m13:43:22.888958 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m13:43:23.062255 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m13:43:23.064677 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m13:43:23.089465 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m13:43:23.099823 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m13:43:23.172387 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m13:43:23.175223 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m13:43:23.175823 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '64f43bc0-0025-49f3-81eb-49158b7ee3bb', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109041340>]}
+[0m13:43:23.180198 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/metrics.json
+[0m13:43:23.729964 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/metrics.json 200
+[0m13:43:23.736104 [error] [MainThread]: Encountered an error:
+Could not find a matching compatible version for package dbt-labs/metrics
+  Requested range: =1.5.0, =1.5.0
+  Compatible versions: ['0.1.0', '0.1.1', '0.1.2', '0.1.3', '0.1.4', '0.1.5', '0.2.0', '0.3.0', '0.3.1', '0.3.2', '0.3.3', '0.3.4', '0.3.5']
+
+  Not shown: package versions incompatible with installed version of dbt-core
+  To include them, run 'dbt --no-version-check deps'
+[0m13:43:23.756917 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/main.py", line 455, in deps
+    results = task.run()
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/task/deps.py", line 211, in run
+    self.lock()
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/task/deps.py", line 187, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/resolver.py", line 131, in resolve_packages
+    target = final[package].resolved().fetch_metadata(project, renderer)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/registry.py", line 124, in resolved
+    raise PackageVersionNotFoundError(
+dbt.exceptions.PackageVersionNotFoundError: Could not find a matching compatible version for package dbt-labs/metrics
+  Requested range: =1.5.0, =1.5.0
+  Compatible versions: ['0.1.0', '0.1.1', '0.1.2', '0.1.3', '0.1.4', '0.1.5', '0.2.0', '0.3.0', '0.3.1', '0.3.2', '0.3.3', '0.3.4', '0.3.5']
+
+  Not shown: package versions incompatible with installed version of dbt-core
+  To include them, run 'dbt --no-version-check deps'
+
+[0m13:43:23.759864 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 1.0856404, "process_in_blocks": "0", "process_kernel_time": 0.1383, "process_mem_max_rss": "104235008", "process_out_blocks": "0", "process_user_time": 1.062386}
+[0m13:43:23.760417 [debug] [MainThread]: Command `dbt deps` failed at 13:43:23.760280 after 1.09 seconds
+[0m13:43:23.760872 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10800e7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1090416a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109041190>]}
+[0m13:43:23.761424 [debug] [MainThread]: Flushing usage events
+[0m13:43:24.772502 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:44:05.010531 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ec2790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d39460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108d39280>]}
+
+
+============================== 13:44:05.014922 | 06be741f-6967-42df-a6de-1a57d65514b5 ==============================
+[0m13:44:05.014922 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:44:05.015314 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/user/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'log_path': '/Users/user/Desktop/Data-Engineering/Day12/Ex3/ecommerce_dbt/logs', 'debug': 'False', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'invocation_command': 'dbt deps', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:44:05.124846 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '06be741f-6967-42df-a6de-1a57d65514b5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108011e20>]}
+[0m13:44:05.137003 [debug] [MainThread]: Set downloads directory='/var/folders/ch/fmvg17wn41d7pj3kkrwn98w40000gp/T/dbt-downloads-t_p0_n8o'
+[0m13:44:05.137367 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m13:44:05.192951 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m13:44:05.194399 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m13:44:05.213808 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m13:44:05.221294 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json
+[0m13:44:05.297994 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_expectations.json 200
+[0m13:44:05.299699 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_expectations` package is deprecated in favor of
+`metaplane/dbt_expectations`. Please update your `packages.yml` configuration to
+use `metaplane/dbt_expectations` instead.
+[0m13:44:05.300088 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '06be741f-6967-42df-a6de-1a57d65514b5', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ef5160>]}
+[0m13:44:05.302450 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/metrics.json
+[0m13:44:05.319626 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/metrics.json 200
+[0m13:44:05.321964 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m13:44:05.550227 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m13:44:05.553007 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json
+[0m13:44:05.626621 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json 200
+[0m13:44:05.629035 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m13:44:05.647896 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m13:44:05.651409 [error] [MainThread]: Encountered an error:
+Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['=1.1.1', '>=0.8.1', '<0.9.0', '>=0.8.0', '<2.0.0', '>=0.9.0', '<2.0.0']
+[0m13:44:05.662889 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 422, in reduce_versions
+    to_return = to_return.reduce(version_specifier.to_range())
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 332, in reduce
+    end = self._try_combine_upper_bound(self.end, other.end)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 320, in _try_combine_upper_bound
+    return self._try_combine_upper_bound_with_exact(b, a)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 301, in _try_combine_upper_bound_with_exact
+    raise VersionsNotCompatibleError()
+dbt_common.exceptions.base.VersionsNotCompatibleError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/registry.py", line 100, in resolved
+    range_ = semver.reduce_versions(*self.versions)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 424, in reduce_versions
+    raise VersionsNotCompatibleError(
+dbt_common.exceptions.base.VersionsNotCompatibleError: Could not find a satisfactory version from options: ['=1.1.1', '>=0.8.1', '<0.9.0', '>=0.8.0', '<2.0.0', '>=0.9.0', '<2.0.0']
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/main.py", line 455, in deps
+    results = task.run()
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/task/deps.py", line 211, in run
+    self.lock()
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/task/deps.py", line 187, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/resolver.py", line 131, in resolve_packages
+    target = final[package].resolved().fetch_metadata(project, renderer)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/registry.py", line 103, in resolved
+    raise DependencyError(new_msg) from e
+dbt.exceptions.DependencyError: Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['=1.1.1', '>=0.8.1', '<0.9.0', '>=0.8.0', '<2.0.0', '>=0.9.0', '<2.0.0']
+
+[0m13:44:05.664612 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.7123015, "process_in_blocks": "0", "process_kernel_time": 0.144628, "process_mem_max_rss": "104153088", "process_out_blocks": "0", "process_user_time": 1.141608}
+[0m13:44:05.664957 [debug] [MainThread]: Command `dbt deps` failed at 13:44:05.664894 after 0.71 seconds
+[0m13:44:05.665214 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107ec2790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ef52e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ef5340>]}
+[0m13:44:05.665475 [debug] [MainThread]: Flushing usage events
+[0m13:44:06.728783 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:44:31.756442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107db07f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c28b80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c28d60>]}
+
+
+============================== 13:44:31.760267 | 3059598f-d712-41f6-8ce1-e90e9c85e696 ==============================
+[0m13:44:31.760267 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:44:31.760747 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/Users/user/Desktop/Data-Engineering/Day12/Ex3/ecommerce_dbt/logs', 'profiles_dir': '/Users/user/.dbt', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt deps', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:44:31.858320 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '3059598f-d712-41f6-8ce1-e90e9c85e696', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108ce4280>]}
+[0m13:44:31.871268 [debug] [MainThread]: Set downloads directory='/var/folders/ch/fmvg17wn41d7pj3kkrwn98w40000gp/T/dbt-downloads-bup_x6ig'
+[0m13:44:31.871673 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m13:44:31.894772 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m13:44:31.896061 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m13:44:31.918955 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m13:44:31.925973 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json
+[0m13:44:32.175641 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json 200
+[0m13:44:32.195166 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/metrics.json
+[0m13:44:32.309669 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/metrics.json 200
+[0m13:44:32.311848 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m13:44:32.329371 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m13:44:32.331635 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json
+[0m13:44:32.413425 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json 200
+[0m13:44:32.416331 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m13:44:32.436047 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m13:44:32.437757 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_date` package is deprecated in favor of
+`godatadriven/dbt_date`. Please update your `packages.yml` configuration to use
+`godatadriven/dbt_date` instead.
+[0m13:44:32.438095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '3059598f-d712-41f6-8ce1-e90e9c85e696', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108de5160>]}
+[0m13:44:32.440845 [error] [MainThread]: Encountered an error:
+Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['=0.8.6', '>=0.8.1', '<0.9.0', '>=0.8.0', '<2.0.0', '>=0.9.0', '<2.0.0']
+[0m13:44:32.452141 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 422, in reduce_versions
+    to_return = to_return.reduce(version_specifier.to_range())
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 331, in reduce
+    start = self._try_combine_lower_bound(self.start, other.start)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 288, in _try_combine_lower_bound
+    return self._try_combine_lower_bound_with_exact(b, a)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 269, in _try_combine_lower_bound_with_exact
+    raise VersionsNotCompatibleError()
+dbt_common.exceptions.base.VersionsNotCompatibleError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/registry.py", line 100, in resolved
+    range_ = semver.reduce_versions(*self.versions)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 424, in reduce_versions
+    raise VersionsNotCompatibleError(
+dbt_common.exceptions.base.VersionsNotCompatibleError: Could not find a satisfactory version from options: ['=0.8.6', '>=0.8.1', '<0.9.0', '>=0.8.0', '<2.0.0', '>=0.9.0', '<2.0.0']
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/main.py", line 455, in deps
+    results = task.run()
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/task/deps.py", line 211, in run
+    self.lock()
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/task/deps.py", line 187, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/resolver.py", line 131, in resolve_packages
+    target = final[package].resolved().fetch_metadata(project, renderer)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/registry.py", line 103, in resolved
+    raise DependencyError(new_msg) from e
+dbt.exceptions.DependencyError: Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['=0.8.6', '>=0.8.1', '<0.9.0', '>=0.8.0', '<2.0.0', '>=0.9.0', '<2.0.0']
+
+[0m13:44:32.453808 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.75294065, "process_in_blocks": "0", "process_kernel_time": 0.132563, "process_mem_max_rss": "104431616", "process_out_blocks": "0", "process_user_time": 1.082881}
+[0m13:44:32.454251 [debug] [MainThread]: Command `dbt deps` failed at 13:44:32.454177 after 0.75 seconds
+[0m13:44:32.454546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107db07f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108de5250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108de5310>]}
+[0m13:44:32.454857 [debug] [MainThread]: Flushing usage events
+[0m13:44:33.443619 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:45:02.282364 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b4f790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1069c5580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1069c53a0>]}
+
+
+============================== 13:45:02.286073 | e1b41586-f6ae-43d2-a488-59a1210d43a5 ==============================
+[0m13:45:02.286073 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:45:02.286538 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/user/.dbt', 'debug': 'False', 'version_check': 'False', 'log_path': '/Users/user/Desktop/Data-Engineering/Day12/Ex3/ecommerce_dbt/logs', 'warn_error': 'None', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt deps --no-version-check', 'send_anonymous_usage_stats': 'True'}
+[0m13:45:02.495436 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e1b41586-f6ae-43d2-a488-59a1210d43a5', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106921b20>]}
+[0m13:45:02.613083 [debug] [MainThread]: Set downloads directory='/var/folders/ch/fmvg17wn41d7pj3kkrwn98w40000gp/T/dbt-downloads-i211foch'
+[0m13:45:02.613543 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m13:45:02.643258 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m13:45:02.644722 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m13:45:02.667285 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m13:45:02.673636 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json
+[0m13:45:02.994307 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/metaplane/dbt_expectations.json 200
+[0m13:45:02.998585 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/metrics.json
+[0m13:45:03.017917 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/metrics.json 200
+[0m13:45:03.020575 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m13:45:03.341269 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m13:45:03.343816 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json
+[0m13:45:03.361682 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/audit_helper.json 200
+[0m13:45:03.363916 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json
+[0m13:45:03.382747 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/calogica/dbt_date.json 200
+[0m13:45:03.384820 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `calogica/dbt_date` package is deprecated in favor of
+`godatadriven/dbt_date`. Please update your `packages.yml` configuration to use
+`godatadriven/dbt_date` instead.
+[0m13:45:03.385252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'e1b41586-f6ae-43d2-a488-59a1210d43a5', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b80e80>]}
+[0m13:45:03.387313 [error] [MainThread]: Encountered an error:
+Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['=0.8.6', '>=0.8.1', '<0.9.0', '>=0.8.0', '<2.0.0', '>=0.9.0', '<2.0.0']
+[0m13:45:03.401783 [error] [MainThread]: Traceback (most recent call last):
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 422, in reduce_versions
+    to_return = to_return.reduce(version_specifier.to_range())
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 331, in reduce
+    start = self._try_combine_lower_bound(self.start, other.start)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 288, in _try_combine_lower_bound
+    return self._try_combine_lower_bound_with_exact(b, a)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 269, in _try_combine_lower_bound_with_exact
+    raise VersionsNotCompatibleError()
+dbt_common.exceptions.base.VersionsNotCompatibleError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/registry.py", line 100, in resolved
+    range_ = semver.reduce_versions(*self.versions)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt_common/semver.py", line 424, in reduce_versions
+    raise VersionsNotCompatibleError(
+dbt_common.exceptions.base.VersionsNotCompatibleError: Could not find a satisfactory version from options: ['=0.8.6', '>=0.8.1', '<0.9.0', '>=0.8.0', '<2.0.0', '>=0.9.0', '<2.0.0']
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 153, in wrapper
+    result, success = func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 103, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/requires.py", line 264, in wrapper
+    return func(*args, **kwargs)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/cli/main.py", line 455, in deps
+    results = task.run()
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/task/deps.py", line 211, in run
+    self.lock()
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/task/deps.py", line 187, in lock
+    resolved_deps = resolve_packages(packages, self.project, self.cli_vars)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/resolver.py", line 131, in resolve_packages
+    target = final[package].resolved().fetch_metadata(project, renderer)
+  File "/Users/user/Library/Python/3.9/lib/python/site-packages/dbt/deps/registry.py", line 103, in resolved
+    raise DependencyError(new_msg) from e
+dbt.exceptions.DependencyError: Version error for package dbt-labs/dbt_utils: Could not find a satisfactory version from options: ['=0.8.6', '>=0.8.1', '<0.9.0', '>=0.8.0', '<2.0.0', '>=0.9.0', '<2.0.0']
+
+[0m13:45:03.403774 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 1.1925566, "process_in_blocks": "0", "process_kernel_time": 0.17993, "process_mem_max_rss": "99614720", "process_out_blocks": "0", "process_user_time": 1.233767}
+[0m13:45:03.404218 [debug] [MainThread]: Command `dbt deps` failed at 13:45:03.404148 after 1.19 seconds
+[0m13:45:03.404546 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105b4f790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b80ca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106b80550>]}
+[0m13:45:03.404850 [debug] [MainThread]: Flushing usage events
+[0m13:45:04.491078 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:46:02.095829 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a60a7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b6b9580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b6b93a0>]}
+
+
+============================== 13:46:02.099252 | 72071ade-41d0-4c64-b58e-056ca6f425ee ==============================
+[0m13:46:02.099252 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:46:02.099645 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/Users/user/.dbt', 'log_path': '/Users/user/Desktop/Data-Engineering/Day12/Ex3/ecommerce_dbt/logs', 'debug': 'False', 'version_check': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'invocation_command': 'dbt deps --no-version-check', 'static_parser': 'True', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m13:46:02.203269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '72071ade-41d0-4c64-b58e-056ca6f425ee', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108c01100>]}
+[0m13:46:02.215590 [debug] [MainThread]: Set downloads directory='/var/folders/ch/fmvg17wn41d7pj3kkrwn98w40000gp/T/dbt-downloads-qj7kp8c9'
+[0m13:46:02.216036 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m13:46:02.272429 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m13:46:02.273949 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m13:46:02.292222 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m13:46:02.297838 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json
+[0m13:46:02.317853 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/codegen.json 200
+[0m13:46:02.328042 [info ] [MainThread]: Updating lock file in file path: /Users/user/Desktop/Data-Engineering/Day12/Ex3/ecommerce_dbt/package-lock.yml
+[0m13:46:02.329709 [debug] [MainThread]: Set downloads directory='/var/folders/ch/fmvg17wn41d7pj3kkrwn98w40000gp/T/dbt-downloads-rzi3bm35'
+[0m13:46:02.332387 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m13:46:02.917665 [info ] [MainThread]: Installed from version 1.3.0
+[0m13:46:02.917982 [info ] [MainThread]: Up to date!
+[0m13:46:02.918292 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '72071ade-41d0-4c64-b58e-056ca6f425ee', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aa11c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b7570a0>]}
+[0m13:46:02.918583 [info ] [MainThread]: Installing dbt-labs/codegen
+[0m13:46:03.385387 [info ] [MainThread]: Installed from version 0.13.1
+[0m13:46:03.385771 [info ] [MainThread]: Up to date!
+[0m13:46:03.386085 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'package', 'label': '72071ade-41d0-4c64-b58e-056ca6f425ee', 'property_': 'install', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c078e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c078940>]}
+[0m13:46:03.387986 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 1.3486366, "process_in_blocks": "0", "process_kernel_time": 0.202497, "process_mem_max_rss": "104300544", "process_out_blocks": "0", "process_user_time": 1.086371}
+[0m13:46:03.388375 [debug] [MainThread]: Command `dbt deps` succeeded at 13:46:03.388294 after 1.35 seconds
+[0m13:46:03.388670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a60a7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b7893d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10928d2b0>]}
+[0m13:46:03.388972 [debug] [MainThread]: Flushing usage events
+[0m13:46:04.386066 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:46:05.635135 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107597760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10840c520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10840c340>]}
+
+
+============================== 13:46:05.638520 | 6075649d-569b-4196-83a7-bd44fd99d88d ==============================
+[0m13:46:05.638520 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:46:05.638957 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/Users/user/.dbt', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/Users/user/Desktop/Data-Engineering/Day12/Ex3/ecommerce_dbt/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt debug', 'introspect': 'True', 'static_parser': 'True', 'target_path': 'None', 'log_format': 'default', 'send_anonymous_usage_stats': 'True'}
+[0m13:46:05.646236 [info ] [MainThread]: dbt version: 1.9.4
+[0m13:46:05.646577 [info ] [MainThread]: python version: 3.9.6
+[0m13:46:05.646858 [info ] [MainThread]: python path: /Library/Developer/CommandLineTools/usr/bin/python3
+[0m13:46:05.647113 [info ] [MainThread]: os info: macOS-15.3.2-arm64-arm-64bit
+[0m13:46:05.699630 [info ] [MainThread]: Using profiles dir at /Users/user/.dbt
+[0m13:46:05.699967 [info ] [MainThread]: Using profiles.yml file at /Users/user/.dbt/profiles.yml
+[0m13:46:05.700176 [info ] [MainThread]: Using dbt_project.yml file at /Users/user/Desktop/Data-Engineering/Day12/Ex3/ecommerce_dbt/dbt_project.yml
+[0m13:46:05.700736 [info ] [MainThread]: adapter type: postgres
+[0m13:46:05.700969 [info ] [MainThread]: adapter version: 1.9.0
+[0m13:46:05.789129 [info ] [MainThread]: Configuration:
+[0m13:46:05.789507 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m13:46:05.789718 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m13:46:05.789912 [info ] [MainThread]: Required dependencies:
+[0m13:46:05.790202 [debug] [MainThread]: Executing "git --help"
+[0m13:46:05.812444 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--super-prefix=<path>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:46:05.813148 [debug] [MainThread]: STDERR: "b''"
+[0m13:46:05.813413 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:46:05.813655 [info ] [MainThread]: Connection:
+[0m13:46:05.813924 [info ] [MainThread]:   host: localhost
+[0m13:46:05.814208 [info ] [MainThread]:   port: 5434
+[0m13:46:05.814389 [info ] [MainThread]:   user: dbt_user
+[0m13:46:05.814571 [info ] [MainThread]:   database: dbt_db_ex3
+[0m13:46:05.814750 [info ] [MainThread]:   schema: public
+[0m13:46:05.814940 [info ] [MainThread]:   connect_timeout: 10
+[0m13:46:05.815120 [info ] [MainThread]:   role: None
+[0m13:46:05.815303 [info ] [MainThread]:   search_path: None
+[0m13:46:05.815478 [info ] [MainThread]:   keepalives_idle: 0
+[0m13:46:05.815652 [info ] [MainThread]:   sslmode: None
+[0m13:46:05.815831 [info ] [MainThread]:   sslcert: None
+[0m13:46:05.816003 [info ] [MainThread]:   sslkey: None
+[0m13:46:05.816177 [info ] [MainThread]:   sslrootcert: None
+[0m13:46:05.816351 [info ] [MainThread]:   application_name: dbt
+[0m13:46:05.816525 [info ] [MainThread]:   retries: 1
+[0m13:46:05.817037 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m13:46:05.889588 [debug] [MainThread]: Acquiring new postgres connection 'debug'
+[0m13:46:05.919143 [debug] [MainThread]: Using postgres connection "debug"
+[0m13:46:05.919479 [debug] [MainThread]: On debug: select 1 as id
+[0m13:46:05.919709 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m13:46:06.026754 [debug] [MainThread]: SQL status: SELECT 1 in 0.107 seconds
+[0m13:46:06.027711 [debug] [MainThread]: On debug: Close
+[0m13:46:06.028029 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m13:46:06.028328 [info ] [MainThread]: [32mAll checks passed![0m
+[0m13:46:06.029559 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.45344922, "process_in_blocks": "0", "process_kernel_time": 0.166852, "process_mem_max_rss": "113721344", "process_out_blocks": "0", "process_user_time": 1.117336}
+[0m13:46:06.030075 [debug] [MainThread]: Command `dbt debug` succeeded at 13:46:06.029957 after 0.45 seconds
+[0m13:46:06.030758 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m13:46:06.031090 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107597760>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108906730>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083f85b0>]}
+[0m13:46:06.031470 [debug] [MainThread]: Flushing usage events
+[0m13:46:07.065676 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:46:08.503387 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111d01820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112d7bcd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x112d7beb0>]}
+
+
+============================== 13:46:08.507749 | acdfee88-26c1-41bb-bf1f-780ec2740b01 ==============================
+[0m13:46:08.507749 [info ] [MainThread]: Running with dbt=1.9.4
+[0m13:46:08.508907 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/Users/user/Desktop/Data-Engineering/Day12/Ex3/ecommerce_dbt/logs', 'version_check': 'True', 'profiles_dir': '/Users/user/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run --select source:* staging.* core.*', 'send_anonymous_usage_stats': 'True'}
+[0m13:46:08.706233 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'acdfee88-26c1-41bb-bf1f-780ec2740b01', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11318cdc0>]}
+[0m13:46:08.842699 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'acdfee88-26c1-41bb-bf1f-780ec2740b01', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1131cb130>]}
+[0m13:46:08.843469 [info ] [MainThread]: Registered adapter: postgres=1.9.0
+[0m13:46:08.963384 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m13:46:08.964490 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m13:46:08.964803 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'acdfee88-26c1-41bb-bf1f-780ec2740b01', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1132ff2e0>]}
+[0m13:46:10.379802 [error] [MainThread]: Encountered an error:
+Compilation Error in model stg_products (models/staging/stg_products.sql)
+  maximum recursion depth exceeded while calling a Python object
+[0m13:46:10.381588 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 2.0091188, "process_in_blocks": "0", "process_kernel_time": 0.207438, "process_mem_max_rss": "110510080", "process_out_blocks": "0", "process_user_time": 2.354183}
+[0m13:46:10.381970 [debug] [MainThread]: Command `dbt run` failed at 13:46:10.381903 after 2.01 seconds
+[0m13:46:10.382301 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x111d01820>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1132ff2e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113d6eeb0>]}
+[0m13:46:10.382821 [debug] [MainThread]: Flushing usage events
+[0m13:46:11.337968 [debug] [MainThread]: An error was encountered while trying to flush usage events

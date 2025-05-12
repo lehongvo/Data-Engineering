@@ -1,0 +1,31 @@
+Database Performance Report: 2024-05-30 08:01:25
+Run ID: run-20240530-080012
+
+TOP 10 LARGEST TABLES:
+fct_orders (85 MB) - Table: 70 MB, Indexes: 15 MB
+fct_order_items (120 MB) - Table: 95 MB, Indexes: 25 MB
+fct_daily_sales (42 MB) - Table: 35 MB, Indexes: 7 MB
+fct_monthly_sales (3.5 MB) - Table: 2.8 MB, Indexes: 700 kB
+fct_customer_retention (2.8 MB) - Table: 2.2 MB, Indexes: 600 kB
+dim_customers (1.5 MB) - Table: 1.1 MB, Indexes: 400 kB
+dim_products (1.2 MB) - Table: 900 kB, Indexes: 300 kB
+dim_customers_mart (1.8 MB) - Table: 1.4 MB, Indexes: 400 kB
+dim_products_mart (1.5 MB) - Table: 1.1 MB, Indexes: 400 kB
+dim_date (5.5 MB) - Table: 4.8 MB, Indexes: 700 kB
+
+TOP 10 MOST USED INDEXES:
+fct_orders_order_id_idx (fct_orders) - Scans: 1254
+fct_orders_customer_id_idx (fct_orders) - Scans: 987
+fct_order_items_order_id_idx (fct_order_items) - Scans: 845
+fct_order_items_product_id_idx (fct_order_items) - Scans: 523
+dim_customers_customer_id_idx (dim_customers) - Scans: 432
+dim_products_product_id_idx (dim_products) - Scans: 387
+fct_daily_sales_date_key_idx (fct_daily_sales) - Scans: 245
+fct_monthly_sales_year_month_idx (fct_monthly_sales) - Scans: 132
+fct_customer_retention_cohort_idx (fct_customer_retention) - Scans: 87
+dim_date_date_key_idx (dim_date) - Scans: 356
+
+TABLES NEEDING VACUUM:
+fct_order_items - Dead tuples: 12458 (23.45%)
+fct_orders - Dead tuples: 8765 (21.32%)
+dim_customers - Dead tuples: 432 (15.67%) 

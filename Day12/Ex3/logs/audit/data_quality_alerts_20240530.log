@@ -1,0 +1,8 @@
+[ALERT] Model: dim_customers | Type: dimension | Rows: 152 | Key: customer_id | Nulls: 0 | Duplicates: 0 | Time: 2024-05-30 08:00:45
+[ALERT] Model: fct_orders | Type: fact | Rows: 1254 | Key: order_id | Nulls: 0 | Duplicates: 2 | Time: 2024-05-30 08:00:48
+[ALERT] Model: fct_daily_sales | Type: fact | Rows: 142 | Key: date_key | Nulls: 0 | Duplicates: 0 | Time: 2024-05-30 08:01:05
+
+[FAILURE] Test: relationships_fct_orders_customer_id__customer_id__ref_dim_customers_ | Failed Rows: 2 | Model: fct_orders | Timestamp: 2024-05-30 09:15:43 | Details: 2 rows in fct_orders have customer_ids that don't exist in dim_customers
+
+[ALERT] Data Freshness Check Failed: orders | Expected Maximum Age: 1 hour | Current Age: 2 hours 15 minutes | Timestamp: 2024-05-30 10:30:22
+[ALERT] Data Freshness Check Failed: order_items | Expected Maximum Age: 1 hour | Current Age: 2 hours 15 minutes | Timestamp: 2024-05-30 10:30:22 
