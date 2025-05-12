@@ -30,36 +30,46 @@ public class AnomalyDetectionJob {
                 properties
         );
 
+        // Bắt đầu từ các sự kiện mới
+        consumer.setStartFromLatest();
+
         DataStream<String> input = env.addSource(consumer);
 
         // Parse JSON to POJO
         DataStream<Transaction> transactions = input
-            .map(json -> new ObjectMapper().readValue(json, Transaction.class))
+            .map(json -> {
+                Transaction t = new ObjectMapper().readValue(json, Transaction.class);
+                System.out.println("Processing transaction: " + json);
+                return t;
+            })
             .returns(Transaction.class);
 
         // Key by account_id
         KeyedStream<Transaction, String> keyed = transactions.keyBy(Transaction::getAccountId);
 
-        // Define CEP pattern: 3 giao dịch liên tiếp > 5000 trong 1 phút
-        Pattern pattern = Pattern.begin("start")
-            .where(new IterativeCondition<Object>() {
+        // Define CEP pattern: 3 giao dịch liên tiếp > 3000 trong 1 phút
+        Pattern<Transaction, ?> pattern = Pattern.<Transaction>begin("start")
+            .where(new IterativeCondition<Transaction>() {
                 @Override
-                public boolean filter(Object t, Context<Object> ctx) {
-                    return ((Transaction) t).getAmount() > 5000;
+                public boolean filter(Transaction t, Context<Transaction> ctx) {
+                    System.out.println("Checking start condition for: " + t.getAccountId() + " - " + t.getAmount());
+                    return t.getAmount() > 3000;
                 }
             })
             .next("middle")
-            .where(new IterativeCondition<Object>() {
+            .where(new IterativeCondition<Transaction>() {
                 @Override
-                public boolean filter(Object t, Context<Object> ctx) {
-                    return ((Transaction) t).getAmount() > 5000;
+                public boolean filter(Transaction t, Context<Transaction> ctx) {
+                    System.out.println("Checking middle condition for: " + t.getAccountId() + " - " + t.getAmount());
+                    return t.getAmount() > 3000;
                 }
             })
             .next("end")
-            .where(new IterativeCondition<Object>() {
+            .where(new IterativeCondition<Transaction>() {
                 @Override
-                public boolean filter(Object t, Context<Object> ctx) {
-                    return ((Transaction) t).getAmount() > 5000;
+                public boolean filter(Transaction t, Context<Transaction> ctx) {
+                    System.out.println("Checking end condition for: " + t.getAccountId() + " - " + t.getAmount());
+                    return t.getAmount() > 3000;
                 }
             })
             .within(Time.minutes(1));
@@ -67,8 +77,14 @@ public class AnomalyDetectionJob {
         DataStream<String> alerts = CEP.pattern(keyed, pattern)
             .select((PatternSelectFunction<Transaction, String>) match -> {
                 Transaction start = match.get("start").get(0);
+                Transaction middle = match.get("middle").get(0);
                 Transaction end = match.get("end").get(0);
-                return "Anomaly detected for account " + start.getAccountId() + "!";
+                String alert = "ANOMALY DETECTED for account " + start.getAccountId() + 
+                        "! Transactions: " + start.getTransactionId() + 
+                        ", " + middle.getTransactionId() + 
+                        ", " + end.getTransactionId();
+                System.out.println(">>> " + alert);
+                return alert;
             });
 
         // Gửi cảnh báo ra Kafka topic 'anomaly-alerts'
