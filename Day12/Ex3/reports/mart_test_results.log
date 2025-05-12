@@ -1,0 +1,42 @@
+/Users/user/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[0m06:57:05  Running with dbt=1.9.4
+[0m06:57:05  Registered adapter: postgres=1.9.0
+[0m06:57:05  Found 17 models, 35 data tests, 4 sources, 591 macros
+[0m06:57:05  
+[0m06:57:05  Concurrency: 1 threads (target='dev')
+[0m06:57:05  
+[0m06:57:05  1 of 4 START test assert_metrics_consistency ................................... [RUN]
+[0m06:57:05  1 of 4 FAIL 7 assert_metrics_consistency ....................................... [[31mFAIL 7[0m in 0.06s]
+[0m06:57:05  2 of 4 START test assert_retention_rate_decreases .............................. [RUN]
+[0m06:57:05  2 of 4 FAIL 1 assert_retention_rate_decreases .................................. [[31mFAIL 1[0m in 0.03s]
+[0m06:57:05  3 of 4 START test not_null_metric_daily_sales_date_key ......................... [RUN]
+[0m06:57:05  3 of 4 PASS not_null_metric_daily_sales_date_key ............................... [[32mPASS[0m in 0.03s]
+[0m06:57:05  4 of 4 START test unique_metric_daily_sales_date_key ........................... [RUN]
+[0m06:57:05  4 of 4 PASS unique_metric_daily_sales_date_key ................................. [[32mPASS[0m in 0.03s]
+[0m06:57:05  
+[0m06:57:05  Finished running 4 data tests in 0 hours 0 minutes and 0.29 seconds (0.29s).
+[0m06:57:05  
+[0m06:57:05  [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m06:57:05  
+[0m06:57:05  [31mFailure in test assert_metrics_consistency (tests/assert_metrics_consistency.sql)[0m
+[0m06:57:05    Got 7 results, configured to fail if != 0
+[0m06:57:05  
+[0m06:57:05    compiled code at target/compiled/ecommerce_datamart/tests/assert_metrics_consistency.sql
+[0m06:57:05  
+[0m06:57:05    See test failures:
+  --------------------------------------------------------------------------------
+  select * from "dbt_db_ex3"."public_dbt_test__audit"."assert_metrics_consistency"
+  --------------------------------------------------------------------------------
+[0m06:57:05  
+[0m06:57:05  [31mFailure in test assert_retention_rate_decreases (tests/assert_retention_rate_decreases.sql)[0m
+[0m06:57:05    Got 1 result, configured to fail if != 0
+[0m06:57:05  
+[0m06:57:05    compiled code at target/compiled/ecommerce_datamart/tests/assert_retention_rate_decreases.sql
+[0m06:57:05  
+[0m06:57:05    See test failures:
+  -------------------------------------------------------------------------------------
+  select * from "dbt_db_ex3"."public_dbt_test__audit"."assert_retention_rate_decreases"
+  -------------------------------------------------------------------------------------
+[0m06:57:05  
+[0m06:57:05  Done. PASS=2 WARN=0 ERROR=2 SKIP=0 TOTAL=4

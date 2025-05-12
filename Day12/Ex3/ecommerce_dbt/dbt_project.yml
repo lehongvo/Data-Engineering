@@ -22,11 +22,6 @@ models:
   ecommerce_datamart:
     # Default materialization and hooks
     +materialized: view
-    +post-hook:
-      - "{{ log_model_timing() }}"
-    
-    sources:
-      +materialized: view
     
     staging:
       +materialized: view
@@ -50,9 +45,4 @@ models:
 vars:
   # Use these vars for incremental loads
   start_date: '2023-01-01'
-  end_date: '{{ run_started_at.strftime("%Y-%m-%d") }}'
-
-# Enable dbt comments
-query-comment:
-  comment: "dbt model: {{ model.name }}"
-  append: true 
+  end_date: '{{ run_started_at.strftime("%Y-%m-%d") }}' 

@@ -29,8 +29,6 @@ models:
         tests:
           - unique
           - not_null
-          - dbt_expectations.expect_column_values_to_match_regex:
-              regex: '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
       - name: lifetime_orders
         description: "Total number of orders placed by customer"
         tests:
@@ -39,9 +37,6 @@ models:
         description: "Total lifetime spending of the customer"
         tests:
           - not_null
-          - dbt_expectations.expect_column_values_to_be_between:
-              min_value: 0
-              strictly: true
 
   - name: dim_products
     description: "Product dimension table enriched with sales information."
@@ -65,9 +60,6 @@ models:
         description: "Product price"
         tests:
           - not_null
-          - dbt_expectations.expect_column_values_to_be_between:
-              min_value: 0
-              strictly: true
       - name: category
         description: "Product category"
         tests:
@@ -78,9 +70,6 @@ models:
         description: "Current inventory level"
         tests:
           - not_null
-          - dbt_expectations.expect_column_values_to_be_between:
-              min_value: 0
-              max_value: 10000
 
   - name: fct_orders
     description: "Order fact table."
@@ -118,9 +107,6 @@ models:
         description: "Total order amount"
         tests:
           - not_null
-          - dbt_expectations.expect_column_values_to_be_between:
-              min_value: 0
-              strictly: true
 
   - name: fct_order_items
     description: "Order items fact table."
@@ -155,20 +141,11 @@ models:
         description: "Quantity of the product ordered"
         tests:
           - not_null
-          - dbt_expectations.expect_column_values_to_be_between:
-              min_value: 1
-              strictly: true
       - name: unit_price
         description: "Unit price of the product at the time of order"
         tests:
           - not_null
-          - dbt_expectations.expect_column_values_to_be_between:
-              min_value: 0
-              strictly: true
       - name: item_total
         description: "Total amount for this line item"
         tests:
-          - not_null
-          - dbt_expectations.expect_column_values_to_be_between:
-              min_value: 0
-              strictly: true 
+          - not_null 

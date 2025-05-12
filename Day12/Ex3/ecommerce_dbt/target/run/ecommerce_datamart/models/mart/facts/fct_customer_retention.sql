@@ -1,9 +1,14 @@
-{{
-    config(
-        materialized='table',
-        tags=['datamart', 'facts']
-    )
-}}
+
+  
+    
+
+  create  table "dbt_db_ex3"."public"."fct_customer_retention__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
 
 with customer_orders as (
     select
@@ -14,7 +19,7 @@ with customer_orders as (
         row_number() over(partition by customer_id order by order_date) as order_sequence,
         lead(order_date) over(partition by customer_id order by order_date) as next_order_date,
         extract(day from (lead(order_date) over(partition by customer_id order by order_date) - order_date)) as days_until_next_order
-    from {{ ref('fct_orders') }}
+    from "dbt_db_ex3"."public"."fct_orders"
 ),
 
 customer_first_orders as (
@@ -66,7 +71,7 @@ retention_by_month as (
         count(distinct o.customer_id) as retained_customers,
         sum(o.total_amount) as cohort_revenue
     from customer_first_orders c
-    join {{ ref('fct_orders') }} o using(customer_id)
+    join "dbt_db_ex3"."public"."fct_orders" o using(customer_id)
     join cohort_sizes cs 
         on c.first_order_year = cs.first_order_year 
         and c.first_order_month = cs.first_order_month
@@ -96,4 +101,6 @@ select
     ) as cumulative_cohort_revenue,
     current_timestamp as updated_at
 from retention_by_month r
-order by r.first_order_year, r.first_order_month, r.months_since_first_order 
+order by r.first_order_year, r.first_order_month, r.months_since_first_order
+  );
+  

@@ -1,0 +1,76 @@
+/Users/user/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[0m06:56:50  Running with dbt=1.9.4
+[0m06:56:51  Registered adapter: postgres=1.9.0
+[0m06:56:51  Found 17 models, 35 data tests, 4 sources, 591 macros
+[0m06:56:51  
+[0m06:56:51  Concurrency: 1 threads (target='dev')
+[0m06:56:51  
+[0m06:56:51  1 of 31 START test accepted_values_dim_products_category__Electronics__Clothing__Footwear__Accessories  [RUN]
+[0m06:56:51  1 of 31 PASS accepted_values_dim_products_category__Electronics__Clothing__Footwear__Accessories  [[32mPASS[0m in 0.07s]
+[0m06:56:51  2 of 31 START test accepted_values_fct_orders_status__completed__processing__cancelled__refunded  [RUN]
+[0m06:56:51  2 of 31 PASS accepted_values_fct_orders_status__completed__processing__cancelled__refunded  [[32mPASS[0m in 0.03s]
+[0m06:56:51  3 of 31 START test not_null_dim_customers_customer_id .......................... [RUN]
+[0m06:56:51  3 of 31 PASS not_null_dim_customers_customer_id ................................ [[32mPASS[0m in 0.03s]
+[0m06:56:51  4 of 31 START test not_null_dim_customers_email ................................ [RUN]
+[0m06:56:51  4 of 31 PASS not_null_dim_customers_email ...................................... [[32mPASS[0m in 0.03s]
+[0m06:56:51  5 of 31 START test not_null_dim_customers_lifetime_orders ...................... [RUN]
+[0m06:56:51  5 of 31 PASS not_null_dim_customers_lifetime_orders ............................ [[32mPASS[0m in 0.03s]
+[0m06:56:51  6 of 31 START test not_null_dim_customers_lifetime_value ....................... [RUN]
+[0m06:56:51  6 of 31 PASS not_null_dim_customers_lifetime_value ............................. [[32mPASS[0m in 0.03s]
+[0m06:56:51  7 of 31 START test not_null_dim_customers_name ................................. [RUN]
+[0m06:56:51  7 of 31 PASS not_null_dim_customers_name ....................................... [[32mPASS[0m in 0.03s]
+[0m06:56:51  8 of 31 START test not_null_dim_products_category .............................. [RUN]
+[0m06:56:51  8 of 31 PASS not_null_dim_products_category .................................... [[32mPASS[0m in 0.03s]
+[0m06:56:51  9 of 31 START test not_null_dim_products_inventory_count ....................... [RUN]
+[0m06:56:51  9 of 31 PASS not_null_dim_products_inventory_count ............................. [[32mPASS[0m in 0.03s]
+[0m06:56:51  10 of 31 START test not_null_dim_products_name ................................. [RUN]
+[0m06:56:51  10 of 31 PASS not_null_dim_products_name ....................................... [[32mPASS[0m in 0.02s]
+[0m06:56:51  11 of 31 START test not_null_dim_products_price ................................ [RUN]
+[0m06:56:51  11 of 31 PASS not_null_dim_products_price ...................................... [[32mPASS[0m in 0.02s]
+[0m06:56:51  12 of 31 START test not_null_dim_products_product_id ........................... [RUN]
+[0m06:56:51  12 of 31 PASS not_null_dim_products_product_id ................................. [[32mPASS[0m in 0.02s]
+[0m06:56:51  13 of 31 START test not_null_fct_order_items_item_total ........................ [RUN]
+[0m06:56:51  13 of 31 PASS not_null_fct_order_items_item_total .............................. [[32mPASS[0m in 0.02s]
+[0m06:56:51  14 of 31 START test not_null_fct_order_items_order_id .......................... [RUN]
+[0m06:56:51  14 of 31 PASS not_null_fct_order_items_order_id ................................ [[32mPASS[0m in 0.07s]
+[0m06:56:51  15 of 31 START test not_null_fct_order_items_order_item_id ..................... [RUN]
+[0m06:56:51  15 of 31 PASS not_null_fct_order_items_order_item_id ........................... [[32mPASS[0m in 0.03s]
+[0m06:56:51  16 of 31 START test not_null_fct_order_items_product_id ........................ [RUN]
+[0m06:56:51  16 of 31 PASS not_null_fct_order_items_product_id .............................. [[32mPASS[0m in 0.03s]
+[0m06:56:51  17 of 31 START test not_null_fct_order_items_quantity .......................... [RUN]
+[0m06:56:52  17 of 31 PASS not_null_fct_order_items_quantity ................................ [[32mPASS[0m in 0.11s]
+[0m06:56:52  18 of 31 START test not_null_fct_order_items_unit_price ........................ [RUN]
+[0m06:56:52  18 of 31 PASS not_null_fct_order_items_unit_price .............................. [[32mPASS[0m in 0.03s]
+[0m06:56:52  19 of 31 START test not_null_fct_orders_customer_id ............................ [RUN]
+[0m06:56:52  19 of 31 PASS not_null_fct_orders_customer_id .................................. [[32mPASS[0m in 0.03s]
+[0m06:56:52  20 of 31 START test not_null_fct_orders_order_date ............................. [RUN]
+[0m06:56:52  20 of 31 PASS not_null_fct_orders_order_date ................................... [[32mPASS[0m in 0.03s]
+[0m06:56:52  21 of 31 START test not_null_fct_orders_order_id ............................... [RUN]
+[0m06:56:52  21 of 31 PASS not_null_fct_orders_order_id ..................................... [[32mPASS[0m in 0.03s]
+[0m06:56:52  22 of 31 START test not_null_fct_orders_status ................................. [RUN]
+[0m06:56:52  22 of 31 PASS not_null_fct_orders_status ....................................... [[32mPASS[0m in 0.03s]
+[0m06:56:52  23 of 31 START test not_null_fct_orders_total_amount ........................... [RUN]
+[0m06:56:52  23 of 31 PASS not_null_fct_orders_total_amount ................................. [[32mPASS[0m in 0.03s]
+[0m06:56:52  24 of 31 START test relationships_fct_order_items_order_id__order_id__ref_fct_orders_  [RUN]
+[0m06:56:52  24 of 31 PASS relationships_fct_order_items_order_id__order_id__ref_fct_orders_  [[32mPASS[0m in 0.03s]
+[0m06:56:52  25 of 31 START test relationships_fct_order_items_product_id__product_id__ref_dim_products_  [RUN]
+[0m06:56:52  25 of 31 PASS relationships_fct_order_items_product_id__product_id__ref_dim_products_  [[32mPASS[0m in 0.02s]
+[0m06:56:52  26 of 31 START test relationships_fct_orders_customer_id__customer_id__ref_dim_customers_  [RUN]
+[0m06:56:52  26 of 31 PASS relationships_fct_orders_customer_id__customer_id__ref_dim_customers_  [[32mPASS[0m in 0.03s]
+[0m06:56:52  27 of 31 START test unique_dim_customers_customer_id ........................... [RUN]
+[0m06:56:52  27 of 31 PASS unique_dim_customers_customer_id ................................. [[32mPASS[0m in 0.03s]
+[0m06:56:52  28 of 31 START test unique_dim_customers_email ................................. [RUN]
+[0m06:56:52  28 of 31 PASS unique_dim_customers_email ....................................... [[32mPASS[0m in 0.02s]
+[0m06:56:52  29 of 31 START test unique_dim_products_product_id ............................. [RUN]
+[0m06:56:52  29 of 31 PASS unique_dim_products_product_id ................................... [[32mPASS[0m in 0.02s]
+[0m06:56:52  30 of 31 START test unique_fct_order_items_order_item_id ....................... [RUN]
+[0m06:56:52  30 of 31 PASS unique_fct_order_items_order_item_id ............................. [[32mPASS[0m in 0.02s]
+[0m06:56:52  31 of 31 START test unique_fct_orders_order_id ................................. [RUN]
+[0m06:56:52  31 of 31 PASS unique_fct_orders_order_id ....................................... [[32mPASS[0m in 0.02s]
+[0m06:56:52  
+[0m06:56:52  Finished running 31 data tests in 0 hours 0 minutes and 1.16 seconds (1.16s).
+[0m06:56:52  
+[0m06:56:52  [32mCompleted successfully[0m
+[0m06:56:52  
+[0m06:56:52  Done. PASS=31 WARN=0 ERROR=0 SKIP=0 TOTAL=31

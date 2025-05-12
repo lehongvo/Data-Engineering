@@ -1,12 +1,17 @@
-{{
-    config(
-        materialized='table',
-        tags=['datamart', 'dimensions']
-    )
-}}
+
+  
+    
+
+  create  table "dbt_db_ex3"."public"."dim_customers_mart__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
 
 with customers as (
-    select * from {{ ref('dim_customers') }}
+    select * from "dbt_db_ex3"."public"."dim_customers"
 ),
 
 customer_segments as (
@@ -44,4 +49,6 @@ select
         else false
     end as is_high_value_active
 from customers c
-left join customer_segments cs using (customer_id) 
+left join customer_segments cs using (customer_id)
+  );
+  
