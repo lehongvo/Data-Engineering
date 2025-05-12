@@ -1,0 +1,74 @@
+version: 2
+
+models:
+  - name: metric_daily_sales
+    description: "Key sales metrics aggregated by day"
+    columns:
+      - name: date_key
+        description: "Date key for the metrics"
+        tests:
+          - unique
+          - not_null
+      
+      - name: total_sales_amount
+        description: "Total revenue by day"
+        
+      - name: average_order_value
+        description: "Average order value per transaction"
+        
+      - name: orders_count
+        description: "Number of orders per day"
+        
+      - name: customers_count
+        description: "Number of unique customers per day"
+        
+      - name: electronics_revenue
+        description: "Revenue from electronics products"
+        
+      - name: clothing_revenue
+        description: "Revenue from clothing products"
+        
+      - name: footwear_revenue
+        description: "Revenue from footwear products"
+        
+      - name: accessories_revenue
+        description: "Revenue from accessories products"
+        
+  - name: metric_monthly_sales
+    description: "Key sales metrics aggregated by month"
+    columns:
+      - name: year
+        description: "Year of the data point"
+        
+      - name: month
+        description: "Month of the data point"
+        
+      - name: unique_customers
+        description: "Number of unique customers per month"
+        
+      - name: total_sales_amount
+        description: "Total revenue by month"
+        
+      - name: sales_growth_pct
+        description: "Month-over-month sales growth percentage"
+        
+      - name: new_customers
+        description: "Number of new customers acquired in this month"
+        
+      - name: cancellation_rate
+        description: "Percentage of orders that were cancelled"
+        
+  - name: metric_customer_retention
+    description: "Customer retention metrics by cohort"
+    columns:
+      - name: cohort
+        description: "Customer cohort identifier (YYYY-MM)"
+        
+      - name: months_since_first_order
+        description: "Number of months since first order"
+        
+      - name: retention_rate
+        description: "Percentage of customers retained after N months"
+        
+      - name: revenue_per_retained_customer
+        description: "Average revenue per retained customer" 

@@ -1,0 +1,174 @@
+version: 2
+
+models:
+  - name: dim_customers
+    description: "Customer dimension table enriched with order information."
+    config:
+      tags: ['core', 'dimensions']
+    meta:
+      owner: "Analytics Team"
+      contains_pii: true
+    columns:
+      - name: customer_id
+        description: "Primary key for customer table"
+        meta:
+          is_primary_key: true
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Customer's full name"
+        meta:
+          contains_pii: true
+        tests:
+          - not_null
+      - name: email
+        description: "Customer's normalized email address"
+        meta:
+          contains_pii: true
+        tests:
+          - unique
+          - not_null
+          - dbt_expectations.expect_column_values_to_match_regex:
+              regex: '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'
+      - name: lifetime_orders
+        description: "Total number of orders placed by customer"
+        tests:
+          - not_null
+      - name: lifetime_value
+        description: "Total lifetime spending of the customer"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              strictly: true
+
+  - name: dim_products
+    description: "Product dimension table enriched with sales information."
+    config:
+      tags: ['core', 'dimensions']
+    meta:
+      owner: "Product Team"
+    columns:
+      - name: product_id
+        description: "Primary key for product table"
+        meta:
+          is_primary_key: true
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Product name"
+        tests:
+          - not_null
+      - name: price
+        description: "Product price"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              strictly: true
+      - name: category
+        description: "Product category"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Electronics', 'Clothing', 'Footwear', 'Accessories']
+      - name: inventory_count
+        description: "Current inventory level"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 10000
+
+  - name: fct_orders
+    description: "Order fact table."
+    config:
+      tags: ['core', 'facts']
+    meta:
+      owner: "Sales Team"
+      update_frequency: "daily"
+    columns:
+      - name: order_id
+        description: "Primary key for order table"
+        meta:
+          is_primary_key: true
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Foreign key to customer table"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_customers')
+              field: customer_id
+      - name: order_date
+        description: "Date when the order was placed"
+        tests:
+          - not_null
+      - name: status
+        description: "Order status"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['completed', 'processing', 'cancelled', 'refunded']
+      - name: total_amount
+        description: "Total order amount"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              strictly: true
+
+  - name: fct_order_items
+    description: "Order items fact table."
+    config:
+      tags: ['core', 'facts']
+    meta:
+      owner: "Sales Team"
+      update_frequency: "daily"
+    columns:
+      - name: order_item_id
+        description: "Primary key for order item"
+        meta:
+          is_primary_key: true
+        tests:
+          - unique
+          - not_null
+      - name: order_id
+        description: "Foreign key to order table"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('fct_orders')
+              field: order_id
+      - name: product_id
+        description: "Foreign key to product table"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_products')
+              field: product_id
+      - name: quantity
+        description: "Quantity of the product ordered"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 1
+              strictly: true
+      - name: unit_price
+        description: "Unit price of the product at the time of order"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              strictly: true
+      - name: item_total
+        description: "Total amount for this line item"
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              strictly: true 
