@@ -1,0 +1,12 @@
+ecommerce_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: dbt_user
+      password: dbt_password
+      port: 5432
+      dbname: dbt_db
+      schema: public
+      threads: 4 

@@ -1,0 +1,80 @@
+version: 2
+
+sources:
+  - name: ecommerce_raw
+    database: dbt_db
+    schema: public
+    tables:
+      - name: customers
+        description: Dữ liệu khách hàng thô
+        columns:
+          - name: customer_id
+            description: Khóa chính của bảng khách hàng
+            tests:
+              - unique
+              - not_null
+          - name: name
+            description: Tên đầy đủ của khách hàng
+          - name: email
+            description: Địa chỉ email của khách hàng
+            tests:
+              - unique
+      
+      - name: products
+        description: Dữ liệu sản phẩm thô
+        columns:
+          - name: product_id
+            description: Khóa chính của bảng sản phẩm
+            tests:
+              - unique
+              - not_null
+          - name: name
+            description: Tên sản phẩm
+          - name: price
+            description: Giá sản phẩm (VND)
+          - name: category
+            description: Danh mục sản phẩm
+      
+      - name: orders
+        description: Dữ liệu đơn hàng thô
+        columns:
+          - name: order_id
+            description: Khóa chính của bảng đơn hàng
+            tests:
+              - unique
+              - not_null
+          - name: customer_id
+            description: Khóa ngoại tham chiếu đến bảng khách hàng
+            tests:
+              - relationships:
+                  to: source('ecommerce_raw', 'customers')
+                  field: customer_id
+          - name: order_date
+            description: Ngày đặt hàng
+          - name: status
+            description: Trạng thái đơn hàng (completed, processing, v.v.)
+      
+      - name: order_items
+        description: Dữ liệu chi tiết đơn hàng thô
+        columns:
+          - name: order_item_id
+            description: Khóa chính của bảng chi tiết đơn hàng
+            tests:
+              - unique
+              - not_null
+          - name: order_id
+            description: Khóa ngoại tham chiếu đến bảng đơn hàng
+            tests:
+              - relationships:
+                  to: source('ecommerce_raw', 'orders')
+                  field: order_id
+          - name: product_id
+            description: Khóa ngoại tham chiếu đến bảng sản phẩm
+            tests:
+              - relationships:
+                  to: source('ecommerce_raw', 'products')
+                  field: product_id
+          - name: quantity
+            description: Số lượng sản phẩm trong đơn hàng
+          - name: unit_price
+            description: Giá mỗi đơn vị tại thời điểm mua 
