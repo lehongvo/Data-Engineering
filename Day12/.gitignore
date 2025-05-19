@@ -1,0 +1,6 @@
+.terraform/
+
+# Exclude large JAR files
+Day11/Exercise/Exercise1/.venv/lib/python3.9/site-packages/pyflink/lib/flink-dist-2.0.0.jar
+Day11/Exercise/Exercise3/flink-cep-job/target/flink-cep-job-1.0-SNAPSHOT.jar
+*.jar 

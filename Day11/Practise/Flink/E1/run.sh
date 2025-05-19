@@ -1,218 +1,214 @@
 #!/bin/bash
 
-# Setup function to initialize the environment
-setup_environment() {
-    echo "Setting up Flink environment..."
-    
-    # Create directories if they don't exist
-    mkdir -p data code
-    
-    # Stop existing containers and start new ones
-    echo "Starting Flink containers..."
+# Bài tập 1: Thiết lập môi trường Kafka và tạo ứng dụng Hello World
+
+# Bước 1: Khởi động Kafka và ZooKeeper
+echo "Khởi động Kafka và ZooKeeper..."
+docker-compose up -d
+
+# Đợi dịch vụ khởi động hoàn tất
+sleep 10
+echo "Kafka và ZooKeeper đã khởi động."
+
+# Bước 2: Kiểm tra và tạo topics nếu cần
+echo "Kiểm tra và tạo topics..."
+docker exec kafka kafka-topics.sh --bootstrap-server localhost:9092 --list
+
+# Tạo topics nếu chưa tồn tại (mặc dù đã được cấu hình tự động tạo trong docker-compose.yml)
+docker exec kafka kafka-topics.sh --bootstrap-server localhost:9092 --create --topic input-topic --partitions 1 --replication-factor 1 --if-not-exists
+docker exec kafka kafka-topics.sh --bootstrap-server localhost:9092 --create --topic output-topic --partitions 1 --replication-factor 1 --if-not-exists
+
+echo "Topics đã được tạo."
+
+# Bước 3: Tạo thư mục cho ứng dụng Java và tạo các file cần thiết
+mkdir -p kafka-streams-app/src/main/java
+mkdir -p kafka-streams-app/src/main/resources
+
+# Tạo file pom.xml
+cat > kafka-streams-app/pom.xml << 'EOF'
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>kafka-streams-app</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+        <kafka.version>3.5.0</kafka.version>
+    </properties>
+
+    <dependencies>
+        <!-- Kafka Streams -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-streams</artifactId>
+            <version>${kafka.version}</version>
+        </dependency>
+        <!-- SLF4J API -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.36</version>
+        </dependency>
+        <!-- SLF4J Simple binding -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-simple</artifactId>
+            <version>1.7.36</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>11</source>
+                    <target>11</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>3.2.4</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>com.example.KafkaStreamsApp</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
+EOF
+
+# Tạo file ứng dụng Java
+cat > kafka-streams-app/src/main/java/com/example/KafkaStreamsApp.java << 'EOF'
+package com.example;
+
+import org.apache.kafka.common.serialization.Serdes;
+import org.apache.kafka.streams.KafkaStreams;
+import org.apache.kafka.streams.StreamsBuilder;
+import org.apache.kafka.streams.StreamsConfig;
+import org.apache.kafka.streams.Topology;
+import org.apache.kafka.streams.kstream.KStream;
+
+import java.util.Properties;
+import java.util.concurrent.CountDownLatch;
+
+public class KafkaStreamsApp {
+
+    public static void main(String[] args) {
+        // Thiết lập cấu hình cho Kafka Streams
+        Properties props = new Properties();
+        props.put(StreamsConfig.APPLICATION_ID_CONFIG, "uppercase-app");
+        props.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        props.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
+        props.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, Serdes.String().getClass().getName());
+
+        // Tạo một StreamsBuilder để định nghĩa topology
+        StreamsBuilder builder = new StreamsBuilder();
+
+        // Đọc dữ liệu từ input-topic
+        KStream<String, String> source = builder.stream("input-topic");
+
+        // Xử lý dữ liệu: chuyển thành chữ HOA
+        KStream<String, String> uppercased = source.mapValues(value -> value.toUpperCase());
+
+        // Ghi dữ liệu đã xử lý vào output-topic
+        uppercased.to("output-topic");
+
+        // Xây dựng topology
+        Topology topology = builder.build();
+        System.out.println("Topology: " + topology.describe());
+
+        // Tạo Kafka Streams instance với cấu hình và topology đã định nghĩa
+        KafkaStreams streams = new KafkaStreams(topology, props);
+
+        // Xử lý tắt ứng dụng
+        CountDownLatch latch = new CountDownLatch(1);
+        Runtime.getRuntime().addShutdownHook(new Thread("streams-shutdown-hook") {
+            @Override
+            public void run() {
+                streams.close();
+                latch.countDown();
+                System.out.println("Streams application đã đóng");
+            }
+        });
+
+        try {
+            // Khởi động Kafka Streams
+            streams.start();
+            System.out.println("Streams application đã khởi động");
+            latch.await();
+        } catch (Exception e) {
+            System.exit(1);
+        }
+    }
+}
+EOF
+
+# Tạo file properties cho logging
+cat > kafka-streams-app/src/main/resources/simplelogger.properties << 'EOF'
+org.slf4j.simpleLogger.defaultLogLevel=info
+org.slf4j.simpleLogger.showDateTime=true
+org.slf4j.simpleLogger.dateTimeFormat=yyyy-MM-dd HH:mm:ss
+org.slf4j.simpleLogger.showThreadName=true
+EOF
+
+# Bước 4: Biên dịch và đóng gói ứng dụng
+echo "Biên dịch và đóng gói ứng dụng..."
+cd kafka-streams-app
+mvn clean package
+cd ..
+
+# Bước 5: Chạy ứng dụng (trong background)
+echo "Chạy ứng dụng Kafka Streams..."
+java -jar kafka-streams-app/target/kafka-streams-app-1.0-SNAPSHOT.jar &
+APP_PID=$!
+echo "Ứng dụng đã khởi động với PID: $APP_PID"
+sleep 5
+
+# Bước 6: Gửi dữ liệu vào input-topic
+echo "Gửi dữ liệu vào input-topic..."
+echo "hello world" | docker exec -i kafka kafka-console-producer.sh --bootstrap-server localhost:9092 --topic input-topic
+echo "kafka streams" | docker exec -i kafka kafka-console-producer.sh --bootstrap-server localhost:9092 --topic input-topic
+echo "đây là bài tập 1" | docker exec -i kafka kafka-console-producer.sh --bootstrap-server localhost:9092 --topic input-topic
+sleep 2
+
+# Bước 7: Đọc dữ liệu từ output-topic
+echo "Đọc dữ liệu từ output-topic (kết quả):"
+docker exec kafka kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic output-topic --from-beginning --max-messages 3
+
+# Dừng ứng dụng
+echo "Dừng ứng dụng Kafka Streams..."
+kill $APP_PID
+wait $APP_PID 2>/dev/null
+echo "Ứng dụng đã dừng."
+
+# Bước 8: Lựa chọn: dừng Kafka và ZooKeeper sau khi hoàn thành
+read -p "Bạn có muốn dừng Kafka và ZooKeeper không? (y/n): " choice
+if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
+    echo "Dừng Kafka và ZooKeeper..."
     docker-compose down
-    docker-compose up -d
-    
-    # Wait for Flink to be ready
-    echo "Waiting for Flink to be ready..."
-    
-    # Check if services are ready
-    for i in {1..20}; do
-        if curl -s http://localhost:8081/config > /dev/null 2>&1; then
-            echo "Flink JobManager is ready!"
-            break
-        fi
-        echo -n "."
-        sleep 2
-        if [ $i -eq 20 ]; then
-            echo "Timeout waiting for Flink to start."
-            echo "Checking logs for errors:"
-            docker-compose logs
-        fi
-    done
-    
-    # Check Flink status
-    echo "Checking Flink containers status..."
-    docker ps | grep flink
-    
-    echo "Environment setup complete!"
-    
-    # Return to main menu after setup is complete
-    sleep 2
-    show_menu
-}
+    echo "Kafka và ZooKeeper đã dừng."
+fi
 
-# Run Flink WordCount
-run_wordcount() {
-    echo "Running Flink WordCount job..."
-    
-    # Check if containers are running
-    if ! docker ps | grep -q flink-jobmanager; then
-        echo "Flink containers are not running. Please set up the environment first (option 4)."
-        echo "Press Enter to return to the menu..."
-        read
-        show_menu
-        return
-    fi
-    
-    # Make sure the input directory exists with sample data
-    if [ ! -f "data/input.txt" ]; then
-        echo "Creating sample input data..."
-        echo "Hello Apache Flink. Apache Flink is a framework and distributed processing engine for stateful computations over unbounded and bounded data streams." > data/input.txt
-    fi
-    
-    # Force remove existing output directories on the container
-    echo "Cleaning up previous output directories..."
-    docker exec -it flink-jobmanager bash -c "rm -rf /data/output*"
-    
-    # Check if directories were successfully removed
-    echo "Verifying cleanup..."
-    docker exec -it flink-jobmanager ls -la /data
-    
-    # Run the WordCount job on a new file
-    echo "Executing Flink WordCount job..."
-    
-    # Use the built-in examples from Flink
-    docker exec -it flink-jobmanager bash -c "
-        # Create a random output dir to avoid conflicts
-        OUTPUT_DIR=/data/output_\$(date +%s)
-        mkdir -p \$OUTPUT_DIR
-        
-        # Run the Flink WordCount example with properly specified class
-        /opt/flink/bin/flink run \
-            -c org.apache.flink.examples.java.wordcount.WordCount \
-            /opt/flink/examples/batch/WordCount.jar \
-            --input /data/input.txt \
-            --output \$OUTPUT_DIR/result
-        
-        # Copy the results to the standard output directory
-        mkdir -p /data/output
-        cp -r \$OUTPUT_DIR/* /data/output/
-    "
-    
-    echo "Job completed!"
-    
-    # Show top results
-    echo "Top 10 word counts:"
-    if [ -d "data/output" ] && [ "$(ls -A data/output 2>/dev/null)" ]; then
-        cat data/output/* | head -10
-    else
-        echo "Output directory is empty or not found. Job may have failed."
-    fi
-    
-    echo ""
-    echo "Press Enter to return to the menu..."
-    read
-    
-    show_menu
-}
-
-# Show Flink Dashboard
-open_dashboard() {
-    echo "Opening Flink Dashboard..."
-    echo "Please visit http://localhost:8081 in your browser"
-    
-    # Check if dashboard is actually accessible
-    if command -v curl &> /dev/null; then
-        if curl -s --head http://localhost:8081 | grep "200 OK" > /dev/null; then
-            echo "Dashboard is accessible!"
-        else
-            echo "WARNING: Dashboard might not be accessible. Check if Flink is running correctly."
-        fi
-    fi
-    
-    echo ""
-    echo "Press Enter to return to the menu..."
-    read
-    
-    show_menu
-}
-
-# View Results
-view_results() {
-    echo "Viewing WordCount Results..."
-    
-    if [ ! -d "data/output" ] || [ ! "$(ls -A data/output 2>/dev/null)" ]; then
-        echo "Output directory is empty or not found. Please run the WordCount job first."
-        sleep 2
-        show_menu
-        return
-    fi
-    
-    echo "All words (sorted by count):"
-    cat data/output/* | sort -nr -k2
-    
-    echo ""
-    echo "Press Enter to return to the menu..."
-    read
-    
-    show_menu
-}
-
-# Clean all containers and rebuild
-clean_rebuild() {
-    echo "Cleaning all containers and rebuilding..."
-    
-    # Stop and remove all containers
-    docker-compose down --rmi all
-    
-    # Clean up Docker cache
-    docker system prune -f
-    
-    echo "Cleanup complete!"
-    echo "Press Enter to return to the menu..."
-    read
-    
-    show_menu
-}
-
-# Display menu and get user input
-show_menu() {
-    clear
-    echo "========================================"
-    echo "      APACHE FLINK WORDCOUNT - E1      "
-    echo "========================================"
-    echo "Please select an option:"
-    echo ""
-    echo "1) Run WordCount job"
-    echo "2) Open Flink Dashboard"
-    echo "3) View WordCount results"
-    echo "4) Setup Flink Environment"
-    echo "5) Clean & Remove All Containers"
-    echo "0) Exit"
-    echo ""
-    echo -n "Enter your choice [0-5]: "
-    read choice
-
-    case $choice in
-        1)
-            run_wordcount
-            ;;
-        2)
-            open_dashboard
-            ;;
-        3)
-            view_results
-            ;;
-        4)
-            setup_environment
-            ;;
-        5)
-            clean_rebuild
-            ;;
-        0)
-            echo "Exiting..."
-            exit 0
-            ;;
-        *)
-            echo "Invalid option. Press Enter to continue..."
-            read
-            show_menu
-            ;;
-    esac
-}
-
-# Make the script executable
-chmod +x "$0"
-setup_environment
-# Main script logic - show menu
-show_menu 
+echo "Bài tập 1 đã hoàn thành!"

@@ -62,7 +62,7 @@ There are 1 unused configuration paths:
 [0m06:24:28  
 [0m06:24:28  Finished running 25 data tests in 0 hours 0 minutes and 0.91 seconds (0.91s).
 [0m06:24:28  
-[0m06:24:28  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m06:24:28  [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0mgi
 [0m06:24:28  
 [0m06:24:28  [31mFailure in test assert_no_duplicate_orders (tests/assert_no_duplicate_orders.sql)[0m
 [0m06:24:28    Got 2 results, configured to fail if != 0

@@ -1,0 +1,48 @@
+name: 'ecommerce_datamart'
+version: '1.0.0'
+config-version: 2
+
+profile: 'ecommerce_datamart'
+
+# Paths configuration
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"  
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Model configurations
+models:
+  ecommerce_datamart:
+    # Default materialization and hooks
+    +materialized: view
+    
+    staging:
+      +materialized: view
+      
+    core:
+      +materialized: table
+      
+    mart:
+      +materialized: table
+      
+      dimensions:
+        +tags: ["datamart", "dimensions"]
+      
+      facts:
+        +tags: ["datamart", "facts"]
+        
+      metrics:
+        +tags: ["datamart", "metrics"]
+
+# Vars for runtime configuration
+vars:
+  # Use these vars for incremental loads
+  start_date: '2023-01-01'
+  end_date: '{{ run_started_at.strftime("%Y-%m-%d") }}'
